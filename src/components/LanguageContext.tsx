@@ -1,11 +1,20 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-const LanguageContext = createContext({
+interface LanguageContextType {
+  languageChangeCount: number;
+  incrementLanguageChangeCount: () => void;
+}
+
+const LanguageContext = createContext<LanguageContextType>({
   languageChangeCount: 0,
   incrementLanguageChangeCount: () => {},
 });
 
-export const LanguageProvider = ({ children }) => {
+interface LanguageProviderProps {
+  children: ReactNode;
+}
+
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [languageChangeCount, setLanguageChangeCount] = useState(0);
 
   const incrementLanguageChangeCount = () => {
