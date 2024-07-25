@@ -2,16 +2,17 @@ import { useTranslations } from 'next-intl';
 import Reveal from "../util/Reveal";
 import DotGrid from "./DotGrid";
 import { OutlineButton } from "../buttons/OutlineButton";
+import MouseMove from './MouseMove';
 
 const Hero = () => {
   const t = useTranslations('hero');
 
   return (
-    <section className="text-slat-100 overflow-hidden py-24 md:py-32">
+    <section className="text-slate-100 overflow-hidden py-24 md:py-32">
       <div className="relative">
         <div className="pointer-events-none relative z-10">
           <Reveal>
-            <h1 className="pointer-events-auto text-4xl sm:text-6xl font-black text-zinc-100 md:text-8xl">
+            <h1 className="pointer-events-auto text-4xl sm:text-6xl font-black text-zinc-100 md:text-8xl leading-tight sm:leading-tight md:leading-tight pb-2">
               {t('greeting')}<span className="text-indigo-500">.</span>
             </h1>
           </Reveal>

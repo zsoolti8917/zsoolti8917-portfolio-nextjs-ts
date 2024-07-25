@@ -1,7 +1,4 @@
 {
-    "Home": {
-      "title": "Welcome to my website"
-    },
     "About": {
       "title": "About",
       "firstLetter": "H",
@@ -71,6 +68,7 @@
         "email": "zsolt.varju.rl@gmail.com"
       },
       "experience": {
+        "title": "Experience",
         "companyName": "Galileo Corporation s.r.o",
         "dates": "2022 - Present",
         "jobTitle": "Quality Assurance Tester",

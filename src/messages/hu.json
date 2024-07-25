@@ -1,228 +1,229 @@
 {
-    "Home": {
-      "title": "Welcome to my website"
-    },
+
     "About": {
-      "title": "About",
-      "firstLetter": "H",
-      "intro": "Hey there! I'm Zsolt Varjú, a passionate web enthusiast from Čierna Voda, Slovakia. I started my journey as a Remote Web Page Tester, working closely with frontend developers, which sparked my love for frontend development. Armed with a master's degree from Constantine the Philosopher University in Nitra, I am now diving into the world of React and Next.js, ready to bring design files to life with seamless functionality and exceptional user experiences.",
-      "currentWork": "Currently, I work as a web tester, but I am transitioning into a frontend developer role. Outside of web development, you'll often find me running, skiing, or exploring 3D printing and tinkering with microPCs like Arduino. I also enjoy 3D modeling whenever I get the chance.",
-      "jobSearch": "I'm on the lookout for a frontend developer position where I can merge my skills and passion for creating stunning web designs.",
-      "quote": "As {author} wisely said, \"Luck is when preparation meets opportunity\" and I feel prepared, just waiting for the right opportunity to come along.",
-      "connect": "If you think we might be a good fit, let's connect! 🔗",
-      "myLinks": "My links"
-    },
-    "Stats": {
-      "useInProjects": {
-        "title": "Use in projects",
-        "chips": [
-          "JavaScript",
-          "TypeScript",
-          "HTML",
-          "TailwindCSS",
-          "React",
-          "NextJS",
-          "NodeJS",
-          "Express",
-          "SQL",
-          "MongoDB",
-          "GitHub",
-          "Figma",
-          "Heroku",
-          "HeadlessCMS",
-          "Docker",
-          "Postman",
-          "REST Api"
-        ]
-      },
-      "triedOut": {
-        "title": "Tried out / Used in school",
-        "chips": [
-          "Storybook",
-          "Python",
-          "Java",
-          "OOP",
-          "AdobeXD",
-          "Laravel",
-          "Unity",
-          "Blender",
-          "GraphQL",
-          "C#"
-        ]
-      },
-      "myLanguages": {
-        "title": "My Languages",
-        "chips": [
-          "Hungarian - mother language",
-          "Slovak",
-          "English"
-        ]
-      }
-    },
+  "title": "Rólam",
+  "firstLetter": "H",
+  "intro": "eló! a teljes nevem Varjú Zsolt, egy lelkes webfejlesztő a szlovákiai Feketenyékről. Az utam QA tesztelőként kezdődött, szorosan együttműködve frontend fejlesztőkkel, ami felébresztette a szenvedélyemet a webfejlesztés iránt. A nyitrai Konstantin Filozófus Egyetemen szerzett mesterdiplomával a MERN-stack és a Next.js világába merültem, készen arra, hogy a tervezési fájlokat életre keltsem zökkenőmentes funkcionalitással és kivételes felhasználói élményekkel.",
+  "currentWork": "Jelenleg webtesztelőként dolgozom, de frontend fejlesztői szerepbne szeretnék elhelyezkedni. A webfejlesztésen kívül gyakran találhatsz futás, síelés, 3D nyomtatás felfedezése közben, vagy épp microPC-k, mint például az Arduino babrálása közben. Emellett a 3D modellezést is élvezem, amikor csak lehetőségem adódik rá.",
+  "jobSearch": "Olyan frontend fejlesztői pozíciót keresek, ahol össze tudom kapcsolni készségeimet és szenvedélyemet lenyűgöző weboldalak készítésére.",
+  "quote": "Ahogy Seneca bölcsen mondta: „A szerencse akkor jön el, amikor a felkészültség találkozik a lehetőséggel”, és felkészültnek érzem magam, csak a megfelelő lehetőségre várok.",
+  "connect": "Ha úgy gondolod, hogy jól összeillünk, csatlakozzunk! 🔗",
+  "myLinks": "Elérhetőségeim"
+},
+"Stats": {
+  "useInProjects": {
+    "title": "Projektekben használt technológiák",
+    "chips": [
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "TailwindCSS",
+      "React",
+      "NextJS",
+      "NodeJS",
+      "Express",
+      "SQL",
+      "MongoDB",
+      "GitHub",
+      "Figma",
+      "Heroku",
+      "HeadlessCMS",
+      "Docker",
+      "Postman",
+      "REST Api"
+    ]
+  }
+},
+ "triedOut": {
+  "title": "Kipróbált / tanulmányok során használt technológiák",
+  "chips": [
+    "Storybook",
+    "Python",
+    "Java",
+    "OOP",
+    "AdobeXD",
+    "Laravel",
+    "Unity",
+    "Blender",
+    "GraphQL",
+    "C#"
+  ]
+},
+"myLanguages": {
+  "title": "Nyelvismeret",
+  "chips": [
+    "Magyar - anyanyelv",
+    "Szlovák - folyékony",
+    "Angol - folyékony"
+  ]
+},
     "Contact": {
-        "title": "Contact",
-        "message": "Shoot me an email if you want to connect! You can also find me on",
-        "linkedin": "Linkedin",
-        "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
-        "or": "or",
-        "github": "Github",
-        "githubUrl": "https://github.com/zsoolti8917",
-        "moreYourSpeed": "if that's more your speed.",
-        "email": "zsolt.varju.rl@gmail.com"
-      },
-      "experience": {
-        "companyName": "Galileo Corporation s.r.o",
-        "dates": "2022 - Present",
-        "jobTitle": "Quality Assurance Tester",
-        "location": "Remote",
-        "responsibilities": [
-          {
-            "title": "Functionality Testing:",
-            "description": "Conducting thorough manual testing of web pages to verify that all features operate correctly across various browsers and devices. Identifying and reporting discrepancies or bugs promptly."
-          },
-          {
-            "title": "Visual Consistency:",
-            "description": "Assessing the visual appearance of web pages to ensure they match the provided graphic design specifications. Communicating deviations to the relevant team members and providing detailed feedback for necessary corrections."
-          },
-          {
-            "title": "Quality Assurance:",
-            "description": "Maintaining high standards of quality by rigorously testing web pages, ensuring they meet required specifications and user expectations."
-          },
-          {
-            "title": "Communication:",
-            "description": "Collaborating effectively with designers, developers, and project managers to address issues found during testing and offering suggestions for improvements and clarifications."
-          },
-          {
-            "title": "Remote Work:",
-            "description": "Managing all tasks independently while adhering to strict deadlines and utilizing effective time management skills to complete tasks efficiently and accurately."
-          },
-          {
-            "title": "Documentation:",
-            "description": "Maintaining detailed records of test results, issues identified, and corrective actions taken, and providing comprehensive reports to relevant stakeholders."
-          }
-        ],
-        "skills": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Cross-Browser Testing",
-          "Bug Tracking",
-          "Remote Collaboration",
-          "Time Management"
-        ]
-      },
-      "hero": {
-        "greeting": "Hi, I'm Zsolt",
-        "title": "I'm a",
-        "profession": "Web Developer",
-        "description": "I recently completed my Master's degree in Applied Informatics and am now a web developer with expertise in Headless CMS and Next.js. I'm also highly adaptable and eager to work with a variety of technologies. Let's connect!",
-        "buttonText": "Contact Me"
-      },
-      "sidebar": {
-        "logo": "V",
-        "about": "About",
-        "projects": "Projects",
-        "experience": "Exp.",
-        "contact": "Contact"
-      },
-      "header": {
-    "resumeButton": "My Resume",
-    "linkedinAria": "Visit my LinkedIn profile",
-    "githubAria": "Visit my GitHub profile",
-    "languageSelector": "Change language",
-    "languages": {
-      "en": "English",
-      "sk": "Slovak",
-      "hu": "Hungarian"
+  "title": "Elérhetőség",
+  "message": "Küldj egy e-mailt, ha kapcsolatba szeretnél lépni! Továbbá megtalálsz a",
+  "linkedin": "Linkedin",
+  "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
+  "or": "vagy",
+  "github": "Github",
+  "githubUrl": "https://github.com/zsoolti8917",
+  "moreYourSpeed": "platformokon is.",
+  "email": "zsolt.varju.rl@gmail.com"
+},
+"experience": {
+  "title": "Munkatapasztalat",
+  "companyName": "Galileo Corporation s.r.o",
+  "dates": "2022 - Jelenleg",
+  "jobTitle": "Minőségbiztosítási tesztelő (Quality Assurance Tester)",
+  "location": "Home Office",
+  "responsibilities": [
+    {
+      "title": "Funkcionalitás Tesztelése:",
+      "description": "Alapos manuális tesztelést végzek a weboldalakon, hogy meggyőződjek arról, hogy minden funkció helyesen működik különböző böngészőkben és eszközökön. Azonosítom az esetleges eltéréseket vagy hibákat, és azokat azonnal jelentem."
+    },
+    {
+      "title": "Vizuális következetesség:",
+      "description": "Értékelem a weboldalak vizuális megjelenését annak érdekében, hogy megfeleljenek a megadott grafikai tervezési előírásoknak. Kommunikálom az esetleges eltéréseket az érintett csapattagokkal, részletes visszajelzést nyújtva a szükséges korrekciókról."
+    },
+    {
+      "title": "Minőségbiztosítás:",
+      "description": "Magas minőségi szintet tartok fenn azáltal, hogy szigorúan tesztelem a cég által készített weboldalak többségét Szlovákiában. Biztosítom, hogy minden weboldal megfeleljen a szükséges előírásoknak és a felhasználói elvárásoknak."
+    },
+    {
+      "title": "Kommunikáció:",
+      "description": "Hatékonyan együttműködök a tervezőkkel, fejlesztőkkel és projektmenedzserekkel a tesztelés során felmerült problémák megoldása érdekében. Javaslatokat teszek a javításokra és tisztázásokra, ha szükséges."
+    },
+    {
+      "title": "Home Office:",
+      "description": "Minden feladatot önállóan kezelek, miközben szigorú határidőket tartok be. "
+    },
+    {
+      "title": "Dokumentáció:",
+      "description": "Részletes nyilvántartást vezetek a teszteredményekről, azonosított problémákról és a megtett korrekciós intézkedésekről. Átfogó jelentéseket nyújtok az érintett érdekelt feleknek"
     }
-  },
-      "projectModal": {
-        "projectLinks": "Project Links",
-        "sourceCode": "Source Code",
-        "liveProject": "Live Project"
-      },
-      "projects": {
-        "sectionTitle": "Projects",
-        "infoMapSK": {
-          "title": "InfoMapSK - Interactive Demographic Data Visualization",
-          "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
-          "description": "A full-stack web application for visualizing demographic data of Slovakia, featuring an interactive map and various data categories. Developed as a master's thesis project.",
-          "modalContent": {
-            "para1": "InfoMapSK is a comprehensive full-stack web application developed as part of a master's thesis project. It provides an interactive platform for exploring and visualizing demographic data across different administrative levels of Slovakia.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Interactive map of Slovakia with region, district, and city/village selection | Visualization of demographic data using various chart types | Multiple data categories: Population, Economic Activity, Agriculture, and Organizational Statistics | Search functionality for specific locations | Responsive design optimized for various devices | Accessibility features following WCAG 2.1 guidelines | Contact form for user feedback and inquiries",
-            "para2": "This project showcases proficiency in full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). The frontend is built with React and styled with TailwindCSS, while the backend utilizes Node.js with Express.js and MongoDB for data caching.",
-            "technologiesList": "The development process involved integrating various technologies and APIs, including:",
-            "techList": "React-leaflet for interactive mapping | Recharts for data visualization | Formik and Yup for form handling and validation | Statistical Office of the Slovak Republic API for demographic data | Geoportal of Slovakia for geospatial information",
-            "para3": "This project demonstrates the ability to create a complex, data-driven web application while adhering to best practices in responsive design, accessibility, and modern web development techniques. It showcases skills in both frontend and backend development, as well as data visualization and integration with external APIs."
-          }
-        },
-        "gardenBros": {
-          "title": "Garden Bros Website Frontend",
-          "tech": "Next.js,Tailwind CSS,Strapi CMS,Vercel",
-          "description": "A multilingual website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
-          "modalContent": {
-            "para1": "The Garden Bros Website Frontend is a multilingual platform for a gardening company to promote their services and showcase their work. Built with Next.js, styled using Tailwind CSS, and managed through Strapi CMS, it offers a responsive and dynamic user experience.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive main page with dynamic components | Fully-featured contact page and FAQ section | Blog with author-written posts | Multilingual support (Slovak, Hungarian, English) | Dynamic page generation | Content management through Strapi CMS",
-            "para2": "The project showcases my ability to create a full-featured, multilingual website using modern web technologies. It demonstrates skills in frontend development, responsive design with Tailwind CSS, CMS integration, and deployment strategies.",
-            "para3": "Tailwind CSS was used to create a custom, responsive design that perfectly fits the client's needs. This utility-first CSS framework allowed for rapid development of a unique and visually appealing interface while maintaining consistency across the site.",
-            "para4": "The website is deployed on Vercel, ensuring fast loading times and reliable performance. The use of Strapi CMS allows for easy content management and updates without requiring changes to the codebase.",
-            "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs while providing an excellent user experience and visually striking design."
-          }
-        },
+  ],
+"skills": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Keresztböngészős tesztelés",
+  "Önálló döntéshozatal",
+  "Távoli együttműködés",
+  "Időgazdálkodás",
+  "Reszponzív design"
+]
+},
+"hero": {
+  "greeting": "Üdv, a nevem Zsolt",
+  "title": "Szenvedélyes",
+  "profession": "Webfejlesztő",
+  "description": "Nemrég fejeztem be a mesterdiplomámat alkalmazott informatikából, és most Junior webfejlesztőkén keresek munkahelyet, aki jártas a Headless CMS-ben és a Next.js-ben. Nagyon alkalmazkodó vagyok, és szívesen dolgozom különféle technológiákkal. Csatlakozzunk!",
+  "buttonText": "Kapcsolatfelvétel"
+},
+"sidebar": {
+  "logo": "V",
+  "about": "Rólam",
+  "projects": "Projektek",
+  "experience": "Tapasztalat",
+  "contact": "Kapcsolat"
+},
+"header": {
+  "resumeButton": "Önéletrajzom",
+  "linkedinAria": "Látogasd meg a LinkedIn profilomat",
+  "githubAria": "Látogasd meg a GitHub profilomat",
+  "languageSelector": "Nyelv módosítása",
+  "languages": {
+    "en": "Angol",
+    "sk": "Szlovák",
+    "hu": "Magyar"
+  }
+},
+"projectModal": {
+  "projectLinks": "Projekt Linkek",
+  "sourceCode": "Forráskód",
+  "liveProject": "Élő Projekt"
+},
+"projects": {
+  "sectionTitle": "Projektek",
+  "infoMapSK": {
+    "title": "InfoMapSK - Interaktív Demográfiai Adatvizualizáció",
+    "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
+    "description": "Egy full-stack webalkalmazás Szlovákia demográfiai adatainak vizualizálására, interaktív térképpel és különféle adat kategóriákkal. Mesterképzési szakdolgozatként fejlesztve.",
+    "modalContent": {
+      "para1": "Az InfoMapSK egy átfogó full-stack webalkalmazás, amely mesterképzési szakdolgozato projektem részeként készült. Interaktív platformot biztosít Szlovákia különböző közigazgatási szintjeinek demográfiai adatainak felfedezésére és vizualizálására.",
+      "keyFeatures": "Főbb jellemzők:",
+      "featuresList": "Interaktív térkép Szlovákiáról régió, járás és város/falu választási lehetőséggel | Demográfiai adatok vizualizálása különféle diagramtípusokkal | Több adat kategória: Népesség, Gazdasági tevékenység, Mezőgazdaság és Szervezeti statisztikák | Keresési funkció konkrét helyszínekhez | Reszponzív design különféle eszközökre optimalizálva | Akadálymentességi jellemzők a WCAG 2.1 irányelvek szerint | Kapcsolatfelvételi űrlap felhasználói visszajelzés és kérdések számára",
+      "para2": "Ez a projekt bemutatja a full-stack fejlesztésben szerzett jártasságot a MERN stack (MongoDB, Express.js, React, Node.js) használatával. A frontend Reacttel van felépítve és TailwindCSS-sel van formázva, míg a backend a Node.js, Express.js és MongoDB technológiákat alkalmazza.",
+      "technologiesList": "A fejlesztési folyamat során különféle technológiák és API-k integrálása történt, beleértve:",
+      "techList": "React-leaflet az interaktív térképezéshez | Recharts az adatok vizualizálásához | Formik és Yup az űrlapkezeléshez és érvényesítéshez | A Szlovák Köztársaság Statisztikai Hivatalának API-ja a demográfiai adatokért | Szlovákia Geoportálja a térinformatikai adatokért",
+      "para3": "Ez a projekt demonstrálja a képességemet, hogy komplex, adatvezérelt webalkalmazást tudok létrehozni, miközben betartom a Best-practices irányelvet a reszponzív tervezésben, akadálymentességben és a modern webfejlesztési technikákban. Bemutatja a frontend és backend fejlesztési készségeimet, valamint az adatok vizualizálását és külső API-k integrációját."
+    }
+  
+},
+"gardenBros": {
+  "title": "Garden Bros Weboldal",
+  "tech": "Next.js,Tailwind CSS,Strapi CMS,Vercel",
+  "description": "Egy többnyelvű weboldal egy kertészeti vállalat számára, amely Next.js-sel készült, Tailwind CSS-sel van formázva, és a Strapi CMS kezeli. Jellemzői a reszponzív design, dinamikus tartalomgenerálás és a Vercel-en való üzemeltetés.",
+  "modalContent": {
+    "para1": "A Garden Bros Weboldal Frontend egy többnyelvű platform egy kertészeti vállalat számára, hogy népszerűsítse szolgáltatásait és bemutassa munkáját. Next.js-sel készült, Tailwind CSS-sel van formázva, és a Strapi CMS kezeli, reszponzív és dinamikus felhasználói élményt kínál.",
+    "keyFeatures": "Főbb jellemzők:",
+    "featuresList": "Reszponzív főoldal dinamikus komponensekkel | Teljes értékű kapcsolatfelvételi oldal és GYIK szekció | Blog szerzői bejegyzésekkel | Többnyelvű támogatás (szlovák, magyar, angol) | Dinamikus oldal generálás | Tartalomkezelés a Strapi CMS-en keresztül",
+    "para2": "A projekt bemutatja képességeimet egy teljes funkcionalitású, többnyelvű weboldal létrehozásában modern webtechnológiák használatával. Bemutatja a frontend fejlesztési készségeket, a reszponzív design készítést a Tailwind CSS-sel, a CMS integrációt és az üzemeltetési stratégiákat.",
+    "para3": "A Tailwind CSS-t egy egyedi, reszponzív design létrehozására használtam, amely tökéletesen illeszkedik az ügyfél igényeihez. Ez az utility-first CSS keretrendszer gyors fejlesztést tett lehetővé egy egyedi és vizuálisan vonzó felület számára, miközben fenntartja a következetességet az oldalon.",
+    "para4": "A weboldal a Vercel-en van üzemeltetve, biztosítva a gyors betöltési időket és a megbízható teljesítményt. A Strapi CMS használata lehetővé teszi a könnyű tartalomkezelést és frissítéseket a kódbázis módosítása nélkül.",
+    "para5": "Ez a projekt kiemeli a készségemet skálázható, karbantartható és felhasználóbarát webalkalmazások létrehozásában, amelyek megfelelnek a konkrét üzleti igényeknek, miközben kiváló felhasználói élményt és vizuálisan lenyűgöző designt biztosítanak."
+  }
+},
         "portfolio": {
-          "title": "My First Portfolio",
-          "tech": "HTML5,CSS3,JavaScript,GSAP",
-          "description": "My initial web development portfolio showcasing early projects and skills, built with plain HTML, CSS, and JavaScript with GSAP for animations.",
-          "modalContent": {
-            "para1": "This portfolio is my first attempt at showcasing my web development skills and projects. It represents the beginning of my journey in web development and displays the various components and small projects I built while learning.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive design for various screen sizes | Animated elements using GSAP (GreenSock Animation Platform) | Showcase of beginner-level projects and components | Clean and simple user interface",
-            "para2": "This project demonstrates my foundational skills in front-end web development. It was built using semantic HTML5 markup, styled with CSS3, and enhanced with JavaScript for interactivity. GSAP was used to implement smooth animations, adding a dynamic feel to the portfolio.",
-            "para3": "The development process involved applying fundamental web development concepts and exploring animation techniques with GSAP. This portfolio served as a practical exercise in creating a responsive layout and organizing a showcase of multiple projects.",
-            "para4": "While this represents my early work, it laid the foundation for my growth as a web developer. Future improvements planned include adding more complex projects, enhancing the design, implementing advanced JavaScript functionality, and potentially integrating a backend for dynamic content."
-          }
-        },
+  "title": "Első Portfólióm",
+  "tech": "HTML5,CSS3,JavaScript,GSAP",
+  "description": "Első webfejlesztési portfólióm, amely bemutatja a kezdeti projektjeimet, egyszerű HTML, CSS és JavaScript segítségével illetve animációkhoz GSAP használatával.",
+  "modalContent": {
+    "para1": "Ez a portfólió az első próbálkozásom a webfejlesztési projektjeim bemutatására. A webfejlesztési utam kezdetét jelenti, és bemutatja azokat a különféle komponenseket és kisebb projekteket, amelyeket a tanulás során építettem.",
+    "keyFeatures": "Főbb jellemzők:",
+    "featuresList": "Reszponzív design különféle képernyőméretekhez | Animált elemek a GSAP (GreenSock Animation Platform) segítségével | Kezdő szintű projektek és komponensek bemutatása | Tiszta és egyszerű felhasználói felület",
+    "para2": "Ez a projekt bemutatja az alapvető képességeimet a front-end webfejlesztésben. Szemantikus HTML5 jelöléssel készült, CSS3-mal van formázva, és JavaScript segítségével van kiegészítve az interaktivitás érdekében. A GSAP-t használták a sima animációk megvalósítására, dinamikus érzést adva a portfóliónak.",
+    "para3": "A fejlesztési folyamat magában foglalta az alapvető webfejlesztési fogalmak alkalmazását és az animációs technikák felfedezését a GSAP segítségével. Ez a portfólió gyakorlatként szolgált egy reszponzív elrendezés létrehozására és több projekt bemutatására.",
+    "para4": "Noha ez a korai munkámat képviseli, megalapozta a növekedésemet, mint webfejlesztő. A jövőbeli fejlesztések között szerepel a bonyolultabb projektek hozzáadása, a design javítása, a fejlettebb JavaScript funkciók megvalósítása és esetlegesen egy backend integrálása a dinamikus tartalomhoz."
+  }
+},
         "scoot": {
-          "title": "Scoot Sharing Web App",
-          "tech": "Next.js,React,Tailwind CSS",
-          "description": "A responsive web app for a fictional scooter rental service, featuring multiple pages and a contact form. Built with Next.js and deployed on Vercel.",
-          "modalContent": {
-            "para1": "The Scoot Sharing Web App is a responsive web application that showcases a fictional scooter rental service. This project demonstrates proficiency in modern web development technologies and responsive design principles.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive design with a mobile-first approach | Five fully functional pages: Landing, About, FAQ, Locations, and Contact | Static map image on the Locations page | Fully functional contact form | Optimized for all screen resolutions",
-            "para2": "This project showcases my proficiency in Next.js and modern web development practices. It was built using Next.js, styled with Tailwind CSS, and enhanced with React for interactivity.",
-            "para3": "The development process involved implementing a multi-page application structure, creating responsive layouts, and integrating a functional contact form. I also focused on optimizing the site for various screen sizes and ensuring a consistent user experience across devices.",
-            "para4": "This project demonstrates my ability to create comprehensive, multi-page web applications while adhering to best practices in responsive design and modern web development techniques."
-          }
-        },
-        "alza": {
-          "title": "Alza Dni Kupónový Filter",
-          "tech": "JavaScript,Chrome Extension API,HTML,CSS",
-          "description": "A Chrome extension that helps users filter products during Alza Days sales by various coupon codes, making it easier to find the best discounts on Alza.sk.",
-          "modalContent": {
-            "para1": "Alza Dni Kupónový Filter is a useful tool for anyone shopping during Alza Days. This Chrome extension allows you to easily filter products by various coupon codes, helping you quickly find the best discounts on Alza.sk.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Filtering products by coupon codes (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Option to filter only currently displayed products or load all products | Simple and clear user interface | Quick filter removal with one click",
-            "para2": "The extension demonstrates my ability to create practical tools that enhance user experience on e-commerce platforms. It showcases skills in JavaScript, Chrome Extension API, and frontend development.",
-            "para3": "The project uses vanilla JavaScript to interact with the webpage DOM, filter products, and manage the extension's UI. The Chrome Extension API is utilized to create a browser action and handle background scripts.",
-            "para4": "This extension highlights my proficiency in creating solutions that address specific user needs, improving the shopping experience during promotional events. It also demonstrates my ability to work with browser APIs and create user-friendly interfaces for browser extensions.",
-            "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
-          }
-        },
-        "github": {
-          "title": "GitHub User Search App",
-          "tech": "HTML5,Tailwind CSS,JavaScript,GSAP,Axios",
-          "description": "A responsive web app that allows users to search for GitHub profiles, view user information, and switch between light and dark themes. Built as a solution to a Frontend Mentor challenge.",
-          "modalContent": {
-            "para1": "The GitHub User Search App is a responsive web application that enables users to search for GitHub profiles and view relevant user information. This project was developed as a solution to a Frontend Mentor challenge, demonstrating skills in frontend development and API integration.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive layout optimized for various screen sizes | GitHub user search functionality using the GitHub API | Display of relevant user information based on the search | Light and dark theme switching | Automatic theme selection based on user's system preferences | Interactive elements with hover states",
-            "para2": "This project showcases my proficiency in modern web development technologies and practices. It was built using semantic HTML5 markup, styled with Tailwind CSS, and enhanced with JavaScript for interactivity. The GitHub API integration was handled using Axios, and animations were implemented with GSAP.",
-            "para3": "The development process involved learning and applying new concepts such as working with APIs, implementing dark/light themes, and using Tailwind CSS for the first time. I also incorporated error handling for API requests and used JavaScript modules to organize the codebase.",
-            "para4": "This project demonstrates my ability to create functional, visually appealing web applications while adhering to modern development practices and continuously learning new technologies."
-          }
-        }
-      }
+  "title": "Robogó Megosztó Webalkalmazás",
+  "tech": "Next.js,React,Tailwind CSS",
+  "description": "Egy reszponzív webalkalmazás egy fiktív robogóbérlési szolgáltatáshoz, több oldallal és egy kapcsolatfelvételi űrlappal. Next.js-sel készült és a Vercel-en van üzemeltetve.",
+  "modalContent": {
+    "para1": "A Scoot Megosztó Webalkalmazás egy reszponzív webalkalmazás, amely egy fiktív robogóbérlési szolgáltatást mutat be. Ez a projekt bemutatja a modern webfejlesztési technológiák és a reszponzív design elvek ismeretét.",
+    "keyFeatures": "Főbb jellemzők:",
+    "featuresList": "Reszponzív design Mobile-first megközelítéssel | Öt teljesen működő oldal: Kezdőlap, Egyéb információk, GYIK, Helyszínek és Kapcsolat | Statikus térkép a Helyszínek oldalon | Teljes funkcionalitású kapcsolatfelvételi űrlap | Optimalizálva minden képernyőfelbontáshoz",
+    "para2": "Ez a projekt bemutatja a Next.js és a modern webfejlesztési gyakorlatok ismeretét. Next.js-sel készült, Tailwind CSS-sel van formázva",
+    "para3": "A fejlesztési folyamat magában foglalta a többoldalas alkalmazás struktúrájának megvalósítását, reszponzív elrendezések létrehozását és egy működő kapcsolatfelvételi űrlap integrálását. Emellett a weboldal optimalizálására is figyeltem különböző képernyőméretekhez, és a felhasználói élmény következetességére az eszközök között.",
+    "para4": "Ez a projekt bemutatja a képességemet átfogó, többoldalas webalkalmazások létrehozására, miközben betartom a legjobb gyakorlatokat a reszponzív design és a modern webfejlesztési technikák terén."
+  }
+},
+"alza": {
+  "title": "Alza Dni Kupónkód Szűrő",
+  "tech": "JavaScript,Chrome Extension API,HTML,CSS",
+  "description": "Egy Chrome kiterjesztés, amely segít a felhasználóknak szűrni a termékeket Alza Days akciók alatt különböző kuponkódok alapján, megkönnyítve a legjobb kedvezmények megtalálását az Alza.sk oldalon.",
+  "modalContent": {
+    "para1": "Az Alza Dni Kupónkód Szűrő egy hasznos eszköz mindenki számára, aki Alza Days alatt vásárol. Ez a Chrome kiterjesztés lehetővé teszi, hogy könnyedén szűrjük a termékeket különböző kuponkódok alapján, segítve, hogy gyorsan megtaláljuk a legjobb kedvezményeket az Alza.sk-n.",
+    "keyFeatures": "Főbb jellemzők:",
+    "featuresList": "Termékek szűrése kuponkódok alapján (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Lehetőség csak a jelenleg megjelenített termékek szűrésére vagy az összes termék betöltésére | Egyszerű és világos felhasználói felület | Szűrő eltávolítás egy kattintással",
+    "para2": "A kiterjesztés bemutatja a gyakorlati eszközök létrehozására való képességemet, amelyek javítják a felhasználói élményt az e-kereskedelmi platformokon. Képességeimet JavaScript, Chrome Extension API és frontend fejlesztés terén mutatja be.",
+    "para3": "A projekt vanilla JavaScript-et használ az oldal DOM-jával való interakcióhoz, a termékek szűréséhez és a kiterjesztés UI-jának kezeléséhez. A Chrome Extension API-t a böngésző akció létrehozásához és a háttérszkriptek kezeléséhez használtam.",
+    "para4": "Ez a kiterjesztés kiemeli a képességemet olyan megoldások létrehozására, amelyek kielégítik a konkrét felhasználói igényeket, javítva a vásárlási élményt promóciós események alatt. Ezenkívül bemutatja a böngésző API-kal való munkavégzést és a felhasználóbarát felületek létrehozását a böngésző kiterjesztésekhez.",
+    "para5": "A projekt nyílt forráskódú, és lehetőséget ad a fejlesztői közösség hozzájárulására, ami bemutatja az elkötelezettségemet az együttműködő fejlesztés és a szoftverprojektek folyamatos fejlesztése iránt."
+  }
+},
+"github": {
+  "title": "GitHub Felhasználó Kereső Alkalmazás",
+  "tech": "HTML5,Tailwind CSS,JavaScript,GSAP,Axios",
+  "description": "Egy reszponzív webalkalmazás, amely lehetővé teszi a felhasználók számára, hogy GitHub profilokat keressenek, megtekintsék a felhasználói információkat, és váltsanak a világos és sötét téma között. A Frontend Mentor kihívásának megoldásaként készült.",
+  "modalContent": {
+    "para1": "A GitHub Felhasználó Kereső Alkalmazás egy reszponzív webalkalmazás, amely lehetővé teszi a felhasználók számára, hogy GitHub profilokat keressenek és megtekinthessék a releváns felhasználói információkat. Ez a projekt a Frontend Mentor kihívásának megoldásaként készült, bemutatva a frontend fejlesztési és API integrációs készségeket.",
+    "keyFeatures": "Főbb jellemzők:",
+    "featuresList": "Reszponzív elrendezés, amely különböző képernyőméretekhez optimalizált | GitHub felhasználó keresési funkció a GitHub API használatával | Releváns felhasználói információk megjelenítése a keresés alapján | Világos és sötét téma váltás | Automatikus téma választás a felhasználó rendszerbeállításai alapján | Interaktív elemek lebegő állapotokkal",
+    "para2": "Ez a projekt bemutatja a modern webfejlesztési technológiák és gyakorlatok ismeretét. Szemantikus HTML5 jelöléssel készült, Tailwind CSS-sel van formázva, és JavaScript-tel van kiegészítve az interaktivitás érdekében. A GitHub API integrációját Axios-szal kezeltük, az animációk pedig GSAP-pal lettek megvalósítva.",
+    "para3": "A fejlesztési folyamat során új koncepciók, például API-k használata, világos/sötét témák implementálása és a Tailwind CSS használata voltak az elsődleges tanulmányi területek. Emellett hibakezelést is beépítettem az API kérésekhez, és JavaScript modulokat használtam a kód alap struktúrájának megszervezésére.",
+    "para4": "Ez a projekt bemutatja a képességemet működő, vizuálisan vonzó webalkalmazások létrehozására, miközben betartom a modern fejlesztési gyakorlatokat és folyamatosan tanulok új technológiákat."
+  }
+}
+}
   }

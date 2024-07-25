@@ -19,6 +19,17 @@ export const Header: React.FC = () => {
     setOpen(false);
   };
 
+  const getCVUrl = (locale: string) => {
+    switch (locale) {
+      case 'sk':
+        return "/Varju-CV-SK.pdf";
+      case 'hu':
+        return "/Varju-CV-HU.pdf";
+      default:
+        return "/Varju-CV-EN.pdf";
+    }
+  };
+
   return (
     <header className="h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">
       <MyLinks />
@@ -45,7 +56,7 @@ export const Header: React.FC = () => {
             <Option setOpen={setOpen} text={t('languages.hu')} onClick={() => changeLocale('hu')} />
           </motion.ul>
         </motion.div>
-        <OutlineButton onClick={() => window.open("/Varju-CV-EN.pdf")}>
+        <OutlineButton onClick={() => window.open(getCVUrl(router.locale || 'en'))}>
           {t('resumeButton')}
         </OutlineButton>
       </div>
