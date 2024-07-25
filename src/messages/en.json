@@ -2,10 +2,10 @@
     "About": {
       "title": "About",
       "firstLetter": "H",
-      "intro": "Hey there! I'm Zsolt Varjú, a passionate web enthusiast from Čierna Voda, Slovakia. I started my journey as a Remote Web Page Tester, working closely with frontend developers, which sparked my love for frontend development. Armed with a master's degree from Constantine the Philosopher University in Nitra, I am now diving into the world of React and Next.js, ready to bring design files to life with seamless functionality and exceptional user experiences.",
+      "intro": "Hey there! I'm Zsolt Varjú, a passionate web enthusiast from Čierna Voda, Slovakia. I started my journey as a Web Page Tester, working closely with frontend developers, which sparked my love for frontend development. Armed with a master's degree from Constantine the Philosopher University in Nitra, I am now diving into the world of React, Next.js and headless CMSs, ready to bring design files to life with seamless functionality and exceptional user experiences.",
       "currentWork": "Currently, I work as a web tester, but I am transitioning into a frontend developer role. Outside of web development, you'll often find me running, skiing, or exploring 3D printing and tinkering with microPCs like Arduino. I also enjoy 3D modeling whenever I get the chance.",
       "jobSearch": "I'm on the lookout for a frontend developer position where I can merge my skills and passion for creating stunning web designs.",
-      "quote": "As {author} wisely said, \"Luck is when preparation meets opportunity\" and I feel prepared, just waiting for the right opportunity to come along.",
+      "quote": "As {author} wisely said, \"Luck is when preparation meets opportunity\" and I feel prepared, just waiting for the right opportunity to come along. ",
       "connect": "If you think we might be a good fit, let's connect! 🔗",
       "myLinks": "My links"
     },
@@ -48,7 +48,7 @@
         ]
       },
       "myLanguages": {
-        "title": "My Languages",
+        "title": "Languages",
         "chips": [
           "Hungarian - mother language",
           "Slovak",
@@ -58,7 +58,7 @@
     },
     "Contact": {
         "title": "Contact",
-        "message": "Shoot me an email if you want to connect! You can also find me on",
+        "message": "Shoot me an email if you want to connect! You can also find me on ",
         "linkedin": "Linkedin",
         "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
         "or": "or",
@@ -110,6 +110,7 @@
         ]
       },
       "hero": {
+        "clickMe": "Click here!",
         "greeting": "Hi, I'm Zsolt",
         "title": "I'm a",
         "profession": "Web Developer",

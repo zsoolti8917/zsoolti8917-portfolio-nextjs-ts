@@ -2,10 +2,10 @@
 
     "About": {
   "title": "Rólam",
-  "firstLetter": "H",
-  "intro": "eló! a teljes nevem Varjú Zsolt, egy lelkes webfejlesztő a szlovákiai Feketenyékről. Az utam QA tesztelőként kezdődött, szorosan együttműködve frontend fejlesztőkkel, ami felébresztette a szenvedélyemet a webfejlesztés iránt. A nyitrai Konstantin Filozófus Egyetemen szerzett mesterdiplomával a MERN-stack és a Next.js világába merültem, készen arra, hogy a tervezési fájlokat életre keltsem zökkenőmentes funkcionalitással és kivételes felhasználói élményekkel.",
-  "currentWork": "Jelenleg webtesztelőként dolgozom, de frontend fejlesztői szerepbne szeretnék elhelyezkedni. A webfejlesztésen kívül gyakran találhatsz futás, síelés, 3D nyomtatás felfedezése közben, vagy épp microPC-k, mint például az Arduino babrálása közben. Emellett a 3D modellezést is élvezem, amikor csak lehetőségem adódik rá.",
-  "jobSearch": "Olyan frontend fejlesztői pozíciót keresek, ahol össze tudom kapcsolni készségeimet és szenvedélyemet lenyűgöző weboldalak készítésére.",
+  "firstLetter": "Ü",
+  "intro": "dv! Varjú Zsolt vagyok, egy lelkes webfejlesztő Szlovákia Feketenyék városából. Az utam QA tesztelőként indult, ahol szoros együttműködésben dolgoztam frontend fejlesztőkkel. Ez a tapasztalat ébresztette fel a webfejlesztés iránti szenvedélyemet. A nyitrai Konstantin Filozófus Egyetemen szerzett mesterdiplomám után a MERN-stack és a Next.js technológiák világában merültem el, hogy életre keltsem a dizájnokat, kiváló funkcionalitást és felhasználói élményeket nyújtva.",
+  "currentWork": "Webtesztelőként dolgozom, de szeretnék frontend fejlesztőként elhelyezkedni. Szabadidőmben gyakran futok, síelek, a 3D nyomtatás rejtelmeit kutatom, vagy az Arduino és Raspberry Pi nyílt forráskódú platformokat használom elektronikai projekthez. A 3D modellezés is nagy örömet okoz, amikor csak alkalmam nyílik rá.",
+  "jobSearch": "Célom, hogy egy olyan frontend fejlesztői pozícióban dolgozhassak, ahol a készségeimet és szenvedélyemet izgalmas weboldalak megalkotására fordíthatom.",
   "quote": "Ahogy Seneca bölcsen mondta: „A szerencse akkor jön el, amikor a felkészültség találkozik a lehetőséggel”, és felkészültnek érzem magam, csak a megfelelő lehetőségre várok.",
   "connect": "Ha úgy gondolod, hogy jól összeillünk, csatlakozzunk! 🔗",
   "myLinks": "Elérhetőségeim"
@@ -32,7 +32,7 @@
       "Postman",
       "REST Api"
     ]
-  }
+  
 },
  "triedOut": {
   "title": "Kipróbált / tanulmányok során használt technológiák",
@@ -56,10 +56,11 @@
     "Szlovák - folyékony",
     "Angol - folyékony"
   ]
+}
 },
     "Contact": {
   "title": "Elérhetőség",
-  "message": "Küldj egy e-mailt, ha kapcsolatba szeretnél lépni! Továbbá megtalálsz a",
+  "message": "Küldj egy e-mailt, ha kapcsolatba szeretnél lépni! Továbbá megtalálsz a ",
   "linkedin": "Linkedin",
   "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
   "or": "vagy",
@@ -106,16 +107,16 @@
   "JavaScript",
   "Keresztböngészős tesztelés",
   "Önálló döntéshozatal",
-  "Távoli együttműködés",
   "Időgazdálkodás",
   "Reszponzív design"
 ]
 },
 "hero": {
+  "clickMe": "Kattints ide!",
   "greeting": "Üdv, a nevem Zsolt",
-  "title": "Szenvedélyes",
+  "title": "Junior",
   "profession": "Webfejlesztő",
-  "description": "Nemrég fejeztem be a mesterdiplomámat alkalmazott informatikából, és most Junior webfejlesztőkén keresek munkahelyet, aki jártas a Headless CMS-ben és a Next.js-ben. Nagyon alkalmazkodó vagyok, és szívesen dolgozom különféle technológiákkal. Csatlakozzunk!",
+  "description": "Alkalmazott informatika mesterképzéssel a hátam mögött keresek Junior webfejlesztői lehetőségeket. Tapasztalattal rendelkezem a Headless CMS-ek és a React framework (Next.js) terén. Könnyen alkalmazkodom, és szeretek új technológiákkal dolgozni. Lépjünk kapcsolatba!",
   "buttonText": "Kapcsolatfelvétel"
 },
 "sidebar": {

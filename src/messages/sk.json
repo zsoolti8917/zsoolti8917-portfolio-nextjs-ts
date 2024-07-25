@@ -5,11 +5,11 @@
     "About": {
   "title": "Informácie o mne",
   "firstLetter": "A",
-  "intro": "hoj! Som Zsolt Varjú, webdeveloper z Čiernej Vody. Svoju kariéru som začal ako tester webových stránok, úzko spolupracujúci s frontendovými vývojármi, čo vzbudilo moju lásku k frontendovému vývoju. S magisterským titulom z Univerzity Konštantína Filozofa v Nitre teraz vstupujem do sveta Reactu a Next.js, pripravený oživiť dizajnové súbory s bezproblémovou funkčnosťou a výnimočnými používateľskými skúsenosťami.",
-  "currentWork": "Momentálne pracujem ako webový tester, ale prechádzam do úlohy frontendového vývojára. Mimo webového vývoja ma často nájdete bežať, lyžovať alebo skúmať 3D tlač a hrať sa s mikroPC ako Arduino. Takisto si užívam 3D modelovanie, kedykoľvek mám príležitosť.",
-  "jobSearch": "Hľadám pozíciu frontendového vývojára, kde môžem spojiť svoje zručnosti a vášeň pre tvorbu ohromujúcich webových dizajnov.",
-  "quote": "Ako {author} múdro povedal: \"Šťastie je, keď sa príprava stretne s príležitosťou\" a cítim sa pripravený, len čakám na správnu príležitosť, ktorá sa objaví.",
-  "connect": "Ak si myslíte, že by sme si mohli rozumieť, spojme sa! 🔗",
+  "intro": "hojte! Volám sa Zsolt Varjú a som Junior Webdeveloper z Čiernej Vody. Svoju kariéru som začal ako QA tester, kde som úzko spolupracoval s frontendovými vývojármi. Táto skúsenosť ma nasmerovala k webovému vývoju. Po získaní magisterského titulu na Univerzite Konštantína Filozofa v Nitre som sa ponoril do technológií MERN-stack, Next.js a Headless CMS, aby som dizajny oživil s vynikajúcou funkčnosťou a používateľskými skúsenosťami.",
+  "currentWork": "Momentálne pracujem ako QA web tester, no plánujem prechod na pozíciu frontendového vývojára. Vo voľnom čase sa často venujem behaniu, lyžovaniu, vytváraniu 3D tlače z mojich návrhov a práci s otvorenými platformami ako Arduino a Raspberry Pi pri elektronických projektoch. 3D modelovanie mi tiež prináša veľkú radosť, kedykoľvek mám šancu.",
+  "jobSearch": "Hľadám pozíciu frontendového vývojára, kde môžem kombinovať svoje zručnosti a záujem o vytváranie funkčných a atraktívnych webových stránok.",
+  "quote": "Ako Seneca raz povedal: \"Šťastie je, keď sa príprava stretne s príležitosťou\" a cítim sa pripravený, len čakám na správnu príležitosť.",
+  "connect": "Ak si myslíte, že by sme mohli byť dobrý tím, spojme sa! 🔗",
   "myLinks": "Moje odkazy"
 },
 "Stats": {
@@ -51,7 +51,7 @@
     ]
   },
   "myLanguages": {
-    "title": "Moje jazyky",
+    "title": "Jazykové znalosti",
     "chips": [
       "Maďarčina - materinský jazyk",
       "Slovenčina",
@@ -61,45 +61,45 @@
 },
     "Contact": {
   "title": "Kontakt",
-  "message": "Napíšte mi e-mail, ak sa chcete spojiť! Nájdete ma aj na",
+  "message": "Napíšte mi e-mail, ak sa chcete spojiť! Nájdete ma aj na platformách ",
   "linkedin": "LinkedIn",
   "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
-  "or": "alebo",
+  "or": "alebo na",
   "github": "GitHub",
   "githubUrl": "https://github.com/zsoolti8917",
-  "moreYourSpeed": "ak je to pre vás pohodlnejšie.",
+  "moreYourSpeed": "",
   "email": "zsolt.varju.rl@gmail.com"
 },
 "experience": {
   "title": "Pracovné skúsenosti",
   "companyName": "Galileo Corporation s.r.o",
   "dates": "2022 - Súčasnosť",
-  "jobTitle": "Tester kvality",
+  "jobTitle": " Tester kvality (Quality Assurance Tester)",
   "location": "Remote",
   "responsibilities": [
     {
       "title": "Testovanie funkčnosti:",
-      "description": "Vykonávanie dôkladného manuálneho testovania webových stránok, aby sa overilo, že všetky funkcie fungujú správne v rôznych prehliadačoch a zariadeniach. Rýchle identifikovanie a hlásenie nezrovnalostí alebo chýb."
+      "description": " Vykonávať dôkladné manuálne testovanie webových stránok na overenie správnej funkčnosti všetkých funkcií v rôznych prehliadačoch a zariadeniach. Identifikovať akékoľvek nezrovnalosti alebo chyby a okamžite ich nahlásiť."
     },
     {
-      "title": "Vizualná konzistencia:",
-      "description": "Hodnotenie vizuálneho vzhľadu webových stránok, aby sa zabezpečilo, že zodpovedajú poskytnutým grafickým dizajnovým špecifikáciám. Komunikovanie odchýlok relevantným členom tímu a poskytovanie podrobných spätných väzieb na potrebné opravy."
+      "title": " Vizuálna konzistentnosť:",
+      "description": "Posudzovať vizuálny vzhľad webových stránok, aby sa zabezpečilo, že zodpovedajú poskytnutým grafickým návrhovým špecifikáciám. Komunikovať akékoľvek odchýlky príslušným členom tímu a poskytnúť podrobné pripomienky k potrebným úpravám."
     },
     {
-      "title": "Kvalitná kontrola:",
-      "description": "Udržiavanie vysokých štandardov kvality dôkladným testovaním webových stránok a zabezpečenie, že spĺňajú požadované špecifikácie a očakávania používateľov."
+      "title": "Zabezpečenie kvality:",
+      "description": "Udržiavať vysoké štandardy kvality dôkladným testovaním väčšiny webových stránok na Slovensku. Zabezpečiť, aby všetky webové stránky spĺňali požadované špecifikácie a očakávania používateľov."
     },
     {
       "title": "Komunikácia:",
-      "description": "Efektívna spolupráca s dizajnérmi, vývojármi a projektovými manažérmi na riešení problémov zistených počas testovania a ponúkanie návrhov na vylepšenia a objasnenia."
+      "description": "Efektívne spolupracovať s dizajnérmi, developermi a projektovými manažérmi na riešení akýchkoľvek problémov zistených počas testovania. Ponúkať návrhy na zlepšenia a objasnenia, keď je to potrebné."
     },
     {
-      "title": "Práca na diaľku:",
-      "description": "Samostatné riadenie všetkých úloh pri dodržiavaní prísnych termínov a využívaní efektívnych zručností riadenia času na dokončenie úloh efektívne a presne."
+      "title": "Home Office:",
+      "description": "Samostatne riadiť všetky úlohy pri dodržiavaní prísnych termínov. Využívať efektívne zručnosti v riadení času na dokončenie testovacích úloh efektívne a presne."
     },
     {
       "title": "Dokumentácia:",
-      "description": "Udržiavanie podrobných záznamov o výsledkoch testovania, identifikovaných problémoch a vykonaných nápravných opatreniach, a poskytovanie komplexných správ relevantným zainteresovaným stranám."
+      "description": "Viesť podrobné záznamy o výsledkoch testovania, zistených problémoch a prijatých nápravných opatreniach. Poskytovať komplexné správy relevantným zainteresovaným stranám."
     }
   ],
   "skills": [
@@ -109,14 +109,15 @@
     "Testovanie v rôznych prehliadačoch",
     "Sledovanie chýb",
     "Spolupráca na diaľku",
-    "Riadenie času"
+    "Time management"
   ]
 },
      "hero": {
+      "clickMe": "Kliknite sem!",
   "greeting": "Ahoj, som Zsolt",
   "title": "Som",
-  "profession": "Webový vývojár",
-  "description": "Nedávno som ukončil magisterské štúdium v odbore Aplikovaná informatika a teraz pracujem ako webový vývojár so zameraním na Headless CMS a Next.js. Som tiež veľmi prispôsobivý a túžim pracovať s rôznymi technológiami. Spojme sa!",
+  "profession": "Web Developer",
+  "description": "Po ukončení magisterského štúdia v odbore Aplikovaná informatika hľadám príležitosti na pozíciu Junior webového vývojára. Mám skúsenosti s Headless CMS a frameworkom React (Next.js). Som veľmi prispôsobivý a rád pracujem s novými technológiami. Spojme sa!",
   "buttonText": "Kontaktujte ma"
 },
 "sidebar": {
@@ -145,7 +146,7 @@
       "projects": {
         "sectionTitle": "Projekty",
         "infoMapSK": {
-  "title": "InfoMapSK - Interaktívna vizualizácia demografických údajov",
+  "title": "InfoMapSK - Interaktívna vizualizácia demografických údajov na Slovensku",
   "tech": "React, Node.js, Express, MongoDB, TailwindCSS",
   "description": "Full-stack webová aplikácia na vizualizáciu demografických údajov Slovenska, obsahujúca interaktívnu mapu a rôzne kategórie údajov. Vyvinutá ako projekt diplomovej práce.",
   "modalContent": {
@@ -159,11 +160,11 @@
   }
 },
 "gardenBros": {
-  "title": "Frontend webovej stránky Garden Bros",
+  "title": "Webová stránka Garden Bros",
   "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel",
   "description": "Viacjazyčná webová stránka pre spoločnosť zaoberajúcu sa záhradníctvom, postavená na Next.js, štýlovaná pomocou Tailwind CSS a spravovaná cez Strapi CMS. Obsahuje responzívny dizajn, dynamické generovanie obsahu a nasadenie na Vercel.",
   "modalContent": {
-    "para1": "Frontend webovej stránky Garden Bros je viacjazyčná platforma pre spoločnosť zaoberajúcu sa záhradníctvom, ktorá má za cieľ propagovať svoje služby a predviesť svoju prácu. Postavená na Next.js, štýlovaná pomocou Tailwind CSS a spravovaná cez Strapi CMS, poskytuje responzívny a dynamický užívateľský zážitok.",
+    "para1": "Webová stránka Garden Bros je viacjazyčná platforma pre spoločnosť zaoberajúcu sa záhradníctvom, ktorá má za cieľ propagovať svoje služby a predviesť svoju prácu. Postavená na Next.js, štýlovaná pomocou Tailwind CSS a spravovaná cez Strapi CMS, poskytuje responzívny a dynamický užívateľský zážitok.",
     "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
     "featuresList": "Responzívna hlavná stránka s dynamickými komponentami | Kompletná kontaktná stránka a sekcia FAQ | Blog s príspevkami od autorov | Viacjazyčná podpora (slovenčina, maďarčina, angličtina) | Dynamické generovanie stránok | Správa obsahu cez Strapi CMS",
     "para2": "Projekt predvádza moju schopnosť vytvoriť plne vybavenú, viacjazyčnú webovú stránku s použitím moderných webových technológií. Demonštruje zručnosti v oblasti frontendového vývoja, responzívneho dizajnu s Tailwind CSS, integrácie CMS a stratégií nasadenia.",
@@ -175,7 +176,7 @@
 "portfolio": {
   "title": "Môj prvý portfólio",
   "tech": "HTML5, CSS3, JavaScript, GSAP",
-  "description": "Môj prvý webový vývojový portfólio ukazujúci začiatky projektov a zručností, postavený s použitím čistého HTML, CSS a JavaScriptu s GSAP pre animácie.",
+  "description": "Môj prvý portfólio ukazujúci začiatky projektov a zručností, postavený s použitím čistého HTML, CSS a JavaScriptu s GSAP pre animácie.",
   "modalContent": {
     "para1": "Toto portfólio je môj prvý pokus o ukázanie mojich zručností a projektov v oblasti webového vývoja. Predstavuje začiatok mojej cesty v webovom vývoji a zobrazuje rôzne komponenty a malé projekty, ktoré som vytvoril počas učenia.",
     "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
@@ -215,11 +216,11 @@
 "github": {
   "title": "GitHub User Search App",
   "tech": "HTML5, Tailwind CSS, JavaScript, GSAP, Axios",
-  "description": "Reaktívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily, zobraziť informácie o používateľoch a prepínať medzi svetlými a tmavými témami. Vyvinuté ako riešenie výzvy od Frontend Mentor.",
+  "description": "responzívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily, zobraziť informácie o používateľoch a prepínať medzi svetlými a tmavými témami. Vyvinuté ako riešenie výzvy od Frontend Mentor.",
   "modalContent": {
-    "para1": "GitHub User Search App je reaktívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily a zobrazovať relevantné informácie o používateľoch. Tento projekt bol vyvinutý ako riešenie výzvy od Frontend Mentor, čo demonštruje zručnosti v frontendovom vývoji a integrácii API.",
+    "para1": "GitHub User Search App je responzívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily a zobrazovať relevantné informácie o používateľoch. Tento projekt bol vyvinutý ako riešenie výzvy od Frontend Mentor, čo demonštruje zručnosti v frontendovom vývoji a integrácii API.",
     "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Reaktívny dizajn optimalizovaný pre rôzne veľkosti obrazoviek | Funkcionalita vyhľadávania GitHub používateľov pomocou GitHub API | Zobrazenie relevantných informácií o používateľoch na základe vyhľadávania | Prepínanie medzi svetlými a tmavými témami | Automatický výber témy na základe preferencií používateľského systému | Interaktívne prvky s hover stavmi",
+    "featuresList": "Responzívny dizajn optimalizovaný pre rôzne veľkosti obrazoviek | Funkcionalita vyhľadávania GitHub používateľov pomocou GitHub API | Zobrazenie relevantných informácií o používateľoch na základe vyhľadávania | Prepínanie medzi svetlými a tmavými témami | Automatický výber témy na základe preferencií používateľského systému | Interaktívne prvky s hover stavmi",
     "para2": "Tento projekt ukazuje moju zručnosť v moderných webových technológiach a praktikách. Bol vyvinutý s použitím semantického HTML5 značkovania, štýlovaný pomocou Tailwind CSS a obohatený o JavaScript pre interaktivitu. Integrácia GitHub API bola riešená pomocou Axios a animácie boli implementované pomocou GSAP.",
     "para3": "Vývojový proces zahŕňal učenie sa a aplikovanie nových konceptov, ako je práca s API, implementácia tmavých/svetlých tém a používanie Tailwind CSS po prvýkrát. Taktiež som zahrnul spracovanie chýb pri API požiadavkách a použil JavaScript moduly na organizáciu kódu.",
     "para4": "Tento projekt demonštruje moju schopnosť vytvárať funkčné a vizuálne príťažlivé webové aplikácie pri dodržiavaní moderných vývojových praktík a neustálom učení sa nových technológií."

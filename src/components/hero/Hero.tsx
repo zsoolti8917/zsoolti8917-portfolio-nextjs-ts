@@ -1,11 +1,25 @@
+import React, { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
+import anime from 'animejs';
 import Reveal from "../util/Reveal";
 import DotGrid from "./DotGrid";
 import { OutlineButton } from "../buttons/OutlineButton";
-import MouseMove from './MouseMove';
 
 const Hero = () => {
   const t = useTranslations('hero');
+  const pulsateRef = useRef(null);
+
+  useEffect(() => {
+    anime({
+      targets: pulsateRef.current,
+      scale: [1, 1.1],
+      opacity: [0.5, 1],
+      duration: 1000,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutQuad'
+    });
+  }, []);
 
   return (
     <section className="text-slate-100 overflow-hidden py-24 md:py-32">
@@ -41,6 +55,13 @@ const Hero = () => {
           </Reveal>
         </div>
         <DotGrid />
+        
+        <div className="absolute -top-[90px] left-[260px] hidden lg:flex items-center transform rotate-[30deg] z-20">
+          <span ref={pulsateRef} className="mr-2 text-sm font-bold text-white whitespace-nowrap">{t('clickMe')}</span>
+          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </div>
       </div>
     </section>
   );

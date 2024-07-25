@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">
+    <header className="h-[72px]  px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">
       <MyLinks />
       <div className="flex items-center gap-4">
         <motion.div animate={open ? "open" : "closed"} className="relative">

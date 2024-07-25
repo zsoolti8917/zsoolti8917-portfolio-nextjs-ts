@@ -19,15 +19,31 @@ export const SideBarLink = ({
   href,
   value,
 }: Props) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setSelected(value);
+    
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      const headerHeight = 72; // Adjust this value to match your header height
+      const offset = 20; // Additional offset to ensure the title is fully visible
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <MotionLink
       initial={{ x: -70 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
       href={href}
-      onClick={() => {
-        setSelected(value);
-      }}
+      onClick={handleClick}
       className={`writing-vertical h-24 shrink-0 flex items-center justify-center border-r-2 text-sm transition-all w-full ${
         selected === value
           ? "bg-zinc-800 border-indigo-500 text-indigo-300"

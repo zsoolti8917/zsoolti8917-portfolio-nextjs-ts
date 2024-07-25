@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SideBarLink } from "./SideBarLink";
 import { useTranslations } from 'next-intl';
-
+import { scrollToTop } from "../ScrollToTopButton";
 export const SideBar = () => {
   const [selected, setSelected] = useState("");
   const t = useTranslations('sidebar');
@@ -41,9 +41,12 @@ export const SideBar = () => {
       initial={{ x: -70 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-zinc-950 h-screen sticky top-0 left-0 z-20 flex flex-col items-center w-[70px] overflow-hidden"
+      className="bg-zinc-950 h-screen sticky top-0 left-0 z-20 flex flex-col items-center   overflow-hidden"
     >
-      <span className=" w-full shrink-0 text-xl font-black leading-[1] h-10 flex items-center justify-center my-4">
+      <span 
+      className=" w-full shrink-0 text-xl font-black leading-[1] h-10 flex items-center justify-center my-4 cursor-pointer"
+      onClick={scrollToTop}
+      >
         {t('logo')}<span className="text-indigo-500">.</span>
       </span>
       <div className="flex flex-col items-center w-full overflow-y-auto scrollbar-hide">

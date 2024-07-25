@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 import { motion, Variants } from 'framer-motion';
 
+export const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
 const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 

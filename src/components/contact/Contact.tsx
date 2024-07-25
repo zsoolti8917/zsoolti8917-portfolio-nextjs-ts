@@ -10,7 +10,7 @@ export const Contact = () => {
     <section className="section-wrapper" id="contact">
       <div className="max-w-xl mx-auto bg-zinc-800 px-8 py-12 rounded-xl">
         <Reveal width="w-full">
-          <h4 className="text-4xl md:text-5xl text-center font-black">
+          <h4 className="text-4xl md:text-5xl text-center font-black leading-tight pb-2">
             {t('title')}<span className="text-indigo-500">.</span>
           </h4>
         </Reveal>
