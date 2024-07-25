@@ -1,5 +1,7 @@
 {
-
+"Home":{
+      "title": "Home"
+    },
     "About": {
   "title": "Rólam",
   "firstLetter": "Ü",
@@ -113,7 +115,7 @@
 },
 "hero": {
   "clickMe": "Kattints ide!",
-  "greeting": "Üdv, a nevem Zsolt",
+  "greeting": "Helló, Zsolt vagyok",
   "title": "Junior",
   "profession": "Webfejlesztő",
   "description": "Alkalmazott informatika mesterképzéssel a hátam mögött keresek Junior webfejlesztői lehetőségeket. Tapasztalattal rendelkezem a Headless CMS-ek és a React framework (Next.js) terén. Könnyen alkalmazkodom, és szeretek új technológiákkal dolgozni. Lépjünk kapcsolatba!",
