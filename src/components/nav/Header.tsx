@@ -46,11 +46,12 @@ export const Header: React.FC = () => {
             </motion.span>
           </button>
           <motion.ul
-            initial={wrapperVariants.closed}
-            variants={wrapperVariants}
-            style={{ originY: "top", translateX: "-50%" }}
-            className="flex flex-col gap-2 p-2 rounded-lg bg-zinc-800 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
-          >
+  initial="closed"
+  variants={wrapperVariants}
+  animate={open ? "open" : "closed"}
+  style={{ originY: "top", translateX: "-50%" }}
+  className="flex flex-col gap-2 p-2 rounded-lg bg-zinc-800 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
+>
             <Option setOpen={setOpen} text={t('languages.en')} onClick={() => changeLocale('en')} />
             <Option setOpen={setOpen} text={t('languages.sk')} onClick={() => changeLocale('sk')} />
             <Option setOpen={setOpen} text={t('languages.hu')} onClick={() => changeLocale('hu')} />
