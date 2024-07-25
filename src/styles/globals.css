@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+
+/* Define the background and track color in hex format */
+:root {
+  --scrollbar-bg: #1c1b1f; /* Equivalent to bg-zinc-900 in Tailwind CSS */
+  --scrollbar-thumb: #4b5563; /* Equivalent to bg-zinc-700 in Tailwind CSS */
+}
+
+/* Custom scrollbar styling for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg); /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); /* Color of the thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* Slightly lighter color when hovered */
+}
+
+/* Custom scrollbar styling for Firefox */
+html {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg); /* Thumb and track color */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.writing-vertical {
+  writing-mode: vertical-lr;
+}
+
+html {
+  scroll-behavior: smooth;
+}
