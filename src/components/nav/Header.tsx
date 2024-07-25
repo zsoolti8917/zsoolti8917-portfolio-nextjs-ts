@@ -6,15 +6,18 @@ import { OutlineButton } from "../buttons/OutlineButton";
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { motion, Variants } from "framer-motion";
+import { useLanguage } from "../LanguageContext";
 
 export const Header: React.FC = () => {
   const t = useTranslations('header');
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
+  const { incrementLanguageChangeCount } = useLanguage();
 
   const changeLocale = (newLocale: string) => {
     router.push('/', '/', { locale: newLocale, scroll: false }).then(() => {
       window.scrollTo(0, 0);
+      incrementLanguageChangeCount();
     });
     setOpen(false);
   };
