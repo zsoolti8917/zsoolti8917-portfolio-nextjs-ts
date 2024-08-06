@@ -12,9 +12,9 @@ export const SectionHeader = ({ title, dir = "r" }: Props) => {
       style={{ flexDirection: dir === "r" ? "row" : "row-reverse" }}
     >
       <div className="w-full h-[1px] bg-zinc-700" />
-      <h2 className="shrink-0">
+      <h2 className="">
         <Reveal>
-          <span className="text-3xl md:text-5xl font-black text-end leading-tight inline-block py-2">
+          <span className="text-3xl md:text-5xl font-black text-end leading-tight pr-2">
             {title}
             <span className="text-indigo-500">.</span>
           </span>

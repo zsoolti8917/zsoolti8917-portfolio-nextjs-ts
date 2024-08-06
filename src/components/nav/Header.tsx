@@ -38,16 +38,18 @@ export const Header: React.FC = () => {
       <MyLinks />
       <div className="flex items-center gap-4">
         <motion.div animate={open ? "open" : "closed"} className="relative">
-          <button
-            onClick={() => setOpen((pv) => !pv)}
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-zinc-300 bg-zinc-800 hover:bg-zinc-700 transition-colors"
-          >
-            <FiGlobe />
-            <span className="font-medium text-sm">{t(`languages.${router.locale}`)}</span>
-            <motion.span variants={iconVariants}>
-              <FiChevronDown />
-            </motion.span>
-          </button>
+        <button
+        onClick={() => setOpen((pv) => !pv)}
+        className="flex items-center gap-2 px-3 py-2 rounded-md text-zinc-300   
+ bg-zinc-800 hover:bg-zinc-700 transition-colors relative group"
+      >
+        {/* Globe icon hidden on phone screens using Tailwind's 'hidden sm:block' */}
+        <FiGlobe className="hidden sm:block" /> 
+        <span className="font-medium text-sm">{t(`languages.${router.locale}`)}</span>
+        <motion.span variants={iconVariants}>
+          <FiChevronDown />
+        </motion.span>
+      </button>
           <motion.ul
   initial="closed"
   variants={wrapperVariants}
