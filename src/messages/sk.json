@@ -159,20 +159,21 @@
     "para3": "Tento projekt demonštruje schopnosť vytvoriť komplexnú, dátami riadenú webovú aplikáciu pri dodržiavaní najlepších praktík v oblasti responzívneho dizajnu, prístupnosti a moderných webových techník. Predvádza zručnosti v oblasti frontendového a backendového vývoja, ako aj vizualizácie údajov a integrácie s externými API."
   }
 },
-"gardenBros": {
-  "title": "Webová stránka Garden Bros",
-  "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel",
-  "description": "Viacjazyčná webová stránka pre spoločnosť zaoberajúcu sa záhradníctvom, postavená na Next.js, štýlovaná pomocou Tailwind CSS a spravovaná cez Strapi CMS. Obsahuje responzívny dizajn, dynamické generovanie obsahu a nasadenie na Vercel.",
-  "modalContent": {
-    "para1": "Webová stránka Garden Bros je viacjazyčná platforma pre spoločnosť zaoberajúcu sa záhradníctvom, ktorá má za cieľ propagovať svoje služby a predviesť svoju prácu. Postavená na Next.js, štýlovaná pomocou Tailwind CSS a spravovaná cez Strapi CMS, poskytuje responzívny a dynamický užívateľský zážitok.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Responzívna hlavná stránka s dynamickými komponentami | Kompletná kontaktná stránka a sekcia FAQ | Blog s príspevkami od autorov | Viacjazyčná podpora (slovenčina, maďarčina, angličtina) | Dynamické generovanie stránok | Správa obsahu cez Strapi CMS",
-    "para2": "Projekt predvádza moju schopnosť vytvoriť plne vybavenú, viacjazyčnú webovú stránku s použitím moderných webových technológií. Demonštruje zručnosti v oblasti frontendového vývoja, responzívneho dizajnu s Tailwind CSS, integrácie CMS a stratégií nasadenia.",
-    "para3": "Tailwind CSS bol použitý na vytvorenie vlastného, responzívneho dizajnu, ktorý dokonale vyhovuje potrebám klienta. Tento CSS framework zameraný na utilitu umožnil rýchly vývoj unikátneho a vizuálne atraktívneho rozhrania pri zachovaní konzistencie na celej stránke.",
-    "para4": "Webová stránka je nasadená na Vercel, čo zabezpečuje rýchle načítanie a spoľahlivý výkon. Použitie Strapi CMS umožňuje jednoduchú správu obsahu a aktualizácie bez potreby zmien v kódovej báze.",
-    "para5": "Tento projekt zdôrazňuje moje schopnosti v oblasti vytvárania škálovateľných, udržiavateľných a používateľsky príjemných webových aplikácií, ktoré spĺňajú špecifické obchodné potreby a poskytujú vynikajúci užívateľský zážitok a vizuálne pôsobivý dizajn."
-  }
-},
+
+  "gardenBros": {
+    "title": "Webová stránka Garden Bros",
+    "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+    "description": "Webová stránka pre záhradnícku spoločnosť, vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS. Obsahuje responzívny dizajn, dynamickú generáciu obsahu a nasadenie na Vercel.",
+    "modalContent": {
+      "para1": "Webová stránka Garden Bros je dynamická platforma pre záhradnícku spoločnosť, ktorá propaguje svoje služby a prezentuje svoju prácu. Vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS, ponúka responzívny a atraktívny používateľský zážitok.",
+      "keyFeatures": "Hlavné vlastnosti zahŕňajú:",
+      "featuresList": "Responzívna hlavná stránka s dynamickými komponentmi | Kompletná kontaktná stránka a sekcia s často kladenými otázkami | Blog s príspevkami od autorov | Dynamická generácia stránok | Správa obsahu prostredníctvom Strapi CMS",
+      "para2": "Projekt demonštruje moje schopnosti vytvárať plne vybavené webové stránky s využitím moderných webových technológií. Ukazuje zručnosti v oblasti frontendového vývoja, responzívneho dizajnu s Tailwind CSS, integrácie CMS a stratégií nasadenia.",
+      "para3": "Tailwind CSS bol použitý na vytvorenie prispôsobeného, responzívneho dizajnu, ktorý vyhovuje potrebám klienta. Tento framework zameraný na utilitu umožnil rýchly vývoj jedinečného a vizuálne atraktívneho rozhrania pri zachovaní konzistencie na celom webe.",
+      "para4": "Webová stránka je nasadená na Vercel, čo zabezpečuje rýchle načítanie a spoľahlivý výkon. Backend je spravovaný prostredníctvom Strapi CMS, hostovaný na VPS od Forpsi v prostredí Dokku. Funguje ako kontajner s SSL certifikátom a používa nastavenie reverzného proxy. Databáza PostgreSQL, bežiaca na rovnakom VPS, je zdieľaná s inými projektmi, čo zabezpečuje efektívne využitie a správu zdrojov.",
+      "para5": "Tento projekt zdôrazňuje moje zručnosti v tvorbe škálovateľných, udržiavateľných a používateľsky prívetivých webových aplikácií, ktoré zodpovedajú špecifickým obchodným potrebám a poskytujú vynikajúci používateľský zážitok a vizuálne pútavý dizajn."
+    }
+  },
 "portfolio": {
   "title": "Môj prvý portfólio",
   "tech": "HTML5, CSS3, JavaScript, GSAP",

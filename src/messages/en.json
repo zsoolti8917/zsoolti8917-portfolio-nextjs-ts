@@ -160,17 +160,17 @@
           }
         },
         "gardenBros": {
-          "title": "Garden Bros Website Frontend",
-          "tech": "Next.js,Tailwind CSS,Strapi CMS,Vercel",
-          "description": "A multilingual website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
+          "title": "Garden Bros Website",
+          "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+          "description": "A website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
           "modalContent": {
-            "para1": "The Garden Bros Website Frontend is a multilingual platform for a gardening company to promote their services and showcase their work. Built with Next.js, styled using Tailwind CSS, and managed through Strapi CMS, it offers a responsive and dynamic user experience.",
+            "para1": "The Garden Bros Website is a dynamic platform for a gardening company to promote their services and showcase their work. Built with Next.js, styled using Tailwind CSS, and managed through Strapi CMS, it offers a responsive and engaging user experience.",
             "keyFeatures": "Key features include:",
-            "featuresList": "Responsive main page with dynamic components | Fully-featured contact page and FAQ section | Blog with author-written posts | Multilingual support (Slovak, Hungarian, English) | Dynamic page generation | Content management through Strapi CMS",
-            "para2": "The project showcases my ability to create a full-featured, multilingual website using modern web technologies. It demonstrates skills in frontend development, responsive design with Tailwind CSS, CMS integration, and deployment strategies.",
-            "para3": "Tailwind CSS was used to create a custom, responsive design that perfectly fits the client's needs. This utility-first CSS framework allowed for rapid development of a unique and visually appealing interface while maintaining consistency across the site.",
-            "para4": "The website is deployed on Vercel, ensuring fast loading times and reliable performance. The use of Strapi CMS allows for easy content management and updates without requiring changes to the codebase.",
-            "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs while providing an excellent user experience and visually striking design."
+            "featuresList": "Responsive main page with dynamic components | Fully-featured contact page and FAQ section | Blog with author-written posts | Dynamic page generation | Content management through Strapi CMS",
+            "para2": "The project demonstrates my ability to create a full-featured website using modern web technologies. It showcases skills in frontend development, responsive design with Tailwind CSS, CMS integration, and deployment strategies.",
+            "para3": "Tailwind CSS was used to create a custom, responsive design that aligns with the client's needs. This utility-first CSS framework enabled rapid development of a unique and visually appealing interface while ensuring consistency across the site.",
+            "para4": "The website is deployed on Vercel, ensuring fast loading times and reliable performance. The backend is managed through Strapi CMS, hosted on a VPS from Forpsi within a Dokku environment. It operates as a container with an SSL certificate and uses a reverse proxy setup. The PostgreSQL database, running on the same VPS, is shared with other projects, ensuring efficient resource utilization and management.",
+            "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs, providing an excellent user experience and visually striking design."
           }
         },
         "portfolio": {

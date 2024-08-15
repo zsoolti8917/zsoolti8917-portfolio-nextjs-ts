@@ -161,20 +161,21 @@
     }
   
 },
-"gardenBros": {
-  "title": "Garden Bros Weboldal",
-  "tech": "Next.js,Tailwind CSS,Strapi CMS,Vercel",
-  "description": "Egy többnyelvű weboldal egy kertészeti vállalat számára, amely Next.js-sel készült, Tailwind CSS-sel van formázva, és a Strapi CMS kezeli. Jellemzői a reszponzív design, dinamikus tartalomgenerálás és a Vercel-en való üzemeltetés.",
-  "modalContent": {
-    "para1": "A Garden Bros Weboldal Frontend egy többnyelvű platform egy kertészeti vállalat számára, hogy népszerűsítse szolgáltatásait és bemutassa munkáját. Next.js-sel készült, Tailwind CSS-sel van formázva, és a Strapi CMS kezeli, reszponzív és dinamikus felhasználói élményt kínál.",
-    "keyFeatures": "Főbb jellemzők:",
-    "featuresList": "Reszponzív főoldal dinamikus komponensekkel | Teljes értékű kapcsolatfelvételi oldal és GYIK szekció | Blog szerzői bejegyzésekkel | Többnyelvű támogatás (szlovák, magyar, angol) | Dinamikus oldal generálás | Tartalomkezelés a Strapi CMS-en keresztül",
-    "para2": "A projekt bemutatja képességeimet egy teljes funkcionalitású, többnyelvű weboldal létrehozásában modern webtechnológiák használatával. Bemutatja a frontend fejlesztési készségeket, a reszponzív design készítést a Tailwind CSS-sel, a CMS integrációt és az üzemeltetési stratégiákat.",
-    "para3": "A Tailwind CSS-t egy egyedi, reszponzív design létrehozására használtam, amely tökéletesen illeszkedik az ügyfél igényeihez. Ez az utility-first CSS keretrendszer gyors fejlesztést tett lehetővé egy egyedi és vizuálisan vonzó felület számára, miközben fenntartja a következetességet az oldalon.",
-    "para4": "A weboldal a Vercel-en van üzemeltetve, biztosítva a gyors betöltési időket és a megbízható teljesítményt. A Strapi CMS használata lehetővé teszi a könnyű tartalomkezelést és frissítéseket a kódbázis módosítása nélkül.",
-    "para5": "Ez a projekt kiemeli a készségemet skálázható, karbantartható és felhasználóbarát webalkalmazások létrehozásában, amelyek megfelelnek a konkrét üzleti igényeknek, miközben kiváló felhasználói élményt és vizuálisan lenyűgöző designt biztosítanak."
-  }
-},
+
+  "gardenBros": {
+    "title": "Garden Bros Weboldal",
+    "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+    "description": "Egy weboldal egy kertészeti cég számára, amely Next.js-t használva készült, Tailwind CSS-sel van stilizálva, és a Strapi CMS-en keresztül van kezelve. Responzív dizájnt, dinamikus tartalomgenerálást és Vercel-en történő telepítést kínál.",
+    "modalContent": {
+      "para1": "A Garden Bros Weboldal egy dinamikus platform egy kertészeti cég számára, amely lehetővé teszi szolgáltatásaik népszerűsítését és munkájuk bemutatását. Next.js-t használva készült, Tailwind CSS-sel stilizálva, és a Strapi CMS-en keresztül van kezelve, ami reszponzív és vonzó felhasználói élményt biztosít.",
+      "keyFeatures": "Főbb jellemzők:",
+      "featuresList": "Responzív főoldal dinamikus komponensekkel | Teljes funkcionalitású kapcsolat oldal és GYIK szakasz | Blog szerző által írt bejegyzésekkel | Dinamikus oldalgenerálás | Tartalomkezelés Strapi CMS-en keresztül",
+      "para2": "A projekt bemutatja képességemet arra, hogy teljes funkcionalitású weboldalt készítsek modern webtechnológiák felhasználásával. Kiemeli a frontend fejlesztés, a Tailwind CSS-sel történő reszponzív dizájn, a CMS integráció és a telepítési stratégiák terén szerzett készségeimet.",
+      "para3": "A Tailwind CSS-t a kliens igényeihez illeszkedő egyedi, reszponzív dizájn létrehozására használtam. Ez a utility-first CSS keretrendszer lehetővé tette egy egyedi és vizuálisan vonzó felület gyors fejlesztését, miközben biztosította az oldalon belüli következetességet.",
+      "para4": "A weboldal a Vercel-en van telepítve, amely biztosítja a gyors betöltési időket és megbízható teljesítményt. A backend a Strapi CMS-en keresztül van kezelve, VPS-en keresztül, a Forpsi-tól, Dokku környezetben. Konténerként működik SSL tanúsítvánnyal és visszafelé proxy beállítással. A PostgreSQL adatbázis, amely ugyanazon a VPS-en fut, más projektekkel osztozik, biztosítva a hatékony erőforrás-használatot és kezelést.",
+      "para5": "Ez a projekt kiemeli a skálázható, karbantartható és felhasználóbarát webalkalmazások készítésében szerzett jártasságomat, amelyek a speciális üzleti igényeknek megfelelően kínálnak kiváló felhasználói élményt és vizuálisan figyelemfelkeltő dizájnt."
+    }
+  },
         "portfolio": {
   "title": "Első Portfólióm",
   "tech": "HTML5,CSS3,JavaScript,GSAP",

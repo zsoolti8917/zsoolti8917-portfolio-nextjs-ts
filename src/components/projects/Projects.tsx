@@ -67,7 +67,7 @@ export const Projects = () => {
       title: t('portfolio.title'),
       imgSrc: "/project-imgs/Portfolio.png",
       code: "https://github.com/zsoolti8917/Portfolio",
-      projectLink: "www.zsoltvarju.sk",
+      projectLink: "https://zsoltvarjuold.netlify.app/",
       tech: t('portfolio.tech').split(','),
       description: t('portfolio.description'),
       modalContent: (
@@ -115,7 +115,7 @@ export const Projects = () => {
       title: t('alza.title'),
       imgSrc: "project-imgs/Main.png",
       code: "https://github.com/zsoolti8917/Alza",
-      projectLink: "https://scoot-multi-page-website-six.vercel.app/",
+      projectLink: "https://github.com/zsoolti8917/Alza",
       tech: t('alza.tech').split(','),
       description: t('alza.description'),
       modalContent: (
