@@ -57,8 +57,10 @@ export const SideBar = () => {
             setSelected={setSelected}
             value={link.value}
             href={link.href}
+
           >
             {link.label}
+            
           </SideBarLink>
         ))}
       </div>

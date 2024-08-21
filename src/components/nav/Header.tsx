@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
             <Option setOpen={setOpen} text={t('languages.hu')} onClick={() => changeLocale('hu')} />
           </motion.ul>
         </motion.div>
-        <OutlineButton onClick={() => window.open(getCVUrl(router.locale || 'en'))}>
+        <OutlineButton data-umami-event={`CV donwloaded in ${router.locale} language`} onClick={() => window.open(getCVUrl(router.locale || 'en'))}>
           {t('resumeButton')}
         </OutlineButton>
       </div>
