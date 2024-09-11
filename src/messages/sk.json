@@ -175,7 +175,7 @@
     }
   },
 "portfolio": {
-  "title": "Môj prvý portfólio",
+  "title": "Môje prvé portfólio",
   "tech": "HTML5, CSS3, JavaScript, GSAP",
   "description": "Môj prvý portfólio ukazujúci začiatky projektov a zručností, postavený s použitím čistého HTML, CSS a JavaScriptu s GSAP pre animácie.",
   "modalContent": {
@@ -223,8 +223,7 @@
     "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
     "featuresList": "Responzívny dizajn optimalizovaný pre rôzne veľkosti obrazoviek | Funkcionalita vyhľadávania GitHub používateľov pomocou GitHub API | Zobrazenie relevantných informácií o používateľoch na základe vyhľadávania | Prepínanie medzi svetlými a tmavými témami | Automatický výber témy na základe preferencií používateľského systému | Interaktívne prvky s hover stavmi",
     "para2": "Tento projekt ukazuje moju zručnosť v moderných webových technológiach a praktikách. Bol vyvinutý s použitím semantického HTML5 značkovania, štýlovaný pomocou Tailwind CSS a obohatený o JavaScript pre interaktivitu. Integrácia GitHub API bola riešená pomocou Axios a animácie boli implementované pomocou GSAP.",
-    "para3": "Vývojový proces zahŕňal učenie sa a aplikovanie nových konceptov, ako je práca s API, implementácia tmavých/svetlých tém a používanie Tailwind CSS po prvýkrát. Taktiež som zahrnul spracovanie chýb pri API požiadavkách a použil JavaScript moduly na organizáciu kódu.",
-    "para4": "Tento projekt demonštruje moju schopnosť vytvárať funkčné a vizuálne príťažlivé webové aplikácie pri dodržiavaní moderných vývojových praktík a neustálom učení sa nových technológií."
+    "para3": "Vývojový proces zahŕňal učenie sa a aplikovanie nových konceptov, ako je práca s API, implementácia tmavých/svetlých tém a používanie Tailwind CSS po prvýkrát. Taktiež som zahrnul spracovanie chýb pri API požiadavkách a použil JavaScript moduly na organizáciu kódu."
   }
 }
       }
