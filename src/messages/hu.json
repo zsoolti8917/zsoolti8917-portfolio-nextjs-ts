@@ -176,6 +176,22 @@
       "para5": "Ez a projekt kiemeli a skálázható, karbantartható és felhasználóbarát webalkalmazások készítésében szerzett jártasságomat, amelyek a speciális üzleti igényeknek megfelelően kínálnak kiváló felhasználói élményt és vizuálisan figyelemfelkeltő dizájnt."
     }
   },
+  
+    "quizApp": {
+      "title": "AI-alapú Kvíz Alkalmazás",
+      "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
+      "description": "Interaktív kvíz alkalmazás, amely mesterséges intelligencia segítségével ellenőrzi a felhasználói válaszokat, visszajelzést ad, és további beszélgetéseket tesz lehetővé a témákról. A MERN stack-re épült, Tailwind CSS és Shadcn/ui segítségével formázott, a Netlify-en került telepítésre, és VPS-en, Dokku környezetben lett hosztolva.",
+      "modalContent": {
+        "para1": "Az AI-alapú Kvíz Alkalmazás egy dinamikus kvíz platform, amely nemcsak értékeli a felhasználói válaszokat mesterséges intelligencia segítségével, hanem részletes magyarázatokat és további beszélgetéseket is kínál a témakörökről. Ez a projekt bemutatja a mesterséges intelligencia fejlett integrációját a kvíz funkciókban, miközben zökkenőmentes felhasználói interakciót és modern felületet biztosít.",
+        "keyFeatures": "Főbb funkciók:",
+        "featuresList": "Interaktív kvízek AI-alapú válaszértékeléssel | Lehetőség kiterjesztett beszélgetésekre az AI-val minden kérdés után | Előre meghatározott kérdések és válaszok tárolása a MongoDB-ben | Felhasználóbarát felület, Tailwind CSS és Shadcn/ui stílusban | SSL biztonságos backend VPS-en, Dokku környezetben | Frontend Netlify-re telepítve",
+        "para2": "A projekt bemutatja a MERN stack (MongoDB, Express, React, Node.js) kezelésében szerzett tapasztalataimat, és az OpenAI API integrációját a felhasználói válaszok értékelésére és javítására. A frontend Tailwind CSS és Shadcn/ui segítségével lett formázva, így biztosítva a tiszta és reszponzív megjelenést.",
+        "para3": "A fejlesztés során létrehoztam egy kérdés-válasz rendszert, amelyet a Node.js és a MongoDB backend hajt meg. A mesterséges intelligencia értékeli a felhasználói válaszokat, javításokat vagy további információkat kínálva. Az alkalmazás lehetővé teszi a felhasználóknak, hogy folytassák a beszélgetéseket az AI-val, hogy mélyebben belemerüljenek a témákba.",
+        "para4": "Ez a projekt bemutatja full-stack webfejlesztési készségeimet, az AI integrációját és skálázható alkalmazások építését, amelyek a felhasználói elköteleződésre és az eszközök közötti reszponzivitásra összpontosítanak."
+      }
+    },
+  
+  
         "portfolio": {
   "title": "Első Portfólióm",
   "tech": "HTML5,CSS3,JavaScript,GSAP",

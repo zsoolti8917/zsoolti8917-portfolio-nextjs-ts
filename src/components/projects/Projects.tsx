@@ -64,6 +64,30 @@ export const Projects = () => {
       ),
     },
     {
+    title: t('quizApp.title'),
+    imgSrc: "/project-imgs/AI_app.png",
+    code: "https://github.com/zsoolti8917/ai-self-quiz",
+    projectLink: "https://heartfelt-cuchufli-12c257.netlify.app/",
+    tech: t('quizApp.tech').split(','),
+    description: t('quizApp.description'),
+    modalContent: (
+      <>
+        <p className="mb-4">{t('quizApp.modalContent.para1')}</p>
+        <p className="mb-4">
+          {t('quizApp.modalContent.keyFeatures')}
+          <ul className="list-disc list-inside ml-4">
+            {t('quizApp.modalContent.featuresList').split('|').map((feature, index) => (
+              <li key={index}>{feature.trim()}</li>
+            ))}
+          </ul>
+        </p>
+        <p className="mb-4">{t('quizApp.modalContent.para2')}</p>
+        <p className="mb-4">{t('quizApp.modalContent.para3')}</p>
+        <p className="mb-4">{t('quizApp.modalContent.para4')}</p>
+      </>
+    ),
+  },  
+    {
       title: t('portfolio.title'),
       imgSrc: "/project-imgs/Portfolio.png",
       code: "https://github.com/zsoolti8917/Portfolio",

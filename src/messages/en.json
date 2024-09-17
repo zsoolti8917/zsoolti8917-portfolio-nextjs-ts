@@ -173,6 +173,19 @@
             "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs, providing an excellent user experience and visually striking design."
           }
         },
+        "quizApp": {
+          "title": "AI-Powered Quiz App",
+          "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
+          "description": "An interactive quiz application that checks user answers using AI, provides feedback, and allows for additional discussions on topics. Built with the MERN stack, styled with Tailwind CSS and Shadcn/ui, deployed on Netlify, and hosted on a VPS using Dokku.",
+          "modalContent": {
+            "para1": "The AI-Powered Quiz App is a dynamic quiz platform that not only evaluates user answers using AI but also offers detailed explanations and further discussions on the subject matter. This project showcases advanced integration of AI into quiz functionalities, while also ensuring smooth user interaction and a modern interface.",
+            "keyFeatures": "Key features include:",
+            "featuresList": "Interactive quizzes with AI-based answer evaluation | Option for extended conversations with AI after each question | Predefined questions and answers stored in MongoDB | User-friendly interface styled with Tailwind CSS and Shadcn/ui | SSL-secured backend hosted on VPS using Dokku | Frontend deployed on Netlify",
+            "para2": "The project highlights my ability to work with the MERN stack (MongoDB, Express, React, Node.js), integrating OpenAI's API for evaluating and improving user responses. The frontend is styled with Tailwind CSS and Shadcn/ui, ensuring a clean and responsive design.",
+            "para3": "Development involved setting up a question-answer system with a backend powered by Node.js and MongoDB. The AI evaluates user responses, offering corrections or additional information. The app allows users to continue conversations with AI to delve deeper into topics.",
+            "para4": "This project demonstrates my skills in full-stack web development, AI integration, and building scalable applications with a focus on user engagement and responsiveness across devices."
+          }
+        },
         "portfolio": {
           "title": "My First Portfolio",
           "tech": "HTML5,CSS3,JavaScript,GSAP",

@@ -200,6 +200,20 @@
     "para4": "Tento projekt demonštruje moju schopnosť vytvárať komplexné, viacstránkové webové aplikácie pri dodržiavaní najlepších praktík v responzívnom dizajne a moderných technikách webového vývoja."
   }
 },
+
+  "quizApp": {
+    "title": "AI-Powered Kvízová Aplikácia",
+    "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
+    "description": "Interaktívna kvízová aplikácia, ktorá kontroluje odpovede používateľov pomocou AI, poskytuje spätnú väzbu a umožňuje ďalšie diskusie o témach. Postavená s MERN stackom, štylizovaná pomocou Tailwind CSS a Shadcn/ui, nasadená na Netlify a hostovaná na VPS s Dokku.",
+    "modalContent": {
+      "para1": "AI-Powered Kvízová Aplikácia je dynamická platforma, ktorá nielenže hodnotí odpovede používateľov pomocou AI, ale tiež ponúka podrobné vysvetlenia a ďalšie diskusie o danej téme. Tento projekt demonštruje pokročilú integráciu AI do funkcií kvízu a zároveň zaisťuje plynulú interakciu používateľov a moderné rozhranie.",
+      "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+      "featuresList": "Interaktívne kvízy s hodnotením odpovedí založeným na AI | Možnosť pokračovať v konverzáciách s AI po každej otázke | Preddefinované otázky a odpovede uložené v MongoDB | Používateľsky prívetivé rozhranie štylizované pomocou Tailwind CSS a Shadcn/ui | Backend so zabezpečením SSL hostovaný na VPS s Dokku | Frontend nasadený na Netlify",
+      "para2": "Projekt zdôrazňuje moju schopnosť pracovať s MERN stackom (MongoDB, Express, React, Node.js) a integrovať OpenAI API na hodnotenie a zlepšovanie používateľských odpovedí. Frontend je štylizovaný pomocou Tailwind CSS a Shadcn/ui, čím sa zaisťuje čistý a responzívny dizajn.",
+      "para3": "Vývoj zahŕňal vytvorenie systému otázok a odpovedí s backendom poháňaným Node.js a MongoDB. AI hodnotí odpovede používateľov a ponúka opravy alebo dodatočné informácie. Aplikácia umožňuje používateľom pokračovať v konverzáciách s AI, aby sa hlbšie venovali témam.",
+      "para4": "Tento projekt demonštruje moje schopnosti v oblasti full-stack webového vývoja, integrácie AI a budovania škálovateľných aplikácií so zameraním na zapojenie používateľov a responzívnosť naprieč zariadeniami."
+    }
+  },
 "alza": {
   "title": "Alza Dni Kupónový Filter",
   "tech": "JavaScript, Chrome Extension API, HTML, CSS",
