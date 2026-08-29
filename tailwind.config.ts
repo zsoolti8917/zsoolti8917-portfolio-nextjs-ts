@@ -5,9 +5,6 @@ import type { Config } from "tailwindcss";
  * hard-coded hex, so a theme swap is a `:root` change and never a component
  * change. The channel-only form is what lets `<alpha-value>` work, i.e.
  * `bg-canvas/70` and `bg-accent/10`.
- *
- * `hairline` is the exception: it is *defined* as an alpha over white, so it
- * takes literal rgba and does not accept an alpha modifier.
  */
 const config: Config = {
   content: [
@@ -22,8 +19,8 @@ const config: Config = {
         "surface-1": "rgb(var(--surface-1) / <alpha-value>)",
         "surface-2": "rgb(var(--surface-2) / <alpha-value>)",
         "surface-3": "rgb(var(--surface-3) / <alpha-value>)",
-        hairline: "rgba(255, 255, 255, 0.08)",
-        "hairline-strong": "rgba(255, 255, 255, 0.14)",
+        hairline: "rgb(var(--hairline) / 0.08)",
+        "hairline-strong": "rgb(var(--hairline) / 0.14)",
         fg: "rgb(var(--fg) / <alpha-value>)",
         "fg-2": "rgb(var(--fg-2) / <alpha-value>)",
         "fg-3": "rgb(var(--fg-3) / <alpha-value>)",

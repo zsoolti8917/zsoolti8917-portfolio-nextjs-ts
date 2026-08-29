@@ -22,7 +22,7 @@ interface Props {
 export const HeroSection = ({ children, tall = false, className = "" }: Props) => (
   <section
     id="hero"
-    className={`relative isolate w-full overflow-hidden mb-24 md:mb-32 ${
+    className={`relative isolate w-full overflow-hidden scroll-mt-14 mb-24 md:mb-32 ${
       tall ? "min-h-[calc(100svh-56px)] flex items-center" : "py-24 md:py-32"
     } ${className}`}
   >

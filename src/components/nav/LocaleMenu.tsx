@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { motion, Variants } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { FiChevronDown, FiGlobe } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
+import { useDialogKeys } from "../util/useDialogKeys";
 
 const LOCALES = ["en", "sk", "hu"] as const;
 
@@ -16,6 +17,7 @@ export const LocaleMenu: React.FC = () => {
   const t = useTranslations("header");
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const changeLocale = (locale: string) => {
     router.push("/", "/", { locale, scroll: false }).then(() => {
@@ -24,14 +26,34 @@ export const LocaleMenu: React.FC = () => {
     setOpen(false);
   };
 
+  useDialogKeys({ open, onClose: () => setOpen(false) });
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onMouseDown = (e: MouseEvent) => {
+      if (!containerRef.current?.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", onMouseDown);
+    return () => document.removeEventListener("mousedown", onMouseDown);
+  }, [open]);
+
   return (
-    <motion.div animate={open ? "open" : "closed"} className="relative">
+    <motion.div
+      ref={containerRef}
+      animate={open ? "open" : "closed"}
+      className="relative"
+    >
       <button
         type="button"
         onClick={() => setOpen((pv) => !pv)}
         aria-label={t("languageSelector")}
+        aria-haspopup="menu"
         aria-expanded={open}
-        className="flex items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg"
+        className="flex items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
       >
         <FiGlobe className="hidden sm:block" />
         <span className="text-sm font-medium uppercase">{router.locale}</span>
@@ -39,24 +61,32 @@ export const LocaleMenu: React.FC = () => {
           <FiChevronDown />
         </motion.span>
       </button>
-      <motion.ul
-        initial="closed"
-        variants={wrapperVariants}
-        animate={open ? "open" : "closed"}
-        style={{ originY: "top" }}
-        className="absolute right-0 top-[120%] flex w-44 flex-col gap-1 overflow-hidden rounded-lg border border-hairline bg-surface-2 p-1.5 shadow-xl"
-      >
-        {LOCALES.map((locale) => (
-          <motion.li
-            key={locale}
-            variants={itemVariants}
-            onClick={() => changeLocale(locale)}
-            className="flex w-full cursor-pointer items-center gap-2 whitespace-nowrap rounded-md p-2 text-xs font-medium text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg"
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            role="menu"
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={wrapperVariants}
+            style={{ originY: "top" }}
+            className="absolute right-0 top-[120%] flex w-44 flex-col gap-1 overflow-hidden rounded-lg border border-hairline bg-surface-2 p-1.5 shadow-xl"
           >
-            <span>{t(`languages.${locale}`)}</span>
-          </motion.li>
-        ))}
-      </motion.ul>
+            {LOCALES.map((locale) => (
+              <motion.li key={locale} role="none" variants={itemVariants}>
+                <button
+                  type="button"
+                  role="menuitem"
+                  onClick={() => changeLocale(locale)}
+                  className="flex w-full cursor-pointer items-center gap-2 whitespace-nowrap rounded-md p-2 text-xs font-medium text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+                >
+                  <span>{t(`languages.${locale}`)}</span>
+                </button>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

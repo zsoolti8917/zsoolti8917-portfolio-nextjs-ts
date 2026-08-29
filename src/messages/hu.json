@@ -500,6 +500,7 @@
     }
   },
   "nav": {
+    "home": "Kezdőlap",
     "about": "Rólam",
     "projects": "Projektek",
     "experience": "Tapasztalat",

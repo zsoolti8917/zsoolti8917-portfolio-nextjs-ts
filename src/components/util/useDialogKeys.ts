@@ -25,14 +25,16 @@ export const useDialogKeys = ({ open, onClose }: Options) => {
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        e.stopPropagation();
+        // Capture phase + stopImmediatePropagation: pre-empts any other
+        // Escape handler (e.g. a nested dialog) reached later in this phase.
+        e.stopImmediatePropagation();
         onCloseRef.current();
       }
     };
 
-    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", onKeyDown, { capture: true });
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", onKeyDown, { capture: true });
       opener?.focus?.();
     };
   }, [open]);

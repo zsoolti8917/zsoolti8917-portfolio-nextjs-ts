@@ -20,6 +20,9 @@ import { CommandPalette } from "./palette/CommandPalette";
  *
  * The modal host and the palette are siblings of <main>, not children: both
  * portal into <body> and neither belongs to the document outline.
+ *
+ * Footer is a sibling of <main>, not a child: it is its own `contentinfo`
+ * landmark, not part of the main document content.
  */
 export const HomPage = () => {
   return (
@@ -33,8 +36,8 @@ export const HomPage = () => {
           <Experience />
           <Contact />
         </div>
-        <Footer />
       </main>
+      <Footer />
       <ProjectModalHost />
       <CommandPalette />
     </TerminalBusProvider>

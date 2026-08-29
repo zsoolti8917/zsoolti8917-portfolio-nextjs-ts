@@ -500,6 +500,7 @@
     }
   },
   "nav": {
+    "home": "Domov",
     "about": "O mne",
     "projects": "Projekty",
     "experience": "Skúsenosti",

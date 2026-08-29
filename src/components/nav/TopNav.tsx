@@ -36,7 +36,8 @@ export const TopNav = () => {
         <button
           type="button"
           onClick={scrollToTop}
-          className="font-mono mono-1 text-xl font-bold leading-none text-fg"
+          aria-label={t("nav.home")}
+          className="rounded font-mono mono-1 text-xl font-bold leading-none text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         >
           V<span className="text-accent">.</span>
         </button>
@@ -50,7 +51,7 @@ export const TopNav = () => {
                 key={id}
                 href={`#${id}`}
                 aria-current={isActive ? "true" : undefined}
-                className={`relative py-1 text-sm transition-colors ${
+                className={`relative rounded py-1 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent ${
                   isActive ? "text-fg" : "text-fg-2 hover:text-fg"
                 }`}
               >
@@ -82,7 +83,7 @@ export const TopNav = () => {
             type="button"
             onClick={openPalette}
             aria-label={t("nav.palette")}
-            className="hidden items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg md:flex"
+            className="hidden items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded md:flex"
           >
             <FiSearch />
             <span className="font-mono mono-1 min-w-[3.5rem] text-xs">{shortcut}</span>
@@ -93,6 +94,7 @@ export const TopNav = () => {
           <OutlineButton
             data-umami-event={cvUmamiEvent(locale)}
             onClick={() => window.open(getCVUrl(locale))}
+            className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
           >
             {t("nav.cv")}
           </OutlineButton>

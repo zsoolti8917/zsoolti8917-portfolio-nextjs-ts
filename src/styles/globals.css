@@ -21,6 +21,7 @@
   --accent-hover: 129 140 248; /* #818cf8 */
   --success: 52 211 153;     /* #34d399 — status dot */
   --warn: 251 191 36;        /* #fbbf24 — terminal error tone */
+  --hairline: 255 255 255;   /* borders composed as rgb(var(--hairline) / <alpha>) */
 
   /* Scrollbars are chrome, not content: they read off the tokens so they
      never drift from the page background again. */
@@ -65,6 +66,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
   scroll-behavior: smooth;
+  /* Reserves the scrollbar's width whether or not it's showing, so
+     useScrollLock's `overflow: hidden` never shifts the layout by its width. */
+  scrollbar-gutter: stable;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

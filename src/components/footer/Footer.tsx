@@ -20,13 +20,16 @@ export const Footer = () => {
           href="https://github.com/zsoolti8917"
           target="_blank"
           rel="noreferrer"
-          className="transition-colors hover:text-fg"
+          className="rounded transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         >
           {t("source")} ↗
         </a>
         <span aria-hidden>·</span>
         {/* The machine-readable copy of this site — see scripts/build-llm-assets.mjs. */}
-        <a href="/llms.txt" className="transition-colors hover:text-fg">
+        <a
+          href="/llms.txt"
+          className="rounded transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+        >
           {t("llms")}
         </a>
       </div>
