@@ -306,7 +306,16 @@
         "stack": "stack",
         "statusLabel": "állapot",
         "roleValue": "Szoftverfejlesztő · full-stack + platformüzemeltetés",
-        "nowValue": "egyedüli fejlesztő az Európai Űrügynökség egyik projektjén"
+        "nowValue": "egyedüli fejlesztő az Európai Űrügynökség egyik projektjén",
+        "stackValue": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Python",
+          "Docker",
+          "Kubernetes"
+        ]
       },
       "help": {
         "intro": "Parancsok — kattints vagy írd be:",

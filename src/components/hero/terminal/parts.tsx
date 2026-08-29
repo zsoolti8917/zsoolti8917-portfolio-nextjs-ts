@@ -3,6 +3,7 @@ import type { HeroTerminalCopy } from "../types";
 import { CHIPS } from "./commands";
 import type { Block, Line } from "./model";
 import { PILL, Seg, stagger } from "./atoms";
+import { revealed } from "./session";
 import { WhoamiCard } from "./WhoamiCard";
 import type { useTerminal } from "./useTerminal";
 
@@ -51,7 +52,10 @@ const TerminalBlock = ({
   term: TerminalState;
   copy: HeroTerminalCopy;
 }) => {
-  const isDemo = block.id === term.demoBlockId;
+  // The pre-run blocks are the demo, and their id IS their position in it, so
+  // each header can be typed in independently while the other stays complete.
+  const isDemo = block.id < term.liveFrom && block.command !== null;
+  const shown = isDemo ? revealed(term.typed, block.id, block.command as string) : 0;
 
   return (
     <article className="mb-5 last:mb-0">
@@ -61,16 +65,20 @@ const TerminalBlock = ({
         <p aria-hidden className="text-fg-3">
           <span className="text-accent">{copy.prompt}</span>{" "}
           <span className="text-fg">
-            {isDemo ? block.command.slice(0, term.typed) : block.command}
+            {isDemo ? block.command.slice(0, shown) : block.command}
           </span>
-          {isDemo && term.typed < term.demoCommand.length && (
+          {isDemo && shown < block.command.length && (
             <span className="hero-caret text-accent">▍</span>
           )}
         </p>
       )}
 
       {block.command === "whoami" ? (
-        <WhoamiCard lines={block.lines} onRun={term.run} asHeading={isDemo} />
+        <WhoamiCard
+          lines={block.lines}
+          onRun={term.run}
+          asHeading={block.id === term.headingBlockId}
+        />
       ) : (
         <div className="whitespace-pre-wrap break-words">
           {block.lines.map((line, i) => (

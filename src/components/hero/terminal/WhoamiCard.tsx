@@ -8,9 +8,9 @@ import { Monogram } from "./Monogram";
  *
  * It is rendered from ordinary command output — the same `Line[]` the parser
  * produces — so the shell is not decorated with a special case: type `whoami`
- * again and you get the card again. Because block 0 is server-rendered, the
- * name, role, current work, location, year and stack are all in the HTML for a
- * crawler that never runs JavaScript, exactly as the prose band used to be.
+ * again and you get the card again. Because the block is pre-run on the server,
+ * the name, role, current work, location, year and stack are all in the HTML
+ * for a crawler that never runs JavaScript, exactly as the prose band used to be.
  */
 export const WhoamiCard = ({
   lines,
@@ -19,7 +19,7 @@ export const WhoamiCard = ({
 }: {
   lines: Line[];
   onRun: (cmd: string) => void;
-  /** Only the first card on the page owns the <h1>. A second one is a <p>. */
+  /** Only the first card in the scrollback owns the <h1>. A second one is a <p>. */
   asHeading: boolean;
 }) => {
   const name = lines.find((l) => l.kind === "h1")?.segments[0]?.text ?? "";
@@ -83,23 +83,37 @@ export const WhoamiCard = ({
 };
 
 /** `● open to new roles   [contact]  [cv ↓]` — the only CTAs above the fold. */
-const ActionsRow = ({ row, onRun }: { row: Line; onRun: (cmd: string) => void }) => (
-  <>
-    {row.segments.map((segment, j) =>
-      segment.run ? (
-        <button key={j} type="button" onClick={() => onRun(segment.run as string)} className={PILL}>
-          {/* The brackets are what the plain-text output says; on screen the
-              pill is the bracket. */}
-          {segment.text.replace(/^\[(.*)\]$/, "$1")}
-        </button>
-      ) : (
+const ActionsRow = ({ row, onRun }: { row: Line; onRun: (cmd: string) => void }) => {
+  const actions = row.segments.filter((s) => s.run);
+  const label = row.segments.filter((s) => !s.run);
+
+  return (
+    <>
+      {label.map((segment, j) => (
         <span key={j}>
           <span aria-hidden className="text-success">
             ●
           </span>{" "}
           {segment.text}
         </span>
-      )
-    )}
-  </>
-);
+      ))}
+      {/* The pills are one wrapping unit. Loose in the row, the narrower `cv ↓`
+          dropped to a line of its own under the status text on a 390px screen,
+          which read as an afterthought rather than a pair of actions. */}
+      <span className="flex flex-nowrap items-center gap-1.5">
+        {actions.map((segment, j) => (
+          <button
+            key={j}
+            type="button"
+            onClick={() => onRun(segment.run as string)}
+            className={PILL}
+          >
+            {/* The brackets are what the plain-text output says; on screen the
+                pill is the bracket. */}
+            {segment.text.replace(/^\[(.*)\]$/, "$1")}
+          </button>
+        ))}
+      </span>
+    </>
+  );
+};

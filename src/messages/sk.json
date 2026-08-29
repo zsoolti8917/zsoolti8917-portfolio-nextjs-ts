@@ -306,7 +306,16 @@
         "stack": "stack",
         "statusLabel": "stav",
         "roleValue": "Softvérový vývojár · full-stack + prevádzka platforiem",
-        "nowValue": "jediný vývojár na projekte pre Európsku vesmírnu agentúru"
+        "nowValue": "jediný vývojár na projekte pre Európsku vesmírnu agentúru",
+        "stackValue": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Python",
+          "Docker",
+          "Kubernetes"
+        ]
       },
       "help": {
         "intro": "Príkazy — kliknite alebo napíšte:",

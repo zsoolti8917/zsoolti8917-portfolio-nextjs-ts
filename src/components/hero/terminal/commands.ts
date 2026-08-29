@@ -134,9 +134,11 @@ export const suggest = (raw: string): string[] => {
  */
 const whoamiLines = (ctx: CommandContext): Line[] => {
   const w = ctx.copy.whoami;
-  // Flattened rather than one-per-group: the card is the 5-second read, the
-  // grouped version is what `skills` prints.
-  const stack = ctx.data.stack.flatMap((g) => g.items).slice(0, 7);
+  // Curated in the messages, not the first seven of the flattened Stats data:
+  // the card is the five-second read, so it names the seven things a recruiter
+  // is scanning for. The full, grouped list is what `skills` prints. Identical
+  // in all three locales — they are proper nouns.
+  const stack = w.stackValue;
 
   return [
     { tone: "out", kind: "h1", segments: [{ text: ctx.common.name }] },

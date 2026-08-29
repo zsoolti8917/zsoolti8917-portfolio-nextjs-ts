@@ -54,6 +54,9 @@ const copy: HeroTerminalCopy = {
     statusLabel: "status",
     roleValue: "Software Developer · full-stack + platform operator",
     nowValue: "sole developer on a project for the European Space Agency",
+    stackValue: [
+      "TypeScript", "React", "Next.js", "Node.js", "Python", "Docker", "Kubernetes",
+    ],
   },
   help: {
     intro: "Commands:",
@@ -228,6 +231,15 @@ describe("runCommand('whoami')", () => {
     expect(since?.segments.map((s) => s.text).join("")).toBe("2022");
   });
 
+  it("prints the curated stack from the messages, not the flattened Stats data", () => {
+    const stack = lines.find((l) => l.label === "stack");
+    const runnable = stack?.segments.filter((s) => s.run) ?? [];
+    expect(runnable.map((s) => s.text)).toEqual(copy.whoami.stackValue);
+    // The grouped `skills` output is where the full Stats list belongs; the
+    // card is the seven-item read.
+    expect(runnable.map((s) => s.text)).not.toContain("Bash");
+  });
+
   it("makes every stack item a `find` command, like the skills output", () => {
     const stack = lines.find((l) => l.label === "stack");
     const runnable = stack?.segments.filter((s) => s.run) ?? [];
@@ -278,10 +290,18 @@ describe("effects the UI is wired to", () => {
     expect(runCommand("contact", ctx).effect).toBe("contact");
   });
 
-  it("clear empties the scrollback", () => {
+  // The UI turns this effect into "reset the scrollback to the identity card"
+  // (see `headingBlockId` in session.test.ts) rather than an empty window, so
+  // the page never loses its only <h1>. The command itself still prints nothing.
+  it("clear prints nothing and asks the UI to reset the scrollback", () => {
     const { lines, effect } = runCommand("clear", ctx);
     expect(effect).toBe("clear");
     expect(lines).toEqual([]);
+  });
+
+  it("clear is reachable by the words a visitor would use", () => {
+    expect(runCommand("reset", ctx).effect).toBe("clear");
+    expect(runCommand("cls", ctx).effect).toBe("clear");
   });
 });
 

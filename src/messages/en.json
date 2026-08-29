@@ -306,7 +306,16 @@
         "stack": "stack",
         "statusLabel": "status",
         "roleValue": "Software Developer · full-stack + platform operator",
-        "nowValue": "sole developer on a project for the European Space Agency"
+        "nowValue": "sole developer on a project for the European Space Agency",
+        "stackValue": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Python",
+          "Docker",
+          "Kubernetes"
+        ]
       },
       "help": {
         "intro": "Commands — click one, or type it:",

@@ -16,10 +16,12 @@ export interface HeroWhoamiCopy {
   since: string;
   stack: string;
   statusLabel: string;
-  /** Row values that exist nowhere else. `based` reuses `common.location`,
-   *  `since` comes from the About data, `stack` from the Stats data. */
+  /** Row values that exist nowhere else. `based` reuses `common.location` and
+   *  `since` comes from the About data. */
   roleValue: string;
   nowValue: string;
+  /** The card's curated seven. Proper nouns, so identical in every locale. */
+  stackValue: string[];
 }
 
 export interface HeroTerminalCopy {

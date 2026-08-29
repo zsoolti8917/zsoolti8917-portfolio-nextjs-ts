@@ -16,7 +16,12 @@ const ROWS = [
   "0001000",
 ];
 
-/** The first and the last filled cell, dimmed so the glyph reads as lit. */
+/**
+ * The two ENDS of the glyph — the top of the left arm and the point at the
+ * bottom — dropped a step in opacity so the stroke reads as lit rather than
+ * flat. Not the grid's corners: the top-right cell is part of the right arm and
+ * stays at full accent, and the bottom two corners are empty.
+ */
 const DIM = new Set(["0-0", "6-3"]);
 
 export const Monogram = () => (
