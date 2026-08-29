@@ -1,8 +1,9 @@
-import { useAnimation, useInView, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
+import { ProjectCover } from "./ProjectCover";
 import Reveal from "../util/Reveal";
 
 interface Props {
@@ -24,104 +25,79 @@ export const Project = ({
   code,
   tech,
 }: Props) => {
+  const t = useTranslations("projects");
+
   const [hovered, setHovered] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const controls = useAnimation();
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [isInView, controls]);
-
   return (
     <>
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 0.75 }}
-      >
-        <div
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
-          className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
-        >
-          {imgSrc ? (
-            <img
-              src={imgSrc}
-              alt={`An image of the ${title} project.`}
-              style={{
-                width: hovered ? "90%" : "85%",
-                rotate: hovered ? "2deg" : "0deg",
-              }}
-              className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-zinc-800 via-zinc-700 to-indigo-950">
-              <span
-                style={{
-                  scale: hovered ? "1.1" : "1",
-                  rotate: hovered ? "2deg" : "0deg",
-                }}
-                className="bg-indigo-500 text-white font-black text-4xl py-3 px-5 rounded transition-all"
-              >
-                {title.charAt(0)}
-              </span>
-            </div>
-          )}
-        </div>
-        <div className="mt-6">
-          <Reveal width="w-full">
-            <div className="flex items-center gap-2 w-full">
-              <h4 className="font-bold text-lg shrink-0 max-w-[calc(100%_-_150px)]">
-                {title}
-              </h4>
-              <div className="w-full h-[1px] bg-zinc-600" />
+      {/* One Reveal for the whole card. The old version ran its own
+          `useInView` + `useAnimation` with a 100px rise, which fought the
+          shared 0.45s fade-up every other section uses. */}
+      <Reveal width="100%">
+        <div className="h-full rounded-lg border border-hairline bg-surface-1 p-3 transition-colors hover:border-hairline-strong">
+          <div
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={() => setIsOpen(true)}
+            className="w-full cursor-pointer"
+          >
+            {imgSrc ? (
+              <div className="relative aspect-video overflow-hidden rounded-lg border border-hairline bg-surface-2">
+                <img
+                  src={imgSrc}
+                  alt={`An image of the ${title} project.`}
+                  // The screenshot floats out of the bottom of the tile and
+                  // grows a little on hover. The 2 degree rotation is gone:
+                  // the covers beside it are square-on windows, and one tilted
+                  // tile in a grid of straight ones reads as a mistake.
+                  style={{ width: hovered ? "88%" : "85%" }}
+                  className="absolute bottom-0 left-1/2 w-[85%] -translate-x-1/2 translate-y-1/4 rounded-t border border-b-0 border-hairline transition-all"
+                />
+              </div>
+            ) : (
+              <ProjectCover title={title} tech={tech} />
+            )}
+          </div>
+          <div className="mt-4">
+            {/* The old row padded the title to `100% - 150px` and filled the
+                gap with a rule; on any title that wrapped, the rule floated
+                between the two lines. The card has a border of its own now,
+                so the rule was buying nothing. */}
+            <div className="flex w-full items-start justify-between gap-3">
+              <h4 className="min-w-0 text-lg font-semibold text-fg">{title}</h4>
 
-              {code && (
-                <Link href={code} target="_blank" rel="nofollow">
-                  <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-                </Link>
-              )}
+              <div className="flex shrink-0 items-center gap-3 pt-1">
+                {code && (
+                  <Link href={code} target="_blank" rel="nofollow">
+                    <AiFillGithub className="text-xl text-fg-3 transition-colors hover:text-fg" />
+                  </Link>
+                )}
 
-              {projectLink && (
-                <Link href={projectLink} target="_blank" rel="nofollow">
-                  <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-                </Link>
-              )}
+                {projectLink && (
+                  <Link href={projectLink} target="_blank" rel="nofollow">
+                    <AiOutlineExport className="text-xl text-fg-3 transition-colors hover:text-fg" />
+                  </Link>
+                )}
+              </div>
             </div>
-          </Reveal>
-          <Reveal>
-            <div className="flex flex-wrap gap-4 text-sm text-indigo-300 my-2">
-              {tech.join(" - ")}
-            </div>
-          </Reveal>
-          <Reveal>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="my-2 font-mono mono-1 text-xs leading-relaxed text-fg-3">
+              {tech.join(" · ")}
+            </p>
+            <p className="text-sm leading-relaxed text-fg-2">
               {description}{" "}
               <span
-                className="inline-block text-sm text-indigo-300 cursor-pointer"
+                className="inline-block cursor-pointer text-sm text-accent-hover underline-offset-4 hover:underline"
                 onClick={() => setIsOpen(true)}
               >
-                Learn more {">"}
+                {t("learnMore")} →
               </span>
             </p>
-          </Reveal>
+          </div>
         </div>
-      </motion.div>
+      </Reveal>
       <ProjectModal
         modalContent={modalContent}
         projectLink={projectLink}
