@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { motion, Variants } from "framer-motion";
 import { useLanguage } from "../LanguageContext";
+import { getCVUrl } from "@/lib/cv";
 
 export const Header: React.FC = () => {
   const t = useTranslations('header');
@@ -22,16 +23,6 @@ export const Header: React.FC = () => {
     setOpen(false);
   };
 
-  const getCVUrl = (locale: string) => {
-    switch (locale) {
-      case 'sk':
-        return "/Varju-CV-SK.pdf";
-      case 'hu':
-        return "/Varju-CV-HU.pdf";
-      default:
-        return "/Varju-CV-EN.pdf";
-    }
-  };
 
   return (
     <header className="h-[72px]  px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">

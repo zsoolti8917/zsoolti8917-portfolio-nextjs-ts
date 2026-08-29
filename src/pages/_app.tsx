@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Inter } from "next/font/google";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import { LanguageProvider } from '@/components/LanguageContext';
-const inter = Inter({ subsets: ["latin"], display: 'swap' });
+const inter = Inter({ subsets: ["latin", "latin-ext"], display: 'swap' });
 
 
 export default function App({ Component, pageProps }: AppProps) {

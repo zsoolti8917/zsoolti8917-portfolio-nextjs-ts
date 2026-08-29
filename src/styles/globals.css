@@ -51,79 +51,44 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- About V5: stack marquee ------------------------------------------- */
+/* --- Hero variants ------------------------------------------------------
+   Pre-planted here so no variant needs to touch this shared file. Each rule
+   is inert until the variant that owns it mounts. */
 
-@keyframes about-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* V1 — live-status dot on the "currently" pill. */
+@keyframes hero-ping {
+  0%   { transform: scale(1);   opacity: 0.75; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+.hero-ping { animation: hero-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+/* V2 — chips are absolutely positioned and driven by matter-js via
+   `transform`. Until the engine loads they are laid out by normal flow, so
+   the positioning only switches on once the world exists. */
+.hero-chip-physics {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
 }
 
-.about-marquee-track {
-  overflow: hidden;
-  /* Without this the max-content track below would propagate its intrinsic
-     width up through the page grid and widen the whole document. */
-  min-width: 0;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 6%,
-    black 94%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 6%,
-    black 94%,
-    transparent
-  );
-}
+/* V3 — a Bayer dither is a *pixel* effect; the canvas is rendered at DPR 1
+   and upscaled, so it must not be smoothed. */
+.hero-dither-canvas { image-rendering: pixelated; }
 
-/* Two identical halves, so a -50% shift loops seamlessly. */
-.about-marquee {
-  display: flex;
-  width: max-content;
-  animation: about-marquee var(--marquee-duration, 45s) linear infinite;
-}
-
-.about-marquee-reverse {
-  animation-direction: reverse;
-}
-
-.about-marquee-track:hover .about-marquee {
-  animation-play-state: paused;
+/* V5 — the weight is written per letter as a custom property rather than a
+   whole font-variation-settings string: cheaper to parse, and it keeps the
+   CSS out of the JS. Fixed width is load-bearing — a variable `wght` changes
+   glyph advance, which would reflow the line on every frame and make the
+   letters slide out from under the cursor. */
+.hero-kinetic-letter {
+  display: inline-block;
+  text-align: center;
+  font-variation-settings: "wght" var(--hw, 400);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about-marquee-track {
-    overflow: visible;
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-
-  .about-marquee {
-    width: 100%;
-    min-width: 0;
-    animation: none;
-  }
-
-  /* The one remaining half becomes an ordinary wrapping chip list. It ships
-     with `shrink-0` for the animated case, which must be undone here or the
-     row stays at max-content and pushes the page sideways. */
-  .about-marquee > * {
-    width: 100%;
-    min-width: 0;
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    padding-right: 0;
-  }
-
-  /* The second half exists only to make the loop seamless. */
-  .about-marquee-duplicate {
-    display: none;
-  }
+  .hero-ping { animation: none; }
+  .hero-chip-physics { position: static; transform: none !important; }
+  .hero-kinetic-letter { font-variation-settings: "wght" 400; }
 }

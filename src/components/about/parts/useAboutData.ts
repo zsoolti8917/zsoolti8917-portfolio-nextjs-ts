@@ -22,7 +22,3 @@ export const useAboutData = () => {
     languages: t.raw("languages") as LanguageEntry[],
   };
 };
-
-/** The stack groups flattened back into one list, for variants that want it. */
-export const flattenStack = (stack: StackGroup[]) =>
-  stack.flatMap((group) => group.items);

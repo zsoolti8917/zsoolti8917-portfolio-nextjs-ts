@@ -14,7 +14,6 @@
     "quote": "{author} povedal, že šťastie vznikne vtedy, keď sa príprava stretne s príležitosťou. Zatiaľ to sedí. ",
     "connect": "Ak chcete niečo spolu vytvoriť alebo si len pokecať o technológiách, ozvite sa. 🔗",
     "myLinks": "Moje odkazy",
-    "stackLabel": "Technológie",
     "certificationsLabel": "Certifikáty",
     "languagesLabel": "Jazyky",
     "showMore": "+{count} ďalších",
@@ -31,14 +30,6 @@
       "fromValue": "Čierna Voda, SK",
       "sinceLabel": "V IT od roku",
       "sinceValue": "2022"
-    },
-    "personality": {
-      "label": "Mimo práce",
-      "items": [
-        "Homelab, ktorý dávno prerástol rozumnú mieru",
-        "Motorka",
-        "Lyžiarska sezóna, ktorej nikdy nie je dosť"
-      ]
     }
   },
   "Stats": {
@@ -274,12 +265,96 @@
     ]
   },
   "hero": {
-    "clickMe": "Kliknite sem!",
     "greeting": "Ahoj, som Zsolt",
     "title": "Som",
     "profession": "softvérový vývojár",
     "description": "Vývojár a prevádzkovateľ platforiem: tvorím webové aplikácie od začiatku do konca, navrhujem dátové pipeliny, ktoré za nimi stoja, a udržiavam v chode infraštruktúru, na ktorej bežia. Momentálne som jediným vývojárom a prevádzkovateľom na projekte pre Európsku vesmírnu agentúru.",
-    "buttonText": "Kontaktujte ma"
+    "buttonText": "Kontaktujte ma",
+    "common": {
+      "name": "Zsolt Varju",
+      "languages": "EN · SK · HU",
+      "ctaWork": "Pozrite, čo som dodal",
+      "ctaCv": "Životopis (PDF)",
+      "ctaContact": "Kontaktujte ma",
+      "statusLabel": "Momentálne",
+      "statusValue": "Serco, Praha — jediný vývojár a prevádzkovateľ",
+      "proof": {
+        "tools": "technológií v produkcii",
+        "projects": "dodaných projektov",
+        "certs": "certifikácie",
+        "langs": "jazyky, ktorými hovorím",
+        "years": "rokov v softvéri",
+        "build": "posledný build"
+      }
+    },
+    "v1": {
+      "eyebrow": "Full-stack · Prevádzka platforiem · Praha, CET",
+      "headlineLines": [
+        "Na projekte pre Európsku",
+        "vesmírnu agentúru",
+        "som jediný vývojár."
+      ],
+      "subhead": "Tvorím webové aplikácie od začiatku do konca, navrhujem dátové pipeliny, ktoré za nimi stoja, a udržiavam v chode infraštruktúru, na ktorej bežia.",
+      "panelTitle": "Stav systému"
+    },
+    "v2": {
+      "eyebrow": "Full-stack · Automatizácia · Praha, CET",
+      "headlineLines": [
+        "Polovica, ktorú vidíte, je React.",
+        "Tá druhá je dôvod, prečo to beží."
+      ],
+      "subhead": "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru.",
+      "hint": "Potiahnite ich.",
+      "resetLabel": "Naskladajte ich znova"
+    },
+    "v3": {
+      "eyebrow": "Full-stack · Prevádzka platforiem · Praha, CET",
+      "headline": "Nasadenie je len polovica cesty.",
+      "subhead": "Kód píšem ja a ja ho aj udržiavam v chode. Momentálne som jediným vývojárom na projekte pre Európsku vesmírnu agentúru."
+    },
+    "v4": {
+      "eyebrow": "Automatizácia · AI nástroje · Praha, CET",
+      "headline": "Živím sa tým, že ruším prácu.",
+      "subhead": "Scrapery, dátové pipeliny a interné nástroje, ktoré nahradia prácu, čo nikto nechce robiť dvakrát — a React rozhrania, ktoré na nich bežia.",
+      "prompt": "visitor@zsoltvarju:~$",
+      "boot": [
+        "zsoltvarju.com — interaktívny shell",
+        "Napíšte help a stlačte Enter."
+      ],
+      "hint": "Napíšte help a stlačte Enter.",
+      "notFound": "{cmd}: príkaz sa nenašiel. Skúste help.",
+      "help": {
+        "intro": "Dostupné príkazy:",
+        "whoami": "s kým hovoríte",
+        "ls": "zoznam dodanej práce",
+        "stack": "s čím pracujem",
+        "cv": "stiahnuť životopis",
+        "contact": "ako ma kontaktovať",
+        "gui": "opustiť terminál"
+      },
+      "whoami": [
+        "Zsolt Varju — full-stack vývojár a prevádzkovateľ platforiem, Praha.",
+        "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru.",
+        "Jazyky: angličtina, slovenčina, maďarčina, čeština."
+      ],
+      "contactLines": [
+        "Prejdite do sekcie kontakt, alebo ma nájdite na LinkedIne a GitHube."
+      ],
+      "cvLine": "Otváram životopis…",
+      "stackHeader": "S čím pracujem:",
+      "lsHeader": "Dodaná práca:",
+      "guiLeaving": "Prechádzam do grafického rozhrania…"
+    },
+    "v5": {
+      "eyebrow": "Full-stack · Prevádzka platforiem · Praha, CET",
+      "headlineLines": [
+        "Postaviť.",
+        "Nasadiť.",
+        "A udržať pri živote."
+      ],
+      "subhead": "Full-stack vývojár a prevádzkovateľ platforiem. Jediný vývojár na projekte pre Európsku vesmírnu agentúru.",
+      "hoverHint": "Pohnite kurzorom."
+    }
   },
   "sidebar": {
     "logo": "V",

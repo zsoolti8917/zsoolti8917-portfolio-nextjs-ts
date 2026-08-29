@@ -15,7 +15,7 @@ interface ProjectDef {
   techList?: boolean;
 }
 
-const PROJECTS: ProjectDef[] = [
+export const PROJECTS: ProjectDef[] = [
   { key: "ragSystem" },
   {
     key: "coffece",
