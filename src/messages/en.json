@@ -172,7 +172,8 @@
     "moreYourSpeed": "if that's more your speed.",
     "email": "dev@zsoltvarju.com",
     "copy": "Copy email",
-    "copied": "Copied"
+    "copied": "Copied",
+    "sendEmail": "Send an email"
   },
   "experience": {
     "title": "Experience",
@@ -498,7 +499,8 @@
         "para4": "This extension highlights my proficiency in creating solutions that address specific user needs, improving the shopping experience during promotional events. It also demonstrates my ability to work with browser APIs and create user-friendly interfaces for browser extensions.",
         "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
       }
-    }
+    },
+    "openSite": "Open site"
   },
   "nav": {
     "home": "Home",

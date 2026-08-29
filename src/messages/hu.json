@@ -172,7 +172,8 @@
     "moreYourSpeed": "platformokon is.",
     "email": "dev@zsoltvarju.com",
     "copy": "E-mail másolása",
-    "copied": "Másolva"
+    "copied": "Másolva",
+    "sendEmail": "E-mail küldése"
   },
   "experience": {
     "title": "Munkatapasztalat",
@@ -498,7 +499,8 @@
         "para4": "Ez a kiterjesztés kiemeli a képességemet olyan megoldások létrehozására, amelyek kielégítik a konkrét felhasználói igényeket, javítva a vásárlási élményt promóciós események alatt. Ezenkívül bemutatja a böngésző API-kal való munkavégzést és a felhasználóbarát felületek létrehozását a böngésző kiterjesztésekhez.",
         "para5": "A projekt nyílt forráskódú, és lehetőséget ad a fejlesztői közösség hozzájárulására, ami bemutatja az elkötelezettségemet az együttműködő fejlesztés és a szoftverprojektek folyamatos fejlesztése iránt."
       }
-    }
+    },
+    "openSite": "Weboldal megnyitása"
   },
   "nav": {
     "home": "Kezdőlap",

@@ -7,41 +7,37 @@ interface Props {
   /** Constrain the measure. Prose is unreadable much past ~75ch. */
   className?: string;
   withLinks?: boolean;
-  withDropCap?: boolean;
 }
 
-export const AboutProse = ({
-  className = "",
-  withLinks = true,
-  withDropCap = true,
-}: Props) => {
+export const AboutProse = ({ className = "", withLinks = true }: Props) => {
   const t = useTranslations("About");
 
   return (
     <div className={`space-y-4 ${className}`}>
-      <Reveal width="w-full">
-        <p className="leading-relaxed text-zinc-300">
-          {withDropCap && (
-            <span className="float-left mr-1 rounded bg-indigo-500 px-3 py-2 text-2xl font-bold text-white">
-              {t("firstLetter")}
-            </span>
-          )}
+      <Reveal width="100%">
+        <p className="leading-relaxed text-fg-2">
+          {/* `firstLetter` is the intro's first character, split out back when
+              the paragraph opened with an indigo drop-cap box. The box is
+              gone; the key stays, because scripts/build-llm-assets.mjs and
+              hero/terminal/useTerminalData.ts both reassemble the sentence
+              from the two halves. Rendered as plain text, no separator. */}
+          {t("firstLetter")}
           {t("intro")}
         </p>
       </Reveal>
-      <Reveal width="w-full">
-        <p className="leading-relaxed text-zinc-300">{t("currentWork")}</p>
+      <Reveal width="100%">
+        <p className="leading-relaxed text-fg-2">{t("currentWork")}</p>
       </Reveal>
-      <Reveal width="w-full">
-        <p className="leading-relaxed text-zinc-300">
+      <Reveal width="100%">
+        <p className="leading-relaxed text-fg-2">
           {t("quote", { author: "Seneca" })}
           {t("connect")}
         </p>
       </Reveal>
       {withLinks && (
-        <Reveal width="w-full">
+        <Reveal width="100%">
           <div className="flex items-center gap-6 pt-2">
-            <div className="flex items-center gap-4 text-sm text-indigo-300">
+            <div className="flex items-center gap-3 text-sm text-fg-3">
               <span>{t("myLinks")}</span>
               <AiOutlineArrowRight />
             </div>

@@ -63,8 +63,10 @@ export const Projects = () => {
     <section className="section-wrapper scroll-mt-16" id="projects">
       <SectionHeader index="02" kicker={nav('projects').toLowerCase()} title={t('sectionTitle')} />
 
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
-        {PROJECTS.map((def) => (
+      {/* items-stretch (the default) plus `h-full` on the card: the cards
+          carry a border now, so ragged bottom edges would read as a bug. */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {PROJECTS.map((def, i) => (
           <Project
             key={def.key}
             title={t(`${def.key}.title`)}
@@ -74,6 +76,7 @@ export const Projects = () => {
             tech={t(`${def.key}.tech`).split(',')}
             description={t(`${def.key}.description`)}
             projectKey={def.key}
+            index={i}
           />
         ))}
       </div>

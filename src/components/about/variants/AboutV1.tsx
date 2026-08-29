@@ -22,11 +22,11 @@ export const AboutV1 = () => {
     <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,1fr)_340px]">
       <div className="space-y-8 md:sticky md:top-24 md:self-start">
         <AboutProse />
-        <div className="border-t border-zinc-800 pt-6">
+        <div className="border-t border-hairline pt-6">
           <FactsRow />
         </div>
         <div>
-          <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-zinc-400">
+          <h4 className="mb-2 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("languagesLabel")}
           </h4>
           <LanguageList items={languages} layout="inline" />
@@ -46,7 +46,7 @@ export const AboutV1 = () => {
         <SkillGroup label={aiLlm.title} items={aiLlm.chips} limit={8} />
         <SkillGroup label={triedOut.title} items={triedOut.chips} />
         <div>
-          <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
+          <h4 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("certificationsLabel")}
           </h4>
           <CertificationList items={certifications} />

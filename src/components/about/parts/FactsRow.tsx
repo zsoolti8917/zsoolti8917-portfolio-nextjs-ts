@@ -1,22 +1,17 @@
 import { useTranslations } from "next-intl";
-import { IconType } from "react-icons";
-import {
-  AiOutlineEnvironment,
-  AiOutlineCompass,
-  AiOutlineCalendar,
-} from "react-icons/ai";
 
-const FACTS: { key: string; Icon: IconType }[] = [
-  { key: "based", Icon: AiOutlineEnvironment },
-  { key: "from", Icon: AiOutlineCompass },
-  { key: "since", Icon: AiOutlineCalendar },
-];
+const FACTS = ["based", "from", "since"] as const;
 
 interface Props {
   layout?: "row" | "column";
   className?: string;
 }
 
+/**
+ * Three labelled facts. The icons are gone: a pin, a compass and a calendar
+ * next to "Based / From / Since" said nothing the label did not already say,
+ * and the mono kicker is the section's own way of marking a label.
+ */
 export const FactsRow = ({ layout = "row", className = "" }: Props) => {
   const t = useTranslations("About");
 
@@ -28,17 +23,12 @@ export const FactsRow = ({ layout = "row", className = "" }: Props) => {
           : "flex flex-col gap-4"
       } ${className}`}
     >
-      {FACTS.map(({ key, Icon }) => (
-        <div key={key} className="flex items-start gap-3">
-          <Icon className="mt-[2px] shrink-0 text-base text-indigo-500" />
-          <div>
-            <dt className="text-xs uppercase tracking-widest text-zinc-500">
-              {t(`facts.${key}Label`)}
-            </dt>
-            <dd className="text-sm font-medium text-zinc-200">
-              {t(`facts.${key}Value`)}
-            </dd>
-          </div>
+      {FACTS.map((key) => (
+        <div key={key}>
+          <dt className="font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
+            {t(`facts.${key}Label`)}
+          </dt>
+          <dd className="mt-1 text-sm text-fg">{t(`facts.${key}Value`)}</dd>
         </div>
       ))}
     </dl>

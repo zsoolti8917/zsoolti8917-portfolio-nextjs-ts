@@ -19,7 +19,7 @@ export const SkillGroup = ({ label, items, limit }: Props) => {
 
   return (
     <div>
-      <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
+      <h4 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
         {label}
       </h4>
       <div className="flex flex-wrap gap-2">
@@ -30,7 +30,7 @@ export const SkillGroup = ({ label, items, limit }: Props) => {
           <button
             type="button"
             onClick={() => setExpanded((pv) => !pv)}
-            className="rounded bg-zinc-800 px-2 py-1 text-xs text-indigo-300 transition-colors hover:bg-zinc-700"
+            className="rounded-md border border-hairline bg-surface-2 px-2 py-1 font-mono mono-1 text-xs text-accent-hover transition-colors hover:border-hairline-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
           >
             {expanded ? t("showLess") : t("showMore", { count: hidden })}
           </button>

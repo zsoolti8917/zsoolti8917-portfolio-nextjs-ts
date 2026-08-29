@@ -8,10 +8,13 @@ import { useTranslations } from 'next-intl';
 import { useDialogKeys } from "../util/useDialogKeys";
 import { useOverlay } from "../util/overlayState";
 import { useScrollLock } from "../util/useScrollLock";
+import { ProjectCover } from "./ProjectCover";
 
 export interface ProjectModalData {
   title: string;
   imgSrc?: string;
+  /** Position in `PROJECTS`; drives the generated cover's hue. */
+  index: number;
   code?: string;
   projectLink?: string;
   tech: string[];
@@ -50,14 +53,14 @@ export const ProjectModal = ({ project, onClose }: Props) => {
       role="dialog"
       aria-modal="true"
       aria-labelledby={titleId}
-      className="fixed inset-0 z-50 px-4 py-12 bg-zinc-950/50 backdrop-blur overflow-y-scroll flex justify-center cursor-pointer"
+      className="fixed inset-0 z-50 flex cursor-pointer justify-center overflow-y-scroll bg-canvas/70 px-4 py-12 backdrop-blur"
       onClick={onClose}
     >
       <button
         type="button"
         aria-label={t('close')}
         onClick={onClose}
-        className="absolute top-4 md:top-6 text-xl right-4"
+        className="absolute right-4 top-4 rounded text-xl text-fg-2 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent md:top-6"
       >
         <MdClose />
       </button>
@@ -66,42 +69,44 @@ export const ProjectModal = ({ project, onClose }: Props) => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg cursor-auto"
+        className="h-fit w-full max-w-2xl cursor-auto overflow-hidden rounded-xl border border-hairline bg-surface-1"
       >
         {imgSrc ? (
           <img
-            className="w-full"
+            className="w-full border-b border-hairline"
             src={imgSrc}
             alt={`An image of the ${title} project.`}
           />
         ) : (
-          <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-zinc-800 via-zinc-700 to-indigo-950">
-            <span className="bg-indigo-500 text-white font-black text-3xl py-2 px-4 rounded">
-              {title.charAt(0)}
-            </span>
-          </div>
+          // The same tile the card shows, flush with the panel edges.
+          <ProjectCover
+            title={title}
+            tech={tech}
+            index={index}
+            className="rounded-none border-x-0 border-t-0"
+          />
         )}
         <div className="p-8">
-          <h4 id={titleId} className="text-3xl font-bold mb-2">{title}</h4>
-          <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
-            {tech.join(" - ")}
+          <h4 id={titleId} className="mb-2 text-3xl font-bold tracking-[-0.02em] text-fg">{title}</h4>
+          <div className="flex flex-wrap gap-2 font-mono mono-1 text-xs text-fg-3">
+            {tech.join(" · ")}
           </div>
 
-          <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">
+          <div className="my-6 space-y-4 text-sm leading-relaxed text-fg-2">
             {content}
           </div>
 
           {(code || projectLink) && (
             <div>
-              <p className="font-bold mb-2 text-xl">
-                {t('projectLinks')}<span className="text-indigo-500">.</span>
+              <p className="mb-2 text-xl font-bold text-fg">
+                {t('projectLinks')}<span className="text-accent">.</span>
               </p>
               <div className="flex items-center gap-4 text-sm">
                 {code && (
                   <Link
                     target="_blank"
                     rel="nofollow"
-                    className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                    className="flex items-center gap-1 text-fg-2 transition-colors hover:text-fg"
                     href={code}
                   >
                     <AiFillGithub /> {t('sourceCode')}
@@ -111,7 +116,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
                   <Link
                     target="_blank"
                     rel="nofollow"
-                    className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                    className="flex items-center gap-1 text-fg-2 transition-colors hover:text-fg"
                     href={projectLink}
                   >
                     <AiOutlineExport /> {t('liveProject')}

@@ -15,14 +15,15 @@ import { useProjectModalContent, type ProjectDef } from "./useProjectModalConten
  */
 export const ProjectModalHost = () => {
   const { projectKey, closeProject } = useTerminalBus();
-  const def = PROJECTS.find((p) => p.key === projectKey);
+  const index = PROJECTS.findIndex((p) => p.key === projectKey);
+  const def = index >= 0 ? PROJECTS[index] : undefined;
 
   // Split so the hooks below only ever run for a project that exists — the
   // content hook reads a whole modal body out of the message catalogue.
-  return def ? <OpenProject def={def} onClose={closeProject} /> : null;
+  return def ? <OpenProject def={def} index={index} onClose={closeProject} /> : null;
 };
 
-const OpenProject = ({ def, onClose }: { def: ProjectDef; onClose: () => void }) => {
+const OpenProject = ({ def, index, onClose }: { def: ProjectDef; index: number; onClose: () => void }) => {
   const t = useTranslations("projects");
   const content = useProjectModalContent(def);
 
@@ -31,6 +32,7 @@ const OpenProject = ({ def, onClose }: { def: ProjectDef; onClose: () => void })
       project={{
         title: t(`${def.key}.title`),
         imgSrc: def.imgSrc,
+        index,
         code: def.code,
         projectLink: def.projectLink,
         tech: t(`${def.key}.tech`).split(","),

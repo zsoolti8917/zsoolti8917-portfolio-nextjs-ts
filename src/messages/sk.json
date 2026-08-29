@@ -172,7 +172,8 @@
     "moreYourSpeed": "",
     "email": "dev@zsoltvarju.com",
     "copy": "Kopírovať e-mail",
-    "copied": "Skopírované"
+    "copied": "Skopírované",
+    "sendEmail": "Poslať e-mail"
   },
   "experience": {
     "title": "Pracovné skúsenosti",
@@ -498,7 +499,8 @@
         "para4": "Toto rozšírenie zdôrazňuje moju zručnosť pri vytváraní riešení, ktoré riešia konkrétne potreby používateľov, čím sa zlepšuje nákupný zážitok počas promo akcií. Tiež ukazuje moju schopnosť pracovať s prehliadačovými API a vytvárať používateľsky prívetivé rozhrania pre rozšírenia prehliadača.",
         "para5": "Projekt je open-source, čo pozýva príspevky od komunity vývojárov, čo ukazuje moju oddanosť spolupráci na vývoji a neustálemu zlepšovaniu softvérových projektov."
       }
-    }
+    },
+    "openSite": "Otvoriť web"
   },
   "nav": {
     "home": "Domov",
