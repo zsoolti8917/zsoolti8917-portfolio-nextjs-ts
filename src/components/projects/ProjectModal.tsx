@@ -39,6 +39,9 @@ interface Props {
 export const ProjectModal = ({ project, onClose }: Props) => {
   const { content, projectLink, imgSrc, index, title, code, tech } = project;
   const t = useTranslations('projectModal');
+  // The alt text lives with the other per-project copy, not with the dialog's
+  // chrome — the card renders exactly the same string.
+  const p = useTranslations('projects');
   const titleId = useId();
   const reduced = useReducedMotion();
 
@@ -106,7 +109,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
           <img
             className="w-full border-b border-hairline"
             src={imgSrc}
-            alt={`An image of the ${title} project.`}
+            alt={p('imageAlt', { title })}
           />
         ) : (
           // The same tile the card shows, flush with the panel edges.
@@ -118,7 +121,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
           />
         )}
         <div className="p-8">
-          <h4 id={titleId} className="mb-2 text-3xl font-bold tracking-[-0.02em] text-fg">{title}</h4>
+          <h3 id={titleId} className="mb-2 text-3xl font-bold tracking-[-0.02em] text-fg">{title}</h3>
           <div className="flex flex-wrap gap-2 font-mono mono-1 text-xs text-fg-3">
             {tech.join(" · ")}
           </div>

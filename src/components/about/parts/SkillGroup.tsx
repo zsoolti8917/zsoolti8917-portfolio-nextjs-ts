@@ -19,9 +19,9 @@ export const SkillGroup = ({ label, items, limit }: Props) => {
 
   return (
     <div>
-      <h4 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
+      <h3 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
         {label}
-      </h4>
+      </h3>
       <div className="flex flex-wrap gap-2">
         {visible.map((item) => (
           <Chip key={item}>{item}</Chip>

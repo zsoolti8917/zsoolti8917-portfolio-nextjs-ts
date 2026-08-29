@@ -290,7 +290,7 @@
       "findHeader": "Výsledky pre „{q}“:",
       "findEmpty": "Nič sa nezhoduje s „{q}“. Skúste: projects, experience, skills.",
       "findUsage": "Použitie: find <slovo> — prehľadá projekty, prax a technológie.",
-      "status": "otvorený novým ponukám",
+      "status": "otvorený novým príležitostiam",
       "statusBar": {
         "cwd": "~/cv",
         "hints": "↑↓ história · → doplniť · ^L vyčistiť",
@@ -298,9 +298,9 @@
       },
       "whoami": {
         "headline": "Živím sa tým, že ruším prácu.",
-        "role": "rola",
+        "role": "pozícia",
         "now": "teraz",
-        "based": "sídlo",
+        "based": "bydlisko",
         "since": "od",
         "stack": "stack",
         "statusLabel": "stav",
@@ -366,6 +366,7 @@
   "projects": {
     "sectionTitle": "Projekty",
     "learnMore": "Zistiť viac",
+    "imageAlt": "Snímka obrazovky: {title}",
     "ragSystem": {
       "title": "Self-hosted RAG vyhľadávanie",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",

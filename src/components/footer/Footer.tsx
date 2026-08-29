@@ -7,12 +7,15 @@ import { useTranslations } from "next-intl";
  */
 export const Footer = () => {
   const t = useTranslations("footer");
+  // Not hardcoded: Hungarian puts the family name first, and the footer must
+  // agree with the <h1> the hero prints for the same locale.
+  const hero = useTranslations("hero.common");
   const year = (process.env.NEXT_PUBLIC_BUILD_TIME ?? "").slice(0, 4) || "2026";
 
   return (
     <footer className="mt-16 border-t border-hairline">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 py-8 font-mono mono-1 text-xs text-fg-3 md:px-8">
-        <span>© {year} Zsolt Varjú</span>
+        <span>© {year} {hero("name")}</span>
         <span aria-hidden>·</span>
         <span>{t("builtWith")}</span>
         <span aria-hidden>·</span>

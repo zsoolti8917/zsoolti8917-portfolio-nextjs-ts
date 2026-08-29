@@ -366,6 +366,7 @@
   "projects": {
     "sectionTitle": "Projects",
     "learnMore": "Learn more",
+    "imageAlt": "Screenshot of {title}",
     "ragSystem": {
       "title": "Self-Hosted RAG Search",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",

@@ -61,7 +61,7 @@ export const Project = ({
               <div className="relative aspect-video overflow-hidden rounded-lg border border-hairline bg-surface-2">
                 <img
                   src={imgSrc}
-                  alt={`An image of the ${title} project.`}
+                  alt={t("imageAlt", { title })}
                   // The screenshot floats out of the bottom of the tile and
                   // grows a little on hover. The 2 degree rotation is gone:
                   // the covers beside it are square-on windows, and one tilted
@@ -80,7 +80,7 @@ export const Project = ({
                 between the two lines. The card has a border of its own now,
                 so the rule was buying nothing. */}
             <div className="flex w-full items-start justify-between gap-3">
-              <h4 className="min-w-0 text-lg font-semibold text-fg">{title}</h4>
+              <h3 className="min-w-0 text-lg font-semibold text-fg">{title}</h3>
 
               <div className="flex shrink-0 items-center gap-3 pt-1">
                 {code && (

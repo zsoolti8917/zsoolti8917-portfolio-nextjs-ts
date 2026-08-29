@@ -13,12 +13,12 @@ export const CurrentlyCard = ({ className = "", bare = false }: Props) => {
   const body = (
     <>
       {!bare && (
-        <h4 className="mb-4 flex items-center gap-2">
+        <h3 className="mb-4 flex items-center gap-2">
           <AiOutlineRadarChart className="text-lg text-fg-3" />
           <span className="font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("currently.label")}
           </span>
-        </h4>
+        </h3>
       )}
       <p className="flex items-center gap-2 font-semibold text-fg">
         {/* The one animated thing in the section: a live status light. Green,

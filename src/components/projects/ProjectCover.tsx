@@ -98,8 +98,8 @@ export const ProjectCover = ({ title, index, tech = [], className = "" }: Props)
         <p aria-hidden className="truncate font-mono mono-1 text-[11px] text-fg-3">
           ❯ open {slug}
         </p>
-        {/* Not a heading: the card already names the project in its own <h4>,
-            and the modal in its <h4> — this is decoration of that name. */}
+        {/* Not a heading: the card already names the project in its own <h3>,
+            and the modal in its <h3> — this is decoration of that name. */}
         <p className="font-mono mono-1 text-lg font-bold leading-tight text-fg md:text-xl">
           {title}
         </p>

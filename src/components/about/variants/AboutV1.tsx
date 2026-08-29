@@ -26,9 +26,9 @@ export const AboutV1 = () => {
           <FactsRow />
         </div>
         <div>
-          <h4 className="mb-2 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
+          <h3 className="mb-2 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("languagesLabel")}
-          </h4>
+          </h3>
           <LanguageList items={languages} layout="inline" />
         </div>
       </div>
@@ -46,9 +46,9 @@ export const AboutV1 = () => {
         <SkillGroup label={aiLlm.title} items={aiLlm.chips} limit={8} />
         <SkillGroup label={triedOut.title} items={triedOut.chips} />
         <div>
-          <h4 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
+          <h3 className="mb-3 font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("certificationsLabel")}
-          </h4>
+          </h3>
           <CertificationList items={certifications} />
         </div>
       </div>

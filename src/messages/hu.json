@@ -298,10 +298,10 @@
       },
       "whoami": {
         "headline": "Abból élek, hogy megszüntetek munkát.",
-        "role": "szerep",
+        "role": "pozíció",
         "now": "most",
         "based": "lakhely",
-        "since": "szakmában",
+        "since": "kezdés",
         "stack": "stack",
         "statusLabel": "állapot",
         "roleValue": "Szoftverfejlesztő · full-stack + platformüzemeltetés",
@@ -360,12 +360,13 @@
   "projectModal": {
     "projectLinks": "Projekt Linkek",
     "sourceCode": "Forráskód",
-    "liveProject": "Élő Projekt",
+    "liveProject": "Élő projekt",
     "close": "Bezárás"
   },
   "projects": {
     "sectionTitle": "Projektek",
     "learnMore": "Tudj meg többet",
+    "imageAlt": "Képernyőkép: {title}",
     "ragSystem": {
       "title": "Saját üzemeltetésű RAG keresés",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
