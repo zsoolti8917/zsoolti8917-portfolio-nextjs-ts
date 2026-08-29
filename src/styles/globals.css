@@ -118,4 +118,48 @@ html {
   .hero-caret { animation: none; opacity: 1; }
 }
 
-/* WP1 adds the sequential-print stagger keyframes below this line. */
+/* Sequential print. Output lines rise in one after another, ~35ms apart and
+   capped at 20 lines, so a long block finishes inside ~0.9s. The animation is
+   pure CSS: the server-rendered card reveals itself with JavaScript disabled,
+   and a crawler — which reads the markup, not the paint — is unaffected either
+   way. `data-done` (set by the first keystroke or click, and on the SSR blocks
+   once the demo is over) freezes everything at its final state. */
+.term-line {
+  opacity: 0;
+  transform: translateY(2px);
+  animation: term-line 0.18s ease-out forwards;
+  animation-delay: calc(min(var(--i), 20) * 35ms);
+}
+
+[data-done] .term-line {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes term-line {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .term-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Below sm the chips are one scrollable row; the fade is what says "there is
+   more to the right" without a scrollbar. Above sm they wrap and it goes. */
+.chips-row {
+  mask-image: linear-gradient(to right, black 85%, transparent);
+}
+
+@media (min-width: 640px) {
+  .chips-row {
+    mask-image: none;
+  }
+}

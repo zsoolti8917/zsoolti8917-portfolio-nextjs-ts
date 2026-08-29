@@ -1,39 +1,46 @@
-import { recursive } from "@/lib/fonts";
-import type { HeroTerminalCopy } from "../types";
+import type { HeroCommonCopy, HeroTerminalCopy } from "../types";
 import {
-  TerminalChips, TerminalInput, TerminalLog, TerminalPageLink, TerminalShell, TerminalSkipLink,
+  TerminalChips, TerminalInput, TerminalLog, TerminalShell, TerminalSkipLink, TerminalTitleBar,
 } from "./parts";
+import { StatusBar } from "./StatusBar";
 import { useTerminal } from "./useTerminal";
 
 /**
- * The default assembly: window chrome, scrollback, prompt, chips.
- * Variants that need a different structure compose the pieces in `parts.tsx`
- * directly against `useTerminal`.
+ * The window, and the whole first screen.
+ *
+ * The height is DEFINITE, not a min-height: the scrollback is the only
+ * flexible child, and without a definite height on its ancestor it would grow
+ * to fit its content instead of scrolling — which would also make the
+ * autoscroll effect a no-op. `100svh` rather than `dvh` so the on-screen
+ * keyboard does not resize the window mid-sentence on iOS.
+ *
+ * Prompt row, chips row and status bar are SIBLINGS of the scrollback, so
+ * nothing a visitor needs can scroll out of reach — including after `clear`.
  */
 export const Terminal = ({
   copy,
-  className = "",
-  logClassName = "h-[22rem] md:h-[26rem]",
+  common,
 }: {
   copy: HeroTerminalCopy;
-  className?: string;
-  logClassName?: string;
+  common: HeroCommonCopy;
 }) => {
-  const term = useTerminal(copy);
+  const term = useTerminal(copy, common);
 
   return (
-    <TerminalShell className={`${recursive.variable} rounded-lg border border-zinc-800 bg-zinc-950/80 ${className}`}>
+    <TerminalShell
+      className={
+        "relative h-[calc(100svh-56px)] overflow-hidden border-y border-hairline bg-surface-1 " +
+        "md:mx-auto md:my-6 md:h-[calc(100svh-56px-3rem)] md:max-w-6xl md:rounded-xl md:border " +
+        // The only shadow on the site. It lifts the window off the glow.
+        "md:shadow-[0_0_0_1px_rgb(0_0_0/0.4),0_30px_80px_-30px_rgb(99_102_241/0.25)]"
+      }
+    >
       <TerminalSkipLink copy={copy} />
-      <div className="flex items-center gap-2 border-b border-zinc-800 px-4 py-2.5">
-        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-        <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-        <span className="ml-2 truncate text-xs text-zinc-500">{copy.windowTitle}</span>
-        <span className="ml-auto"><TerminalPageLink copy={copy} /></span>
-      </div>
-      <TerminalLog term={term} copy={copy} className={`flex-1 px-4 py-3 ${logClassName}`} />
-      <TerminalInput term={term} copy={copy} className="border-t border-zinc-800 px-4 py-3" />
-      <TerminalChips term={term} copy={copy} className="border-t border-zinc-800/70 px-4 py-3" />
+      <TerminalTitleBar copy={copy} />
+      <TerminalLog term={term} copy={copy} className="flex-1 px-4 py-4 text-[13px] leading-[1.6] md:px-6" />
+      <TerminalInput term={term} copy={copy} />
+      <TerminalChips term={term} copy={copy} />
+      <StatusBar copy={copy} />
     </TerminalShell>
   );
 };
