@@ -4,12 +4,9 @@ import { useRouter } from "next/router";
 
 interface RevealProps {
   children: JSX.Element;
-  /**
-   * CSS width ("fit-content" | "100%"). Tailwind width classes ("w-full",
-   * "w-fit") are also accepted — several call sites predate the token rework —
-   * and are applied as a class instead of an inline style.
-   */
-  width?: "fit-content" | "100%" | (string & {});
+  /** CSS width, applied inline. Tailwind `w-*` classes used to be accepted too;
+   *  no call site passed one, so the branch that handled them is gone. */
+  width?: "fit-content" | "100%";
 }
 
 /**
@@ -32,13 +29,11 @@ const RevealOnce = ({ children, width }: Required<RevealProps>) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
   const reduced = useReducedMotion();
-  const isClass = width.startsWith("w-");
 
   return (
     <motion.div
       ref={ref}
-      className={isClass ? width : undefined}
-      style={isClass ? undefined : { width }}
+      style={{ width }}
       initial={reduced ? false : { opacity: 0, y: 16 }}
       animate={reduced || isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
       transition={{ duration: reduced ? 0 : 0.45, ease: "easeOut" }}

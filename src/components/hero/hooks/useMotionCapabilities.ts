@@ -3,25 +3,23 @@ import { useReducedMotion } from "framer-motion";
 import { useMediaQuery } from "./useMediaQuery";
 
 /**
- * The one rule that keeps every hero variant hydration-safe: these values may
- * gate `useEffect` bodies ONLY, never a JSX branch. The reduced-motion form is
- * always what renders; effects upgrade it after mount.
+ * The two capability values the terminal reads, and the one rule that keeps it
+ * hydration-safe: they may gate `useEffect` bodies ONLY, never a JSX branch.
+ * The reduced-motion, fine-pointer form is always what renders; effects upgrade
+ * it after mount. Anything wanting to branch in JSX on reduced motion should use
+ * framer's `useReducedMotion` directly, as `util/Reveal` does.
  */
 export const useMotionCapabilities = () => {
-  const framerReduced = useReducedMotion();
-  const reducedMotion = framerReduced ?? false;
+  const reducedMotion = useReducedMotion() ?? false;
   const coarsePointer = useMediaQuery("(pointer: coarse)");
-  const isDesktop = useMediaQuery("(min-width: 768px)");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   return {
-    mounted,
-    reducedMotion,
-    coarsePointer,
-    isDesktop,
+    /** True once mounted on a client that has not asked for less motion. */
     canAnimate: mounted && !reducedMotion,
-    canRunPhysics: mounted && !reducedMotion && isDesktop && !coarsePointer,
+    /** A touch screen: a tap in the output must not summon the keyboard. */
+    coarsePointer,
   };
 };

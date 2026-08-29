@@ -270,8 +270,6 @@
   "hero": {
     "common": {
       "name": "Zsolt Varjú",
-      "role": "Softvérový vývojár",
-      "tagline": "Full-stack vývojár a prevádzkovateľ platforiem. Jediný vývojár na projekte pre Európsku vesmírnu agentúru.",
       "location": "Praha, CET · EN · SK · HU"
     },
     "terminal": {
@@ -345,22 +343,11 @@
       "labels": {
         "tech": "Technológie",
         "link": "Otvoriť ↗",
-        "based": "Sídlo",
-        "from": "Pôvod",
-        "since": "V softvéri od",
         "back": "← všetky projekty"
       }
     }
   },
-  "sidebar": {
-    "logo": "V",
-    "about": "O mne",
-    "projects": "Projekty",
-    "experience": "Skúsenosti",
-    "contact": "Kontakt"
-  },
   "header": {
-    "resumeButton": "Moje CV",
     "linkedinAria": "Navštívte môj LinkedIn profil",
     "githubAria": "Navštívte môj GitHub profil",
     "languageSelector": "Zmeniť jazyk",
@@ -532,7 +519,6 @@
   },
   "palette": {
     "placeholder": "Napíšte príkaz alebo hľadajte…",
-    "empty": "Žiadne výsledky",
     "runInTerminal": "Spustiť „{query}“ v termináli",
     "groups": {
       "sections": "Prejsť na",
@@ -545,8 +531,7 @@
     "actions": {
       "cv": "Stiahnuť životopis",
       "copyEmail": "Kopírovať e-mail",
-      "copied": "Skopírované",
-      "switchLocale": "Zmeniť jazyk"
+      "copied": "Skopírované"
     },
     "footer": {
       "navigate": "navigácia",

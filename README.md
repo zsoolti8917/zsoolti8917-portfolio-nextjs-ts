@@ -12,7 +12,7 @@ npm run build      # production build (this is the gate — keep it green)
 npm test           # vitest, unit tests only
 npm run lint       # next lint
 npm run cv:build   # regenerate the three CV PDFs from cv/content.<locale>.json
-npm run llm:build  # regenerate public/llms.txt and public/cv.md
+npm run llm:build  # regenerate public/llms.txt, public/cv.md and public/profile.json
 ```
 
 ## Locales

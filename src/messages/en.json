@@ -270,8 +270,6 @@
   "hero": {
     "common": {
       "name": "Zsolt Varjú",
-      "role": "Software Developer",
-      "tagline": "Full-stack developer and platform operator. Sole developer on a project for the European Space Agency.",
       "location": "Prague, CET · EN · SK · HU"
     },
     "terminal": {
@@ -345,22 +343,11 @@
       "labels": {
         "tech": "Tech",
         "link": "Open ↗",
-        "based": "Based in",
-        "from": "From",
-        "since": "In software since",
         "back": "← all projects"
       }
     }
   },
-  "sidebar": {
-    "logo": "V",
-    "about": "About",
-    "projects": "Projects",
-    "experience": "Exp.",
-    "contact": "Contact"
-  },
   "header": {
-    "resumeButton": "My Resume",
     "linkedinAria": "Visit my LinkedIn profile",
     "githubAria": "Visit my GitHub profile",
     "languageSelector": "Change language",
@@ -532,7 +519,6 @@
   },
   "palette": {
     "placeholder": "Type a command or search…",
-    "empty": "No results",
     "runInTerminal": "Run “{query}” in the terminal",
     "groups": {
       "sections": "Go to",
@@ -545,8 +531,7 @@
     "actions": {
       "cv": "Download CV",
       "copyEmail": "Copy email",
-      "copied": "Copied",
-      "switchLocale": "Switch language"
+      "copied": "Copied"
     },
     "footer": {
       "navigate": "navigate",

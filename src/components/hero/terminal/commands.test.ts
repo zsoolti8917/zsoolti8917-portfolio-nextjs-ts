@@ -19,8 +19,6 @@ import {
 
 const common: HeroCommonCopy = {
   name: "Zsolt Varjú",
-  role: "Software Developer",
-  tagline: "Full-stack developer and platform operator.",
   location: "Prague, CET · EN · SK · HU",
 };
 
@@ -85,9 +83,6 @@ const copy: HeroTerminalCopy = {
   labels: {
     tech: "Tech",
     link: "Open ↗",
-    based: "Based in",
-    from: "From",
-    since: "In software since",
     back: "← all projects",
   },
 };

@@ -20,13 +20,13 @@ export const StatusBar = ({ copy }: { copy: HeroTerminalCopy }) => {
   const time = usePragueClock();
 
   return (
-    <div className="flex h-7 shrink-0 items-center gap-4 border-t border-hairline bg-surface-2 px-4 font-mono mono-1 text-[11px] text-fg-3 md:px-6">
+    <div className="flex h-7 shrink-0 items-center justify-between gap-4 border-t border-hairline bg-surface-2 px-4 font-mono mono-1 text-[11px] text-fg-3 md:px-6">
       <span className="hidden md:inline">{copy.statusBar.cwd}</span>
       <span className="hidden shrink-0 sm:inline">main@{COMMIT}</span>
 
-      <span className="ml-auto mr-auto hidden lg:inline">{copy.statusBar.hints}</span>
+      <span className="hidden lg:inline">{copy.statusBar.hints}</span>
 
-      <span className="ml-auto flex shrink-0 items-center gap-1.5 truncate">
+      <span className="flex shrink-0 items-center gap-1.5 truncate">
         <span aria-hidden className="text-success">
           ●
         </span>

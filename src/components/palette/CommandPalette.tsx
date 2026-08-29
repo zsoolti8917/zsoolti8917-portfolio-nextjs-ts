@@ -145,9 +145,10 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
     }
   };
 
+  // No empty-list guard: `searchPalette` never returns an empty list. An empty
+  // query is the starter menu, and any other query that matches nothing still
+  // gets the "run it in the terminal" row appended.
   const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!items.length) return;
-
     switch (event.key) {
       case "ArrowDown":
         event.preventDefault();
@@ -252,7 +253,7 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
             role="combobox"
             aria-expanded
             aria-controls={listId}
-            aria-activedescendant={items.length ? optionId(selected) : undefined}
+            aria-activedescendant={optionId(selected)}
             aria-autocomplete="list"
             aria-label={t("placeholder")}
             data-palette-input=""
@@ -290,10 +291,6 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
           ))}
 
           {fallback && row(fallback, items.length - 1)}
-
-          {!items.length && (
-            <p className="px-4 py-6 text-center text-sm text-fg-3">{t("empty")}</p>
-          )}
         </div>
 
         <div className="mono-1 flex h-8 items-center gap-4 border-t border-hairline px-4 font-mono text-[11px] text-fg-3">

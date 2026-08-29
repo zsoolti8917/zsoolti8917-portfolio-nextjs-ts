@@ -1,8 +1,8 @@
-/** Copy that is shared by the card and anything else naming the person. */
+/** Copy that is shared by the card and anything else naming the person.
+ *  The role and the tagline are not here: `whoami.roleValue` and
+ *  `whoami.headline` are what the card prints, and nothing else read them. */
 export interface HeroCommonCopy {
   name: string;
-  role: string;
-  tagline: string;
   location: string;
 }
 
@@ -56,17 +56,5 @@ export interface HeroTerminalCopy {
     "about" | "projects" | "experience" | "skills" | "certifications" | "languages" | "contact",
     string
   >;
-  labels: Record<"tech" | "link" | "based" | "from" | "since" | "back", string>;
-}
-
-export interface HeroStats {
-  stack: { label: string; items: string[] }[];
-  flatStack: string[];
-  toolCount: number;
-  aiCount: number;
-  projectCount: number;
-  certCount: number;
-  langCount: number;
-  years: number;
-  buildDate: string;
+  labels: Record<"tech" | "link" | "back", string>;
 }

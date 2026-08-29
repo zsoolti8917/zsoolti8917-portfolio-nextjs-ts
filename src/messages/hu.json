@@ -270,8 +270,6 @@
   "hero": {
     "common": {
       "name": "Varjú Zsolt",
-      "role": "Szoftverfejlesztő",
-      "tagline": "Full-stack fejlesztő és platformüzemeltető. Egyedüli fejlesztő az Európai Űrügynökség egyik projektjén.",
       "location": "Prága, CET · EN · SK · HU"
     },
     "terminal": {
@@ -345,22 +343,11 @@
       "labels": {
         "tech": "Technológiák",
         "link": "Megnyitás ↗",
-        "based": "Lakhely",
-        "from": "Származás",
-        "since": "A szakmában",
         "back": "← összes projekt"
       }
     }
   },
-  "sidebar": {
-    "logo": "V",
-    "about": "Rólam",
-    "projects": "Projektek",
-    "experience": "Tapasztalat",
-    "contact": "Kapcsolat"
-  },
   "header": {
-    "resumeButton": "Önéletrajzom",
     "linkedinAria": "Látogasd meg a LinkedIn profilomat",
     "githubAria": "Látogasd meg a GitHub profilomat",
     "languageSelector": "Nyelv módosítása",
@@ -532,7 +519,6 @@
   },
   "palette": {
     "placeholder": "Írj be egy parancsot vagy keress…",
-    "empty": "Nincs találat",
     "runInTerminal": "„{query}” futtatása a terminálban",
     "groups": {
       "sections": "Ugrás ide",
@@ -545,8 +531,7 @@
     "actions": {
       "cv": "Önéletrajz letöltése",
       "copyEmail": "E-mail másolása",
-      "copied": "Másolva",
-      "switchLocale": "Nyelvváltás"
+      "copied": "Másolva"
     },
     "footer": {
       "navigate": "navigálás",

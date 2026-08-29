@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { PROJECTS } from "@/components/projects/Projects";
+import { slug } from "@/lib/slug";
 import type { StackGroup, Certification, LanguageEntry, ChipGroup } from "@/components/about/types";
 
 export interface TerminalProject {
@@ -34,10 +35,6 @@ export interface TerminalData {
   languages: LanguageEntry[];
   about: { intro: string; currentWork: string; based: string; from: string; since: string };
 }
-
-/** A slug a visitor could plausibly type, from a company name. */
-const slug = (value: string) =>
-  value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "").split("-")[0];
 
 /**
  * Single read point for everything the shell can print. Every field comes from
