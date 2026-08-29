@@ -75,7 +75,7 @@ export const TopNav = () => {
             type="button"
             onClick={openPalette}
             aria-label={t("nav.menu")}
-            className="flex items-center rounded-md border border-hairline bg-surface-2 p-2 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg md:hidden"
+            className="flex items-center rounded-md border border-hairline bg-surface-2 p-2 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent md:hidden"
           >
             <FiMenu />
           </button>
@@ -83,7 +83,7 @@ export const TopNav = () => {
             type="button"
             onClick={openPalette}
             aria-label={t("nav.palette")}
-            className="hidden items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded md:flex"
+            className="hidden items-center gap-2 rounded-md border border-hairline bg-surface-2 px-2.5 py-1.5 text-fg-2 transition-colors hover:bg-surface-3 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent md:flex"
           >
             <FiSearch />
             <span className="font-mono mono-1 min-w-[3.5rem] text-xs">{shortcut}</span>
