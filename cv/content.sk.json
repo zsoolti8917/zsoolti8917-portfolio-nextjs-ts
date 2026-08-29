@@ -1,0 +1,264 @@
+{
+  "lang": "sk",
+  "pages": 2,
+  "docTitle": "Zsolt Varjú, softvérový vývojár, životopis",
+  "name": "Zsolt Varjú",
+  "role": "Softvérový vývojár",
+  "contact": {
+    "email": "dev@zsoltvarju.com",
+    "phone": "+421 915 443 951",
+    "location": "Praha, Česko (trvalý pobyt: Čierna Voda, Slovensko)",
+    "links": [
+      {
+        "label": "zsoltvarju.com",
+        "href": "https://zsoltvarju.com"
+      },
+      {
+        "label": "linkedin.com/in/zsoltvarju",
+        "href": "https://www.linkedin.com/in/zsoltvarju"
+      },
+      {
+        "label": "github.com/zsoolti8917",
+        "href": "https://github.com/zsoolti8917"
+      }
+    ]
+  },
+  "headings": {
+    "summary": "Profil",
+    "skills": "Zručnosti",
+    "experience": "Pracovné skúsenosti",
+    "projects": "Projekty",
+    "education": "Vzdelanie",
+    "certifications": "Certifikáty",
+    "languages": "Jazyky"
+  },
+  "summary": "Softvérový vývojár a prevádzkovateľ platforiem, zámerne širší než full-stack. Tvorím webové aplikácie od začiatku do konca, navrhujem ETL pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem infraštruktúru, na ktorej bežia, momentálne ako jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru. Vývoj s podporou AI je pre mňa bežná pracovná metóda, nie kuriozita. Smerujem k systémovej architektúre.",
+  "skillGroups": [
+    {
+      "label": "Jazyky",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Bash",
+        "SQL"
+      ]
+    },
+    {
+      "label": "Web",
+      "items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "REST API"
+      ]
+    },
+    {
+      "label": "Vyhľadávanie a dáta",
+      "items": [
+        "Apache Solr",
+        "Open Semantic Search",
+        "Tika",
+        "Neo4j",
+        "RabbitMQ",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "label": "ETL a automatizácia",
+      "items": [
+        "Vlastné ingesčné pipeliny",
+        "Orchestrácia cez cron",
+        "Extrakcia z PDF a tabuliek",
+        "Automatizácia procesov"
+      ]
+    },
+    {
+      "label": "AI a LLM",
+      "items": [
+        "RAG architektúra",
+        "Embeddingy",
+        "Vektorové vyhľadávanie (Qdrant)",
+        "Hybridné vyhľadávanie",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "Lokálne modely"
+      ]
+    },
+    {
+      "label": "DevOps a cloud",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "Azure",
+        "AWS",
+        "Dokku",
+        "nginx",
+        "WireGuard",
+        "Tailscale"
+      ]
+    },
+    {
+      "label": "Bezpečnosť a prax",
+      "items": [
+        "Odstraňovanie zraniteľností",
+        "TLS",
+        "Hardening",
+        "Riadenie zmien",
+        "Agile",
+        "Testovanie API (Postman)"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Softvérový vývojár",
+      "org": "Serco Czech Republic s.r.o.",
+      "location": "Praha, Česko",
+      "dates": "Feb 2025 – súčasnosť",
+      "bullets": [
+        "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru, a to od používateľského rozhrania až po servery, na ktorých beží.",
+        "React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ pre správy, Neo4j pre vzťahy a Tika pre extrakciu dokumentov.",
+        "Návrh a prevádzka ingesčných pipelín pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát.",
+        "Správa Ubuntu serverov v Azure: nginx s TLS a riadením prístupu, kontajnerizované služby, CI, zálohovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.",
+        "Viedol som fázovaný program kvality frontendu: vendor bundle menší približne o tri štvrtiny, objem JavaScriptu nižší o tretinu, CSS o viac než polovicu, odstránené všetky lint chyby a o 80 % menej zbytočných React re-renderov.",
+        "Priama spolupráca s tímami misií a IT na požiadavkách, formálnych hláseniach chýb, eskaláciách, záznamoch o zmenách a odhadoch prácnosti."
+      ]
+    },
+    {
+      "title": "Tester kvality (QA)",
+      "org": "Galileo Corporation s.r.o",
+      "location": "Na diaľku",
+      "dates": "2022 – 2025",
+      "bullets": [
+        "Manuálne funkčné testovanie webových stránok v rôznych prehliadačoch a na rôznych zariadeniach, s identifikáciou a nahlasovaním chýb.",
+        "Overovanie stránok voči grafickým návrhom a poskytovanie podrobnej spätnej väzby dizajnérom a vývojárom.",
+        "Udržiavanie štandardov kvality naprieč rozsiahlym portfóliom slovenských obecných a komerčných webových stránok.",
+        "Dokumentovanie výsledkov testov a nápravných opatrení, samostatná práca v pevných termínoch."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Self-hosted RAG vyhľadávanie",
+      "tech": [
+        "Python",
+        "Qdrant",
+        "bge-m3",
+        "LangChain",
+        "Docker"
+      ],
+      "line": "Vyhľadávanie s rozšíreným kontextom nad lokálnou zbierkou dokumentov: hybridné BM25 a vektorové vyhľadávanie, odpovede podložené citovanými pasážami a explicitné odmietnutie odpovede, keď chýba podklad."
+    },
+    {
+      "title": "Coffece (coffece.sk)",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "next-intl"
+      ],
+      "line": "Dvojjazyčná (SK/EN) marketingová a objednávková stránka pre značku rozvozu kávy do kancelárií, s lokalizovaným smerovaním, validovanými formulármi a kompletnými SEO metadátami."
+    },
+    {
+      "title": "IDT PLUS STAV (idtplusstav.sk)",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "MDX",
+        "Dokku",
+        "Google Workspace"
+      ],
+      "line": "Kompletná digitálna prevádzka pre stavebnú firmu: self-hosted web, firemný e-mail overený cez DKIM, fakturácia nastavená na slovenský prenos daňovej povinnosti, plus Google Ads a SEO."
+    },
+    {
+      "title": "B2B veľkoobchodný objednávkový portál",
+      "tech": [
+        "WooCommerce",
+        "B2BKing",
+        "Stock Locations"
+      ],
+      "line": "Produkčný B2B objednávkový portál pre slovenského veľkoobchodníka: cenové hladiny pre skupiny zákazníkov, katalóg len po prihlásení, sklad na dvoch miestach, desatinné množstvá pre vážený tovar a integrovaná fakturácia."
+    },
+    {
+      "title": "Lemma: skener slovnej zásoby",
+      "tech": [
+        "React Native",
+        "Expo",
+        "Vision modely",
+        "FSRS"
+      ],
+      "line": "Mobilná aplikácia, ktorá z fotografie tlačenej strany vytvorí kartičky slovnej zásoby; spája detekčnú pipeline s vision-language modelom s plánovaním opakovania podľa FSRS."
+    },
+    {
+      "title": "Vlastná infraštruktúra a homelab",
+      "tech": [
+        "Linux",
+        "Docker",
+        "WireGuard",
+        "Tailscale",
+        "CI/CD"
+      ],
+      "line": "Vlastný VPS a domáci server prevádzkované s produkčnými návykmi: privátna sieť cez WireGuard, atomické nasadenia bez výpadku s návratom späť, samoopravná obnova služieb a plánované zálohy."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Mgr., aplikovaná informatika",
+      "org": "Univerzita Konštantína Filozofa v Nitre",
+      "dates": "2018 – 2024",
+      "note": "Diplomová práca: InfoMap SK, full-stack aplikácia vizualizujúca slovenské otvorené dáta z API Štatistického úradu na interaktívnej mape."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Linux Foundation / CNCF",
+      "date": ""
+    },
+    {
+      "name": "Ubuntu Linux Professional Certificate",
+      "issuer": "Canonical",
+      "date": "apr 2025"
+    },
+    {
+      "name": "Learning Bash Scripting",
+      "issuer": "LinkedIn Learning",
+      "date": "júl 2025"
+    },
+    {
+      "name": "Základy programovania v ABAP na SAP BTP",
+      "issuer": "SAP",
+      "date": "okt 2024"
+    },
+    {
+      "name": "AWS Academy Graduate, Cloud Foundations",
+      "issuer": "AWS Academy",
+      "date": "júl 2022"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Maďarčina",
+      "level": "materinský jazyk"
+    },
+    {
+      "name": "Slovenčina",
+      "level": "plynule"
+    },
+    {
+      "name": "Čeština",
+      "level": "plynule"
+    },
+    {
+      "name": "Angličtina",
+      "level": "plynule"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+/* CV print stylesheet — standalone.
+   Do NOT import Tailwind or src/styles/globals.css here.
+
+   Hard rules (see cv/README.md):
+   - single geometric column; nothing side-by-side
+   - no letter-spacing / word-spacing / text-transform / small-caps
+   - no position:absolute, float, flex order, columns, or layout tables
+   - visual structure from borders + colour only; backgrounds are NOT printed
+*/
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+}
+
+@page {
+  size: A4;
+  margin: 12mm 15mm;
+}
+
+:root {
+  --fs: 9.8pt;
+  --lh: 1.36;
+  --gap: 3.2mm;
+  --ink: #111111;
+  --muted: #454545;
+  --rule: #c2c2c2;
+  --accent: #1f3a5f;
+}
+
+/* HU and SK run 10-20% longer than EN; tighten so the page count stays stable. */
+html[lang="sk"],
+html[lang="hu"] {
+  --fs: 9.5pt;
+  --lh: 1.32;
+  --gap: 3.0mm;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font: var(--fs) / var(--lh) "Source Sans 3", Arial, Helvetica, sans-serif;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+  word-spacing: 0;
+  hyphens: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+ul,
+li,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 0 · identity ------------------------------------------------------ */
+
+.cv-head {
+  padding-bottom: 1.6mm;
+  border-bottom: 0.8pt solid var(--accent);
+}
+
+h1.name {
+  font-size: 2.05em;
+  font-weight: 700;
+  line-height: 1.08;
+  color: var(--accent);
+}
+
+.role {
+  margin-top: 0.7mm;
+  font-size: 1.14em;
+  font-weight: 600;
+}
+
+.contact {
+  margin-top: 1.4mm;
+  font-size: 0.93em;
+  color: var(--muted);
+}
+
+/* --- sections ---------------------------------------------------------- */
+
+.sec {
+  margin-top: var(--gap);
+}
+
+h2 {
+  break-after: avoid;
+  page-break-after: avoid;
+  padding-bottom: 0.7mm;
+  margin-bottom: 1.3mm;
+  font-size: 1.02em;
+  font-weight: 700;
+  color: var(--accent);
+  border-bottom: 0.4pt solid var(--rule);
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.entry {
+  margin-top: 1.9mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.entry:first-of-type {
+  margin-top: 0;
+}
+
+.meta {
+  margin-top: 0.3mm;
+  margin-bottom: 0.9mm;
+  font-size: 0.95em;
+  color: var(--muted);
+}
+
+.summary {
+  text-align: left;
+}
+
+/* Skills: label + comma-separated run. list-style:none keeps marker glyphs
+   out of the extracted text layer. */
+ul.skill-groups {
+  list-style: none;
+}
+
+ul.skill-groups li {
+  margin-bottom: 0.6mm;
+}
+
+ul.cert-list {
+  list-style: none;
+}
+
+ul.cert-list li {
+  margin-bottom: 0.6mm;
+}
+
+ul.bullets {
+  padding-left: 4.2mm;
+}
+
+ul.bullets li {
+  margin-bottom: 0.5mm;
+}
+
+.entry > p:last-child {
+  margin-top: 0.2mm;
+}
+
+/* Link annotation is still emitted; the visible text is the readable URL. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Screen preview only — never affects the printed page. */
+@media screen {
+  body {
+    width: 180mm;
+    margin: 0 auto;
+    padding: 12mm 0 24mm;
+  }
+}

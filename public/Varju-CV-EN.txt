@@ -1,0 +1,84 @@
+Zsolt Varjú
+Software Developer
+
+dev@zsoltvarju.com · +421 915 443 951 · Prague, Czechia (permanent: Čierna Voda, Slovakia)
+zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
+
+SUMMARY
+-------
+Software developer and platform operator, deliberately broader than full stack. I build web applications end to end, design the ETL pipelines that feed them, and run the production infrastructure they depend on, currently as sole developer and operator of a document search platform on a project for the European Space Agency. AI-assisted development is a core working method, not a novelty. Heading towards system architecture.
+
+EXPERIENCE
+----------
+
+Software Developer
+Serco Czech Republic s.r.o. · Prague, Czechia · Feb 2025 – Present
+  - Sole developer and operator of a document search platform on a project for the European Space Agency, owned end to end from the user interface down to the servers it runs on.
+  - React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships and Tika for document extraction.
+  - Design and operate multi-mission ingestion pipelines in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners.
+  - Run Ubuntu servers on Azure: nginx with TLS and access control, containerised services, CI, backups, and regular vulnerability remediation under formal change control.
+  - Led a phased frontend quality programme: vendor bundle cut by roughly three quarters, JavaScript payload down a third, CSS down more than half, every outstanding lint error cleared, unnecessary React re-renders reduced by 80%.
+  - Coordinate directly with mission teams and IT on requirements, formal bug reports, escalations, change records and effort estimates for new work.
+
+Quality Assurance Tester
+Galileo Corporation s.r.o · Remote · 2022 – 2025
+  - Manual functional testing of web pages across browsers and devices, identifying and reporting defects.
+  - Verified pages against graphic design specifications and fed detailed corrections back to designers and developers.
+  - Maintained quality standards across a large portfolio of Slovak municipal and commercial websites.
+  - Documented test results and corrective actions, working independently to fixed deadlines.
+
+SKILLS
+------
+Languages: TypeScript, JavaScript, Python, Bash, SQL
+Web: React, Next.js, Node.js, Express, REST APIs
+Search & data: Apache Solr, Open Semantic Search, Tika, Neo4j, RabbitMQ, PostgreSQL, MongoDB
+ETL & automation: Custom ingestion pipelines, Cron orchestration, PDF & spreadsheet extraction, Workflow automation
+AI & LLM: RAG architecture, Embeddings, Vector search (Qdrant), Hybrid retrieval, Prompt engineering, Claude Code, Codex, OpenRouter, Self-hosted models
+DevOps & cloud: Docker, Kubernetes, Jenkins, GitHub Actions, Azure, AWS, Dokku, nginx, WireGuard, Tailscale
+Security & practice: Vulnerability remediation, TLS, Hardening, Change management, Agile, API testing (Postman)
+
+PROJECTS
+--------
+
+Self-Hosted RAG Search
+Python, Qdrant, bge-m3, LangChain, Docker
+Retrieval-augmented search over a local document collection: hybrid BM25 and vector retrieval, answers grounded in cited passages, and explicit abstention when no supporting evidence is found.
+
+Coffece (coffece.sk)
+Next.js, TypeScript, Tailwind CSS, next-intl
+Bilingual SK/EN marketing and ordering site for an office coffee delivery brand, with localised routing, validated order forms and full SEO metadata.
+
+IDT PLUS STAV (idtplusstav.sk)
+Next.js, TypeScript, MDX, Dokku, Google Workspace
+Complete digital operations for a construction SME: self-hosted marketing site, DKIM-authenticated business email, invoicing configured for Slovak VAT reverse charge, plus Google Ads and SEO.
+
+B2B Wholesale Ordering Portal
+WooCommerce, B2BKing, Stock Locations
+Production B2B ordering portal for a Slovak wholesaler: tiered customer pricing, login-only catalogue, two-warehouse inventory, decimal quantities for weighted goods and integrated invoicing.
+
+Lemma: Vocabulary Scanner
+React Native, Expo, Vision models, FSRS
+Mobile app that turns a photo of a printed page into vocabulary cards, pairing a vision-language detection pipeline with FSRS spaced-repetition scheduling.
+
+Personal Infrastructure & Homelab
+Linux, Docker, WireGuard, Tailscale, CI/CD
+Personal VPS and home server run with production habits: WireGuard private networking, atomic zero-downtime deploys with rollback, self-healing service recovery and scheduled backups.
+
+EDUCATION
+---------
+
+MSc, Applied Informatics
+Constantine the Philosopher University in Nitra · 2018 – 2024
+Thesis: InfoMap SK, a full-stack application visualising Slovak open data from the Statistical Office API on an interactive map.
+
+CERTIFICATIONS
+--------------
+Certified Kubernetes Administrator (CKA) · Linux Foundation / CNCF
+Ubuntu Linux Professional Certificate · Canonical · Apr 2025
+Learning Bash Scripting · LinkedIn Learning · Jul 2025
+Basics of ABAP Programming on SAP BTP · SAP · Oct 2024
+AWS Academy Graduate, Cloud Foundations · AWS Academy · Jul 2022
+
+LANGUAGES
+---------
+Hungarian (native) · Slovak (fluent) · Czech (fluent) · English (fluent)

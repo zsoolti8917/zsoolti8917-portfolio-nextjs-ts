@@ -1,244 +1,448 @@
 {
-    "Home": {
-      "title": "Welcome to my website"
-    },
-    "About": {
-  "title": "Informácie o mne",
-  "firstLetter": "A",
-  "intro": "hojte! Volám sa Zsolt Varjú a som Junior Webdeveloper z Čiernej Vody. Svoju kariéru som začal ako QA tester, kde som úzko spolupracoval s frontendovými vývojármi. Táto skúsenosť ma nasmerovala k webovému vývoju. Po získaní magisterského titulu na Univerzite Konštantína Filozofa v Nitre som sa ponoril do technológií MERN-stack, Next.js a Headless CMS, aby som dizajny oživil s vynikajúcou funkčnosťou a používateľskými skúsenosťami.",
-  "currentWork": "Momentálne pracujem ako QA web tester, no plánujem prechod na pozíciu frontendového vývojára. Vo voľnom čase sa často venujem behaniu, lyžovaniu, vytváraniu 3D tlače z mojich návrhov a práci s otvorenými platformami ako Arduino a Raspberry Pi pri elektronických projektoch. 3D modelovanie mi tiež prináša veľkú radosť, kedykoľvek mám šancu.",
-  "jobSearch": "Hľadám pozíciu frontendového vývojára, kde môžem kombinovať svoje zručnosti a záujem o vytváranie funkčných a atraktívnych webových stránok.",
-  "quote": "Ako Seneca raz povedal: \"Šťastie je, keď sa príprava stretne s príležitosťou\" a cítim sa pripravený, len čakám na správnu príležitosť.",
-  "connect": "Ak si myslíte, že by sme mohli byť dobrý tím, spojme sa! 🔗",
-  "myLinks": "Moje odkazy"
-},
-"Stats": {
-  "useInProjects": {
-    "title": "Používal som v projektoch",
-    "chips": [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "TailwindCSS",
-      "React",
-      "NextJS",
-      "NodeJS",
-      "Express",
-      "SQL",
-      "MongoDB",
-      "GitHub",
-      "Figma",
-      "Heroku",
-      "HeadlessCMS",
-      "Docker",
-      "Postman",
-      "REST Api"
-    ]
+  "Home": {
+    "title": "Welcome to my website"
   },
-  "triedOut": {
-    "title": "Vyskúšané / Použité v škole",
-    "chips": [
-      "Storybook",
-      "Python",
-      "Java",
-      "OOP",
-      "AdobeXD",
-      "Laravel",
-      "Unity",
-      "Blender",
-      "GraphQL",
-      "C#"
-    ]
+  "meta": {
+    "title": "Zsolt Varjú | softvérový vývojár",
+    "description": "Zsolt Varjú je softvérový vývojár a prevádzkovateľ platforiem so sídlom v Prahe, ktorý tvorí webové aplikácie od začiatku do konca, navrhuje ETL pipeliny a prevádzkuje infraštruktúru, na ktorej bežia."
   },
-  "myLanguages": {
-    "title": "Jazykové znalosti",
-    "chips": [
-      "Maďarčina - materinský jazyk",
-      "Slovenčina",
-      "Angličtina"
-    ]
-  }
-},
-    "Contact": {
-  "title": "Kontakt",
-  "message": "Napíšte mi e-mail, ak sa chcete spojiť! Nájdete ma aj na platformách ",
-  "linkedin": "LinkedIn",
-  "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
-  "or": "alebo na",
-  "github": "GitHub",
-  "githubUrl": "https://github.com/zsoolti8917",
-  "moreYourSpeed": "",
-  "email": "zsolt.varju.rl@gmail.com"
-},
-"experience": {
-  "title": "Pracovné skúsenosti",
-  "companyName": "Galileo Corporation s.r.o",
-  "dates": "2022 - Súčasnosť",
-  "jobTitle": " Tester kvality (Quality Assurance Tester)",
-  "location": "Remote",
-  "responsibilities": [
-    {
-      "title": "Testovanie funkčnosti:",
-      "description": " Vykonávať dôkladné manuálne testovanie webových stránok na overenie správnej funkčnosti všetkých funkcií v rôznych prehliadačoch a zariadeniach. Identifikovať akékoľvek nezrovnalosti alebo chyby a okamžite ich nahlásiť."
+  "About": {
+    "title": "Informácie o mne",
+    "firstLetter": "A",
+    "intro": "hojte. Volám sa Zsolt, som vývojár z Čiernej Vody na Slovensku a momentálne žijem v Prahe. Softvér nielen píšem, ale ho aj prevádzkujem. Dnes sa starám o platformu na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru, kde som jediný vývojár. Píšem kód, presúvam dáta a dohliadam na to, aby servery bežali.",
+    "currentWork": "Začínal som testovaním cudzích webových stránok a práve tam som sa naučil zaujímať sa o to, čo sa deje po nasadení. Odvtedy som pobral aj menej efektnú polovicu remesla: dátové pipeliny, Linux, siete, zálohy. Pri každodennej práci sa vo veľkom opieram o AI a zároveň s ňou aj staviam, najmä vyhľadávacie systémy a lokálne prevádzkované modely. Mimo práce mám homelab, ktorý dávno prerástol rozumnú mieru, motorku a lyžiarsku sezónu, ktorej nikdy nie je dosť.",
+    "quote": "{author} povedal, že šťastie vznikne vtedy, keď sa príprava stretne s príležitosťou. Zatiaľ to sedí. ",
+    "connect": "Ak chcete niečo spolu vytvoriť alebo si len pokecať o technológiách, ozvite sa. 🔗",
+    "myLinks": "Moje odkazy",
+    "stackLabel": "Technológie",
+    "certificationsLabel": "Certifikáty",
+    "languagesLabel": "Jazyky",
+    "showMore": "+{count} ďalších",
+    "showLess": "Zobraziť menej",
+    "currently": {
+      "label": "Momentálne",
+      "role": "Softvérový vývojár v Serco, Praha",
+      "detail": "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru — kód, dátové pipeliny aj servery, na ktorých to beží."
     },
-    {
-      "title": " Vizuálna konzistentnosť:",
-      "description": "Posudzovať vizuálny vzhľad webových stránok, aby sa zabezpečilo, že zodpovedajú poskytnutým grafickým návrhovým špecifikáciám. Komunikovať akékoľvek odchýlky príslušným členom tímu a poskytnúť podrobné pripomienky k potrebným úpravám."
+    "facts": {
+      "basedLabel": "Žijem v",
+      "basedValue": "Praha, ČR",
+      "fromLabel": "Pochádzam z",
+      "fromValue": "Čierna Voda, SK",
+      "sinceLabel": "V IT od roku",
+      "sinceValue": "2022"
     },
-    {
-      "title": "Zabezpečenie kvality:",
-      "description": "Udržiavať vysoké štandardy kvality dôkladným testovaním väčšiny webových stránok na Slovensku. Zabezpečiť, aby všetky webové stránky spĺňali požadované špecifikácie a očakávania používateľov."
-    },
-    {
-      "title": "Komunikácia:",
-      "description": "Efektívne spolupracovať s dizajnérmi, developermi a projektovými manažérmi na riešení akýchkoľvek problémov zistených počas testovania. Ponúkať návrhy na zlepšenia a objasnenia, keď je to potrebné."
-    },
-    {
-      "title": "Home Office:",
-      "description": "Samostatne riadiť všetky úlohy pri dodržiavaní prísnych termínov. Využívať efektívne zručnosti v riadení času na dokončenie testovacích úloh efektívne a presne."
-    },
-    {
-      "title": "Dokumentácia:",
-      "description": "Viesť podrobné záznamy o výsledkoch testovania, zistených problémoch a prijatých nápravných opatreniach. Poskytovať komplexné správy relevantným zainteresovaným stranám."
-    }
-  ],
-  "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Testovanie v rôznych prehliadačoch",
-    "Sledovanie chýb",
-    "Spolupráca na diaľku",
-    "Time management"
-  ]
-},
-     "hero": {
-      "clickMe": "Kliknite sem!",
-  "greeting": "Ahoj, som Zsolt",
-  "title": "Som",
-  "profession": "Web Developer",
-  "description": "Po ukončení magisterského štúdia v odbore Aplikovaná informatika hľadám príležitosti na pozíciu Junior webového vývojára. Mám skúsenosti s Headless CMS a frameworkom React (Next.js). Som veľmi prispôsobivý a rád pracujem s novými technológiami. Spojme sa!",
-  "buttonText": "Kontaktujte ma"
-},
-"sidebar": {
-  "logo": "V",
-  "about": "O mne",
-  "projects": "Projekty",
-  "experience": "Skúsenosti",
-  "contact": "Kontakt"
-},
-"header": {
-  "resumeButton": "Moje CV",
-  "linkedinAria": "Navštívte môj LinkedIn profil",
-  "githubAria": "Navštívte môj GitHub profil",
-  "languageSelector": "Zmeniť jazyk",
-  "languages": {
-    "en": "Angličtina",
-    "sk": "Slovenčina",
-    "hu": "Maďarčina"
-  }
-},
-     "projectModal": {
-  "projectLinks": "Odkazy na projekt",
-  "sourceCode": "Zdrojový kód",
-  "liveProject": "Živý projekt"
-},
-      "projects": {
-        "sectionTitle": "Projekty",
-        "infoMapSK": {
-  "title": "InfoMapSK - Interaktívna vizualizácia demografických údajov na Slovensku",
-  "tech": "React, Node.js, Express, MongoDB, TailwindCSS",
-  "description": "Full-stack webová aplikácia na vizualizáciu demografických údajov Slovenska, obsahujúca interaktívnu mapu a rôzne kategórie údajov. Vyvinutá ako projekt diplomovej práce.",
-  "modalContent": {
-    "para1": "InfoMapSK je komplexná full-stack webová aplikácia vyvinutá ako súčasť diplomovej práce. Poskytuje interaktívnu platformu na skúmanie a vizualizáciu demografických údajov na rôznych administratívnych úrovniach Slovenska.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Interaktívna mapa Slovenska s možnosťou výberu regiónov, okresov a miest/dedín | Vizualizácia demografických údajov pomocou rôznych typov grafov | Viaceré kategórie údajov: Populácia, Ekonomická aktivita, Poľnohospodárstvo a Organizačná štatistika | Funkcionalita vyhľadávania pre konkrétne miesta | Responzívny dizajn optimalizovaný pre rôzne zariadenia | Funkcie prístupnosti podľa pokynov WCAG 2.1 | Kontaktný formulár pre spätnú väzbu a otázky používateľov",
-    "para2": "Tento projekt predvádza zručnosti v oblasti full-stack vývoja pomocou MERN stacku (MongoDB, Express.js, React, Node.js). Frontend je vytvorený pomocou Reactu a štýlovaný s TailwindCSS, zatiaľ čo backend využíva Node.js s Express.js a MongoDB na ukladanie údajov.",
-    "technologiesList": "Vývojový proces zahŕňal integráciu rôznych technológií a API, vrátane:",
-    "techList": "React-leaflet pre interaktívnu mapu | Recharts pre vizualizáciu údajov | Formik a Yup pre spracovanie a validáciu formulárov | API Štatistického úradu Slovenskej republiky pre demografické údaje | Geoportal Slovenska pre geodetické informácie",
-    "para3": "Tento projekt demonštruje schopnosť vytvoriť komplexnú, dátami riadenú webovú aplikáciu pri dodržiavaní najlepších praktík v oblasti responzívneho dizajnu, prístupnosti a moderných webových techník. Predvádza zručnosti v oblasti frontendového a backendového vývoja, ako aj vizualizácie údajov a integrácie s externými API."
-  }
-},
-
-  "gardenBros": {
-    "title": "Webová stránka Garden Bros",
-    "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
-    "description": "Webová stránka pre záhradnícku spoločnosť, vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS. Obsahuje responzívny dizajn, dynamickú generáciu obsahu a nasadenie na Vercel.",
-    "modalContent": {
-      "para1": "Webová stránka Garden Bros je dynamická platforma pre záhradnícku spoločnosť, ktorá propaguje svoje služby a prezentuje svoju prácu. Vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS, ponúka responzívny a atraktívny používateľský zážitok.",
-      "keyFeatures": "Hlavné vlastnosti zahŕňajú:",
-      "featuresList": "Responzívna hlavná stránka s dynamickými komponentmi | Kompletná kontaktná stránka a sekcia s často kladenými otázkami | Blog s príspevkami od autorov | Dynamická generácia stránok | Správa obsahu prostredníctvom Strapi CMS",
-      "para2": "Projekt demonštruje moje schopnosti vytvárať plne vybavené webové stránky s využitím moderných webových technológií. Ukazuje zručnosti v oblasti frontendového vývoja, responzívneho dizajnu s Tailwind CSS, integrácie CMS a stratégií nasadenia.",
-      "para3": "Tailwind CSS bol použitý na vytvorenie prispôsobeného, responzívneho dizajnu, ktorý vyhovuje potrebám klienta. Tento framework zameraný na utilitu umožnil rýchly vývoj jedinečného a vizuálne atraktívneho rozhrania pri zachovaní konzistencie na celom webe.",
-      "para4": "Webová stránka je nasadená na Vercel, čo zabezpečuje rýchle načítanie a spoľahlivý výkon. Backend je spravovaný prostredníctvom Strapi CMS, hostovaný na VPS od Forpsi v prostredí Dokku. Funguje ako kontajner s SSL certifikátom a používa nastavenie reverzného proxy. Databáza PostgreSQL, bežiaca na rovnakom VPS, je zdieľaná s inými projektmi, čo zabezpečuje efektívne využitie a správu zdrojov.",
-      "para5": "Tento projekt zdôrazňuje moje zručnosti v tvorbe škálovateľných, udržiavateľných a používateľsky prívetivých webových aplikácií, ktoré zodpovedajú špecifickým obchodným potrebám a poskytujú vynikajúci používateľský zážitok a vizuálne pútavý dizajn."
+    "personality": {
+      "label": "Mimo práce",
+      "items": [
+        "Homelab, ktorý dávno prerástol rozumnú mieru",
+        "Motorka",
+        "Lyžiarska sezóna, ktorej nikdy nie je dosť"
+      ]
     }
   },
-"portfolio": {
-  "title": "Môje prvé portfólio",
-  "tech": "HTML5, CSS3, JavaScript, GSAP",
-  "description": "Môj prvý portfólio ukazujúci začiatky projektov a zručností, postavený s použitím čistého HTML, CSS a JavaScriptu s GSAP pre animácie.",
-  "modalContent": {
-    "para1": "Toto portfólio je môj prvý pokus o ukázanie mojich zručností a projektov v oblasti webového vývoja. Predstavuje začiatok mojej cesty v webovom vývoji a zobrazuje rôzne komponenty a malé projekty, ktoré som vytvoril počas učenia.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Responzívny dizajn pre rôzne veľkosti obrazoviek | Animované prvky pomocou GSAP (GreenSock Animation Platform) | Ukážka projektov a komponentov na začiatok úrovne | Čisté a jednoduché používateľské rozhranie",
-    "para2": "Tento projekt demonštruje moje základné zručnosti v oblasti frontendového webového vývoja. Bol postavený s použitím sémantického HTML5 označovania, štýlovaný s CSS3 a vylepšený pomocou JavaScriptu pre interaktivitu. GSAP bol použitý na implementáciu plynulých animácií, ktoré pridávajú dynamický pocit k portfóliu.",
-    "para3": "Vývojový proces zahŕňal aplikáciu základných konceptov webového vývoja a skúmanie techník animácií s GSAP. Toto portfólio slúžilo ako praktické cvičenie na vytvorenie responzívneho rozloženia a organizovanie ukážky viacerých projektov.",
-    "para4": "Aj keď toto predstavuje moju ranú prácu, položilo to základy môjho rastu ako webového vývojára. Plánované budúce vylepšenia zahŕňajú pridanie zložitejších projektov, vylepšenie dizajnu, implementáciu pokročilej funkčnosti JavaScriptu a potenciálne integráciu backendu pre dynamický obsah."
-  }
-},
-"scoot": {
-  "title": "Scoot Sharing Web App",
-  "tech": "Next.js, React, Tailwind CSS",
-  "description": "Responzívna webová aplikácia pre fiktívny servis prenájmu skútrov, obsahujúca viacero stránok a kontaktný formulár. Postavená s Next.js a nasadená na Vercel.",
-  "modalContent": {
-    "para1": "Scoot Sharing Web App je responzívna webová aplikácia, ktorá predstavuje fiktívny servis prenájmu skútrov. Tento projekt demonštruje zručnosti v moderných technológiach webového vývoja a princípoch responzívneho dizajnu.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Responzívny dizajn so zameraním na mobilné zariadenia | Päť plne funkčných stránok: Hlavná, O nás, FAQ, Miesta a Kontakt | Statická mapa na stránke Miesta | Plne funkčný kontaktný formulár | Optimalizované pre všetky rozlíšenia obrazoviek",
-    "para2": "Tento projekt ukazuje moje zručnosti v Next.js a moderných praktikách webového vývoja. Bol postavený pomocou Next.js, štýlovaný Tailwind CSS a vylepšený Reactom pre interaktivitu.",
-    "para3": "Vývojový proces zahŕňal implementáciu štruktúry viacerých stránok, vytváranie responzívnych rozložení a integráciu funkčného kontaktného formulára. Súčasťou bolo aj zameranie na optimalizáciu stránky pre rôzne veľkosti obrazoviek a zabezpečenie konzistentného používateľského zážitku naprieč zariadeniami.",
-    "para4": "Tento projekt demonštruje moju schopnosť vytvárať komplexné, viacstránkové webové aplikácie pri dodržiavaní najlepších praktík v responzívnom dizajne a moderných technikách webového vývoja."
-  }
-},
-
-  "quizApp": {
-    "title": "AI-Powered Kvízová Aplikácia",
-    "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
-    "description": "Interaktívna kvízová aplikácia, ktorá kontroluje odpovede používateľov pomocou AI, poskytuje spätnú väzbu a umožňuje ďalšie diskusie o témach. Postavená s MERN stackom, štylizovaná pomocou Tailwind CSS a Shadcn/ui, nasadená na Netlify a hostovaná na VPS s Dokku.",
-    "modalContent": {
-      "para1": "AI-Powered Kvízová Aplikácia je dynamická platforma, ktorá nielenže hodnotí odpovede používateľov pomocou AI, ale tiež ponúka podrobné vysvetlenia a ďalšie diskusie o danej téme. Tento projekt demonštruje pokročilú integráciu AI do funkcií kvízu a zároveň zaisťuje plynulú interakciu používateľov a moderné rozhranie.",
-      "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-      "featuresList": "Interaktívne kvízy s hodnotením odpovedí založeným na AI | Možnosť pokračovať v konverzáciách s AI po každej otázke | Preddefinované otázky a odpovede uložené v MongoDB | Používateľsky prívetivé rozhranie štylizované pomocou Tailwind CSS a Shadcn/ui | Backend so zabezpečením SSL hostovaný na VPS s Dokku | Frontend nasadený na Netlify",
-      "para2": "Projekt zdôrazňuje moju schopnosť pracovať s MERN stackom (MongoDB, Express, React, Node.js) a integrovať OpenAI API na hodnotenie a zlepšovanie používateľských odpovedí. Frontend je štylizovaný pomocou Tailwind CSS a Shadcn/ui, čím sa zaisťuje čistý a responzívny dizajn.",
-      "para3": "Vývoj zahŕňal vytvorenie systému otázok a odpovedí s backendom poháňaným Node.js a MongoDB. AI hodnotí odpovede používateľov a ponúka opravy alebo dodatočné informácie. Aplikácia umožňuje používateľom pokračovať v konverzáciách s AI, aby sa hlbšie venovali témam.",
-      "para4": "Tento projekt demonštruje moje schopnosti v oblasti full-stack webového vývoja, integrácie AI a budovania škálovateľných aplikácií so zameraním na zapojenie používateľov a responzívnosť naprieč zariadeniami."
+  "Stats": {
+    "stack": [
+      {
+        "label": "Jazyky a frameworky",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Bash",
+          "SQL",
+          "React",
+          "Next.js"
+        ]
+      },
+      {
+        "label": "Backend a dáta",
+        "items": [
+          "Node.js",
+          "Express",
+          "REST API",
+          "Apache Solr",
+          "Neo4j",
+          "RabbitMQ",
+          "Tika",
+          "PostgreSQL",
+          "MongoDB",
+          "Headless CMS"
+        ]
+      },
+      {
+        "label": "Infraštruktúra a prevádzka",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "GitHub Actions",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Dokku",
+          "WireGuard",
+          "Tailscale"
+        ]
+      },
+      {
+        "label": "Nástroje",
+        "items": [
+          "Git",
+          "Postman",
+          "Figma"
+        ]
+      }
+    ],
+    "aiLlm": {
+      "title": "AI a LLM",
+      "chips": [
+        "RAG architektúra",
+        "Embeddingy",
+        "Vektorové vyhľadávanie",
+        "Qdrant",
+        "Hybridné vyhľadávanie",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "LangChain / LangSmith",
+        "Lokálne modely"
+      ]
+    },
+    "triedOut": {
+      "title": "Vyskúšané / Použité v škole",
+      "chips": [
+        "Storybook",
+        "Java",
+        "OOP",
+        "AdobeXD",
+        "Laravel",
+        "Unity",
+        "Blender",
+        "GraphQL",
+        "C#"
+      ]
+    },
+    "certifications": [
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Linux Foundation / CNCF",
+        "date": ""
+      },
+      {
+        "name": "Ubuntu Linux Professional Certificate",
+        "issuer": "Canonical",
+        "date": "apr 2025"
+      },
+      {
+        "name": "Learning Bash Scripting",
+        "issuer": "LinkedIn Learning",
+        "date": "júl 2025"
+      },
+      {
+        "name": "Základy programovania v ABAP na SAP BTP",
+        "issuer": "SAP",
+        "date": "okt 2024"
+      },
+      {
+        "name": "AWS Academy Graduate, Cloud Foundations",
+        "issuer": "AWS Academy",
+        "date": "júl 2022"
+      }
+    ],
+    "languages": [
+      {
+        "name": "Maďarčina",
+        "level": "materinský jazyk"
+      },
+      {
+        "name": "Slovenčina",
+        "level": "plynule"
+      },
+      {
+        "name": "Čeština",
+        "level": "plynule"
+      },
+      {
+        "name": "Angličtina",
+        "level": "plynule"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "message": "Napíšte mi e-mail, ak sa chcete spojiť! Nájdete ma aj na platformách ",
+    "linkedin": "LinkedIn",
+    "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
+    "or": "alebo na",
+    "github": "GitHub",
+    "githubUrl": "https://github.com/zsoolti8917",
+    "moreYourSpeed": "",
+    "email": "dev@zsoltvarju.com"
+  },
+  "experience": {
+    "title": "Pracovné skúsenosti",
+    "jobs": [
+      {
+        "companyName": "Serco Czech Republic s.r.o.",
+        "dates": "Feb 2025 - Súčasnosť",
+        "jobTitle": "Softvérový vývojár",
+        "location": "Praha",
+        "responsibilities": [
+          {
+            "title": "Kompletná zodpovednosť:",
+            "description": "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru, a to od používateľského rozhrania až po servery, na ktorých beží."
+          },
+          {
+            "title": "Full-stack vývoj:",
+            "description": "React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ pre správy, Neo4j pre vzťahy a Tika pre extrakciu dokumentov."
+          },
+          {
+            "title": "ETL a automatizácia:",
+            "description": "Návrh a prevádzka ingesčných pipelín pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát."
+          },
+          {
+            "title": "Prevádzka a bezpečnosť:",
+            "description": "Správa Ubuntu serverov v Azure: nginx s TLS a riadením prístupu, kontajnerizované služby, CI, zálohovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien."
+          },
+          {
+            "title": "Výkon a kvalita kódu:",
+            "description": "Viedol som fázovaný program kvality frontendu, ktorý zmenšil vendor bundle približne o tri štvrtiny, znížil objem JavaScriptu o tretinu a CSS o viac než polovicu, odstránil všetky lint chyby a obmedzil zbytočné React re-rendery o 80 %."
+          },
+          {
+            "title": "Komunikácia so zainteresovanými stranami:",
+            "description": "Priama spolupráca s tímami misií a IT na požiadavkách, formálnych hláseniach chýb, eskaláciách, záznamoch o zmenách a odhadoch prácnosti."
+          }
+        ],
+        "skills": [
+          "React",
+          "Node.js",
+          "Python",
+          "Apache Solr",
+          "RabbitMQ",
+          "Neo4j",
+          "Docker",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Bash",
+          "Jenkins"
+        ]
+      },
+      {
+        "companyName": "Galileo Corporation s.r.o",
+        "dates": "2022 - 2025",
+        "jobTitle": " Tester kvality (Quality Assurance Tester)",
+        "location": "Remote",
+        "responsibilities": [
+          {
+            "title": "Testovanie funkčnosti:",
+            "description": " Vykonávať dôkladné manuálne testovanie webových stránok na overenie správnej funkčnosti všetkých funkcií v rôznych prehliadačoch a zariadeniach. Identifikovať akékoľvek nezrovnalosti alebo chyby a okamžite ich nahlásiť."
+          },
+          {
+            "title": " Vizuálna konzistentnosť:",
+            "description": "Posudzovať vizuálny vzhľad webových stránok, aby sa zabezpečilo, že zodpovedajú poskytnutým grafickým návrhovým špecifikáciám. Komunikovať akékoľvek odchýlky príslušným členom tímu a poskytnúť podrobné pripomienky k potrebným úpravám."
+          },
+          {
+            "title": "Zabezpečenie kvality:",
+            "description": "Udržiavať vysoké štandardy kvality dôkladným testovaním väčšiny webových stránok na Slovensku. Zabezpečiť, aby všetky webové stránky spĺňali požadované špecifikácie a očakávania používateľov."
+          },
+          {
+            "title": "Komunikácia:",
+            "description": "Efektívne spolupracovať s dizajnérmi, developermi a projektovými manažérmi na riešení akýchkoľvek problémov zistených počas testovania. Ponúkať návrhy na zlepšenia a objasnenia, keď je to potrebné."
+          },
+          {
+            "title": "Home Office:",
+            "description": "Samostatne riadiť všetky úlohy pri dodržiavaní prísnych termínov. Využívať efektívne zručnosti v riadení času na dokončenie testovacích úloh efektívne a presne."
+          },
+          {
+            "title": "Dokumentácia:",
+            "description": "Viesť podrobné záznamy o výsledkoch testovania, zistených problémoch a prijatých nápravných opatreniach. Poskytovať komplexné správy relevantným zainteresovaným stranám."
+          }
+        ],
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Testovanie v rôznych prehliadačoch",
+          "Sledovanie chýb",
+          "Spolupráca na diaľku",
+          "Time management"
+        ]
+      }
+    ]
+  },
+  "hero": {
+    "clickMe": "Kliknite sem!",
+    "greeting": "Ahoj, som Zsolt",
+    "title": "Som",
+    "profession": "softvérový vývojár",
+    "description": "Vývojár a prevádzkovateľ platforiem: tvorím webové aplikácie od začiatku do konca, navrhujem dátové pipeliny, ktoré za nimi stoja, a udržiavam v chode infraštruktúru, na ktorej bežia. Momentálne som jediným vývojárom a prevádzkovateľom na projekte pre Európsku vesmírnu agentúru.",
+    "buttonText": "Kontaktujte ma"
+  },
+  "sidebar": {
+    "logo": "V",
+    "about": "O mne",
+    "projects": "Projekty",
+    "experience": "Skúsenosti",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "resumeButton": "Moje CV",
+    "linkedinAria": "Navštívte môj LinkedIn profil",
+    "githubAria": "Navštívte môj GitHub profil",
+    "languageSelector": "Zmeniť jazyk",
+    "languages": {
+      "en": "Angličtina",
+      "sk": "Slovenčina",
+      "hu": "Maďarčina"
     }
   },
-"alza": {
-  "title": "Alza Dni Kupónový Filter",
-  "tech": "JavaScript, Chrome Extension API, HTML, CSS",
-  "description": "Rozšírenie pre Chrome, ktoré pomáha používateľom filtrovať produkty počas akcií Alza Days podľa rôznych kupónových kódov, čo uľahčuje nájdenie najlepších zliav na Alza.sk.",
-  "modalContent": {
-    "para1": "Alza Dni Kupónový Filter je užitočný nástroj pre každého, kto nakupuje počas Alza Days. Toto rozšírenie pre Chrome umožňuje ľahké filtrovanie produktov podľa rôznych kupónových kódov, čo vám pomôže rýchlo nájsť najlepšie zľavy na Alza.sk.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Filtrovanie produktov podľa kupónových kódov (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Možnosť filtrovať iba aktuálne zobrazené produkty alebo načítať všetky produkty | Jednoduché a prehľadné používateľské rozhranie | Rýchle odstránenie filtra jedným kliknutím",
-    "para2": "Toto rozšírenie demonštruje moju schopnosť vytvárať praktické nástroje, ktoré zlepšujú používateľský zážitok na e-commerce platformách. Ukazuje zručnosti v JavaScripte, Chrome Extension API a frontendovom vývoji.",
-    "para3": "Projekt používa čistý JavaScript na interakciu s DOM stránkami, filtrovanie produktov a správu UI rozšírenia. Chrome Extension API je využité na vytvorenie akcie prehliadača a správu pozadí skriptov.",
-    "para4": "Toto rozšírenie zdôrazňuje moju zručnosť pri vytváraní riešení, ktoré riešia konkrétne potreby používateľov, čím sa zlepšuje nákupný zážitok počas promo akcií. Tiež ukazuje moju schopnosť pracovať s prehliadačovými API a vytvárať používateľsky prívetivé rozhrania pre rozšírenia prehliadača.",
-    "para5": "Projekt je open-source, čo pozýva príspevky od komunity vývojárov, čo ukazuje moju oddanosť spolupráci na vývoji a neustálemu zlepšovaniu softvérových projektov."
-  }
-},
-"github": {
-  "title": "GitHub User Search App",
-  "tech": "HTML5, Tailwind CSS, JavaScript, GSAP, Axios",
-  "description": "responzívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily, zobraziť informácie o používateľoch a prepínať medzi svetlými a tmavými témami. Vyvinuté ako riešenie výzvy od Frontend Mentor.",
-  "modalContent": {
-    "para1": "GitHub User Search App je responzívna webová aplikácia, ktorá umožňuje používateľom vyhľadávať GitHub profily a zobrazovať relevantné informácie o používateľoch. Tento projekt bol vyvinutý ako riešenie výzvy od Frontend Mentor, čo demonštruje zručnosti v frontendovom vývoji a integrácii API.",
-    "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
-    "featuresList": "Responzívny dizajn optimalizovaný pre rôzne veľkosti obrazoviek | Funkcionalita vyhľadávania GitHub používateľov pomocou GitHub API | Zobrazenie relevantných informácií o používateľoch na základe vyhľadávania | Prepínanie medzi svetlými a tmavými témami | Automatický výber témy na základe preferencií používateľského systému | Interaktívne prvky s hover stavmi",
-    "para2": "Tento projekt ukazuje moju zručnosť v moderných webových technológiach a praktikách. Bol vyvinutý s použitím semantického HTML5 značkovania, štýlovaný pomocou Tailwind CSS a obohatený o JavaScript pre interaktivitu. Integrácia GitHub API bola riešená pomocou Axios a animácie boli implementované pomocou GSAP.",
-    "para3": "Vývojový proces zahŕňal učenie sa a aplikovanie nových konceptov, ako je práca s API, implementácia tmavých/svetlých tém a používanie Tailwind CSS po prvýkrát. Taktiež som zahrnul spracovanie chýb pri API požiadavkách a použil JavaScript moduly na organizáciu kódu."
+  "projectModal": {
+    "projectLinks": "Odkazy na projekt",
+    "sourceCode": "Zdrojový kód",
+    "liveProject": "Živý projekt"
+  },
+  "projects": {
+    "sectionTitle": "Projekty",
+    "ragSystem": {
+      "title": "Self-hosted RAG vyhľadávanie",
+      "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
+      "description": "Systém vyhľadávania s rozšíreným kontextom nad lokálnou zbierkou dokumentov, postavený tak, aby odpovedal s citáciami, a aby mlčal, keď preň nemá podklad.",
+      "modalContent": {
+        "para1": "Zbierka dokumentov je užitočná presne natoľko, nakoľko sa jej dokážete pýtať. Kľúčové slová míňajú význam a obyčajný chatbot nasadený nad korpusom si odpoveď ochotne vymyslí. Tento systém stojí na opačnom inštinkte: každá odpoveď musí byť dohľadateľná k pasáži, ktorá naozaj existuje.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Hybridné vyhľadávanie kombinujúce BM25 s vektorovou podobnosťou | Embeddingy bge-m3 uložené vo vektorovej databáze Qdrant | Každá odpoveď podložená nájdenými pasážami, s citáciami priamo v texte | Explicitné odmietnutie odpovede, keď sa nenájde podporná pasáž, namiesto vierohodného odhadu | Beží plne self-hosted, s lokálnymi modelmi ako alternatívou k cloudovým API | Modelovanie nákladov porovnávajúce cloudové API s prevádzkou vlastnej GPU",
+        "para2": "Pipeline rieši delenie na časti, embeddingy a hybridné vyhľadávanie kombinujúce BM25 s najbližšími susedmi, so sledovaním cez LangChain a LangSmith, aby bolo vidieť, ktoré pasáže viedli ku ktorej odpovedi. OpenRouter poskytuje prístup k viacerým modelom na porovnanie, popri lokálne prevádzkovaných modeloch s otvorenými váhami.",
+        "para3": "Zaujímavá inžinierska práca tu nie je v generovaní textu, ale v kvalite vyhľadávania, vynucovaní citácií a v disciplíne vrátiť radšej nič než niečo nesprávne."
+      }
+    },
+    "coffece": {
+      "title": "Coffece (coffece.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,next-intl,Framer Motion",
+      "description": "Dvojjazyčná (SK/EN) marketingová a objednávková stránka pre značku rozvozu kávy do kancelárií: produktové stránky, FAQ, karusel referencií a kontaktný formulár, s kompletnými SEO metadátami.",
+      "modalContent": {
+        "para1": "Coffece je dvojjazyčná (slovensko-anglická) marketingová a objednávková webová stránka pre značku rozvozu kávy do kancelárií, ktorá návštevníka sprevádza od spoznania ponuky až po odoslanie objednávky.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Plne lokalizované SK/EN routovanie pomocou next-intl | Produktové stránky a ponuka pre rozvoz kávy do kancelárií | Sekcia FAQ a karusel referencií | Kontaktný a objednávkový formulár s validáciou a odosielaním e-mailov | Kompletné SEO metadáta vrátane Open Graph | Plynulé animácie s Framer Motion a podpora tmavého režimu",
+        "para2": "Stránka je postavená na Next.js a TypeScripte, štýlovaná pomocou Tailwind CSS a prístupných UI komponentov. Formuláre sa spracúvajú na serveri s validáciou cez Zod a odosielaním e-mailov.",
+        "para3": "Tento projekt ukazuje kompletné dodanie lokalizovanej marketingovej stránky, od informačnej architektúry a štruktúry obsahu až po SEO a nasadenie do produkcie."
+      }
+    },
+    "idtPlusStav": {
+      "title": "IDT PLUS STAV (idtplusstav.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,MDX",
+      "description": "Kompletná digitálna prevádzka pre slovenskú firmu zaoberajúcu sa diamantovým vŕtaním a rezaním betónu: self-hosted marketingová stránka, firemný e-mail, fakturácia nastavená podľa slovenských pravidiel DPH, plus platené vyhľadávanie a SEO.",
+      "modalContent": {
+        "para1": "Marketingová webová stránka pre spoločnosť IDT PLUS STAV, ktorá sa venuje jadrovému vŕtaniu a rezaniu betónu. Cieľom je prehľadne predstaviť služby firmy a premeniť návštevníkov na dopyty po cenovej ponuke.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Samostatné stránky pre každú službu vŕtania a rezania, s cenníkom a FAQ | Sekcia aktualít postavená na MDX článkoch | Rozsiahla sekcia referencií s realizovanými projektmi | Formulár na dopyt cenovej ponuky s validáciou a doručením e-mailom | Self-hosted nasadenie na serveri spravovanom cez Dokku | Google Workspace s firemným e-mailom overeným cez DKIM | Fakturácia nastavená na slovenský prenos daňovej povinnosti | Kampane v Google Ads a priebežné SEO",
+        "para2": "Postavené na Next.js a TypeScripte, štýlované pomocou Tailwind CSS. Sekcia noviniek je súborový MDX blog (next-mdx-remote) a formulár na cenovú ponuku kombinuje React Hook Form s validáciou cez Zod.",
+        "para3": "Spolupráca ďaleko presiahla tvorbu webu: pokryla celú digitálnu stopu firmy: hosting, doručiteľnosť e-mailov, fakturáciu zodpovedajúcu slovenským daňovým pravidlám a platené aj organické vyhľadávanie, ktoré prináša dopyty."
+      }
+    },
+    "b2bPortal": {
+      "title": "B2B veľkoobchodný objednávkový portál",
+      "tech": "WooCommerce,B2BKing,Stock Locations,SuperFaktúra",
+      "description": "Súkromný B2B objednávkový portál implementovaný pre slovenského veľkoobchodníka s čerstvými potravinami, aktuálne v produkcii. Ponúka odstupňované ceny pre zákazníkov, katalóg dostupný len po prihlásení so skrytými cenami, evidenciu dvoch skladov, desatinné množstvá pre vážený tovar a integrovanú fakturáciu.",
+      "modalContent": {
+        "para1": "Súkromný B2B objednávkový portál vytvorený pre slovenského veľkoobchodníka s čerstvými potravinami, ktorý je v produkcii a denne sa používa na veľkoobchodné objednávky. Portál nahrádza telefonické a e-mailové objednávky samoobslužným katalógom prispôsobeným každému zákazníkovi.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Odstupňované ceny so samostatnými cenníkmi pre skupiny zákazníkov | Katalóg dostupný len po prihlásení, ceny skryté pred verejnosťou | Skladové zásoby evidované v dvoch skladoch | Desatinné množstvá pre vážený tovar, napríklad objednávanie na kilogramy | Integrovaná fakturácia cez SuperFaktúru",
+        "para2": "Portál je postavený na WooCommerce, rozšírený o B2BKing pre veľkoobchodné funkcie (registrácia a schvaľovanie zákazníkov, skupiny zákazníkov, odstupňované ceny a katalóg so skrytými cenami) a o Stock Locations pre evidenciu dvoch skladov.",
+        "para3": "Projekt pokrýval celé dodanie: zber požiadaviek, konfiguráciu a prispôsobenie obchodu, integráciu fakturácie a nasadenie portálu do produkcie. Z dôvodu dôvernosti nie je klient ani obchod menovaný."
+      }
+    },
+    "lemma": {
+      "title": "Lemma: skener slovnej zásoby",
+      "tech": "React Native,Expo,Vision modely,FSRS",
+      "description": "Mobilná aplikácia, ktorá z fotografie tlačenej strany vytvorí kartičky slovnej zásoby. Namierite fotoaparát na text a aplikácia z neho vyberie slová na naučenie a naplánuje ich opakovanie.",
+      "modalContent": {
+        "para1": "Lemma vznikla z čítania v cudzom jazyku a neustáleho prerušovania kvôli hľadaniu slovíčok. Namiesto prepisovania každého slova do slovníka odfotíte stranu a aplikácia sa postará o extrakciu, takže vám ostane balíček na učenie zostavený presne z toho, čo ste práve čítali.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Snímanie fotoaparátom s detekčnou pipeline založenou na vision-language modeli | Extrakcia a lematizácia slov z tlačených strán | Plánovanie opakovania podľa FSRS, takže opakovanie príde tesne pred zabudnutím | Lokálne úložisko fungujúce aj offline | Multiplatformové riešenie z jednej React Native a Expo codebase | Špecifikované až po verziu v1.1",
+        "para2": "Detekčná pipeline spája vision model so spracovaním rozloženia strany, aby spoľahlivo prečítala slová z odfotenej stránky, a opakovacia časť implementuje FSRS, moderný plánovač rozloženého opakovania, ktorý prispôsobuje intervaly vašej skutočnej pamäti namiesto pevného rebríčka.",
+        "para3": "Je to osobný nástroj postavený podľa skutočnej špecifikácie: definovaný rozsah, verzovaný plán a jasná hranica toho, čo v1 robí a čo nie."
+      }
+    },
+    "homelab": {
+      "title": "Vlastná infraštruktúra a homelab",
+      "tech": "Linux,Docker,WireGuard,Tailscale,CI/CD",
+      "description": "Vlastný VPS a domáci server prevádzkované s produkčnými návykmi: privátna sieť, atomické nasadenia bez výpadku a sada self-hosted služieb.",
+      "modalContent": {
+        "para1": "Prevádzka vlastnej infraštruktúry je najrýchlejší spôsob, ako zistiť, čo sa v skutočnosti pokazí. Ide o osobný VPS a domáci NAS prevádzkované tak, ako by sa prevádzkoval produkčný systém: verzované nasadenia, privátna sieť, monitoring a obnova, ktorá nezávisí od toho, či práve sedím pri počítači.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Privátna sieť cez WireGuard prepájajúca VPS a domácu sieť | Atomické nasadenia bez výpadku s okamžitým návratom späť | Prístup k domácim službám odkiaľkoľvek cez Tailscale mesh | Služby v Dockeri na NAS vrátane streamovania médií a záznamu z kamier | Samoopravná obnova služieb a plánované zálohy | Vzdialený vývoj riadený v prípade potreby aj z telefónu",
+        "para2": "Nasadenia sú atomické: nová verzia sa zostaví popri bežiacej a prepne sa až vtedy, keď je zdravá, takže pokazený build nikdy nezhodí službu. Sieť je štandardne privátna. Služby sú dostupné cez WireGuard a Tailscale namiesto vystavenia do internetu.",
+        "para3": "Je to prevádzková polovica práce, cvičená vo vlastnom čase: rovnaké témy ako pri produkčných systémoch (dostupnosť, riadenie prístupu, zálohy, obnova) v mierke, kde je každé rozhodnutie moje."
+      }
+    },
+    "photoCropper": {
+      "title": "Multi Photo Cropper",
+      "tech": "React,TypeScript,Vite,FastAPI,OpenCV,ONNX Runtime,Docker",
+      "description": "Osobný nástroj na digitalizáciu rodinných fotoalbumov. Na skener položíte niekoľko fotografií naraz, aplikácia nájde na hárku jednotlivé snímky, umožní doladiť výrezy a každý z nich exportuje v plnom rozlíšení do jedného ZIP súboru.",
+      "modalContent": {
+        "para1": "Multi Photo Cropper vznikol z veľmi konkrétneho problému: krabice historických rodinných fotografií čakajúcich na digitalizáciu a plochý skener, na ktorom je snímanie jednej fotky po druhej bolestivo pomalé. Riešením je položiť na sklo štyri až šesť fotografií naraz a ich rozdelenie nechať na softvér.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Automatická detekcia fotografií prebiehajúca úplne v prehliadači | Voliteľný self-hosted backend, ktorý spája štyri detekčné stratégie konsenzuálnym hlasovaním podľa IoU | Lokálne spustenie modelu YOLOv8-nano vo formáte ONNX na CPU, bez cloudovej služby a bez API kľúčov | Overovanie podľa textúry a farebného histogramu, ktoré odlíši skutočnú fotografiu od prázdneho pozadia skenera | Analýza natočenia pre každý výrez s automatickým vyrovnaním a perspektívnou korekciou | Plná manuálna kontrola: kreslenie, presúvanie, zmena veľkosti ôsmimi úchytmi, priblíženie, posúvanie, história krokov späť a klávesové skratky | Nastavenie „počet fotiek na sken“, ktoré obmedzí detekciu na očakávaný počet snímok | Výrezy sa znovu extrahujú v plnom rozlíšení zdroja a stiahnu ako jeden ZIP | Automatické prepnutie na detekciu v prehliadači, keď backend nie je dostupný",
+        "para2": "Detektor na strane prehliadača je napísaný od nuly nad Canvas 2D API a surovými poľami pixelov, úplne bez knižnice na spracovanie obrazu: prevod do odtieňov sivej, prahovanie Otsuovho typu, morfologická dilatácia a erózia, komponenty súvislosti a konsenzus podľa IoU. Voliteľný backend pridáva klasické počítačové videnie v OpenCV a lokálne spustený ONNX detektor objektov a následne zlučuje návrhy všetkých stratégií hlasovaním, takže oblasť nájdená dvakrát má vyššie skóre než tá nájdená raz.",
+        "para3": "Celé je to postavené a prevádzkované výhradne na osobné použitie: kontajnerizovaná FastAPI služba bežiaca pod neprivilegovaným používateľom, so zdravotnou kontrolou, pamäťovou poistkou, ktorá pri záťaži odmietne požiadavky, a limitmi zdrojov nastavenými pre malý domáci server. Všetko beží na lokálnom hardvéri a nikdy ho neopúšťa."
+      }
+    },
+    "municipalMigrations": {
+      "title": "Migrácie webov samospráv",
+      "tech": "Virgo / GCM Cloud CMS",
+      "description": "Migrácia a reštrukturalizácia obsahu pre päť slovenských obecných webových stránok vrátane dvojjazyčného slovenského a maďarského obsahu.",
+      "modalContent": {
+        "para1": "Migrácia a reštrukturalizácia obsahu pre päť slovenských obecných webových stránok prechádzajúcich na platformu Virgo / GCM Cloud CMS vrátane dvojjazyčného slovenského a maďarského obsahu.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Kompletné inventúry obsahu pôvodných webov | Štruktúra stránok prispôsobená novému CMS | Migrácia dokumentov, úradných oznamov, zmlúv a fotogalérií | Dvojjazyčné slovenské a maďarské jazykové mutácie | Kontroly po migrácii porovnávajúce starý a nový web stránku po stránke",
+        "para2": "Práca kombinovala vlastné scrapovacie a automatizačné nástroje s manuálnou reštrukturalizáciou, aby sa stránky, dokumenty a obrázky preniesli zo starších a WordPress webov bez straty obsahu.",
+        "para3": "Weby samospráv obsahujú právne významný obsah (zmluvy, faktúry, oznamy úradnej tabule), preto bol pri migráciách kľúčový dôraz na úplnosť, presnosť a overiteľnosť výsledkov."
+      }
+    },
+    "infoMapSK": {
+      "title": "InfoMap SK: diplomová práca",
+      "tech": "React, Node.js, Express, MongoDB, TailwindCSS",
+      "description": "Full-stack aplikácia na vizualizáciu slovenských otvorených dát na interaktívnej mape, vytvorená ako moja diplomová práca. Verejná stránka už nie je online; zdrojový kód zostáva dostupný.",
+      "modalContent": {
+        "para1": "InfoMapSK je komplexná full-stack webová aplikácia vyvinutá ako súčasť diplomovej práce. Poskytuje interaktívnu platformu na skúmanie a vizualizáciu demografických údajov na rôznych administratívnych úrovniach Slovenska.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Interaktívna mapa Slovenska s možnosťou výberu regiónov, okresov a miest/dedín | Vizualizácia demografických údajov pomocou rôznych typov grafov | Viaceré kategórie údajov: Populácia, Ekonomická aktivita, Poľnohospodárstvo a Organizačná štatistika | Funkcionalita vyhľadávania pre konkrétne miesta | Responzívny dizajn optimalizovaný pre rôzne zariadenia | Funkcie prístupnosti podľa pokynov WCAG 2.1 | Kontaktný formulár pre spätnú väzbu a otázky používateľov",
+        "para2": "Tento projekt predvádza zručnosti v oblasti full-stack vývoja pomocou MERN stacku (MongoDB, Express.js, React, Node.js). Frontend je vytvorený pomocou Reactu a štýlovaný s TailwindCSS, zatiaľ čo backend využíva Node.js s Express.js a MongoDB na ukladanie údajov.",
+        "technologiesList": "Vývojový proces zahŕňal integráciu rôznych technológií a API, vrátane:",
+        "techList": "React-leaflet pre interaktívnu mapu | Recharts pre vizualizáciu údajov | Formik a Yup pre spracovanie a validáciu formulárov | API Štatistického úradu Slovenskej republiky pre demografické údaje | Geoportal Slovenska pre geodetické informácie",
+        "para3": "Tento projekt demonštruje schopnosť vytvoriť komplexnú, dátami riadenú webovú aplikáciu pri dodržiavaní najlepších praktík v oblasti responzívneho dizajnu, prístupnosti a moderných webových techník. Predvádza zručnosti v oblasti frontendového a backendového vývoja, ako aj vizualizácie údajov a integrácie s externými API."
+      }
+    },
+    "gardenBros": {
+      "title": "Webová stránka Garden Bros",
+      "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+      "description": "Webová stránka pre záhradnícku spoločnosť, vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS. Obsahuje responzívny dizajn, dynamickú generáciu obsahu a nasadenie na Vercel.",
+      "modalContent": {
+        "para1": "Webová stránka Garden Bros je dynamická platforma pre záhradnícku spoločnosť, ktorá propaguje svoje služby a prezentuje svoju prácu. Vytvorená s využitím Next.js, štýlovaná pomocou Tailwind CSS a spravovaná prostredníctvom Strapi CMS, ponúka responzívny a atraktívny používateľský zážitok.",
+        "keyFeatures": "Hlavné vlastnosti zahŕňajú:",
+        "featuresList": "Responzívna hlavná stránka s dynamickými komponentmi | Kompletná kontaktná stránka a sekcia s často kladenými otázkami | Blog s príspevkami od autorov | Dynamická generácia stránok | Správa obsahu prostredníctvom Strapi CMS",
+        "para2": "Projekt demonštruje moje schopnosti vytvárať plne vybavené webové stránky s využitím moderných webových technológií. Ukazuje zručnosti v oblasti frontendového vývoja, responzívneho dizajnu s Tailwind CSS, integrácie CMS a stratégií nasadenia.",
+        "para3": "Tailwind CSS bol použitý na vytvorenie prispôsobeného, responzívneho dizajnu, ktorý vyhovuje potrebám klienta. Tento framework zameraný na utilitu umožnil rýchly vývoj jedinečného a vizuálne atraktívneho rozhrania pri zachovaní konzistencie na celom webe.",
+        "para4": "Webová stránka je nasadená na Vercel, čo zabezpečuje rýchle načítanie a spoľahlivý výkon. Backend je spravovaný prostredníctvom Strapi CMS, hostovaný na VPS od Forpsi v prostredí Dokku. Funguje ako kontajner s SSL certifikátom a používa nastavenie reverzného proxy. Databáza PostgreSQL, bežiaca na rovnakom VPS, je zdieľaná s inými projektmi, čo zabezpečuje efektívne využitie a správu zdrojov.",
+        "para5": "Tento projekt zdôrazňuje moje zručnosti v tvorbe škálovateľných, udržiavateľných a používateľsky prívetivých webových aplikácií, ktoré zodpovedajú špecifickým obchodným potrebám a poskytujú vynikajúci používateľský zážitok a vizuálne pútavý dizajn."
+      }
+    },
+    "alza": {
+      "title": "Alza Dni Kupónový Filter",
+      "tech": "JavaScript, Chrome Extension API, HTML, CSS",
+      "description": "Rozšírenie pre Chrome, ktoré pomáha používateľom filtrovať produkty počas akcií Alza Days podľa rôznych kupónových kódov, čo uľahčuje nájdenie najlepších zliav na Alza.sk.",
+      "modalContent": {
+        "para1": "Alza Dni Kupónový Filter je užitočný nástroj pre každého, kto nakupuje počas Alza Days. Toto rozšírenie pre Chrome umožňuje ľahké filtrovanie produktov podľa rôznych kupónových kódov, čo vám pomôže rýchlo nájsť najlepšie zľavy na Alza.sk.",
+        "keyFeatures": "Kľúčové vlastnosti zahŕňajú:",
+        "featuresList": "Filtrovanie produktov podľa kupónových kódov (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Možnosť filtrovať iba aktuálne zobrazené produkty alebo načítať všetky produkty | Jednoduché a prehľadné používateľské rozhranie | Rýchle odstránenie filtra jedným kliknutím",
+        "para2": "Toto rozšírenie demonštruje moju schopnosť vytvárať praktické nástroje, ktoré zlepšujú používateľský zážitok na e-commerce platformách. Ukazuje zručnosti v JavaScripte, Chrome Extension API a frontendovom vývoji.",
+        "para3": "Projekt používa čistý JavaScript na interakciu s DOM stránkami, filtrovanie produktov a správu UI rozšírenia. Chrome Extension API je využité na vytvorenie akcie prehliadača a správu pozadí skriptov.",
+        "para4": "Toto rozšírenie zdôrazňuje moju zručnosť pri vytváraní riešení, ktoré riešia konkrétne potreby používateľov, čím sa zlepšuje nákupný zážitok počas promo akcií. Tiež ukazuje moju schopnosť pracovať s prehliadačovými API a vytvárať používateľsky prívetivé rozhrania pre rozšírenia prehliadača.",
+        "para5": "Projekt je open-source, čo pozýva príspevky od komunity vývojárov, čo ukazuje moju oddanosť spolupráci na vývoji a neustálemu zlepšovaniu softvérových projektov."
+      }
+    }
   }
 }
-      }
-  }

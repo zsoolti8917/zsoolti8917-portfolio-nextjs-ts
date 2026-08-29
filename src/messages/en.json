@@ -1,79 +1,238 @@
 {
-    "Home":{
-      "title": "Home"
+  "Home": {
+    "title": "Home"
+  },
+  "meta": {
+    "title": "Zsolt Varjú | Software Developer",
+    "description": "Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them."
+  },
+  "About": {
+    "title": "About",
+    "firstLetter": "H",
+    "intro": "ey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a document search platform on a project for the European Space Agency, where I'm the only developer. I write the code, move the data, and keep the servers up.",
+    "currentWork": "I started out testing other people's websites, which is where I learned to care about what happens after the deploy. Since then I've picked up the unglamorous half of the job: data pipelines, Linux, networking, backups. I lean on AI heavily in my daily work and I build with it too, mostly retrieval systems and self-hosted models. Outside work there's a homelab that has grown well past what I can justify, a motorcycle, and a ski season I never get enough of.",
+    "quote": "{author} said luck is what happens when preparation meets opportunity. That has held up so far. ",
+    "connect": "If you want to build something together, or just talk shop, say hello. 🔗",
+    "myLinks": "My links",
+    "stackLabel": "Stack",
+    "certificationsLabel": "Certifications",
+    "languagesLabel": "Languages",
+    "showMore": "+{count} more",
+    "showLess": "Show less",
+    "currently": {
+      "label": "Currently",
+      "role": "Software Developer at Serco, Prague",
+      "detail": "Sole developer and operator of a document search platform on a project for the European Space Agency — the code, the data pipelines, and the servers it runs on."
     },
-    "About": {
-      "title": "About",
-      "firstLetter": "H",
-      "intro": "Hey there! I'm Zsolt Varjú, a passionate web enthusiast from Čierna Voda, Slovakia. I started my journey as a Web Page Tester, working closely with frontend developers, which sparked my love for frontend development. Armed with a master's degree from Constantine the Philosopher University in Nitra, I am now diving into the world of React, Next.js and headless CMSs, ready to bring design files to life with seamless functionality and exceptional user experiences.",
-      "currentWork": "Currently, I work as a web tester, but I am transitioning into a frontend developer role. Outside of web development, you'll often find me running, skiing, or exploring 3D printing and tinkering with microPCs like Arduino. I also enjoy 3D modeling whenever I get the chance.",
-      "jobSearch": "I'm on the lookout for a frontend developer position where I can merge my skills and passion for creating stunning web designs.",
-      "quote": "As {author} wisely said, \"Luck is when preparation meets opportunity\" and I feel prepared, just waiting for the right opportunity to come along. ",
-      "connect": "If you think we might be a good fit, let's connect! 🔗",
-      "myLinks": "My links"
+    "facts": {
+      "basedLabel": "Based in",
+      "basedValue": "Prague, CZ",
+      "fromLabel": "From",
+      "fromValue": "Čierna Voda, SK",
+      "sinceLabel": "In software since",
+      "sinceValue": "2022"
     },
-    "Stats": {
-      "useInProjects": {
-        "title": "Use in projects",
-        "chips": [
-          "JavaScript",
+    "personality": {
+      "label": "Off the clock",
+      "items": [
+        "A homelab that has grown well past what I can justify",
+        "A motorcycle",
+        "A ski season I never get enough of"
+      ]
+    }
+  },
+  "Stats": {
+    "stack": [
+      {
+        "label": "Languages & frameworks",
+        "items": [
           "TypeScript",
-          "HTML",
-          "TailwindCSS",
-          "React",
-          "NextJS",
-          "NodeJS",
-          "Express",
-          "SQL",
-          "MongoDB",
-          "GitHub",
-          "Figma",
-          "Heroku",
-          "HeadlessCMS",
-          "Docker",
-          "Postman",
-          "REST Api"
-        ]
-      },
-      "triedOut": {
-        "title": "Tried out / Used in school",
-        "chips": [
-          "Storybook",
+          "JavaScript",
           "Python",
-          "Java",
-          "OOP",
-          "AdobeXD",
-          "Laravel",
-          "Unity",
-          "Blender",
-          "GraphQL",
-          "C#"
+          "Bash",
+          "SQL",
+          "React",
+          "Next.js"
         ]
       },
-      "myLanguages": {
-        "title": "Languages",
-        "chips": [
-          "Hungarian - mother language",
-          "Slovak",
-          "English"
+      {
+        "label": "Backend & data",
+        "items": [
+          "Node.js",
+          "Express",
+          "REST API",
+          "Apache Solr",
+          "Neo4j",
+          "RabbitMQ",
+          "Tika",
+          "PostgreSQL",
+          "MongoDB",
+          "Headless CMS"
+        ]
+      },
+      {
+        "label": "Infra & ops",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "GitHub Actions",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Dokku",
+          "WireGuard",
+          "Tailscale"
+        ]
+      },
+      {
+        "label": "Tools",
+        "items": [
+          "Git",
+          "Postman",
+          "Figma"
         ]
       }
+    ],
+    "aiLlm": {
+      "title": "AI & LLM",
+      "chips": [
+        "RAG architecture",
+        "Embeddings",
+        "Vector search",
+        "Qdrant",
+        "Hybrid retrieval",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "LangChain / LangSmith",
+        "Self-hosted models"
+      ]
     },
-    "Contact": {
-        "title": "Contact",
-        "message": "Shoot me an email if you want to connect! You can also find me on ",
-        "linkedin": "Linkedin",
-        "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
-        "or": "or",
-        "github": "Github",
-        "githubUrl": "https://github.com/zsoolti8917",
-        "moreYourSpeed": "if that's more your speed.",
-        "email": "zsolt.varju.rl@gmail.com"
+    "triedOut": {
+      "title": "Tried out / Used in school",
+      "chips": [
+        "Storybook",
+        "Java",
+        "OOP",
+        "AdobeXD",
+        "Laravel",
+        "Unity",
+        "Blender",
+        "GraphQL",
+        "C#"
+      ]
+    },
+    "certifications": [
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Linux Foundation / CNCF",
+        "date": ""
       },
-      "experience": {
-        "title": "Experience",
+      {
+        "name": "Ubuntu Linux Professional Certificate",
+        "issuer": "Canonical",
+        "date": "Apr 2025"
+      },
+      {
+        "name": "Learning Bash Scripting",
+        "issuer": "LinkedIn Learning",
+        "date": "Jul 2025"
+      },
+      {
+        "name": "Basics of ABAP Programming on SAP BTP",
+        "issuer": "SAP",
+        "date": "Oct 2024"
+      },
+      {
+        "name": "AWS Academy Graduate, Cloud Foundations",
+        "issuer": "AWS Academy",
+        "date": "Jul 2022"
+      }
+    ],
+    "languages": [
+      {
+        "name": "Hungarian",
+        "level": "native"
+      },
+      {
+        "name": "Slovak",
+        "level": "fluent"
+      },
+      {
+        "name": "Czech",
+        "level": "fluent"
+      },
+      {
+        "name": "English",
+        "level": "fluent"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Contact",
+    "message": "Shoot me an email if you want to connect! You can also find me on ",
+    "linkedin": "Linkedin",
+    "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
+    "or": "or",
+    "github": "Github",
+    "githubUrl": "https://github.com/zsoolti8917",
+    "moreYourSpeed": "if that's more your speed.",
+    "email": "dev@zsoltvarju.com"
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "companyName": "Serco Czech Republic s.r.o.",
+        "dates": "Feb 2025 - Present",
+        "jobTitle": "Software Developer",
+        "location": "Prague",
+        "responsibilities": [
+          {
+            "title": "Sole Ownership:",
+            "description": "Sole developer and operator of a document search platform on a project for the European Space Agency, owned end to end from the user interface down to the servers it runs on."
+          },
+          {
+            "title": "Full-Stack Development:",
+            "description": "React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships, and Tika for document extraction."
+          },
+          {
+            "title": "ETL & Automation:",
+            "description": "Design and operate multi-mission ingestion pipelines in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners."
+          },
+          {
+            "title": "Operations & Security:",
+            "description": "Run Ubuntu servers on Azure: nginx with TLS and access control, containerised services, CI, backups, and regular vulnerability remediation under formal change control."
+          },
+          {
+            "title": "Performance & Code Quality:",
+            "description": "Led a phased frontend quality programme that cut the vendor bundle by roughly three quarters, reduced the JavaScript payload by a third and CSS by more than half, cleared every outstanding lint error, and cut unnecessary React re-renders by 80%."
+          },
+          {
+            "title": "Stakeholder Coordination:",
+            "description": "Work directly with mission teams and IT on requirements, formal bug reports, escalations, change records, and effort estimates for new work."
+          }
+        ],
+        "skills": [
+          "React",
+          "Node.js",
+          "Python",
+          "Apache Solr",
+          "RabbitMQ",
+          "Neo4j",
+          "Docker",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Bash",
+          "Jenkins"
+        ]
+      },
+      {
         "companyName": "Galileo Corporation s.r.o",
-        "dates": "2022 - Present",
+        "dates": "2022 - 2025",
         "jobTitle": "Quality Assurance Tester",
         "location": "Remote",
         "responsibilities": [
@@ -111,23 +270,25 @@
           "Remote Collaboration",
           "Time Management"
         ]
-      },
-      "hero": {
-        "clickMe": "Click here!",
-        "greeting": "Hi, I'm Zsolt",
-        "title": "I'm a",
-        "profession": "Web Developer",
-        "description": "I recently completed my Master's degree in Applied Informatics and am now a web developer with expertise in Headless CMS and Next.js. I'm also highly adaptable and eager to work with a variety of technologies. Let's connect!",
-        "buttonText": "Contact Me"
-      },
-      "sidebar": {
-        "logo": "V",
-        "about": "About",
-        "projects": "Projects",
-        "experience": "Exp.",
-        "contact": "Contact"
-      },
-      "header": {
+      }
+    ]
+  },
+  "hero": {
+    "clickMe": "Click here!",
+    "greeting": "Hi, I'm Zsolt",
+    "title": "I'm a",
+    "profession": "Software Developer",
+    "description": "Developer and platform operator: I build web applications end to end, design the data pipelines behind them, and keep the infrastructure they run on healthy. Currently the sole developer and operator on a project for the European Space Agency.",
+    "buttonText": "Contact Me"
+  },
+  "sidebar": {
+    "logo": "V",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Exp.",
+    "contact": "Contact"
+  },
+  "header": {
     "resumeButton": "My Resume",
     "linkedinAria": "Visit my LinkedIn profile",
     "githubAria": "Visit my GitHub profile",
@@ -138,106 +299,150 @@
       "hu": "Hungarian"
     }
   },
-      "projectModal": {
-        "projectLinks": "Project Links",
-        "sourceCode": "Source Code",
-        "liveProject": "Live Project"
-      },
-      "projects": {
-        "sectionTitle": "Projects",
-        "infoMapSK": {
-          "title": "InfoMapSK - Interactive Demographic Data Visualization",
-          "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
-          "description": "A full-stack web application for visualizing demographic data of Slovakia, featuring an interactive map and various data categories. Developed as a master's thesis project.",
-          "modalContent": {
-            "para1": "InfoMapSK is a comprehensive full-stack web application developed as part of a master's thesis project. It provides an interactive platform for exploring and visualizing demographic data across different administrative levels of Slovakia.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Interactive map of Slovakia with region, district, and city/village selection | Visualization of demographic data using various chart types | Multiple data categories: Population, Economic Activity, Agriculture, and Organizational Statistics | Search functionality for specific locations | Responsive design optimized for various devices | Accessibility features following WCAG 2.1 guidelines | Contact form for user feedback and inquiries",
-            "para2": "This project showcases proficiency in full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). The frontend is built with React and styled with TailwindCSS, while the backend utilizes Node.js with Express.js and MongoDB for data caching.",
-            "technologiesList": "The development process involved integrating various technologies and APIs, including:",
-            "techList": "React-leaflet for interactive mapping | Recharts for data visualization | Formik and Yup for form handling and validation | Statistical Office of the Slovak Republic API for demographic data | Geoportal of Slovakia for geospatial information",
-            "para3": "This project demonstrates the ability to create a complex, data-driven web application while adhering to best practices in responsive design, accessibility, and modern web development techniques. It showcases skills in both frontend and backend development, as well as data visualization and integration with external APIs."
-          }
-        },
-        "gardenBros": {
-          "title": "Garden Bros Website",
-          "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
-          "description": "A website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
-          "modalContent": {
-            "para1": "The Garden Bros Website is a dynamic platform for a gardening company to promote their services and showcase their work. Built with Next.js, styled using Tailwind CSS, and managed through Strapi CMS, it offers a responsive and engaging user experience.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive main page with dynamic components | Fully-featured contact page and FAQ section | Blog with author-written posts | Dynamic page generation | Content management through Strapi CMS",
-            "para2": "The project demonstrates my ability to create a full-featured website using modern web technologies. It showcases skills in frontend development, responsive design with Tailwind CSS, CMS integration, and deployment strategies.",
-            "para3": "Tailwind CSS was used to create a custom, responsive design that aligns with the client's needs. This utility-first CSS framework enabled rapid development of a unique and visually appealing interface while ensuring consistency across the site.",
-            "para4": "The website is deployed on Vercel, ensuring fast loading times and reliable performance. The backend is managed through Strapi CMS, hosted on a VPS from Forpsi within a Dokku environment. It operates as a container with an SSL certificate and uses a reverse proxy setup. The PostgreSQL database, running on the same VPS, is shared with other projects, ensuring efficient resource utilization and management.",
-            "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs, providing an excellent user experience and visually striking design."
-          }
-        },
-        "quizApp": {
-          "title": "AI-Powered Quiz App",
-          "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
-          "description": "An interactive quiz application that checks user answers using AI, provides feedback, and allows for additional discussions on topics. Built with the MERN stack, styled with Tailwind CSS and Shadcn/ui, deployed on Netlify, and hosted on a VPS using Dokku.",
-          "modalContent": {
-            "para1": "The AI-Powered Quiz App is a dynamic quiz platform that not only evaluates user answers using AI but also offers detailed explanations and further discussions on the subject matter. This project showcases advanced integration of AI into quiz functionalities, while also ensuring smooth user interaction and a modern interface.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Interactive quizzes with AI-based answer evaluation | Option for extended conversations with AI after each question | Predefined questions and answers stored in MongoDB | User-friendly interface styled with Tailwind CSS and Shadcn/ui | SSL-secured backend hosted on VPS using Dokku | Frontend deployed on Netlify",
-            "para2": "The project highlights my ability to work with the MERN stack (MongoDB, Express, React, Node.js), integrating OpenAI's API for evaluating and improving user responses. The frontend is styled with Tailwind CSS and Shadcn/ui, ensuring a clean and responsive design.",
-            "para3": "Development involved setting up a question-answer system with a backend powered by Node.js and MongoDB. The AI evaluates user responses, offering corrections or additional information. The app allows users to continue conversations with AI to delve deeper into topics.",
-            "para4": "This project demonstrates my skills in full-stack web development, AI integration, and building scalable applications with a focus on user engagement and responsiveness across devices."
-          }
-        },
-        "portfolio": {
-          "title": "My First Portfolio",
-          "tech": "HTML5,CSS3,JavaScript,GSAP",
-          "description": "My initial web development portfolio showcasing early projects and skills, built with plain HTML, CSS, and JavaScript with GSAP for animations.",
-          "modalContent": {
-            "para1": "This portfolio is my first attempt at showcasing my web development skills and projects. It represents the beginning of my journey in web development and displays the various components and small projects I built while learning.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive design for various screen sizes | Animated elements using GSAP (GreenSock Animation Platform) | Showcase of beginner-level projects and components | Clean and simple user interface",
-            "para2": "This project demonstrates my foundational skills in front-end web development. It was built using semantic HTML5 markup, styled with CSS3, and enhanced with JavaScript for interactivity. GSAP was used to implement smooth animations, adding a dynamic feel to the portfolio.",
-            "para3": "The development process involved applying fundamental web development concepts and exploring animation techniques with GSAP. This portfolio served as a practical exercise in creating a responsive layout and organizing a showcase of multiple projects.",
-            "para4": "While this represents my early work, it laid the foundation for my growth as a web developer. Future improvements planned include adding more complex projects, enhancing the design, implementing advanced JavaScript functionality, and potentially integrating a backend for dynamic content."
-          }
-        },
-        "scoot": {
-          "title": "Scoot Sharing Web App",
-          "tech": "Next.js,React,Tailwind CSS",
-          "description": "A responsive web app for a fictional scooter rental service, featuring multiple pages and a contact form. Built with Next.js and deployed on Vercel.",
-          "modalContent": {
-            "para1": "The Scoot Sharing Web App is a responsive web application that showcases a fictional scooter rental service. This project demonstrates proficiency in modern web development technologies and responsive design principles.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive design with a mobile-first approach | Five fully functional pages: Landing, About, FAQ, Locations, and Contact | Static map image on the Locations page | Fully functional contact form | Optimized for all screen resolutions",
-            "para2": "This project showcases my proficiency in Next.js and modern web development practices. It was built using Next.js, styled with Tailwind CSS, and enhanced with React for interactivity.",
-            "para3": "The development process involved implementing a multi-page application structure, creating responsive layouts, and integrating a functional contact form. I also focused on optimizing the site for various screen sizes and ensuring a consistent user experience across devices.",
-            "para4": "This project demonstrates my ability to create comprehensive, multi-page web applications while adhering to best practices in responsive design and modern web development techniques."
-          }
-        },
-        "alza": {
-          "title": "Alza Dni Kupónový Filter",
-          "tech": "JavaScript,Chrome Extension API,HTML,CSS",
-          "description": "A Chrome extension that helps users filter products during Alza Days sales by various coupon codes, making it easier to find the best discounts on Alza.sk.",
-          "modalContent": {
-            "para1": "Alza Dni Kupónový Filter is a useful tool for anyone shopping during Alza Days. This Chrome extension allows you to easily filter products by various coupon codes, helping you quickly find the best discounts on Alza.sk.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Filtering products by coupon codes (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Option to filter only currently displayed products or load all products | Simple and clear user interface | Quick filter removal with one click",
-            "para2": "The extension demonstrates my ability to create practical tools that enhance user experience on e-commerce platforms. It showcases skills in JavaScript, Chrome Extension API, and frontend development.",
-            "para3": "The project uses vanilla JavaScript to interact with the webpage DOM, filter products, and manage the extension's UI. The Chrome Extension API is utilized to create a browser action and handle background scripts.",
-            "para4": "This extension highlights my proficiency in creating solutions that address specific user needs, improving the shopping experience during promotional events. It also demonstrates my ability to work with browser APIs and create user-friendly interfaces for browser extensions.",
-            "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
-          }
-        },
-        "github": {
-          "title": "GitHub User Search App",
-          "tech": "HTML5,Tailwind CSS,JavaScript,GSAP,Axios",
-          "description": "A responsive web app that allows users to search for GitHub profiles, view user information, and switch between light and dark themes. Built as a solution to a Frontend Mentor challenge.",
-          "modalContent": {
-            "para1": "The GitHub User Search App is a responsive web application that enables users to search for GitHub profiles and view relevant user information. This project was developed as a solution to a Frontend Mentor challenge, demonstrating skills in frontend development and API integration.",
-            "keyFeatures": "Key features include:",
-            "featuresList": "Responsive layout optimized for various screen sizes | GitHub user search functionality using the GitHub API | Display of relevant user information based on the search | Light and dark theme switching | Automatic theme selection based on user's system preferences | Interactive elements with hover states",
-            "para2": "This project showcases my proficiency in modern web development technologies and practices. It was built using semantic HTML5 markup, styled with Tailwind CSS, and enhanced with JavaScript for interactivity. The GitHub API integration was handled using Axios, and animations were implemented with GSAP.",
-            "para3": "The development process involved learning and applying new concepts such as working with APIs, implementing dark/light themes, and using Tailwind CSS for the first time. I also incorporated error handling for API requests and used JavaScript modules to organize the codebase.",
-            "para4": "This project demonstrates my ability to create functional, visually appealing web applications while adhering to modern development practices and continuously learning new technologies."
-          }
-        }
+  "projectModal": {
+    "projectLinks": "Project Links",
+    "sourceCode": "Source Code",
+    "liveProject": "Live Project"
+  },
+  "projects": {
+    "sectionTitle": "Projects",
+    "ragSystem": {
+      "title": "Self-Hosted RAG Search",
+      "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
+      "description": "A retrieval-augmented search system over a local document collection, built to answer questions with citations, and to stay quiet when the evidence isn't there.",
+      "modalContent": {
+        "para1": "A document collection is only as useful as your ability to ask it questions. Keyword search misses meaning, and a plain chatbot bolted onto a corpus will happily invent an answer. This system is built around the opposite instinct: every answer has to be traceable to a passage that actually exists.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Hybrid retrieval combining BM25 keyword search with vector similarity | bge-m3 embeddings stored in a Qdrant vector database | Every answer grounded in retrieved passages, with inline citations | Explicit abstention when no supporting passage is found, instead of a plausible guess | Runs fully self-hosted, with local models as an alternative to hosted APIs | Cost modelling comparing hosted API inference against running a GPU yourself",
+        "para2": "The pipeline handles chunking, embedding, and hybrid BM25 plus nearest-neighbour retrieval, with tracing through LangChain and LangSmith to see exactly which passages produced which answer. OpenRouter provides multi-model access for comparison, alongside locally hosted open-weight models.",
+        "para3": "The interesting engineering here is not the generation but the retrieval quality, the citation enforcement, and the discipline of returning nothing rather than something wrong."
       }
+    },
+    "coffece": {
+      "title": "Coffece (coffece.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,next-intl,Framer Motion",
+      "description": "A bilingual (SK/EN) marketing and ordering site for an office coffee delivery brand: product pages, FAQ, testimonial carousel, and contact flow, with full SEO metadata.",
+      "modalContent": {
+        "para1": "Coffece is a bilingual (Slovak/English) marketing and ordering website for an office coffee delivery brand, guiding visitors from discovering the offering all the way to placing an order enquiry.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Fully localized SK/EN routing powered by next-intl | Product and offering pages for office coffee delivery | FAQ section and a testimonial carousel | Contact and ordering flow with validated forms and e-mail delivery | Complete SEO metadata including Open Graph tags | Smooth Framer Motion animations and dark mode support",
+        "para2": "The site is built with Next.js and TypeScript, styled with Tailwind CSS and accessible UI components. Forms are handled server-side with Zod validation and e-mail delivery.",
+        "para3": "This project demonstrates delivering a polished, fully localized marketing site end to end, from information architecture and copy structure to SEO and production deployment."
+      }
+    },
+    "idtPlusStav": {
+      "title": "IDT PLUS STAV (idtplusstav.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,MDX",
+      "description": "Complete digital operations for a Slovak diamond drilling and concrete cutting company: a self-hosted marketing website, business email, invoicing configured for Slovak VAT rules, plus paid search and SEO.",
+      "modalContent": {
+        "para1": "A marketing website for IDT PLUS STAV, a Slovak diamond drilling and concrete cutting company, built to present the company's services clearly and turn visitors into quote requests.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Dedicated pages for each drilling and cutting service, with pricing and FAQ | Project news section built on MDX articles | Extensive references section showcasing completed projects | Quote request form with validation and e-mail delivery | Self-hosted deployment on a Dokku-managed server | Google Workspace with DKIM-authenticated business email | Invoicing set up for Slovak VAT reverse charge | Google Ads campaigns and ongoing SEO",
+        "para2": "Built with Next.js and TypeScript and styled with Tailwind CSS. The news section is a file-based MDX blog (next-mdx-remote), and the quote request form combines React Hook Form with Zod validation.",
+        "para3": "The engagement went well beyond building a website: it covered the company's whole digital footprint: hosting, email deliverability, invoicing that matches Slovak tax rules, and the paid and organic search that brings enquiries in."
+      }
+    },
+    "b2bPortal": {
+      "title": "B2B Wholesale Ordering Portal",
+      "tech": "WooCommerce,B2BKing,Stock Locations,SuperFaktúra",
+      "description": "A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production. Features tiered customer pricing, a login-only catalog with hidden prices, two-warehouse inventory, decimal quantities for weighted goods, and integrated invoicing.",
+      "modalContent": {
+        "para1": "A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production and used for day-to-day wholesale ordering. The portal replaces phone and e-mail orders with a self-service catalog tailored to each customer.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Tiered customer pricing with per-group price lists | Login-only catalog with prices hidden from the public | Inventory tracked across two warehouses | Decimal quantities for weighted goods, such as ordering by the kilogram | Integrated invoicing via SuperFaktúra",
+        "para2": "The portal is built on WooCommerce, extended with B2BKing for wholesale behavior (customer registration and approval, customer groups, tiered pricing, and a hidden-price catalog), and with Stock Locations for two-warehouse inventory management.",
+        "para3": "The project covered the whole delivery: gathering requirements, configuring and customizing the store, integrating invoicing, and putting the portal into production. For confidentiality, the client and store are not named."
+      }
+    },
+    "lemma": {
+      "title": "Lemma: Vocabulary Scanner",
+      "tech": "React Native,Expo,Vision models,FSRS",
+      "description": "A mobile app that turns a photo of a printed page into vocabulary cards. Point the camera at text, and it pulls out the words worth learning and schedules them for review.",
+      "modalContent": {
+        "para1": "Lemma came from reading in a foreign language and constantly stopping to look words up. Instead of typing each one into a dictionary, you photograph the page and the app does the extraction, leaving you with a study deck built from what you were actually reading.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Camera capture with a vision-language model detection pipeline | Word extraction and lemmatisation from printed pages | FSRS spaced-repetition scheduling, so reviews land when you are about to forget | Offline-friendly local storage | Cross-platform from a single React Native and Expo codebase | Specced through to v1.1",
+        "para2": "The detection pipeline pairs a vision model with layout handling to read words off a photographed page reliably, and the review side implements FSRS, a modern spaced-repetition scheduler that adapts intervals to your actual recall rather than a fixed ladder.",
+        "para3": "It is a personal tool built to a real specification: a defined scope, a versioned roadmap, and a clear boundary around what v1 does and does not do."
+      }
+    },
+    "homelab": {
+      "title": "Personal Infrastructure & Homelab",
+      "tech": "Linux,Docker,WireGuard,Tailscale,CI/CD",
+      "description": "A personal VPS and home server run with production habits: private networking, atomic zero-downtime deploys, and a stack of self-hosted services.",
+      "modalContent": {
+        "para1": "Running your own infrastructure is the fastest way to learn what actually breaks. This is a personal VPS and a home NAS operated the way a production system would be: versioned deploys, private networking, monitoring, and recovery that does not depend on me being at a desk.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "WireGuard private networking linking the VPS and the home network | Atomic zero-downtime deployments, with instant rollback | Tailscale mesh access to home services from anywhere | Docker-based NAS services including media streaming and camera recording | Self-healing service recovery and scheduled backups | Remote development driven from a phone when needed",
+        "para2": "Deployments are atomic: a release is built alongside the running version and switched over only once it is healthy, so a bad build never takes the service down. Networking is private by default. Services are reachable over WireGuard and Tailscale rather than exposed to the internet.",
+        "para3": "It is the operator half of the job, practised on my own time: the same concerns as production work (uptime, access control, backups, recovery) at a scale where I own every decision."
+      }
+    },
+    "photoCropper": {
+      "title": "Multi Photo Cropper",
+      "tech": "React,TypeScript,Vite,FastAPI,OpenCV,ONNX Runtime,Docker",
+      "description": "A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP.",
+      "modalContent": {
+        "para1": "Multi Photo Cropper came out of a very concrete problem: boxes of historical family photographs waiting to be digitized, and a flatbed scanner that makes scanning one print at a time painfully slow. The answer is to lay four to six photos on the glass at once and let software find and separate them afterwards.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Automatic photo region detection running entirely in the browser | An optional self-hosted backend that merges four detection strategies by IoU consensus voting | Local CPU inference of a YOLOv8-nano ONNX model, with no cloud service and no API keys | Texture and color histogram validation that separates a real photo from blank scanner background | Per-region skew analysis with deskew and perspective correction | Full manual control: draw, drag, resize with eight handles, zoom, pan, undo history, and keyboard shortcuts | A “photos per scan” hint that constrains the detector to the expected number of prints | Crops re-extracted at full source resolution and exported together as a ZIP | Automatic fallback to the in-browser detector whenever the backend is offline",
+        "para2": "The browser-side detector is written from scratch against the Canvas 2D API over raw pixel buffers, with no image library at all: grayscale conversion, Otsu-style thresholding, morphological dilate and erode, connected components, and IoU consensus. The optional backend adds classical computer vision in OpenCV plus a locally run ONNX object detector, then merges every strategy's proposals by consensus voting, so a region found twice scores higher than one found once.",
+        "para3": "It is built and self-hosted purely for personal use: a Dockerized FastAPI service running as a non-root user, with a health check, a memory guard that sheds load under pressure, and resource limits sized for a small home server. Everything runs on local hardware, and nothing ever leaves it."
+      }
+    },
+    "municipalMigrations": {
+      "title": "Municipal Website Migrations",
+      "tech": "Virgo / GCM Cloud CMS",
+      "description": "Content migration and restructuring for five Slovak municipal websites, including bilingual Slovak and Hungarian content.",
+      "modalContent": {
+        "para1": "Content migration and restructuring for five Slovak municipal websites moving to the Virgo / GCM Cloud CMS platform, including bilingual Slovak and Hungarian content.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Complete content inventories of the legacy websites | Page trees restructured to fit the new CMS | Migration of documents, official notices, contracts, and image galleries | Bilingual Slovak and Hungarian language mutations | Post-migration audits comparing the old and new sites page by page",
+        "para2": "The work combined custom scraping and automation tooling with manual restructuring to move pages, documents, and images out of legacy and WordPress sites without losing content.",
+        "para3": "Municipal websites carry legally significant content (contracts, invoices, official board notices), so the migrations put a premium on completeness, accuracy, and verifiable results."
+      }
+    },
+    "infoMapSK": {
+      "title": "InfoMap SK: Master's Thesis",
+      "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
+      "description": "A full-stack application for visualising Slovak open data on an interactive map, built as my master's thesis project. The public site is no longer online; the source remains available.",
+      "modalContent": {
+        "para1": "InfoMapSK is a comprehensive full-stack web application developed as part of a master's thesis project. It provides an interactive platform for exploring and visualizing demographic data across different administrative levels of Slovakia.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Interactive map of Slovakia with region, district, and city/village selection | Visualization of demographic data using various chart types | Multiple data categories: Population, Economic Activity, Agriculture, and Organizational Statistics | Search functionality for specific locations | Responsive design optimized for various devices | Accessibility features following WCAG 2.1 guidelines | Contact form for user feedback and inquiries",
+        "para2": "This project showcases proficiency in full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). The frontend is built with React and styled with TailwindCSS, while the backend utilizes Node.js with Express.js and MongoDB for data caching.",
+        "technologiesList": "The development process involved integrating various technologies and APIs, including:",
+        "techList": "React-leaflet for interactive mapping | Recharts for data visualization | Formik and Yup for form handling and validation | Statistical Office of the Slovak Republic API for demographic data | Geoportal of Slovakia for geospatial information",
+        "para3": "This project demonstrates the ability to create a complex, data-driven web application while adhering to best practices in responsive design, accessibility, and modern web development techniques. It showcases skills in both frontend and backend development, as well as data visualization and integration with external APIs."
+      }
+    },
+    "gardenBros": {
+      "title": "Garden Bros Website",
+      "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+      "description": "A website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
+      "modalContent": {
+        "para1": "The Garden Bros Website is a dynamic platform for a gardening company to promote their services and showcase their work. Built with Next.js, styled using Tailwind CSS, and managed through Strapi CMS, it offers a responsive and engaging user experience.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Responsive main page with dynamic components | Fully-featured contact page and FAQ section | Blog with author-written posts | Dynamic page generation | Content management through Strapi CMS",
+        "para2": "The project demonstrates my ability to create a full-featured website using modern web technologies. It showcases skills in frontend development, responsive design with Tailwind CSS, CMS integration, and deployment strategies.",
+        "para3": "Tailwind CSS was used to create a custom, responsive design that aligns with the client's needs. This utility-first CSS framework enabled rapid development of a unique and visually appealing interface while ensuring consistency across the site.",
+        "para4": "The website is deployed on Vercel, ensuring fast loading times and reliable performance. The backend is managed through Strapi CMS, hosted on a VPS from Forpsi within a Dokku environment. It operates as a container with an SSL certificate and uses a reverse proxy setup. The PostgreSQL database, running on the same VPS, is shared with other projects, ensuring efficient resource utilization and management.",
+        "para5": "This project highlights my proficiency in creating scalable, maintainable, and user-friendly web applications that cater to specific business needs, providing an excellent user experience and visually striking design."
+      }
+    },
+    "alza": {
+      "title": "Alza Dni Kupónový Filter",
+      "tech": "JavaScript,Chrome Extension API,HTML,CSS",
+      "description": "A Chrome extension that helps users filter products during Alza Days sales by various coupon codes, making it easier to find the best discounts on Alza.sk.",
+      "modalContent": {
+        "para1": "Alza Dni Kupónový Filter is a useful tool for anyone shopping during Alza Days. This Chrome extension allows you to easily filter products by various coupon codes, helping you quickly find the best discounts on Alza.sk.",
+        "keyFeatures": "Key features include:",
+        "featuresList": "Filtering products by coupon codes (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Option to filter only currently displayed products or load all products | Simple and clear user interface | Quick filter removal with one click",
+        "para2": "The extension demonstrates my ability to create practical tools that enhance user experience on e-commerce platforms. It showcases skills in JavaScript, Chrome Extension API, and frontend development.",
+        "para3": "The project uses vanilla JavaScript to interact with the webpage DOM, filter products, and manage the extension's UI. The Chrome Extension API is utilized to create a browser action and handle background scripts.",
+        "para4": "This extension highlights my proficiency in creating solutions that address specific user needs, improving the shopping experience during promotional events. It also demonstrates my ability to work with browser APIs and create user-friendly interfaces for browser extensions.",
+        "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
+      }
+    }
   }
+}

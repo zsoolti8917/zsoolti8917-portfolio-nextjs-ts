@@ -1,0 +1,264 @@
+{
+  "lang": "hu",
+  "pages": 2,
+  "docTitle": "Varjú Zsolt, szoftverfejlesztő, önéletrajz",
+  "name": "Varjú Zsolt",
+  "role": "Szoftverfejlesztő",
+  "contact": {
+    "email": "dev@zsoltvarju.com",
+    "phone": "+421 915 443 951",
+    "location": "Prága, Csehország (állandó lakcím: Feketenyék, Szlovákia)",
+    "links": [
+      {
+        "label": "zsoltvarju.com",
+        "href": "https://zsoltvarju.com"
+      },
+      {
+        "label": "linkedin.com/in/zsoltvarju",
+        "href": "https://www.linkedin.com/in/zsoltvarju"
+      },
+      {
+        "label": "github.com/zsoolti8917",
+        "href": "https://github.com/zsoolti8917"
+      }
+    ]
+  },
+  "headings": {
+    "summary": "Profil",
+    "skills": "Készségek",
+    "experience": "Szakmai tapasztalat",
+    "projects": "Projektek",
+    "education": "Tanulmányok",
+    "certifications": "Tanúsítványok",
+    "languages": "Nyelvtudás"
+  },
+  "summary": "Szoftverfejlesztő és platformüzemeltető, szándékosan szélesebb hatókörrel, mint a full-stack. Webalkalmazásokat építek a teljes stacken, megtervezem az őket adattal ellátó ETL pipeline-okat, és üzemeltetem az infrastruktúrát, amin futnak, jelenleg egyedüli fejlesztőként és üzemeltetőként egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén. Az AI-támogatott fejlesztés nálam bevett munkamódszer, nem érdekesség. A rendszerarchitektúra felé tartok.",
+  "skillGroups": [
+    {
+      "label": "Nyelvek",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Bash",
+        "SQL"
+      ]
+    },
+    {
+      "label": "Web",
+      "items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "REST API"
+      ]
+    },
+    {
+      "label": "Keresés és adat",
+      "items": [
+        "Apache Solr",
+        "Open Semantic Search",
+        "Tika",
+        "Neo4j",
+        "RabbitMQ",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "label": "ETL és automatizálás",
+      "items": [
+        "Egyedi adatbetöltő pipeline-ok",
+        "Cron ütemezés",
+        "PDF- és táblázatkinyerés",
+        "Folyamatautomatizálás"
+      ]
+    },
+    {
+      "label": "AI és LLM",
+      "items": [
+        "RAG architektúra",
+        "Embeddingek",
+        "Vektoros keresés (Qdrant)",
+        "Hibrid keresés",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "Saját üzemeltetésű modellek"
+      ]
+    },
+    {
+      "label": "DevOps és felhő",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "Azure",
+        "AWS",
+        "Dokku",
+        "nginx",
+        "WireGuard",
+        "Tailscale"
+      ]
+    },
+    {
+      "label": "Biztonság és gyakorlat",
+      "items": [
+        "Sérülékenységkezelés",
+        "TLS",
+        "Hardening",
+        "Változáskezelés",
+        "Agile",
+        "API-tesztelés (Postman)"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Szoftverfejlesztő",
+      "org": "Serco Czech Republic s.r.o.",
+      "location": "Prága, Csehország",
+      "dates": "2025. febr. – jelenleg",
+      "bullets": [
+        "Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén, a felhasználói felülettől egészen a szerverekig, amelyeken fut.",
+        "React frontend és Node.js backend egy Apache Solr alapú keresési stack fölött, RabbitMQ üzenetkezeléssel, Neo4j kapcsolatkezeléssel és Tika dokumentumfeldolgozással.",
+        "Több misszióra kiterjedő adatbetöltő pipeline-ok tervezése és üzemeltetése Pythonban: ütemezett átvitelek, keresési séma tervezése, valamint táblázatkinyerés PDF- és táblázatfájlokból, az elutasított rekordok visszajelzésével az adatgazdák felé.",
+        "Ubuntu szerverek üzemeltetése Azure-on: nginx TLS-sel és hozzáférés-szabályozással, konténerizált szolgáltatások, CI, mentések és rendszeres sérülékenységkezelés formális változáskezelés mellett.",
+        "Ütemezett frontend minőségi programot vezettem: a vendor bundle nagyjából háromnegyedével kisebb, a JavaScript mennyisége harmadával, a CSS több mint felével csökkent, minden lint hiba megszűnt, a felesleges React újrarenderelések száma 80%-kal esett.",
+        "Közvetlen együttműködés a missziós csapatokkal és az IT-vel a követelményekről, formális hibajelentésekről, eszkalációkról, változáskezelési rekordokról és ráfordításbecslésekről."
+      ]
+    },
+    {
+      "title": "Minőségbiztosítási tesztelő (QA)",
+      "org": "Galileo Corporation s.r.o",
+      "location": "Home office",
+      "dates": "2022 – 2025",
+      "bullets": [
+        "Weboldalak manuális funkcionális tesztelése különböző böngészőkben és eszközökön, a hibák azonosításával és jelentésével.",
+        "Az oldalak ellenőrzése a grafikai tervek alapján, részletes visszajelzéssel a tervezők és fejlesztők felé.",
+        "Minőségi színvonal fenntartása szlovákiai önkormányzati és üzleti weboldalak széles portfólióján.",
+        "Teszteredmények és javító intézkedések dokumentálása, önálló munkavégzés kötött határidők mellett."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Saját üzemeltetésű RAG keresés",
+      "tech": [
+        "Python",
+        "Qdrant",
+        "bge-m3",
+        "LangChain",
+        "Docker"
+      ],
+      "line": "Kontextussal bővített keresés egy helyi dokumentumgyűjtemény fölött: hibrid BM25 és vektoros visszakeresés, hivatkozott szövegrészekre épülő válaszok, és kifejezett válaszmegtagadás, ha nincs alátámasztó bizonyíték."
+    },
+    {
+      "title": "Coffece (coffece.sk)",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "next-intl"
+      ],
+      "line": "Kétnyelvű (szlovák/angol) marketing- és rendelési weboldal egy irodai kávékiszállítással foglalkozó márkának, lokalizált útvonalakkal, validált űrlapokkal és teljes SEO metaadatokkal."
+    },
+    {
+      "title": "IDT PLUS STAV (idtplusstav.sk)",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "MDX",
+        "Dokku",
+        "Google Workspace"
+      ],
+      "line": "Teljes körű digitális működtetés egy építőipari kkv-nak: saját üzemeltetésű weboldal, DKIM-mel hitelesített céges e-mail, a szlovák fordított adózáshoz igazított számlázás, valamint Google Ads és SEO."
+    },
+    {
+      "title": "B2B nagykereskedelmi rendelési portál",
+      "tech": [
+        "WooCommerce",
+        "B2BKing",
+        "Stock Locations"
+      ],
+      "line": "Éles B2B rendelési portál egy szlovák nagykereskedőnek: ügyfélcsoportonkénti árszintek, csak bejelentkezés után elérhető katalógus, két raktár készletkezelése, tizedes mennyiségek mért árukhoz és integrált számlázás."
+    },
+    {
+      "title": "Lemma: szókincsszkenner",
+      "tech": [
+        "React Native",
+        "Expo",
+        "Vision modellek",
+        "FSRS"
+      ],
+      "line": "Mobilalkalmazás, amely egy nyomtatott oldal fényképéből szókártyákat készít; vision-language felismerési pipeline-t köt össze FSRS alapú ismétlésütemezéssel."
+    },
+    {
+      "title": "Saját infrastruktúra és homelab",
+      "tech": [
+        "Linux",
+        "Docker",
+        "WireGuard",
+        "Tailscale",
+        "CI/CD"
+      ],
+      "line": "Saját VPS és otthoni szerver produkciós szokásokkal üzemeltetve: WireGuard privát hálózat, atomi, leállásmentes telepítések visszaállítási lehetőséggel, önjavító szolgáltatás-helyreállítás és ütemezett mentések."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Mesterdiploma, alkalmazott informatika",
+      "org": "Konstantin Filozófus Egyetem, Nyitra",
+      "dates": "2018 – 2024",
+      "note": "Szakdolgozat: InfoMap SK, full-stack alkalmazás, amely a Szlovák Statisztikai Hivatal API-jának nyílt adatait jeleníti meg interaktív térképen."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Linux Foundation / CNCF",
+      "date": ""
+    },
+    {
+      "name": "Ubuntu Linux Professional Certificate",
+      "issuer": "Canonical",
+      "date": "2025. ápr."
+    },
+    {
+      "name": "Learning Bash Scripting",
+      "issuer": "LinkedIn Learning",
+      "date": "2025. júl."
+    },
+    {
+      "name": "ABAP programozás alapjai SAP BTP-n",
+      "issuer": "SAP",
+      "date": "2024. okt."
+    },
+    {
+      "name": "AWS Academy Graduate, Cloud Foundations",
+      "issuer": "AWS Academy",
+      "date": "2022. júl."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Magyar",
+      "level": "anyanyelv"
+    },
+    {
+      "name": "Szlovák",
+      "level": "folyékony"
+    },
+    {
+      "name": "Cseh",
+      "level": "folyékony"
+    },
+    {
+      "name": "Angol",
+      "level": "folyékony"
+    }
+  ]
+}

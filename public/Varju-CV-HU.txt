@@ -1,0 +1,84 @@
+Varjú Zsolt
+Szoftverfejlesztő
+
+dev@zsoltvarju.com · +421 915 443 951 · Prága, Csehország (állandó lakcím: Feketenyék, Szlovákia)
+zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
+
+PROFIL
+------
+Szoftverfejlesztő és platformüzemeltető, szándékosan szélesebb hatókörrel, mint a full-stack. Webalkalmazásokat építek a teljes stacken, megtervezem az őket adattal ellátó ETL pipeline-okat, és üzemeltetem az infrastruktúrát, amin futnak, jelenleg egyedüli fejlesztőként és üzemeltetőként egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén. Az AI-támogatott fejlesztés nálam bevett munkamódszer, nem érdekesség. A rendszerarchitektúra felé tartok.
+
+SZAKMAI TAPASZTALAT
+-------------------
+
+Szoftverfejlesztő
+Serco Czech Republic s.r.o. · Prága, Csehország · 2025. febr. – jelenleg
+  - Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén, a felhasználói felülettől egészen a szerverekig, amelyeken fut.
+  - React frontend és Node.js backend egy Apache Solr alapú keresési stack fölött, RabbitMQ üzenetkezeléssel, Neo4j kapcsolatkezeléssel és Tika dokumentumfeldolgozással.
+  - Több misszióra kiterjedő adatbetöltő pipeline-ok tervezése és üzemeltetése Pythonban: ütemezett átvitelek, keresési séma tervezése, valamint táblázatkinyerés PDF- és táblázatfájlokból, az elutasított rekordok visszajelzésével az adatgazdák felé.
+  - Ubuntu szerverek üzemeltetése Azure-on: nginx TLS-sel és hozzáférés-szabályozással, konténerizált szolgáltatások, CI, mentések és rendszeres sérülékenységkezelés formális változáskezelés mellett.
+  - Ütemezett frontend minőségi programot vezettem: a vendor bundle nagyjából háromnegyedével kisebb, a JavaScript mennyisége harmadával, a CSS több mint felével csökkent, minden lint hiba megszűnt, a felesleges React újrarenderelések száma 80%-kal esett.
+  - Közvetlen együttműködés a missziós csapatokkal és az IT-vel a követelményekről, formális hibajelentésekről, eszkalációkról, változáskezelési rekordokról és ráfordításbecslésekről.
+
+Minőségbiztosítási tesztelő (QA)
+Galileo Corporation s.r.o · Home office · 2022 – 2025
+  - Weboldalak manuális funkcionális tesztelése különböző böngészőkben és eszközökön, a hibák azonosításával és jelentésével.
+  - Az oldalak ellenőrzése a grafikai tervek alapján, részletes visszajelzéssel a tervezők és fejlesztők felé.
+  - Minőségi színvonal fenntartása szlovákiai önkormányzati és üzleti weboldalak széles portfólióján.
+  - Teszteredmények és javító intézkedések dokumentálása, önálló munkavégzés kötött határidők mellett.
+
+KÉSZSÉGEK
+---------
+Nyelvek: TypeScript, JavaScript, Python, Bash, SQL
+Web: React, Next.js, Node.js, Express, REST API
+Keresés és adat: Apache Solr, Open Semantic Search, Tika, Neo4j, RabbitMQ, PostgreSQL, MongoDB
+ETL és automatizálás: Egyedi adatbetöltő pipeline-ok, Cron ütemezés, PDF- és táblázatkinyerés, Folyamatautomatizálás
+AI és LLM: RAG architektúra, Embeddingek, Vektoros keresés (Qdrant), Hibrid keresés, Prompt engineering, Claude Code, Codex, OpenRouter, Saját üzemeltetésű modellek
+DevOps és felhő: Docker, Kubernetes, Jenkins, GitHub Actions, Azure, AWS, Dokku, nginx, WireGuard, Tailscale
+Biztonság és gyakorlat: Sérülékenységkezelés, TLS, Hardening, Változáskezelés, Agile, API-tesztelés (Postman)
+
+PROJEKTEK
+---------
+
+Saját üzemeltetésű RAG keresés
+Python, Qdrant, bge-m3, LangChain, Docker
+Kontextussal bővített keresés egy helyi dokumentumgyűjtemény fölött: hibrid BM25 és vektoros visszakeresés, hivatkozott szövegrészekre épülő válaszok, és kifejezett válaszmegtagadás, ha nincs alátámasztó bizonyíték.
+
+Coffece (coffece.sk)
+Next.js, TypeScript, Tailwind CSS, next-intl
+Kétnyelvű (szlovák/angol) marketing- és rendelési weboldal egy irodai kávékiszállítással foglalkozó márkának, lokalizált útvonalakkal, validált űrlapokkal és teljes SEO metaadatokkal.
+
+IDT PLUS STAV (idtplusstav.sk)
+Next.js, TypeScript, MDX, Dokku, Google Workspace
+Teljes körű digitális működtetés egy építőipari kkv-nak: saját üzemeltetésű weboldal, DKIM-mel hitelesített céges e-mail, a szlovák fordított adózáshoz igazított számlázás, valamint Google Ads és SEO.
+
+B2B nagykereskedelmi rendelési portál
+WooCommerce, B2BKing, Stock Locations
+Éles B2B rendelési portál egy szlovák nagykereskedőnek: ügyfélcsoportonkénti árszintek, csak bejelentkezés után elérhető katalógus, két raktár készletkezelése, tizedes mennyiségek mért árukhoz és integrált számlázás.
+
+Lemma: szókincsszkenner
+React Native, Expo, Vision modellek, FSRS
+Mobilalkalmazás, amely egy nyomtatott oldal fényképéből szókártyákat készít; vision-language felismerési pipeline-t köt össze FSRS alapú ismétlésütemezéssel.
+
+Saját infrastruktúra és homelab
+Linux, Docker, WireGuard, Tailscale, CI/CD
+Saját VPS és otthoni szerver produkciós szokásokkal üzemeltetve: WireGuard privát hálózat, atomi, leállásmentes telepítések visszaállítási lehetőséggel, önjavító szolgáltatás-helyreállítás és ütemezett mentések.
+
+TANULMÁNYOK
+-----------
+
+Mesterdiploma, alkalmazott informatika
+Konstantin Filozófus Egyetem, Nyitra · 2018 – 2024
+Szakdolgozat: InfoMap SK, full-stack alkalmazás, amely a Szlovák Statisztikai Hivatal API-jának nyílt adatait jeleníti meg interaktív térképen.
+
+TANÚSÍTVÁNYOK
+-------------
+Certified Kubernetes Administrator (CKA) · Linux Foundation / CNCF
+Ubuntu Linux Professional Certificate · Canonical · 2025. ápr.
+Learning Bash Scripting · LinkedIn Learning · 2025. júl.
+ABAP programozás alapjai SAP BTP-n · SAP · 2024. okt.
+AWS Academy Graduate, Cloud Foundations · AWS Academy · 2022. júl.
+
+NYELVTUDÁS
+----------
+Magyar (anyanyelv) · Szlovák (folyékony) · Cseh (folyékony) · Angol (folyékony)

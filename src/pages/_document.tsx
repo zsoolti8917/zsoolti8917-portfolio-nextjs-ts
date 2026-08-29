@@ -5,7 +5,7 @@ export default function Document() {
   console.log("Custom Document is being used");
 
   return (
-    <Html lang="en">
+    <Html>
               <Head>
                 
               <Script

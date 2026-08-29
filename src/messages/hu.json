@@ -1,249 +1,448 @@
 {
-"Home":{
-      "title": "Home"
+  "Home": {
+    "title": "Home"
+  },
+  "meta": {
+    "title": "Varjú Zsolt | szoftverfejlesztő",
+    "description": "Varjú Zsolt szoftverfejlesztő és platformüzemeltető Prágában, aki webalkalmazásokat épít a teljes stacken, ETL pipeline-okat tervez, és üzemelteti az azokat futtató infrastruktúrát."
+  },
+  "About": {
+    "title": "Rólam",
+    "firstLetter": "Ü",
+    "intro": "dv. Varjú Zsolt vagyok, fejlesztő a szlovákiai Feketenyékről, jelenleg Prágában élek. A szoftvert nemcsak megírom, hanem üzemeltetem is. Ma egy dokumentumkereső platformra vigyázok az Európai Űrügynökség egyik projektjén, ahol egyedüli fejlesztő vagyok. Írom a kódot, mozgatom az adatot, és figyelek rá, hogy a szerverek menjenek.",
+    "currentWork": "Mások weboldalainak tesztelésével kezdtem, és ott tanultam meg foglalkozni azzal, ami az élesítés után történik. Azóta a szakma kevésbé látványos felét is összeszedtem: adatpipeline-ok, Linux, hálózat, mentések. A napi munkámban erősen támaszkodom az AI-ra, és építek is vele, főleg keresőrendszereket és saját üzemeltetésű modelleket. Munkán kívül van egy homelabem, ami rég túlnőtte az ésszerűséget, egy motor, és egy síszezon, amiből sosem elég.",
+    "quote": "{author} azt mondta, a szerencse akkor születik, amikor a felkészültség találkozik a lehetőséggel. Eddig bevált. ",
+    "connect": "Ha szeretnél közösen építeni valamit, vagy csak beszélgetni a szakmáról, szólj. 🔗",
+    "myLinks": "Elérhetőségeim",
+    "stackLabel": "Technológiák",
+    "certificationsLabel": "Tanúsítványok",
+    "languagesLabel": "Nyelvek",
+    "showMore": "+{count} további",
+    "showLess": "Kevesebb",
+    "currently": {
+      "label": "Jelenleg",
+      "role": "Szoftverfejlesztő a Sercónál, Prága",
+      "detail": "Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén — a kód, az adatpipeline-ok és a szerverek is."
     },
-    "About": {
-  "title": "Rólam",
-  "firstLetter": "Ü",
-  "intro": "dv! Varjú Zsolt vagyok, egy lelkes webfejlesztő Szlovákia Feketenyék falujából. Az utam QA tesztelőként indult, ahol szoros együttműködésben dolgoztam frontend fejlesztőkkel. Ez a tapasztalat ébresztette fel a webfejlesztés iránti szenvedélyemet. A nyitrai Konstantin Filozófus Egyetemen szerzett mesterdiplomám után a MERN-stack és a Next.js technológiák világában merültem el, hogy életre keltsem a dizájnokat, kiváló funkcionalitást és felhasználói élményeket nyújtva.",
-  "currentWork": "Webtesztelőként dolgozom, de szeretnék frontend fejlesztőként elhelyezkedni. Szabadidőmben gyakran futok, síelek, a 3D nyomtatás rejtelmeit kutatom, vagy az Arduino és Raspberry Pi platformokat használom elektronikai projekthez. A 3D modellezés is nagy örömet okoz, amikor csak alkalmam nyílik rá.",
-  "jobSearch": "Célom, hogy egy olyan frontend fejlesztői pozícióban dolgozhassak, ahol a készségeimet és szenvedélyemet izgalmas weboldalak megalkotására fordíthatom.",
-  "quote": "Ahogy Seneca bölcsen mondta: „A szerencse akkor jön el, amikor a felkészültség találkozik a lehetőséggel”, és felkészültnek érzem magam, csak a megfelelő lehetőségre várok. ",
-  "connect": "Ha úgy gondolod, hogy jól összeillünk, csatlakozzunk! 🔗",
-  "myLinks": "Elérhetőségeim"
-},
-"Stats": {
-  "useInProjects": {
-    "title": "Projektekben használt technológiák",
-    "chips": [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "TailwindCSS",
-      "React",
-      "NextJS",
-      "NodeJS",
-      "Express",
-      "SQL",
-      "MongoDB",
-      "GitHub",
-      "Figma",
-      "Heroku",
-      "HeadlessCMS",
-      "Docker",
-      "Postman",
-      "REST Api"
-    ]
-  
-},
- "triedOut": {
-  "title": "Kipróbált / tanulmányok során használt technológiák",
-  "chips": [
-    "Storybook",
-    "Python",
-    "Java",
-    "OOP",
-    "AdobeXD",
-    "Laravel",
-    "Unity",
-    "Blender",
-    "GraphQL",
-    "C#"
-  ]
-},
-"myLanguages": {
-  "title": "Nyelvismeret",
-  "chips": [
-    "Magyar - anyanyelv",
-    "Szlovák - folyékony",
-    "Angol - folyékony"
-  ]
-}
-},
-    "Contact": {
-  "title": "Elérhetőség",
-  "message": "Küldj egy e-mailt, ha kapcsolatba szeretnél lépni! Továbbá megtalálsz a ",
-  "linkedin": "Linkedin",
-  "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
-  "or": "vagy",
-  "github": "Github",
-  "githubUrl": "https://github.com/zsoolti8917",
-  "moreYourSpeed": "platformokon is.",
-  "email": "zsolt.varju.rl@gmail.com"
-},
-"experience": {
-  "title": "Munkatapasztalat",
-  "companyName": "Galileo Corporation s.r.o",
-  "dates": "2022 - Jelenleg",
-  "jobTitle": "Minőségbiztosítási tesztelő (Quality Assurance Tester)",
-  "location": "Home Office",
-  "responsibilities": [
-    {
-      "title": "Funkcionalitás Tesztelése:",
-      "description": "Alapos manuális tesztelést végzek a weboldalakon, hogy meggyőződjek arról, hogy minden funkció helyesen működik különböző böngészőkben és eszközökön. Azonosítom az esetleges eltéréseket vagy hibákat, és azokat azonnal jelentem."
+    "facts": {
+      "basedLabel": "Lakhely",
+      "basedValue": "Prága, CZ",
+      "fromLabel": "Származás",
+      "fromValue": "Feketenyék, SK",
+      "sinceLabel": "A szakmában",
+      "sinceValue": "2022 óta"
     },
-    {
-      "title": "Vizuális következetesség:",
-      "description": "Értékelem a weboldalak vizuális megjelenését annak érdekében, hogy megfeleljenek a megadott grafikai tervezési előírásoknak. Kommunikálom az esetleges eltéréseket az érintett csapattagokkal, részletes visszajelzést nyújtva a szükséges korrekciókról."
-    },
-    {
-      "title": "Minőségbiztosítás:",
-      "description": "Magas minőségi szintet tartok fenn azáltal, hogy szigorúan tesztelem a cég által készített weboldalak többségét Szlovákiában. Biztosítom, hogy minden weboldal megfeleljen a szükséges előírásoknak és a felhasználói elvárásoknak."
-    },
-    {
-      "title": "Kommunikáció:",
-      "description": "Hatékonyan együttműködök a tervezőkkel, fejlesztőkkel és projektmenedzserekkel a tesztelés során felmerült problémák megoldása érdekében. Javaslatokat teszek a javításokra és tisztázásokra, ha szükséges."
-    },
-    {
-      "title": "Home Office:",
-      "description": "Minden feladatot önállóan kezelek, miközben szigorú határidőket tartok be. "
-    },
-    {
-      "title": "Dokumentáció:",
-      "description": "Részletes nyilvántartást vezetek a teszteredményekről, azonosított problémákról és a megtett korrekciós intézkedésekről. Átfogó jelentéseket nyújtok az érintett érdekelt feleknek"
-    }
-  ],
-"skills": [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Keresztböngészős tesztelés",
-  "Önálló döntéshozatal",
-  "Időgazdálkodás",
-  "Reszponzív design"
-]
-},
-"hero": {
-  "clickMe": "Kattints ide!",
-  "greeting": "Helló, Zsolt vagyok",
-  "title": "Junior",
-  "profession": "Webfejlesztő",
-  "description": "Alkalmazott informatika mesterképzéssel a hátam mögött keresek Junior webfejlesztői lehetőségeket. Tapasztalattal rendelkezem a Headless CMS-ek és a React framework (Next.js) terén. Könnyen alkalmazkodom, és szeretek új technológiákkal dolgozni. Lépjünk kapcsolatba!",
-  "buttonText": "Kapcsolatfelvétel"
-},
-"sidebar": {
-  "logo": "V",
-  "about": "Rólam",
-  "projects": "Projektek",
-  "experience": "Tapasztalat",
-  "contact": "Kapcsolat"
-},
-"header": {
-  "resumeButton": "Önéletrajzom",
-  "linkedinAria": "Látogasd meg a LinkedIn profilomat",
-  "githubAria": "Látogasd meg a GitHub profilomat",
-  "languageSelector": "Nyelv módosítása",
-  "languages": {
-    "en": "Angol",
-    "sk": "Szlovák",
-    "hu": "Magyar"
-  }
-},
-"projectModal": {
-  "projectLinks": "Projekt Linkek",
-  "sourceCode": "Forráskód",
-  "liveProject": "Élő Projekt"
-},
-"projects": {
-  "sectionTitle": "Projektek",
-  "infoMapSK": {
-    "title": "InfoMapSK - Interaktív Demográfiai Adatvizualizáció",
-    "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
-    "description": "Egy full-stack webalkalmazás Szlovákia demográfiai adatainak vizualizálására, interaktív térképpel és különféle adat kategóriákkal. Mesterképzési szakdolgozatként fejlesztve.",
-    "modalContent": {
-      "para1": "Az InfoMapSK egy átfogó full-stack webalkalmazás, amely mesterképzési szakdolgozato projektem részeként készült. Interaktív platformot biztosít Szlovákia különböző közigazgatási szintjeinek demográfiai adatainak felfedezésére és vizualizálására.",
-      "keyFeatures": "Főbb jellemzők:",
-      "featuresList": "Interaktív térkép Szlovákiáról régió, járás és város/falu választási lehetőséggel | Demográfiai adatok vizualizálása különféle diagramtípusokkal | Több adat kategória: Népesség, Gazdasági tevékenység, Mezőgazdaság és Szervezeti statisztikák | Keresési funkció konkrét helyszínekhez | Reszponzív design különféle eszközökre optimalizálva | Akadálymentességi jellemzők a WCAG 2.1 irányelvek szerint | Kapcsolatfelvételi űrlap felhasználói visszajelzés és kérdések számára",
-      "para2": "Ez a projekt bemutatja a full-stack fejlesztésben szerzett jártasságot a MERN stack (MongoDB, Express.js, React, Node.js) használatával. A frontend Reacttel van felépítve és TailwindCSS-sel van formázva, míg a backend a Node.js, Express.js és MongoDB technológiákat alkalmazza.",
-      "technologiesList": "A fejlesztési folyamat során különféle technológiák és API-k integrálása történt, beleértve:",
-      "techList": "React-leaflet az interaktív térképezéshez | Recharts az adatok vizualizálásához | Formik és Yup az űrlapkezeléshez és érvényesítéshez | A Szlovák Köztársaság Statisztikai Hivatalának API-ja a demográfiai adatokért | Szlovákia Geoportálja a térinformatikai adatokért",
-      "para3": "Ez a projekt demonstrálja a képességemet, hogy komplex, adatvezérelt webalkalmazást tudok létrehozni, miközben betartom a Best-practices irányelvet a reszponzív tervezésben, akadálymentességben és a modern webfejlesztési technikákban. Bemutatja a frontend és backend fejlesztési készségeimet, valamint az adatok vizualizálását és külső API-k integrációját."
-    }
-  
-},
-
-  "gardenBros": {
-    "title": "Garden Bros Weboldal",
-    "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
-    "description": "Egy weboldal egy kertészeti cég számára, amely Next.js-t használva készült, Tailwind CSS-sel van stilizálva, és a Strapi CMS-en keresztül van kezelve. Responzív dizájnt, dinamikus tartalomgenerálást és Vercel-en történő telepítést kínál.",
-    "modalContent": {
-      "para1": "A Garden Bros Weboldal egy dinamikus platform egy kertészeti cég számára, amely lehetővé teszi szolgáltatásaik népszerűsítését és munkájuk bemutatását. Next.js-t használva készült, Tailwind CSS-sel stilizálva, és a Strapi CMS-en keresztül van kezelve, ami reszponzív és vonzó felhasználói élményt biztosít.",
-      "keyFeatures": "Főbb jellemzők:",
-      "featuresList": "Responzív főoldal dinamikus komponensekkel | Teljes funkcionalitású kapcsolat oldal és GYIK szakasz | Blog szerző által írt bejegyzésekkel | Dinamikus oldalgenerálás | Tartalomkezelés Strapi CMS-en keresztül",
-      "para2": "A projekt bemutatja képességemet arra, hogy teljes funkcionalitású weboldalt készítsek modern webtechnológiák felhasználásával. Kiemeli a frontend fejlesztés, a Tailwind CSS-sel történő reszponzív dizájn, a CMS integráció és a telepítési stratégiák terén szerzett készségeimet.",
-      "para3": "A Tailwind CSS-t a kliens igényeihez illeszkedő egyedi, reszponzív dizájn létrehozására használtam. Ez a utility-first CSS keretrendszer lehetővé tette egy egyedi és vizuálisan vonzó felület gyors fejlesztését, miközben biztosította az oldalon belüli következetességet.",
-      "para4": "A weboldal a Vercel-en van telepítve, amely biztosítja a gyors betöltési időket és megbízható teljesítményt. A backend a Strapi CMS-en keresztül van kezelve, VPS-en keresztül, a Forpsi-tól, Dokku környezetben. Konténerként működik SSL tanúsítvánnyal és visszafelé proxy beállítással. A PostgreSQL adatbázis, amely ugyanazon a VPS-en fut, más projektekkel osztozik, biztosítva a hatékony erőforrás-használatot és kezelést.",
-      "para5": "Ez a projekt kiemeli a skálázható, karbantartható és felhasználóbarát webalkalmazások készítésében szerzett jártasságomat, amelyek a speciális üzleti igényeknek megfelelően kínálnak kiváló felhasználói élményt és vizuálisan figyelemfelkeltő dizájnt."
+    "personality": {
+      "label": "Munkán kívül",
+      "items": [
+        "Egy homelab, ami rég túlnőtte az ésszerűséget",
+        "Egy motor",
+        "Egy síszezon, amiből sosem elég"
+      ]
     }
   },
-  
-    "quizApp": {
-      "title": "AI-alapú Kvíz Alkalmazás",
-      "tech": "React, Node.js, MongoDB, Tailwind CSS, Shadcn/ui",
-      "description": "Interaktív kvíz alkalmazás, amely mesterséges intelligencia segítségével ellenőrzi a felhasználói válaszokat, visszajelzést ad, és további beszélgetéseket tesz lehetővé a témákról. A MERN stack-re épült, Tailwind CSS és Shadcn/ui segítségével formázott, a Netlify-en került telepítésre, és VPS-en, Dokku környezetben lett hosztolva.",
+  "Stats": {
+    "stack": [
+      {
+        "label": "Nyelvek és keretrendszerek",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Bash",
+          "SQL",
+          "React",
+          "Next.js"
+        ]
+      },
+      {
+        "label": "Backend és adat",
+        "items": [
+          "Node.js",
+          "Express",
+          "REST API",
+          "Apache Solr",
+          "Neo4j",
+          "RabbitMQ",
+          "Tika",
+          "PostgreSQL",
+          "MongoDB",
+          "Headless CMS"
+        ]
+      },
+      {
+        "label": "Infrastruktúra és üzemeltetés",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "GitHub Actions",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Dokku",
+          "WireGuard",
+          "Tailscale"
+        ]
+      },
+      {
+        "label": "Eszközök",
+        "items": [
+          "Git",
+          "Postman",
+          "Figma"
+        ]
+      }
+    ],
+    "aiLlm": {
+      "title": "AI és LLM",
+      "chips": [
+        "RAG architektúra",
+        "Embeddingek",
+        "Vektoros keresés",
+        "Qdrant",
+        "Hibrid keresés",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "LangChain / LangSmith",
+        "Saját üzemeltetésű modellek"
+      ]
+    },
+    "triedOut": {
+      "title": "Kipróbált / tanulmányok során használt technológiák",
+      "chips": [
+        "Storybook",
+        "Java",
+        "OOP",
+        "AdobeXD",
+        "Laravel",
+        "Unity",
+        "Blender",
+        "GraphQL",
+        "C#"
+      ]
+    },
+    "certifications": [
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Linux Foundation / CNCF",
+        "date": ""
+      },
+      {
+        "name": "Ubuntu Linux Professional Certificate",
+        "issuer": "Canonical",
+        "date": "2025. ápr."
+      },
+      {
+        "name": "Learning Bash Scripting",
+        "issuer": "LinkedIn Learning",
+        "date": "2025. júl."
+      },
+      {
+        "name": "ABAP programozás alapjai SAP BTP-n",
+        "issuer": "SAP",
+        "date": "2024. okt."
+      },
+      {
+        "name": "AWS Academy Graduate, Cloud Foundations",
+        "issuer": "AWS Academy",
+        "date": "2022. júl."
+      }
+    ],
+    "languages": [
+      {
+        "name": "Magyar",
+        "level": "anyanyelv"
+      },
+      {
+        "name": "Szlovák",
+        "level": "folyékony"
+      },
+      {
+        "name": "Cseh",
+        "level": "folyékony"
+      },
+      {
+        "name": "Angol",
+        "level": "folyékony"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Elérhetőség",
+    "message": "Küldj egy e-mailt, ha kapcsolatba szeretnél lépni! Továbbá megtalálsz a ",
+    "linkedin": "Linkedin",
+    "linkedinUrl": "https://www.linkedin.com/in/zsoltvarju/",
+    "or": "vagy",
+    "github": "Github",
+    "githubUrl": "https://github.com/zsoolti8917",
+    "moreYourSpeed": "platformokon is.",
+    "email": "dev@zsoltvarju.com"
+  },
+  "experience": {
+    "title": "Munkatapasztalat",
+    "jobs": [
+      {
+        "companyName": "Serco Czech Republic s.r.o.",
+        "dates": "2025. február - Jelenleg",
+        "jobTitle": "Szoftverfejlesztő",
+        "location": "Prága",
+        "responsibilities": [
+          {
+            "title": "Teljes körű felelősség:",
+            "description": "Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén, a felhasználói felülettől egészen a szerverekig, amelyeken fut."
+          },
+          {
+            "title": "Full-stack fejlesztés:",
+            "description": "React frontend és Node.js backend egy Apache Solr alapú keresési stack fölött, RabbitMQ üzenetkezeléssel, Neo4j kapcsolatkezeléssel és Tika dokumentumfeldolgozással."
+          },
+          {
+            "title": "ETL és automatizálás:",
+            "description": "Több misszióra kiterjedő adatbetöltő pipeline-ok tervezése és üzemeltetése Pythonban: ütemezett átvitelek, keresési séma tervezése, valamint táblázatkinyerés PDF- és táblázatfájlokból, az elutasított rekordok visszajelzésével az adatgazdák felé."
+          },
+          {
+            "title": "Üzemeltetés és biztonság:",
+            "description": "Ubuntu szerverek üzemeltetése Azure-on: nginx TLS-sel és hozzáférés-szabályozással, konténerizált szolgáltatások, CI, mentések és rendszeres sérülékenységkezelés formális változáskezelés mellett."
+          },
+          {
+            "title": "Teljesítmény és kódminőség:",
+            "description": "Ütemezett frontend minőségi programot vezettem, amely nagyjából háromnegyedével csökkentette a vendor bundle méretét, harmadával a JavaScript mennyiségét, több mint felével a CSS-t, megszüntette az összes lint hibát, és 80%-kal csökkentette a felesleges React újrarendereléseket."
+          },
+          {
+            "title": "Kapcsolattartás:",
+            "description": "Közvetlen együttműködés a missziós csapatokkal és az IT-vel a követelményekről, formális hibajelentésekről, eszkalációkról, változáskezelési rekordokról és ráfordításbecslésekről."
+          }
+        ],
+        "skills": [
+          "React",
+          "Node.js",
+          "Python",
+          "Apache Solr",
+          "RabbitMQ",
+          "Neo4j",
+          "Docker",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Bash",
+          "Jenkins"
+        ]
+      },
+      {
+        "companyName": "Galileo Corporation s.r.o",
+        "dates": "2022 - 2025",
+        "jobTitle": "Minőségbiztosítási tesztelő (Quality Assurance Tester)",
+        "location": "Home Office",
+        "responsibilities": [
+          {
+            "title": "Funkcionalitás Tesztelése:",
+            "description": "Alapos manuális tesztelést végzek a weboldalakon, hogy meggyőződjek arról, hogy minden funkció helyesen működik különböző böngészőkben és eszközökön. Azonosítom az esetleges eltéréseket vagy hibákat, és azokat azonnal jelentem."
+          },
+          {
+            "title": "Vizuális következetesség:",
+            "description": "Értékelem a weboldalak vizuális megjelenését annak érdekében, hogy megfeleljenek a megadott grafikai tervezési előírásoknak. Kommunikálom az esetleges eltéréseket az érintett csapattagokkal, részletes visszajelzést nyújtva a szükséges korrekciókról."
+          },
+          {
+            "title": "Minőségbiztosítás:",
+            "description": "Magas minőségi szintet tartok fenn azáltal, hogy szigorúan tesztelem a cég által készített weboldalak többségét Szlovákiában. Biztosítom, hogy minden weboldal megfeleljen a szükséges előírásoknak és a felhasználói elvárásoknak."
+          },
+          {
+            "title": "Kommunikáció:",
+            "description": "Hatékonyan együttműködök a tervezőkkel, fejlesztőkkel és projektmenedzserekkel a tesztelés során felmerült problémák megoldása érdekében. Javaslatokat teszek a javításokra és tisztázásokra, ha szükséges."
+          },
+          {
+            "title": "Home Office:",
+            "description": "Minden feladatot önállóan kezelek, miközben szigorú határidőket tartok be. "
+          },
+          {
+            "title": "Dokumentáció:",
+            "description": "Részletes nyilvántartást vezetek a teszteredményekről, azonosított problémákról és a megtett korrekciós intézkedésekről. Átfogó jelentéseket nyújtok az érintett érdekelt feleknek"
+          }
+        ],
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Keresztböngészős tesztelés",
+          "Önálló döntéshozatal",
+          "Időgazdálkodás",
+          "Reszponzív design"
+        ]
+      }
+    ]
+  },
+  "hero": {
+    "clickMe": "Kattints ide!",
+    "greeting": "Helló, Zsolt vagyok",
+    "title": "Én",
+    "profession": "szoftverfejlesztő vagyok",
+    "description": "Fejlesztő és platformüzemeltető: webalkalmazásokat építek a teljes stacken, megtervezem a mögöttük álló adatpipeline-okat, és karbantartom az infrastruktúrát, amin futnak. Jelenleg egyedüli fejlesztő és üzemeltető vagyok az Európai Űrügynökség egyik projektjén.",
+    "buttonText": "Kapcsolatfelvétel"
+  },
+  "sidebar": {
+    "logo": "V",
+    "about": "Rólam",
+    "projects": "Projektek",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat"
+  },
+  "header": {
+    "resumeButton": "Önéletrajzom",
+    "linkedinAria": "Látogasd meg a LinkedIn profilomat",
+    "githubAria": "Látogasd meg a GitHub profilomat",
+    "languageSelector": "Nyelv módosítása",
+    "languages": {
+      "en": "Angol",
+      "sk": "Szlovák",
+      "hu": "Magyar"
+    }
+  },
+  "projectModal": {
+    "projectLinks": "Projekt Linkek",
+    "sourceCode": "Forráskód",
+    "liveProject": "Élő Projekt"
+  },
+  "projects": {
+    "sectionTitle": "Projektek",
+    "ragSystem": {
+      "title": "Saját üzemeltetésű RAG keresés",
+      "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
+      "description": "Kontextussal bővített keresőrendszer egy helyi dokumentumgyűjtemény fölött, úgy megépítve, hogy hivatkozásokkal válaszoljon, és hallgasson, ha nincs rá bizonyíték.",
       "modalContent": {
-        "para1": "Az AI-alapú Kvíz Alkalmazás egy dinamikus kvíz platform, amely nemcsak értékeli a felhasználói válaszokat mesterséges intelligencia segítségével, hanem részletes magyarázatokat és további beszélgetéseket is kínál a témakörökről. Ez a projekt bemutatja a mesterséges intelligencia fejlett integrációját a kvíz funkciókban, miközben zökkenőmentes felhasználói interakciót és modern felületet biztosít.",
+        "para1": "Egy dokumentumgyűjtemény pontosan annyira hasznos, amennyire kérdezni tudsz tőle. A kulcsszavas keresés elveszíti a jelentést, egy korpuszra ráhúzott egyszerű chatbot pedig készséggel kitalálja a választ. Ez a rendszer az ellenkező ösztönre épül: minden válasznak visszakövethetőnek kell lennie egy ténylegesen létező szövegrészhez.",
         "keyFeatures": "Főbb funkciók:",
-        "featuresList": "Interaktív kvízek AI-alapú válaszértékeléssel | Lehetőség kiterjesztett beszélgetésekre az AI-val minden kérdés után | Előre meghatározott kérdések és válaszok tárolása a MongoDB-ben | Felhasználóbarát felület, Tailwind CSS és Shadcn/ui stílusban | SSL biztonságos backend VPS-en, Dokku környezetben | Frontend Netlify-re telepítve",
-        "para2": "A projekt bemutatja a MERN stack (MongoDB, Express, React, Node.js) kezelésében szerzett tapasztalataimat, és az OpenAI API integrációját a felhasználói válaszok értékelésére és javítására. A frontend Tailwind CSS és Shadcn/ui segítségével lett formázva, így biztosítva a tiszta és reszponzív megjelenést.",
-        "para3": "A fejlesztés során létrehoztam egy kérdés-válasz rendszert, amelyet a Node.js és a MongoDB backend hajt meg. A mesterséges intelligencia értékeli a felhasználói válaszokat, javításokat vagy további információkat kínálva. Az alkalmazás lehetővé teszi a felhasználóknak, hogy folytassák a beszélgetéseket az AI-val, hogy mélyebben belemerüljenek a témákba.",
-        "para4": "Ez a projekt bemutatja full-stack webfejlesztési készségeimet, az AI integrációját és skálázható alkalmazások építését, amelyek a felhasználói elköteleződésre és az eszközök közötti reszponzivitásra összpontosítanak."
+        "featuresList": "Hibrid keresés, amely a BM25 kulcsszavas keresést vektoros hasonlósággal ötvözi | bge-m3 embeddingek Qdrant vektoradatbázisban tárolva | Minden válasz a megtalált szövegrészekre épül, szövegközi hivatkozásokkal | Kifejezett válaszmegtagadás, ha nincs alátámasztó szövegrész, hihető tipp helyett | Teljesen saját üzemeltetésben fut, helyi modellekkel a felhős API-k alternatívájaként | Költségmodellezés a felhős API és a saját GPU üzemeltetése között",
+        "para2": "A pipeline kezeli a darabolást, az embeddingeket, valamint a BM25-öt és a legközelebbi szomszéd keresést ötvöző hibrid visszakeresést, LangChain és LangSmith követéssel, hogy pontosan látszódjon, mely szövegrészek adták az adott választ. Az OpenRouter több modellhez ad hozzáférést összehasonlításhoz, a helyben futtatott nyílt súlyú modellek mellett.",
+        "para3": "Az érdekes mérnöki munka itt nem a szöveggenerálás, hanem a visszakeresés minősége, a hivatkozások kikényszerítése és az a fegyelem, hogy inkább semmit ne adjunk vissza, mint valami rosszat."
       }
     },
-  
-  
-        "portfolio": {
-  "title": "Első Portfólióm",
-  "tech": "HTML5,CSS3,JavaScript,GSAP",
-  "description": "Első webfejlesztési portfólióm, amely bemutatja a kezdeti projektjeimet, egyszerű HTML, CSS és JavaScript segítségével illetve animációkhoz GSAP használatával.",
-  "modalContent": {
-    "para1": "Ez a portfólió az első próbálkozásom a webfejlesztési projektjeim bemutatására. A webfejlesztési utam kezdetét jelenti, és bemutatja azokat a különféle komponenseket és kisebb projekteket, amelyeket a tanulás során építettem.",
-    "keyFeatures": "Főbb jellemzők:",
-    "featuresList": "Reszponzív design különféle képernyőméretekhez | Animált elemek a GSAP (GreenSock Animation Platform) segítségével | Kezdő szintű projektek és komponensek bemutatása | Tiszta és egyszerű felhasználói felület",
-    "para2": "Ez a projekt bemutatja az alapvető képességeimet a front-end webfejlesztésben. Szemantikus HTML5 jelöléssel készült, CSS3-mal van formázva, és JavaScript segítségével van kiegészítve az interaktivitás érdekében. A GSAP-t használták a sima animációk megvalósítására, dinamikus érzést adva a portfóliónak.",
-    "para3": "A fejlesztési folyamat magában foglalta az alapvető webfejlesztési fogalmak alkalmazását és az animációs technikák felfedezését a GSAP segítségével. Ez a portfólió gyakorlatként szolgált egy reszponzív elrendezés létrehozására és több projekt bemutatására.",
-    "para4": "Noha ez a korai munkámat képviseli, megalapozta a növekedésemet, mint webfejlesztő. A jövőbeli fejlesztések között szerepel a bonyolultabb projektek hozzáadása, a design javítása, a fejlettebb JavaScript funkciók megvalósítása és esetlegesen egy backend integrálása a dinamikus tartalomhoz."
-  }
-},
-        "scoot": {
-  "title": "Robogó Megosztó Webalkalmazás",
-  "tech": "Next.js,React,Tailwind CSS",
-  "description": "Egy reszponzív webalkalmazás egy fiktív robogóbérlési szolgáltatáshoz, több oldallal és egy kapcsolatfelvételi űrlappal. Next.js-sel készült és a Vercel-en van üzemeltetve.",
-  "modalContent": {
-    "para1": "A Scoot Megosztó Webalkalmazás egy reszponzív webalkalmazás, amely egy fiktív robogóbérlési szolgáltatást mutat be. Ez a projekt bemutatja a modern webfejlesztési technológiák és a reszponzív design elvek ismeretét.",
-    "keyFeatures": "Főbb jellemzők:",
-    "featuresList": "Reszponzív design Mobile-first megközelítéssel | Öt teljesen működő oldal: Kezdőlap, Egyéb információk, GYIK, Helyszínek és Kapcsolat | Statikus térkép a Helyszínek oldalon | Teljes funkcionalitású kapcsolatfelvételi űrlap | Optimalizálva minden képernyőfelbontáshoz",
-    "para2": "Ez a projekt bemutatja a Next.js és a modern webfejlesztési gyakorlatok ismeretét. Next.js-sel készült, Tailwind CSS-sel van formázva",
-    "para3": "A fejlesztési folyamat magában foglalta a többoldalas alkalmazás struktúrájának megvalósítását, reszponzív elrendezések létrehozását és egy működő kapcsolatfelvételi űrlap integrálását. Emellett a weboldal optimalizálására is figyeltem különböző képernyőméretekhez, és a felhasználói élmény következetességére az eszközök között.",
-    "para4": "Ez a projekt bemutatja a képességemet átfogó, többoldalas webalkalmazások létrehozására, miközben betartom a legjobb gyakorlatokat a reszponzív design és a modern webfejlesztési technikák terén."
-  }
-},
-"alza": {
-  "title": "Alza Dni Kupónkód Szűrő",
-  "tech": "JavaScript,Chrome Extension API,HTML,CSS",
-  "description": "Egy Chrome kiterjesztés, amely segít a felhasználóknak szűrni a termékeket Alza Days akciók alatt különböző kuponkódok alapján, megkönnyítve a legjobb kedvezmények megtalálását az Alza.sk oldalon.",
-  "modalContent": {
-    "para1": "Az Alza Dni Kupónkód Szűrő egy hasznos eszköz mindenki számára, aki Alza Days alatt vásárol. Ez a Chrome kiterjesztés lehetővé teszi, hogy könnyedén szűrjük a termékeket különböző kuponkódok alapján, segítve, hogy gyorsan megtaláljuk a legjobb kedvezményeket az Alza.sk-n.",
-    "keyFeatures": "Főbb jellemzők:",
-    "featuresList": "Termékek szűrése kuponkódok alapján (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Lehetőség csak a jelenleg megjelenített termékek szűrésére vagy az összes termék betöltésére | Egyszerű és világos felhasználói felület | Szűrő eltávolítás egy kattintással",
-    "para2": "A kiterjesztés bemutatja a gyakorlati eszközök létrehozására való képességemet, amelyek javítják a felhasználói élményt az e-kereskedelmi platformokon. Képességeimet JavaScript, Chrome Extension API és frontend fejlesztés terén mutatja be.",
-    "para3": "A projekt vanilla JavaScript-et használ az oldal DOM-jával való interakcióhoz, a termékek szűréséhez és a kiterjesztés UI-jának kezeléséhez. A Chrome Extension API-t a böngésző akció létrehozásához és a háttérszkriptek kezeléséhez használtam.",
-    "para4": "Ez a kiterjesztés kiemeli a képességemet olyan megoldások létrehozására, amelyek kielégítik a konkrét felhasználói igényeket, javítva a vásárlási élményt promóciós események alatt. Ezenkívül bemutatja a böngésző API-kal való munkavégzést és a felhasználóbarát felületek létrehozását a böngésző kiterjesztésekhez.",
-    "para5": "A projekt nyílt forráskódú, és lehetőséget ad a fejlesztői közösség hozzájárulására, ami bemutatja az elkötelezettségemet az együttműködő fejlesztés és a szoftverprojektek folyamatos fejlesztése iránt."
-  }
-},
-"github": {
-  "title": "GitHub Felhasználó Kereső Alkalmazás",
-  "tech": "HTML5,Tailwind CSS,JavaScript,GSAP,Axios",
-  "description": "Egy reszponzív webalkalmazás, amely lehetővé teszi a felhasználók számára, hogy GitHub profilokat keressenek, megtekintsék a felhasználói információkat, és váltsanak a világos és sötét téma között. A Frontend Mentor kihívásának megoldásaként készült.",
-  "modalContent": {
-    "para1": "A GitHub Felhasználó Kereső Alkalmazás egy reszponzív webalkalmazás, amely lehetővé teszi a felhasználók számára, hogy GitHub profilokat keressenek és megtekinthessék a releváns felhasználói információkat. Ez a projekt a Frontend Mentor kihívásának megoldásaként készült, bemutatva a frontend fejlesztési és API integrációs készségeket.",
-    "keyFeatures": "Főbb jellemzők:",
-    "featuresList": "Reszponzív elrendezés, amely különböző képernyőméretekhez optimalizált | GitHub felhasználó keresési funkció a GitHub API használatával | Releváns felhasználói információk megjelenítése a keresés alapján | Világos és sötét téma váltás | Automatikus téma választás a felhasználó rendszerbeállításai alapján | Interaktív elemek lebegő állapotokkal",
-    "para2": "Ez a projekt bemutatja a modern webfejlesztési technológiák és gyakorlatok ismeretét. Szemantikus HTML5 jelöléssel készült, Tailwind CSS-sel van formázva, és JavaScript-tel van kiegészítve az interaktivitás érdekében. A GitHub API integrációját Axios-szal kezeltük, az animációk pedig GSAP-pal lettek megvalósítva.",
-    "para3": "A fejlesztési folyamat során új koncepciók, például API-k használata, világos/sötét témák implementálása és a Tailwind CSS használata voltak az elsődleges tanulmányi területek. Emellett hibakezelést is beépítettem az API kérésekhez, és JavaScript modulokat használtam a kód alap struktúrájának megszervezésére.",
-    "para4": "Ez a projekt bemutatja a képességemet működő, vizuálisan vonzó webalkalmazások létrehozására, miközben betartom a modern fejlesztési gyakorlatokat és folyamatosan tanulok új technológiákat."
+    "coffece": {
+      "title": "Coffece (coffece.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,next-intl,Framer Motion",
+      "description": "Kétnyelvű (szlovák/angol) marketing- és rendelési weboldal egy irodai kávékiszállítással foglalkozó márka számára: termékoldalak, GYIK, vélemény-karusszel és kapcsolatfelvételi folyamat, teljes SEO metaadatokkal.",
+      "modalContent": {
+        "para1": "A Coffece egy kétnyelvű (szlovák/angol) marketing- és rendelési weboldal egy irodai kávékiszállítással foglalkozó márka számára, amely a látogatót a kínálat megismerésétől egészen a rendelés leadásáig kíséri.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Teljesen lokalizált SK/EN útvonalak a next-intl segítségével | Termék- és kínálatoldalak irodai kávékiszállításhoz | GYIK szekció és vélemény-karusszel | Kapcsolatfelvételi és rendelési űrlap validációval és e-mail küldéssel | Teljes SEO metaadatok, beleértve az Open Graph címkéket | Gördülékeny Framer Motion animációk és sötét mód támogatás",
+        "para2": "Az oldal Next.js-sel és TypeScripttel készült, Tailwind CSS-sel és akadálymentes UI komponensekkel formázva. Az űrlapok szerveroldalon kerülnek feldolgozásra Zod validációval és e-mail küldéssel.",
+        "para3": "Ez a projekt egy teljesen lokalizált marketingoldal végponttól végpontig történő elkészítését mutatja be, az információs architektúrától és a tartalom szerkezetétől a SEO-n át a produkciós telepítésig."
+      }
+    },
+    "idtPlusStav": {
+      "title": "IDT PLUS STAV (idtplusstav.sk)",
+      "tech": "Next.js,TypeScript,TailwindCSS,MDX",
+      "description": "Teljes körű digitális működtetés egy gyémántfúrással és betonvágással foglalkozó szlovák cégnek: saját üzemeltetésű marketingoldal, céges e-mail, a szlovák áfaszabályokhoz igazított számlázás, valamint fizetett keresés és SEO.",
+      "modalContent": {
+        "para1": "Marketingweboldal az IDT PLUS STAV szlovák gyémántfúró és betonvágó cég számára, amelynek célja a szolgáltatások áttekinthető bemutatása és a látogatók árajánlatkérőkké alakítása.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Külön oldal minden fúrási és vágási szolgáltatáshoz, árlistával és GYIK-kel | MDX cikkekre épülő hírek rovat | Kiterjedt referenciaszekció a megvalósult projektekkel | Árajánlatkérő űrlap validációval és e-mailes kézbesítéssel | Saját üzemeltetésű telepítés Dokkuval kezelt szerveren | Google Workspace DKIM-mel hitelesített céges e-maillel | Számlázás beállítása a szlovák fordított adózásra | Google Ads kampányok és folyamatos SEO",
+        "para2": "Next.js-sel és TypeScripttel készült, Tailwind CSS-sel formázva. A hírszekció fájlalapú MDX blog (next-mdx-remote), az árajánlatkérő űrlap pedig React Hook Formot használ Zod validációval.",
+        "para3": "Az együttműködés messze túlmutatott egy weboldal megépítésén: a cég teljes digitális jelenlétét lefedte: hosting, e-mail kézbesíthetőség, a szlovák adószabályoknak megfelelő számlázás, valamint a fizetett és organikus keresés, ami hozza a megkereséseket."
+      }
+    },
+    "b2bPortal": {
+      "title": "B2B nagykereskedelmi rendelési portál",
+      "tech": "WooCommerce,B2BKing,Stock Locations,SuperFaktúra",
+      "description": "Privát B2B rendelési portál egy szlovák friss élelmiszer nagykereskedő számára, jelenleg produkcióban. Jellemzői: sávos ügyfélárazás, csak bejelentkezés után elérhető katalógus rejtett árakkal, kétraktáras készletkezelés, tizedes mennyiségek a mérlegelt árukhoz és integrált számlázás.",
+      "modalContent": {
+        "para1": "Privát B2B rendelési portál egy szlovák friss élelmiszer nagykereskedő számára, amely produkcióban fut, és napi szinten használják nagykereskedelmi rendelésekhez. A portál a telefonos és e-mailes rendeléseket váltja ki egy ügyfelekre szabott önkiszolgáló katalógussal.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Sávos árazás ügyfélcsoportonkénti árlistákkal | Csak bejelentkezés után elérhető katalógus, a nyilvánosság elől rejtett árakkal | Két raktárban nyilvántartott készlet | Tizedes mennyiségek a mérlegelt árukhoz, például kilogrammra rendelés | Integrált számlázás a SuperFaktúrán keresztül",
+        "para2": "A portál WooCommerce-re épül, B2BKing bővítménnyel a nagykereskedelmi funkciókhoz (ügyfélregisztráció és jóváhagyás, ügyfélcsoportok, sávos árazás, rejtett árú katalógus), valamint Stock Locations bővítménnyel a kétraktáras készletkezeléshez.",
+        "para3": "A projekt a teljes megvalósítást lefedte: a követelmények felmérését, az áruház konfigurálását és testreszabását, a számlázás integrálását és a portál produkcióba állítását. Titoktartási okokból az ügyfél és az áruház neve nem szerepel."
+      }
+    },
+    "lemma": {
+      "title": "Lemma: szókincsszkenner",
+      "tech": "React Native,Expo,Vision modellek,FSRS",
+      "description": "Mobilalkalmazás, amely egy nyomtatott oldal fényképéből szókártyákat készít. Ráirányítod a kamerát a szövegre, és kiemeli a megtanulásra érdemes szavakat, majd ütemezi az ismétlésüket.",
+      "modalContent": {
+        "para1": "A Lemma abból született, hogy idegen nyelven olvasva folyton meg kellett állnom szótárazni. Ahelyett, hogy minden szót begépelnél, lefényképezed az oldalt, a kinyerést pedig elvégzi az alkalmazás, így a végén pontosan abból lesz tanulókészleted, amit éppen olvastál.",
+        "keyFeatures": "Főbb funkciók:",
+        "featuresList": "Kamerás rögzítés vision-language modellre épülő felismerési pipeline-nal | Szavak kinyerése és szótövezése nyomtatott oldalakról | FSRS alapú ismétlésütemezés, hogy az ismétlés akkor jöjjön, amikor épp felejtenél | Offline is működő helyi tárolás | Többplatformos megoldás egyetlen React Native és Expo kódbázisból | v1.1-ig specifikálva",
+        "para2": "A felismerési pipeline egy vision modellt köt össze az oldalelrendezés kezelésével, hogy megbízhatóan olvassa ki a szavakat a lefényképezett oldalról, az ismétlési oldal pedig FSRS-t valósít meg, egy modern ütemezőt, amely a tényleges felidézéshez igazítja az intervallumokat, nem egy fix létrához.",
+        "para3": "Ez egy valódi specifikáció alapján épült személyes eszköz: meghatározott hatókör, verziózott ütemterv, és világos határ akörül, hogy a v1 mit csinál és mit nem."
+      }
+    },
+    "homelab": {
+      "title": "Saját infrastruktúra és homelab",
+      "tech": "Linux,Docker,WireGuard,Tailscale,CI/CD",
+      "description": "Saját VPS és otthoni szerver produkciós szokásokkal üzemeltetve: privát hálózat, atomi, leállásmentes telepítések és egy csomó saját üzemeltetésű szolgáltatás.",
+      "modalContent": {
+        "para1": "A saját infrastruktúra üzemeltetése a leggyorsabb módja megtanulni, mi romlik el a valóságban. Ez egy személyes VPS és egy otthoni NAS, úgy üzemeltetve, ahogy egy éles rendszert kellene: verziózott telepítések, privát hálózat, monitorozás és olyan helyreállítás, ami nem függ attól, hogy épp a gép előtt ülök-e.",
+        "keyFeatures": "Főbb funkciók:",
+        "featuresList": "WireGuard privát hálózat a VPS és az otthoni hálózat között | Atomi, leállásmentes telepítések azonnali visszaállítási lehetőséggel | Tailscale mesh hozzáférés az otthoni szolgáltatásokhoz bárhonnan | Dockeres NAS szolgáltatások, köztük médialejátszás és kamerafelvétel | Önjavító szolgáltatás-helyreállítás és ütemezett mentések | Távoli fejlesztés, szükség esetén akár telefonról vezérelve",
+        "para2": "A telepítések atomiak: az új verzió a futó mellett épül fel, és csak akkor kapcsol át, ha egészséges, így egy hibás build sosem viszi le a szolgáltatást. A hálózat alapértelmezetten privát: a szolgáltatások WireGuardon és Tailscale-en érhetők el, nem az internetre kitéve.",
+        "para3": "Ez a munka üzemeltetői fele, saját időben gyakorolva: ugyanazok a kérdések, mint éles rendszereknél (rendelkezésre állás, hozzáférés-szabályozás, mentés, helyreállítás), olyan léptékben, ahol minden döntés az enyém."
+      }
+    },
+    "photoCropper": {
+      "title": "Multi Photo Cropper",
+      "tech": "React,TypeScript,Vite,FastAPI,OpenCV,ONNX Runtime,Docker",
+      "description": "Személyes eszköz családi fotóalbumok digitalizálásához. Több papírkép kerül egyszerre a lapolvasóra, a program pedig megtalálja az egyes fényképeket a lapon, engedi finomhangolni a kijelöléseket, és minden kivágást teljes felbontásban, ZIP-be csomagolva exportál.",
+      "modalContent": {
+        "para1": "A Multi Photo Cropper egy nagyon konkrét problémából született: dobozokban álló régi családi fényképek várták a digitalizálást, a lapolvasóval viszont fájdalmasan lassú egyesével beolvasni őket. A megoldás az, hogy egyszerre négy-hat kép kerül az üvegre, a szétválogatást pedig utólag a szoftver végzi el.",
+        "keyFeatures": "Főbb funkciók:",
+        "featuresList": "Automatikus fénykép-felismerés, teljes egészében a böngészőben futtatva | Opcionális, saját üzemeltetésű backend, amely négy felismerési stratégiát von össze IoU-alapú konszenzusszavazással | Egy YOLOv8-nano ONNX modell helyi, CPU-n futó futtatása, felhőszolgáltatás és API-kulcs nélkül | Textúra- és színhisztogram-alapú ellenőrzés, amely megkülönbözteti a valódi fényképet az üres lapolvasó-háttértől | Ferdeség elemzése képenként, automatikus kiegyenesítéssel és perspektívakorrekcióval | Teljes kézi vezérlés: rajzolás, mozgatás, átméretezés nyolc fogantyúval, nagyítás, pásztázás, visszavonási előzmények és billentyűparancsok | „Képek beolvasásonként” beállítás, amely a várt darabszámhoz igazítja a felismerést | A kivágások teljes forrásfelbontásban készülnek, és egyetlen ZIP-fájlban tölthetők le | Automatikus visszaváltás a böngészőben futó felismerésre, ha a backend nem érhető el",
+        "para2": "A böngészőoldali felismerő a nulláról íródott a Canvas 2D API-ra és nyers pixeltömbökre, mindenféle képfeldolgozó könyvtár nélkül: szürkeárnyalatos átalakítás, Otsu-jellegű küszöbölés, morfológiai dilatáció és erózió, összefüggő komponensek és IoU-alapú konszenzus. Az opcionális backend klasszikus gépi látást ad hozzá OpenCV-vel, valamint egy helyben futtatott ONNX objektumdetektort, majd az összes stratégia javaslatát szavazással vonja össze, így a kétszer is megtalált terület magasabb pontszámot kap, mint az egyszer megtalált.",
+        "para3": "Az egész kizárólag személyes használatra készült és fut: konténerizált FastAPI szolgáltatás nem root felhasználóként, állapotellenőrzéssel, memóriavédelemmel, amely terhelés alatt visszautasítja a kéréseket, és egy kis otthoni szerverhez méretezett erőforrás-korlátokkal. Minden helyi hardveren fut, és soha nem hagyja el azt."
+      }
+    },
+    "municipalMigrations": {
+      "title": "Önkormányzati weboldalak migrációja",
+      "tech": "Virgo / GCM Cloud CMS",
+      "description": "Tartalommigráció és -átstrukturálás öt szlovákiai önkormányzati weboldal számára, kétnyelvű szlovák és magyar tartalommal.",
+      "modalContent": {
+        "para1": "Tartalommigráció és -átstrukturálás öt szlovákiai önkormányzati weboldal számára, amelyek a Virgo / GCM Cloud CMS platformra álltak át, kétnyelvű szlovák és magyar tartalommal.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "A régi weboldalak teljes tartalomleltára | Az új CMS-hez igazított oldalstruktúra | Dokumentumok, hivatalos hirdetmények, szerződések és képgalériák migrálása | Kétnyelvű szlovák és magyar nyelvi mutációk | Migráció utáni ellenőrzések a régi és az új oldal oldalankénti összevetésével",
+        "para2": "A munka egyedi scraping- és automatizálási eszközöket kombinált kézi átszervezéssel, hogy az oldalak, dokumentumok és képek tartalomvesztés nélkül kerüljenek át a régi, illetve WordPress-alapú weboldalakról.",
+        "para3": "Az önkormányzati weboldalak jogilag fontos tartalmakat hordoznak (szerződéseket, számlákat, hivatali hirdetményeket), ezért a migrációknál kiemelt szempont volt a teljesség, a pontosság és az ellenőrizhetőség."
+      }
+    },
+    "infoMapSK": {
+      "title": "InfoMap SK: szakdolgozat",
+      "tech": "React,Node.js,Express,MongoDB,TailwindCSS",
+      "description": "Full-stack alkalmazás szlovákiai nyílt adatok interaktív térképes megjelenítésére, mesterszakos szakdolgozati projektként. A nyilvános oldal már nem elérhető; a forráskód továbbra is megtekinthető.",
+      "modalContent": {
+        "para1": "Az InfoMapSK egy átfogó full-stack webalkalmazás, amely mesterképzési szakdolgozato projektem részeként készült. Interaktív platformot biztosít Szlovákia különböző közigazgatási szintjeinek demográfiai adatainak felfedezésére és vizualizálására.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Interaktív térkép Szlovákiáról régió, járás és város/falu választási lehetőséggel | Demográfiai adatok vizualizálása különféle diagramtípusokkal | Több adat kategória: Népesség, Gazdasági tevékenység, Mezőgazdaság és Szervezeti statisztikák | Keresési funkció konkrét helyszínekhez | Reszponzív design különféle eszközökre optimalizálva | Akadálymentességi jellemzők a WCAG 2.1 irányelvek szerint | Kapcsolatfelvételi űrlap felhasználói visszajelzés és kérdések számára",
+        "para2": "Ez a projekt bemutatja a full-stack fejlesztésben szerzett jártasságot a MERN stack (MongoDB, Express.js, React, Node.js) használatával. A frontend Reacttel van felépítve és TailwindCSS-sel van formázva, míg a backend a Node.js, Express.js és MongoDB technológiákat alkalmazza.",
+        "technologiesList": "A fejlesztési folyamat során különféle technológiák és API-k integrálása történt, beleértve:",
+        "techList": "React-leaflet az interaktív térképezéshez | Recharts az adatok vizualizálásához | Formik és Yup az űrlapkezeléshez és érvényesítéshez | A Szlovák Köztársaság Statisztikai Hivatalának API-ja a demográfiai adatokért | Szlovákia Geoportálja a térinformatikai adatokért",
+        "para3": "Ez a projekt demonstrálja a képességemet, hogy komplex, adatvezérelt webalkalmazást tudok létrehozni, miközben betartom a Best-practices irányelvet a reszponzív tervezésben, akadálymentességben és a modern webfejlesztési technikákban. Bemutatja a frontend és backend fejlesztési készségeimet, valamint az adatok vizualizálását és külső API-k integrációját."
+      }
+    },
+    "gardenBros": {
+      "title": "Garden Bros Weboldal",
+      "tech": "Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL",
+      "description": "Egy weboldal egy kertészeti cég számára, amely Next.js-t használva készült, Tailwind CSS-sel van stilizálva, és a Strapi CMS-en keresztül van kezelve. Responzív dizájnt, dinamikus tartalomgenerálást és Vercel-en történő telepítést kínál.",
+      "modalContent": {
+        "para1": "A Garden Bros Weboldal egy dinamikus platform egy kertészeti cég számára, amely lehetővé teszi szolgáltatásaik népszerűsítését és munkájuk bemutatását. Next.js-t használva készült, Tailwind CSS-sel stilizálva, és a Strapi CMS-en keresztül van kezelve, ami reszponzív és vonzó felhasználói élményt biztosít.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Responzív főoldal dinamikus komponensekkel | Teljes funkcionalitású kapcsolat oldal és GYIK szakasz | Blog szerző által írt bejegyzésekkel | Dinamikus oldalgenerálás | Tartalomkezelés Strapi CMS-en keresztül",
+        "para2": "A projekt bemutatja képességemet arra, hogy teljes funkcionalitású weboldalt készítsek modern webtechnológiák felhasználásával. Kiemeli a frontend fejlesztés, a Tailwind CSS-sel történő reszponzív dizájn, a CMS integráció és a telepítési stratégiák terén szerzett készségeimet.",
+        "para3": "A Tailwind CSS-t a kliens igényeihez illeszkedő egyedi, reszponzív dizájn létrehozására használtam. Ez a utility-first CSS keretrendszer lehetővé tette egy egyedi és vizuálisan vonzó felület gyors fejlesztését, miközben biztosította az oldalon belüli következetességet.",
+        "para4": "A weboldal a Vercel-en van telepítve, amely biztosítja a gyors betöltési időket és megbízható teljesítményt. A backend a Strapi CMS-en keresztül van kezelve, VPS-en keresztül, a Forpsi-tól, Dokku környezetben. Konténerként működik SSL tanúsítvánnyal és visszafelé proxy beállítással. A PostgreSQL adatbázis, amely ugyanazon a VPS-en fut, más projektekkel osztozik, biztosítva a hatékony erőforrás-használatot és kezelést.",
+        "para5": "Ez a projekt kiemeli a skálázható, karbantartható és felhasználóbarát webalkalmazások készítésében szerzett jártasságomat, amelyek a speciális üzleti igényeknek megfelelően kínálnak kiváló felhasználói élményt és vizuálisan figyelemfelkeltő dizájnt."
+      }
+    },
+    "alza": {
+      "title": "Alza Dni Kupónkód Szűrő",
+      "tech": "JavaScript,Chrome Extension API,HTML,CSS",
+      "description": "Egy Chrome kiterjesztés, amely segít a felhasználóknak szűrni a termékeket Alza Days akciók alatt különböző kuponkódok alapján, megkönnyítve a legjobb kedvezmények megtalálását az Alza.sk oldalon.",
+      "modalContent": {
+        "para1": "Az Alza Dni Kupónkód Szűrő egy hasznos eszköz mindenki számára, aki Alza Days alatt vásárol. Ez a Chrome kiterjesztés lehetővé teszi, hogy könnyedén szűrjük a termékeket különböző kuponkódok alapján, segítve, hogy gyorsan megtaláljuk a legjobb kedvezményeket az Alza.sk-n.",
+        "keyFeatures": "Főbb jellemzők:",
+        "featuresList": "Termékek szűrése kuponkódok alapján (5%, 10%, 15%, 20%, 25%, 30%, 50%) | Lehetőség csak a jelenleg megjelenített termékek szűrésére vagy az összes termék betöltésére | Egyszerű és világos felhasználói felület | Szűrő eltávolítás egy kattintással",
+        "para2": "A kiterjesztés bemutatja a gyakorlati eszközök létrehozására való képességemet, amelyek javítják a felhasználói élményt az e-kereskedelmi platformokon. Képességeimet JavaScript, Chrome Extension API és frontend fejlesztés terén mutatja be.",
+        "para3": "A projekt vanilla JavaScript-et használ az oldal DOM-jával való interakcióhoz, a termékek szűréséhez és a kiterjesztés UI-jának kezeléséhez. A Chrome Extension API-t a böngésző akció létrehozásához és a háttérszkriptek kezeléséhez használtam.",
+        "para4": "Ez a kiterjesztés kiemeli a képességemet olyan megoldások létrehozására, amelyek kielégítik a konkrét felhasználói igényeket, javítva a vásárlási élményt promóciós események alatt. Ezenkívül bemutatja a böngésző API-kal való munkavégzést és a felhasználóbarát felületek létrehozását a böngésző kiterjesztésekhez.",
+        "para5": "A projekt nyílt forráskódú, és lehetőséget ad a fejlesztői közösség hozzájárulására, ami bemutatja az elkötelezettségemet az együttműködő fejlesztés és a szoftverprojektek folyamatos fejlesztése iránt."
+      }
+    }
   }
 }
-}
-  }

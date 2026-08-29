@@ -10,9 +10,9 @@ interface Props {
   isOpen: boolean;
   setIsOpen: Function;
   title: string;
-  imgSrc: string;
-  code: string;
-  projectLink: string;
+  imgSrc?: string;
+  code?: string;
+  projectLink?: string;
   tech: string[];
   modalContent: JSX.Element;
 }
@@ -54,11 +54,19 @@ export const ProjectModal = ({
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg cursor-auto"
       >
-        <img
-          className="w-full"
-          src={imgSrc}
-          alt={`An image of the ${title} project.`}
-        />
+        {imgSrc ? (
+          <img
+            className="w-full"
+            src={imgSrc}
+            alt={`An image of the ${title} project.`}
+          />
+        ) : (
+          <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-zinc-800 via-zinc-700 to-indigo-950">
+            <span className="bg-indigo-500 text-white font-black text-3xl py-2 px-4 rounded">
+              {title.charAt(0)}
+            </span>
+          </div>
+        )}
         <div className="p-8">
           <h4 className="text-3xl font-bold mb-2">{title}</h4>
           <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
@@ -69,29 +77,35 @@ export const ProjectModal = ({
             {modalContent}
           </div>
 
-          <div>
-            <p className="font-bold mb-2 text-xl">
-              {t('projectLinks')}<span className="text-indigo-500">.</span>
-            </p>
-            <div className="flex items-center gap-4 text-sm">
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={code}
-              >
-                <AiFillGithub /> {t('sourceCode')}
-              </Link>
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={projectLink}
-              >
-                <AiOutlineExport /> {t('liveProject')}
-              </Link>
+          {(code || projectLink) && (
+            <div>
+              <p className="font-bold mb-2 text-xl">
+                {t('projectLinks')}<span className="text-indigo-500">.</span>
+              </p>
+              <div className="flex items-center gap-4 text-sm">
+                {code && (
+                  <Link
+                    target="_blank"
+                    rel="nofollow"
+                    className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                    href={code}
+                  >
+                    <AiFillGithub /> {t('sourceCode')}
+                  </Link>
+                )}
+                {projectLink && (
+                  <Link
+                    target="_blank"
+                    rel="nofollow"
+                    className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                    href={projectLink}
+                  >
+                    <AiOutlineExport /> {t('liveProject')}
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </motion.div>
     </div>

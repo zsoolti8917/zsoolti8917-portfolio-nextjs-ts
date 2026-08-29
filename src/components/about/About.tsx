@@ -1,54 +1,42 @@
-import { useTranslations } from 'next-intl';
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "../util/SectionHeader";
-import Reveal from "../util/Reveal";
-import { MyLinks } from "../nav/Header";
-import { Stats } from "./Stats";
+import { AboutVariantProvider, useAboutVariant } from "./AboutVariantContext";
+import { AboutVariantSwitcher } from "./AboutVariantSwitcher";
+import { AboutV1 } from "./variants/AboutV1";
+import { AboutV2 } from "./variants/AboutV2";
+import { AboutV3 } from "./variants/AboutV3";
+import { AboutV4 } from "./variants/AboutV4";
+import { AboutV5 } from "./variants/AboutV5";
+
+const AboutBody = () => {
+  const { variant } = useAboutVariant();
+
+  switch (variant) {
+    case 2:
+      return <AboutV2 />;
+    case 3:
+      return <AboutV3 />;
+    case 4:
+      return <AboutV4 />;
+    case 5:
+      return <AboutV5 />;
+    default:
+      return <AboutV1 />;
+  }
+};
 
 export const About = () => {
-  const t = useTranslations('About');
+  const t = useTranslations("About");
 
   return (
-    <section id="about" className="section-wrapper">
-      <SectionHeader title={t('title')} dir="l" />
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
-        <div className="space-y-4">
-          <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
-                {t('firstLetter')}
-              </span>
-              {t('intro')}
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              {t('currentWork')}
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              {t('jobSearch')}
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              {t('quote', { author: 'Seneca' })} 
-              {t('connect')}
-            </p>
-          </Reveal>
-          <Reveal>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-4 text-sm text-indigo-300">
-                <span>{t('myLinks')}</span>
-                <AiOutlineArrowRight />
-              </div>
-              <MyLinks />
-            </div>
-          </Reveal>
-        </div>
-        <Stats />
-      </div>
-    </section>
+    <AboutVariantProvider>
+      {/* `section-wrapper` is the sidebar scroll-spy marker (SideBar.tsx:11);
+          it and the id must survive whichever variant is selected. */}
+      <section id="about" className="section-wrapper">
+        <SectionHeader title={t("title")} dir="l" />
+        <AboutBody />
+        <AboutVariantSwitcher />
+      </section>
+    </AboutVariantProvider>
   );
 };

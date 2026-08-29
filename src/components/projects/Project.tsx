@@ -8,11 +8,11 @@ import Reveal from "../util/Reveal";
 interface Props {
   modalContent: JSX.Element;
   description: string;
-  projectLink: string;
-  imgSrc: string;
+  projectLink?: string;
+  imgSrc?: string;
   tech: string[];
   title: string;
-  code: string;
+  code?: string;
 }
 
 export const Project = ({
@@ -59,15 +59,29 @@ export const Project = ({
           onClick={() => setIsOpen(true)}
           className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
         >
-          <img
-            src={imgSrc}
-            alt={`An image of the ${title} project.`}
-            style={{
-              width: hovered ? "90%" : "85%",
-              rotate: hovered ? "2deg" : "0deg",
-            }}
-            className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
-          />
+          {imgSrc ? (
+            <img
+              src={imgSrc}
+              alt={`An image of the ${title} project.`}
+              style={{
+                width: hovered ? "90%" : "85%",
+                rotate: hovered ? "2deg" : "0deg",
+              }}
+              className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-zinc-800 via-zinc-700 to-indigo-950">
+              <span
+                style={{
+                  scale: hovered ? "1.1" : "1",
+                  rotate: hovered ? "2deg" : "0deg",
+                }}
+                className="bg-indigo-500 text-white font-black text-4xl py-3 px-5 rounded transition-all"
+              >
+                {title.charAt(0)}
+              </span>
+            </div>
+          )}
         </div>
         <div className="mt-6">
           <Reveal width="w-full">
@@ -77,13 +91,17 @@ export const Project = ({
               </h4>
               <div className="w-full h-[1px] bg-zinc-600" />
 
-              <Link href={code} target="_blank" rel="nofollow">
-                <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-              </Link>
+              {code && (
+                <Link href={code} target="_blank" rel="nofollow">
+                  <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                </Link>
+              )}
 
-              <Link href={projectLink} target="_blank" rel="nofollow">
-                <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-              </Link>
+              {projectLink && (
+                <Link href={projectLink} target="_blank" rel="nofollow">
+                  <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                </Link>
+              )}
             </div>
           </Reveal>
           <Reveal>

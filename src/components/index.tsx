@@ -9,7 +9,7 @@ import { Contact } from "./contact/Contact";
 
 export const HomPage = () => {
   return (
-    <div className="grid grid-cols-[54px_1fr]">
+    <div className="grid grid-cols-[54px_minmax(0,1fr)]">
       <SideBar />
       <main>
         <Header />

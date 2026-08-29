@@ -50,3 +50,80 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+/* --- About V5: stack marquee ------------------------------------------- */
+
+@keyframes about-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.about-marquee-track {
+  overflow: hidden;
+  /* Without this the max-content track below would propagate its intrinsic
+     width up through the page grid and widen the whole document. */
+  min-width: 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+/* Two identical halves, so a -50% shift loops seamlessly. */
+.about-marquee {
+  display: flex;
+  width: max-content;
+  animation: about-marquee var(--marquee-duration, 45s) linear infinite;
+}
+
+.about-marquee-reverse {
+  animation-direction: reverse;
+}
+
+.about-marquee-track:hover .about-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-marquee-track {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .about-marquee {
+    width: 100%;
+    min-width: 0;
+    animation: none;
+  }
+
+  /* The one remaining half becomes an ordinary wrapping chip list. It ships
+     with `shrink-0` for the animated case, which must be undone here or the
+     row stays at max-content and pushes the page sideways. */
+  .about-marquee > * {
+    width: 100%;
+    min-width: 0;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  /* The second half exists only to make the loop seamless. */
+  .about-marquee-duplicate {
+    display: none;
+  }
+}

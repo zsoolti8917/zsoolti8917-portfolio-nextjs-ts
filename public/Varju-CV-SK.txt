@@ -1,0 +1,84 @@
+Zsolt Varjú
+Softvérový vývojár
+
+dev@zsoltvarju.com · +421 915 443 951 · Praha, Česko (trvalý pobyt: Čierna Voda, Slovensko)
+zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
+
+PROFIL
+------
+Softvérový vývojár a prevádzkovateľ platforiem, zámerne širší než full-stack. Tvorím webové aplikácie od začiatku do konca, navrhujem ETL pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem infraštruktúru, na ktorej bežia, momentálne ako jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru. Vývoj s podporou AI je pre mňa bežná pracovná metóda, nie kuriozita. Smerujem k systémovej architektúre.
+
+PRACOVNÉ SKÚSENOSTI
+-------------------
+
+Softvérový vývojár
+Serco Czech Republic s.r.o. · Praha, Česko · Feb 2025 – súčasnosť
+  - Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru, a to od používateľského rozhrania až po servery, na ktorých beží.
+  - React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ pre správy, Neo4j pre vzťahy a Tika pre extrakciu dokumentov.
+  - Návrh a prevádzka ingesčných pipelín pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát.
+  - Správa Ubuntu serverov v Azure: nginx s TLS a riadením prístupu, kontajnerizované služby, CI, zálohovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.
+  - Viedol som fázovaný program kvality frontendu: vendor bundle menší približne o tri štvrtiny, objem JavaScriptu nižší o tretinu, CSS o viac než polovicu, odstránené všetky lint chyby a o 80 % menej zbytočných React re-renderov.
+  - Priama spolupráca s tímami misií a IT na požiadavkách, formálnych hláseniach chýb, eskaláciách, záznamoch o zmenách a odhadoch prácnosti.
+
+Tester kvality (QA)
+Galileo Corporation s.r.o · Na diaľku · 2022 – 2025
+  - Manuálne funkčné testovanie webových stránok v rôznych prehliadačoch a na rôznych zariadeniach, s identifikáciou a nahlasovaním chýb.
+  - Overovanie stránok voči grafickým návrhom a poskytovanie podrobnej spätnej väzby dizajnérom a vývojárom.
+  - Udržiavanie štandardov kvality naprieč rozsiahlym portfóliom slovenských obecných a komerčných webových stránok.
+  - Dokumentovanie výsledkov testov a nápravných opatrení, samostatná práca v pevných termínoch.
+
+ZRUČNOSTI
+---------
+Jazyky: TypeScript, JavaScript, Python, Bash, SQL
+Web: React, Next.js, Node.js, Express, REST API
+Vyhľadávanie a dáta: Apache Solr, Open Semantic Search, Tika, Neo4j, RabbitMQ, PostgreSQL, MongoDB
+ETL a automatizácia: Vlastné ingesčné pipeliny, Orchestrácia cez cron, Extrakcia z PDF a tabuliek, Automatizácia procesov
+AI a LLM: RAG architektúra, Embeddingy, Vektorové vyhľadávanie (Qdrant), Hybridné vyhľadávanie, Prompt engineering, Claude Code, Codex, OpenRouter, Lokálne modely
+DevOps a cloud: Docker, Kubernetes, Jenkins, GitHub Actions, Azure, AWS, Dokku, nginx, WireGuard, Tailscale
+Bezpečnosť a prax: Odstraňovanie zraniteľností, TLS, Hardening, Riadenie zmien, Agile, Testovanie API (Postman)
+
+PROJEKTY
+--------
+
+Self-hosted RAG vyhľadávanie
+Python, Qdrant, bge-m3, LangChain, Docker
+Vyhľadávanie s rozšíreným kontextom nad lokálnou zbierkou dokumentov: hybridné BM25 a vektorové vyhľadávanie, odpovede podložené citovanými pasážami a explicitné odmietnutie odpovede, keď chýba podklad.
+
+Coffece (coffece.sk)
+Next.js, TypeScript, Tailwind CSS, next-intl
+Dvojjazyčná (SK/EN) marketingová a objednávková stránka pre značku rozvozu kávy do kancelárií, s lokalizovaným smerovaním, validovanými formulármi a kompletnými SEO metadátami.
+
+IDT PLUS STAV (idtplusstav.sk)
+Next.js, TypeScript, MDX, Dokku, Google Workspace
+Kompletná digitálna prevádzka pre stavebnú firmu: self-hosted web, firemný e-mail overený cez DKIM, fakturácia nastavená na slovenský prenos daňovej povinnosti, plus Google Ads a SEO.
+
+B2B veľkoobchodný objednávkový portál
+WooCommerce, B2BKing, Stock Locations
+Produkčný B2B objednávkový portál pre slovenského veľkoobchodníka: cenové hladiny pre skupiny zákazníkov, katalóg len po prihlásení, sklad na dvoch miestach, desatinné množstvá pre vážený tovar a integrovaná fakturácia.
+
+Lemma: skener slovnej zásoby
+React Native, Expo, Vision modely, FSRS
+Mobilná aplikácia, ktorá z fotografie tlačenej strany vytvorí kartičky slovnej zásoby; spája detekčnú pipeline s vision-language modelom s plánovaním opakovania podľa FSRS.
+
+Vlastná infraštruktúra a homelab
+Linux, Docker, WireGuard, Tailscale, CI/CD
+Vlastný VPS a domáci server prevádzkované s produkčnými návykmi: privátna sieť cez WireGuard, atomické nasadenia bez výpadku s návratom späť, samoopravná obnova služieb a plánované zálohy.
+
+VZDELANIE
+---------
+
+Mgr., aplikovaná informatika
+Univerzita Konštantína Filozofa v Nitre · 2018 – 2024
+Diplomová práca: InfoMap SK, full-stack aplikácia vizualizujúca slovenské otvorené dáta z API Štatistického úradu na interaktívnej mape.
+
+CERTIFIKÁTY
+-----------
+Certified Kubernetes Administrator (CKA) · Linux Foundation / CNCF
+Ubuntu Linux Professional Certificate · Canonical · apr 2025
+Learning Bash Scripting · LinkedIn Learning · júl 2025
+Základy programovania v ABAP na SAP BTP · SAP · okt 2024
+AWS Academy Graduate, Cloud Foundations · AWS Academy · júl 2022
+
+JAZYKY
+------
+Maďarčina (materinský jazyk) · Slovenčina (plynule) · Čeština (plynule) · Angličtina (plynule)

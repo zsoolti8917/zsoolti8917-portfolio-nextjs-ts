@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cv:build": "node cv/build.mjs",
+    "cv:verify": "node cv/verify.mjs"
   },
   "dependencies": {
     "animejs": "^3.2.2",
