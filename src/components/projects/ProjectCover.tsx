@@ -43,11 +43,10 @@ interface Props {
    * Position in the grid — the only input to the hue, so two neighbouring
    * tiles never land on the same colour.
    *
-   * Optional because neither call site can currently supply one: `Projects.tsx`
-   * is frozen for WP2's modal rework and `ProjectModal` renders a single
-   * project out of context. Without it the hue falls back to a hash of the
-   * slug, which is just as deterministic but locale-dependent (the titles are
-   * translated). WP4 should pass the real index from the `PROJECTS.map`.
+   * Optional defensively: both current call sites (`Project.tsx`'s grid card
+   * and `ProjectModalHost.tsx`'s `ProjectModal`) pass the real index from
+   * `PROJECTS`. Without one the hue falls back to a hash of the slug, which is
+   * just as deterministic but locale-dependent (the titles are translated).
    */
   index?: number;
   tech?: string[];
@@ -56,9 +55,11 @@ interface Props {
 
 export const ProjectCover = ({ title, index, tech = [], className = "" }: Props) => {
   const slug = projectSlug(title);
-  // 47 is coprime with 360, so consecutive indexes never repeat a hue; +230
-  // starts the run at indigo, next to the accent.
-  const hue = (((index ?? hashOf(slug)) * 47 + 230) % 360 + 360) % 360;
+  // 47 is coprime with 140, so consecutive indexes step through the whole
+  // range before a hue repeats. +200 keeps every value inside the cool half
+  // of the wheel (200–340: blue → indigo → violet → magenta) — no index lands
+  // on a warm hue.
+  const hue = 200 + (((index ?? hashOf(slug)) * 47) % 140);
 
   return (
     // twMerge, not concatenation: the modal header drops the rounding and the

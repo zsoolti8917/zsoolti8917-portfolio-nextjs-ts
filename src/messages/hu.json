@@ -510,7 +510,8 @@
     "contact": "Kapcsolat",
     "palette": "Keresés / parancsok",
     "menu": "Menü",
-    "cv": "CV"
+    "cv": "CV",
+    "scrollTop": "Vissza a tetejére"
   },
   "palette": {
     "placeholder": "Írj be egy parancsot vagy keress…",

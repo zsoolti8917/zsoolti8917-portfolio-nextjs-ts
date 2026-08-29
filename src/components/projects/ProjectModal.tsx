@@ -6,7 +6,6 @@ import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { useTranslations } from 'next-intl';
 import { useDialogKeys } from "../util/useDialogKeys";
-import { useOverlay } from "../util/overlayState";
 import { useScrollLock } from "../util/useScrollLock";
 import { ProjectCover } from "./ProjectCover";
 
@@ -37,7 +36,7 @@ interface Props {
  * after the first modal. `useScrollLock` restores whatever was there.
  */
 export const ProjectModal = ({ project, onClose }: Props) => {
-  const { content, projectLink, imgSrc, title, code, tech } = project;
+  const { content, projectLink, imgSrc, index, title, code, tech } = project;
   const t = useTranslations('projectModal');
   const titleId = useId();
 
@@ -46,7 +45,6 @@ export const ProjectModal = ({ project, onClose }: Props) => {
 
   useScrollLock(true);
   useDialogKeys({ open: true, onClose });
-  useOverlay(true);
 
   const dialog = (
     <div

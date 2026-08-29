@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { COMMANDS } from "../hero/terminal/commands";
 import type { Job } from "../experience/ExperienceItem";
 import { PROJECTS } from "../projects/Projects";
+import { slug } from "@/lib/slug";
 import type { PaletteSources } from "./search";
 
 /** The four scroll targets, in page order. Same ids `TopNav` links to. */
@@ -10,14 +11,6 @@ export const SECTION_IDS = ["about", "projects", "experience", "contact"] as con
 
 /** Same three as `nav/LocaleMenu`. */
 const LOCALES = ["en", "sk", "hu"] as const;
-
-/**
- * A slug a visitor could plausibly type, from a company name.
- * Duplicated from `hero/terminal/useTerminalData` (three lines, not exported
- * there); the two must agree, since both address the same job.
- */
-const slug = (value: string) =>
-  value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "").split("-")[0];
 
 /**
  * Everything the palette can offer, read from the same next-intl namespaces the

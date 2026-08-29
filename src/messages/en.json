@@ -510,7 +510,8 @@
     "contact": "Contact",
     "palette": "Search / commands",
     "menu": "Menu",
-    "cv": "CV"
+    "cv": "CV",
+    "scrollTop": "Scroll to top"
   },
   "palette": {
     "placeholder": "Type a command or search…",

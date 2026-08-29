@@ -10,7 +10,7 @@ export const Footer = () => {
   const year = (process.env.NEXT_PUBLIC_BUILD_TIME ?? "").slice(0, 4) || "2026";
 
   return (
-    <footer className="mt-32 border-t border-hairline">
+    <footer className="mt-16 border-t border-hairline">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 py-8 font-mono mono-1 text-xs text-fg-3 md:px-8">
         <span>© {year} Zsolt Varjú</span>
         <span aria-hidden>·</span>

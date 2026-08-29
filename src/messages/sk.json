@@ -510,7 +510,8 @@
     "contact": "Kontakt",
     "palette": "Hľadanie / príkazy",
     "menu": "Menu",
-    "cv": "CV"
+    "cv": "CV",
+    "scrollTop": "Späť hore"
   },
   "palette": {
     "placeholder": "Napíšte príkaz alebo hľadajte…",

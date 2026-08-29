@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import { useTerminalBus } from "../bus/TerminalBus";
 import { useDialogKeys } from "../util/useDialogKeys";
-import { useOverlay } from "../util/overlayState";
 import { useScrollLock } from "../util/useScrollLock";
 import { getCVUrl, trackCvDownload } from "@/lib/cv";
 import { searchPalette, type PaletteGroup, type PaletteItem } from "./search";
@@ -62,7 +61,6 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
   // element to hand focus back to, and it must run while that element is still
   // the active one.
   useDialogKeys({ open: true, onClose });
-  useOverlay(true);
 
   useEffect(() => setMounted(true), []);
 
@@ -110,11 +108,13 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
         );
         break;
       case "job":
-        // The jobs have no per-job anchors yet, so the section is as close as
-        // the DOM can get; the terminal's `experience <key>` has the detail.
+        // `intent.key` is the same slug `ExperienceItem` sets as its row's id
+        // (see `src/lib/slug.ts`); `#experience` is only a fallback for a key
+        // that somehow does not match any row.
         onClose();
         defer(() =>
-          document.getElementById("experience")?.scrollIntoView({ block: "start" })
+          (document.getElementById(intent.key) ?? document.getElementById("experience"))
+            ?.scrollIntoView({ block: "start" })
         );
         break;
       case "project":
@@ -184,7 +184,11 @@ const PaletteDialog = ({ onClose }: { onClose: () => void }) => {
     if (copied && item.intent.type === "action" && item.intent.id === "copyEmail") {
       return t("actions.copied");
     }
-    return item.hint || (index === selected ? "↵" : "");
+    if (item.hint) return item.hint;
+    if (index !== selected) return "";
+    // Terminal-command rows spell out what Enter does — every other group's
+    // "↵" already reads as "select" (open a project, jump to a section...).
+    return item.group === "commands" && !item.fallback ? "↵ run" : "↵";
   };
 
   const row = (item: PaletteItem, index: number) => (

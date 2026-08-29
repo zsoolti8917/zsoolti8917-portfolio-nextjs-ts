@@ -1,3 +1,4 @@
+import { slug } from "@/lib/slug";
 import { Chip } from "../util/Chip";
 import Reveal from "../util/Reveal";
 
@@ -18,7 +19,10 @@ export interface Job {
  */
 export const ExperienceItem = ({ job }: { job: Job }) => {
   return (
-    <div className="grid gap-x-8 border-t border-hairline py-8 md:grid-cols-[9rem_1fr]">
+    <div
+      id={slug(job.companyName)}
+      className="grid scroll-mt-20 gap-x-8 border-t border-hairline py-8 md:grid-cols-[9rem_1fr]"
+    >
       <Reveal width="100%">
         {/* tabular-nums keeps "2022 — 2024" and "2024 — present" on the same
             digit grid, so the column reads as a column. */}
