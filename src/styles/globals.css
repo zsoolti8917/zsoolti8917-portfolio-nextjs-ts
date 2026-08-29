@@ -90,5 +90,21 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .hero-ping { animation: none; }
   .hero-chip-physics { position: static; transform: none !important; }
-  .hero-kinetic-letter { font-variation-settings: "wght" 400; }
+  /* Deliberately NOT overriding .hero-kinetic-letter here. Its weight comes
+     from an inline `--hw` the SERVER renders as a static 300->520 gradient,
+     and the cursor loop never starts under reduced motion -- so the value is
+     already safe. Forcing "wght" 400 would only flatten the design for the
+     people who opted out of motion, not spare them any. */
+}
+
+/* V4 — a terminal caret is a hard square blink, not a fade. Tailwind's
+   `animate-pulse` eases opacity, which reads as a glow rather than a cursor. */
+@keyframes hero-caret {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.hero-caret { animation: hero-caret 1.06s steps(1) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-caret { animation: none; opacity: 1; }
 }

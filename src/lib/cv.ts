@@ -17,3 +17,23 @@ export const getCVUrl = (locale: string) => {
 /** Matches the existing umami event names so historical data stays comparable. */
 export const cvUmamiEvent = (locale: string) =>
   `CV downloaded in ${locale} language`;
+
+declare global {
+  interface Window {
+    umami?: { track?: (event: string) => void };
+  }
+}
+
+/**
+ * Programmatic equivalent of the `data-umami-event` attribute used on the
+ * header button. Needed where the download isn't triggered by a click on an
+ * element we control — e.g. the `cv` command in the Shell hero. Safe to call
+ * when the analytics script hasn't loaded (or is blocked).
+ */
+export const trackCvDownload = (locale: string) => {
+  try {
+    window.umami?.track?.(cvUmamiEvent(locale));
+  } catch {
+    /* analytics blocked — never let this break a download */
+  }
+};
