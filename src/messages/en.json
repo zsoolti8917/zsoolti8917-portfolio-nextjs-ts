@@ -513,6 +513,7 @@
   "palette": {
     "placeholder": "Type a command or search…",
     "empty": "No results",
+    "runInTerminal": "Run “{query}” in the terminal",
     "groups": {
       "sections": "Go to",
       "projects": "Projects",
@@ -526,6 +527,11 @@
       "copyEmail": "Copy email",
       "copied": "Copied",
       "switchLocale": "Switch language"
+    },
+    "footer": {
+      "navigate": "navigate",
+      "select": "select",
+      "close": "close"
     }
   },
   "footer": {

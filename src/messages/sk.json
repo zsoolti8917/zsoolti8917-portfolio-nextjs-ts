@@ -513,6 +513,7 @@
   "palette": {
     "placeholder": "Napíšte príkaz alebo hľadajte…",
     "empty": "Žiadne výsledky",
+    "runInTerminal": "Spustiť „{query}“ v termináli",
     "groups": {
       "sections": "Prejsť na",
       "projects": "Projekty",
@@ -526,6 +527,11 @@
       "copyEmail": "Kopírovať e-mail",
       "copied": "Skopírované",
       "switchLocale": "Zmeniť jazyk"
+    },
+    "footer": {
+      "navigate": "navigácia",
+      "select": "vybrať",
+      "close": "zavrieť"
     }
   },
   "footer": {
