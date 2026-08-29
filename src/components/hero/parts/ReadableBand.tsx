@@ -1,4 +1,4 @@
-import type { HeroCommonCopy, HeroVariantCopy } from "../types";
+import type { HeroCommonCopy, HeroFramingCopy } from "../types";
 import { Eyebrow } from "./Eyebrow";
 
 /**
@@ -16,7 +16,7 @@ export const ReadableBand = ({
   className = "",
 }: {
   common: HeroCommonCopy;
-  copy: HeroVariantCopy;
+  copy: HeroFramingCopy;
   className?: string;
 }) => (
   <div className={className}>

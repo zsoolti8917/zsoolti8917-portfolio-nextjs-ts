@@ -265,6 +265,8 @@
     ]
   },
   "hero": {
+    "eyebrow": "Full-stack · Automatizácia · Praha",
+    "headline": "Živím sa tým, že ruším prácu.",
     "common": {
       "name": "Zsolt Varju",
       "role": "Softvérový vývojár",
@@ -272,9 +274,7 @@
       "location": "Praha, CET · EN · SK · HU",
       "ctaWork": "Pozrite, čo som dodal",
       "ctaCv": "Životopis (PDF)",
-      "ctaContact": "Kontaktujte ma",
-      "statusLabel": "Momentálne",
-      "statusValue": "Serco, Praha — jediný vývojár a prevádzkovateľ"
+      "ctaContact": "Kontaktujte ma"
     },
     "terminal": {
       "prompt": "visitor@zsoltvarju:~$",
@@ -330,26 +330,6 @@
         "since": "V softvéri od",
         "back": "← všetky projekty"
       }
-    },
-    "t1": {
-      "eyebrow": "Full-stack · Automatizácia · Praha",
-      "headline": "Živím sa tým, že ruším prácu."
-    },
-    "t2": {
-      "eyebrow": "Full-stack · Prevádzka platforiem · Praha",
-      "headline": "Celý životopis beží tu."
-    },
-    "t3": {
-      "eyebrow": "Full-stack · Automatizácia · Praha",
-      "headline": "Hľadajte vo mne."
-    },
-    "t4": {
-      "eyebrow": "Full-stack · Prevádzka platforiem · Praha",
-      "headline": "Všetko na jeden príkaz."
-    },
-    "t5": {
-      "eyebrow": "Full-stack · Automatizácia · Praha",
-      "headline": "Prečítajte si zdroják."
     }
   },
   "sidebar": {

@@ -1,5 +1,3 @@
-export type HeroVariantId = 1 | 2 | 3 | 4 | 5;
-
 /** Copy that must NOT change when the variant changes. */
 export interface HeroCommonCopy {
   name: string;
@@ -9,8 +7,6 @@ export interface HeroCommonCopy {
   ctaWork: string;
   ctaCv: string;
   ctaContact: string;
-  statusLabel: string;
-  statusValue: string;
 }
 
 export interface HeroTerminalCopy {
@@ -45,7 +41,8 @@ export interface HeroTerminalCopy {
   labels: Record<"tech" | "link" | "based" | "from" | "since" | "back", string>;
 }
 
-export interface HeroVariantCopy {
+/** The framing copy above the terminal. */
+export interface HeroFramingCopy {
   eyebrow: string;
   headline: string;
 }

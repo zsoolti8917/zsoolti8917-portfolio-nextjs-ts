@@ -1,22 +1,32 @@
-import dynamic from "next/dynamic";
-import { ShippedHero } from "./variants/shipped";
+import { HeroActions } from "./parts/HeroActions";
+import { HeroContainer } from "./parts/HeroContainer";
+import { HeroSection } from "./parts/HeroSection";
+import { ReadableBand } from "./parts/ReadableBand";
+import { useHeroCopy } from "./parts/useHeroCopy";
+import { Terminal } from "./terminal/Terminal";
 
 /**
- * `process.env.NODE_ENV` is substituted by DefinePlugin *before* webpack
- * parses this file, so in a production build the import() below sits in a
- * provably dead branch and webpack never collects it as a dependency. The
- * entire `hero/dev/` subtree — registry, context, switcher and the four
- * variants that aren't shipping — is therefore absent from the production
- * bundle, not merely unreachable at runtime.
+ * The hero: a plain-language band over an interactive console.
  *
- * (The old About switcher used `if (NODE_ENV !== "development") return null`,
- * which left all five variants in the module graph and shipped them anyway.)
+ * A STATIC import chain on purpose. The band's <h1> and the terminal's first
+ * output block are server-rendered, so the page is legible to a recruiter on
+ * first paint and complete to a crawler that never runs JavaScript — the
+ * terminal enhances the content, it never gates it.
  */
-const HeroDevHarness =
-  process.env.NODE_ENV === "development"
-    ? dynamic(() => import("./dev/HeroDevHarness"), { ssr: true })
-    : null;
+const Hero = () => {
+  const { common, terminal, copy } = useHeroCopy();
 
-const Hero = () => (HeroDevHarness ? <HeroDevHarness /> : <ShippedHero />);
+  return (
+    <HeroSection>
+      <HeroContainer>
+        <ReadableBand common={common} copy={copy} />
+        <div className="mt-10">
+          <Terminal copy={terminal} />
+        </div>
+        <HeroActions common={common} />
+      </HeroContainer>
+    </HeroSection>
+  );
+};
 
 export default Hero;

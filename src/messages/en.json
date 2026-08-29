@@ -265,6 +265,8 @@
     ]
   },
   "hero": {
+    "eyebrow": "Full-stack · Automation · Prague",
+    "headline": "I delete work for a living.",
     "common": {
       "name": "Zsolt Varju",
       "role": "Software Developer",
@@ -272,9 +274,7 @@
       "location": "Prague, CET · EN · SK · HU",
       "ctaWork": "See what I've shipped",
       "ctaCv": "CV (PDF)",
-      "ctaContact": "Get in touch",
-      "statusLabel": "Currently",
-      "statusValue": "Serco, Prague — sole developer & operator"
+      "ctaContact": "Get in touch"
     },
     "terminal": {
       "prompt": "visitor@zsoltvarju:~$",
@@ -330,26 +330,6 @@
         "since": "In software since",
         "back": "← all projects"
       }
-    },
-    "t1": {
-      "eyebrow": "Full-stack · Automation · Prague",
-      "headline": "I delete work for a living."
-    },
-    "t2": {
-      "eyebrow": "Full-stack · Platform ops · Prague",
-      "headline": "The whole CV runs in here."
-    },
-    "t3": {
-      "eyebrow": "Full-stack · Automation · Prague",
-      "headline": "Search me."
-    },
-    "t4": {
-      "eyebrow": "Full-stack · Platform ops · Prague",
-      "headline": "Everything, one command away."
-    },
-    "t5": {
-      "eyebrow": "Full-stack · Automation · Prague",
-      "headline": "Read the source."
     }
   },
   "sidebar": {

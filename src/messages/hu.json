@@ -265,6 +265,8 @@
     ]
   },
   "hero": {
+    "eyebrow": "Full-stack · Automatizálás · Prága",
+    "headline": "Abból élek, hogy megszüntetek munkát.",
     "common": {
       "name": "Varjú Zsolt",
       "role": "Szoftverfejlesztő",
@@ -272,9 +274,7 @@
       "location": "Prága, CET · EN · SK · HU",
       "ctaWork": "Amit eddig szállítottam",
       "ctaCv": "Önéletrajz (PDF)",
-      "ctaContact": "Kapcsolatfelvétel",
-      "statusLabel": "Jelenleg",
-      "statusValue": "Serco, Prága — egyedüli fejlesztő és üzemeltető"
+      "ctaContact": "Kapcsolatfelvétel"
     },
     "terminal": {
       "prompt": "visitor@zsoltvarju:~$",
@@ -330,26 +330,6 @@
         "since": "A szakmában",
         "back": "← összes projekt"
       }
-    },
-    "t1": {
-      "eyebrow": "Full-stack · Automatizálás · Prága",
-      "headline": "Abból élek, hogy megszüntetek munkát."
-    },
-    "t2": {
-      "eyebrow": "Full-stack · Üzemeltetés · Prága",
-      "headline": "A teljes önéletrajz itt fut."
-    },
-    "t3": {
-      "eyebrow": "Full-stack · Automatizálás · Prága",
-      "headline": "Keress rám."
-    },
-    "t4": {
-      "eyebrow": "Full-stack · Üzemeltetés · Prága",
-      "headline": "Minden egyetlen parancsra."
-    },
-    "t5": {
-      "eyebrow": "Full-stack · Automatizálás · Prága",
-      "headline": "Olvasd a forrást."
     }
   },
   "sidebar": {
