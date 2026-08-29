@@ -355,7 +355,8 @@
   "projectModal": {
     "projectLinks": "Projekt Linkek",
     "sourceCode": "Forráskód",
-    "liveProject": "Élő Projekt"
+    "liveProject": "Élő Projekt",
+    "close": "Bezárás"
   },
   "projects": {
     "sectionTitle": "Projektek",

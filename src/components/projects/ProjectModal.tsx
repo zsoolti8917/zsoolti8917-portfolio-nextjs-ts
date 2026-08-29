@@ -1,50 +1,64 @@
-import { useEffect } from "react";
+import { useEffect, useId, useState } from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { useTranslations } from 'next-intl';
+import { useDialogKeys } from "../util/useDialogKeys";
+import { useOverlay } from "../util/overlayState";
+import { useScrollLock } from "../util/useScrollLock";
 
-interface Props {
-  isOpen: boolean;
-  setIsOpen: Function;
+export interface ProjectModalData {
   title: string;
   imgSrc?: string;
   code?: string;
   projectLink?: string;
   tech: string[];
-  modalContent: JSX.Element;
+  /** The modal body, built by `useProjectModalContent`. */
+  content: JSX.Element;
 }
 
-export const ProjectModal = ({
-  modalContent,
-  projectLink,
-  setIsOpen,
-  imgSrc,
-  isOpen,
-  title,
-  code,
-  tech,
-}: Props) => {
+interface Props {
+  project: ProjectModalData;
+  onClose: () => void;
+}
+
+/**
+ * The project dialog. Rendered only while open, by `ProjectModalHost` — so
+ * "open" is its mount, not a prop, and the scroll lock, the Escape handler and
+ * the focus return are all just its lifetime.
+ *
+ * It no longer writes `body.overflowY` itself: the old effect set it back to
+ * `"scroll"` on close, which left every page with a permanent scrollbar gutter
+ * after the first modal. `useScrollLock` restores whatever was there.
+ */
+export const ProjectModal = ({ project, onClose }: Props) => {
+  const { content, projectLink, imgSrc, title, code, tech } = project;
   const t = useTranslations('projectModal');
+  const titleId = useId();
 
-  useEffect(() => {
-    const body = document.querySelector("body");
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
-    if (isOpen) {
-      body!.style.overflowY = "hidden";
-    } else {
-      body!.style.overflowY = "scroll";
-    }
-  }, [isOpen]);
+  useScrollLock(true);
+  useDialogKeys({ open: true, onClose });
+  useOverlay(true);
 
-  const content = (
+  const dialog = (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={titleId}
       className="fixed inset-0 z-50 px-4 py-12 bg-zinc-950/50 backdrop-blur overflow-y-scroll flex justify-center cursor-pointer"
-      onClick={() => setIsOpen(false)}
+      onClick={onClose}
     >
-      <button className="absolute top-4 md:top-6 text-xl right-4">
+      <button
+        type="button"
+        aria-label={t('close')}
+        onClick={onClose}
+        className="absolute top-4 md:top-6 text-xl right-4"
+      >
         <MdClose />
       </button>
 
@@ -68,13 +82,13 @@ export const ProjectModal = ({
           </div>
         )}
         <div className="p-8">
-          <h4 className="text-3xl font-bold mb-2">{title}</h4>
+          <h4 id={titleId} className="text-3xl font-bold mb-2">{title}</h4>
           <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
             {tech.join(" - ")}
           </div>
 
           <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">
-            {modalContent}
+            {content}
           </div>
 
           {(code || projectLink) && (
@@ -111,8 +125,6 @@ export const ProjectModal = ({
     </div>
   );
 
-  if (!isOpen) return <></>;
-
-  // @ts-ignore
-  return ReactDOM.createPortal(content, document.getElementById("root"));
+  const root = mounted ? document.getElementById("root") : null;
+  return root ? ReactDOM.createPortal(dialog, root) : null;
 };

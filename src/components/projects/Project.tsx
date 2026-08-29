@@ -2,11 +2,12 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
-import { ProjectModal } from "./ProjectModal";
+import { useTerminalBus } from "../bus/TerminalBus";
 import Reveal from "../util/Reveal";
 
 interface Props {
-  modalContent: JSX.Element;
+  /** Key into `PROJECTS` — what the modal host resolves to a project. */
+  projectKey: string;
   description: string;
   projectLink?: string;
   imgSrc?: string;
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export const Project = ({
-  modalContent,
+  projectKey,
   projectLink,
   description,
   imgSrc,
@@ -26,7 +27,9 @@ export const Project = ({
 }: Props) => {
   const [hovered, setHovered] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+  // One modal for the whole page, opened by key: the card, the palette and the
+  // terminal's `open <project>` all reach the same dialog through the bus.
+  const { openProject } = useTerminalBus();
 
   const controls = useAnimation();
 
@@ -56,7 +59,7 @@ export const Project = ({
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
+          onClick={() => openProject(projectKey)}
           className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
         >
           {imgSrc ? (
@@ -114,7 +117,7 @@ export const Project = ({
               {description}{" "}
               <span
                 className="inline-block text-sm text-indigo-300 cursor-pointer"
-                onClick={() => setIsOpen(true)}
+                onClick={() => openProject(projectKey)}
               >
                 Learn more {">"}
               </span>
@@ -122,16 +125,6 @@ export const Project = ({
           </Reveal>
         </div>
       </motion.div>
-      <ProjectModal
-        modalContent={modalContent}
-        projectLink={projectLink}
-        setIsOpen={setIsOpen}
-        isOpen={isOpen}
-        imgSrc={imgSrc}
-        title={title}
-        code={code}
-        tech={tech}
-      />
     </>
   );
 };

@@ -355,7 +355,8 @@
   "projectModal": {
     "projectLinks": "Project Links",
     "sourceCode": "Source Code",
-    "liveProject": "Live Project"
+    "liveProject": "Live Project",
+    "close": "Close"
   },
   "projects": {
     "sectionTitle": "Projects",

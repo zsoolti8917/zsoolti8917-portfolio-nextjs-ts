@@ -355,7 +355,8 @@
   "projectModal": {
     "projectLinks": "Odkazy na projekt",
     "sourceCode": "Zdrojový kód",
-    "liveProject": "Živý projekt"
+    "liveProject": "Živý projekt",
+    "close": "Zavrieť"
   },
   "projects": {
     "sectionTitle": "Projekty",
