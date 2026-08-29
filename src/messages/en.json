@@ -172,7 +172,8 @@
     "moreYourSpeed": "if that's more your speed.",
     "email": "dev@zsoltvarju.com",
     "copy": "Copy email",
-    "copied": "Copied"
+    "copied": "Copied",
+    "sendEmail": "Send an email"
   },
   "experience": {
     "title": "Experience",

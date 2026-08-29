@@ -172,7 +172,8 @@
     "moreYourSpeed": "platformokon is.",
     "email": "dev@zsoltvarju.com",
     "copy": "E-mail másolása",
-    "copied": "Másolva"
+    "copied": "Másolva",
+    "sendEmail": "E-mail küldése"
   },
   "experience": {
     "title": "Munkatapasztalat",

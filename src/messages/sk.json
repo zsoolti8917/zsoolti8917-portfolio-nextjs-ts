@@ -172,7 +172,8 @@
     "moreYourSpeed": "",
     "email": "dev@zsoltvarju.com",
     "copy": "Kopírovať e-mail",
-    "copied": "Skopírované"
+    "copied": "Skopírované",
+    "sendEmail": "Poslať e-mail"
   },
   "experience": {
     "title": "Pracovné skúsenosti",
