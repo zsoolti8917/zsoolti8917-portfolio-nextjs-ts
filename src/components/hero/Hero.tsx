@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { HeroSection } from "./parts/HeroSection";
 import { useHeroCopy } from "./parts/useHeroCopy";
 import { Terminal } from "./terminal/Terminal";
@@ -14,10 +15,15 @@ import { Terminal } from "./terminal/Terminal";
  */
 const Hero = () => {
   const { common, terminal } = useHeroCopy();
+  const router = useRouter();
 
   return (
     <HeroSection>
-      <Terminal copy={terminal} common={common} />
+      {/* Remount on a locale switch (same precedent as `util/Reveal`). A switch
+          is a client-side `router.push`, so `Terminal` would otherwise keep the
+          `blocks` state it seeded on mount and go on showing the old language's
+          pre-run output under a page that has already changed language. */}
+      <Terminal key={router.locale} copy={terminal} common={common} />
     </HeroSection>
   );
 };
