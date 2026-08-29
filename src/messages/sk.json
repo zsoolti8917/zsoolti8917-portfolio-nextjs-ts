@@ -170,7 +170,9 @@
     "github": "GitHub",
     "githubUrl": "https://github.com/zsoolti8917",
     "moreYourSpeed": "",
-    "email": "dev@zsoltvarju.com"
+    "email": "dev@zsoltvarju.com",
+    "copy": "Kopírovať e-mail",
+    "copied": "Skopírované"
   },
   "experience": {
     "title": "Pracovné skúsenosti",
@@ -268,7 +270,7 @@
     "eyebrow": "Full-stack · Automatizácia · Praha",
     "headline": "Živím sa tým, že ruším prácu.",
     "common": {
-      "name": "Zsolt Varju",
+      "name": "Zsolt Varjú",
       "role": "Softvérový vývojár",
       "tagline": "Full-stack vývojár a prevádzkovateľ platforiem. Jediný vývojár na projekte pre Európsku vesmírnu agentúru.",
       "location": "Praha, CET · EN · SK · HU",
@@ -357,6 +359,7 @@
   },
   "projects": {
     "sectionTitle": "Projekty",
+    "learnMore": "Zistiť viac",
     "ragSystem": {
       "title": "Self-hosted RAG vyhľadávanie",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
@@ -495,5 +498,37 @@
         "para5": "Projekt je open-source, čo pozýva príspevky od komunity vývojárov, čo ukazuje moju oddanosť spolupráci na vývoji a neustálemu zlepšovaniu softvérových projektov."
       }
     }
+  },
+  "nav": {
+    "about": "O mne",
+    "projects": "Projekty",
+    "experience": "Skúsenosti",
+    "contact": "Kontakt",
+    "palette": "Hľadanie / príkazy",
+    "menu": "Menu",
+    "cv": "CV"
+  },
+  "palette": {
+    "placeholder": "Napíšte príkaz alebo hľadajte…",
+    "empty": "Žiadne výsledky",
+    "groups": {
+      "sections": "Prejsť na",
+      "projects": "Projekty",
+      "jobs": "Skúsenosti",
+      "commands": "Terminál",
+      "actions": "Akcie",
+      "locale": "Jazyk"
+    },
+    "actions": {
+      "cv": "Stiahnuť životopis",
+      "copyEmail": "Kopírovať e-mail",
+      "copied": "Skopírované",
+      "switchLocale": "Zmeniť jazyk"
+    }
+  },
+  "footer": {
+    "builtWith": "postavené na Next.js",
+    "source": "zdrojový kód",
+    "llms": "llms.txt"
   }
 }

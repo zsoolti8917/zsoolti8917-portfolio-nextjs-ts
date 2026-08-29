@@ -170,7 +170,9 @@
     "github": "Github",
     "githubUrl": "https://github.com/zsoolti8917",
     "moreYourSpeed": "if that's more your speed.",
-    "email": "dev@zsoltvarju.com"
+    "email": "dev@zsoltvarju.com",
+    "copy": "Copy email",
+    "copied": "Copied"
   },
   "experience": {
     "title": "Experience",
@@ -268,7 +270,7 @@
     "eyebrow": "Full-stack · Automation · Prague",
     "headline": "I delete work for a living.",
     "common": {
-      "name": "Zsolt Varju",
+      "name": "Zsolt Varjú",
       "role": "Software Developer",
       "tagline": "Full-stack developer and platform operator. Sole developer on a project for the European Space Agency.",
       "location": "Prague, CET · EN · SK · HU",
@@ -357,6 +359,7 @@
   },
   "projects": {
     "sectionTitle": "Projects",
+    "learnMore": "Learn more",
     "ragSystem": {
       "title": "Self-Hosted RAG Search",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
@@ -495,5 +498,37 @@
         "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
       }
     }
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "palette": "Search / commands",
+    "menu": "Menu",
+    "cv": "CV"
+  },
+  "palette": {
+    "placeholder": "Type a command or search…",
+    "empty": "No results",
+    "groups": {
+      "sections": "Go to",
+      "projects": "Projects",
+      "jobs": "Experience",
+      "commands": "Terminal",
+      "actions": "Actions",
+      "locale": "Language"
+    },
+    "actions": {
+      "cv": "Download CV",
+      "copyEmail": "Copy email",
+      "copied": "Copied",
+      "switchLocale": "Switch language"
+    }
+  },
+  "footer": {
+    "builtWith": "built with Next.js",
+    "source": "source",
+    "llms": "llms.txt"
   }
 }

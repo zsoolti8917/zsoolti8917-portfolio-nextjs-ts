@@ -170,7 +170,9 @@
     "github": "Github",
     "githubUrl": "https://github.com/zsoolti8917",
     "moreYourSpeed": "platformokon is.",
-    "email": "dev@zsoltvarju.com"
+    "email": "dev@zsoltvarju.com",
+    "copy": "E-mail másolása",
+    "copied": "Másolva"
   },
   "experience": {
     "title": "Munkatapasztalat",
@@ -357,6 +359,7 @@
   },
   "projects": {
     "sectionTitle": "Projektek",
+    "learnMore": "Tudj meg többet",
     "ragSystem": {
       "title": "Saját üzemeltetésű RAG keresés",
       "tech": "Python,Qdrant,bge-m3,LangChain,Docker",
@@ -495,5 +498,37 @@
         "para5": "A projekt nyílt forráskódú, és lehetőséget ad a fejlesztői közösség hozzájárulására, ami bemutatja az elkötelezettségemet az együttműködő fejlesztés és a szoftverprojektek folyamatos fejlesztése iránt."
       }
     }
+  },
+  "nav": {
+    "about": "Rólam",
+    "projects": "Projektek",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat",
+    "palette": "Keresés / parancsok",
+    "menu": "Menü",
+    "cv": "CV"
+  },
+  "palette": {
+    "placeholder": "Írj be egy parancsot vagy keress…",
+    "empty": "Nincs találat",
+    "groups": {
+      "sections": "Ugrás ide",
+      "projects": "Projektek",
+      "jobs": "Tapasztalat",
+      "commands": "Terminál",
+      "actions": "Műveletek",
+      "locale": "Nyelv"
+    },
+    "actions": {
+      "cv": "Önéletrajz letöltése",
+      "copyEmail": "E-mail másolása",
+      "copied": "Másolva",
+      "switchLocale": "Nyelvváltás"
+    }
+  },
+  "footer": {
+    "builtWith": "Next.js-szel készült",
+    "source": "forráskód",
+    "llms": "llms.txt"
   }
 }
