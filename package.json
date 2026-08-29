@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "cv:build": "node cv/build.mjs",
-    "cv:verify": "node cv/verify.mjs"
+    "cv:verify": "node cv/verify.mjs",
+    "llm:build": "node scripts/build-llm-assets.mjs"
   },
   "dependencies": {
     "animejs": "^3.2.2",

@@ -1,0 +1,505 @@
+{
+  "name": "Zsolt Varjú",
+  "title": "Software Developer",
+  "headline": "Zsolt Varjú | Software Developer",
+  "summary": "Hey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a document search platform on a project for the European Space Agency, where I'm the only developer. I write the code, move the data, and keep the servers up.\n\nI started out testing other people's websites, which is where I learned to care about what happens after the deploy. Since then I've picked up the unglamorous half of the job: data pipelines, Linux, networking, backups. I lean on AI heavily in my daily work and I build with it too, mostly retrieval systems and self-hosted models. Outside work there's a homelab that has grown well past what I can justify, a motorcycle, and a ski season I never get enough of.",
+  "shortDescription": "Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them.",
+  "url": "https://zsoltvarjuprojects.com/",
+  "language": "en",
+  "updated": "2026-08-29",
+  "generatedFrom": "src/messages/en.json",
+  "localizedVersions": [
+    {
+      "language": "Slovak",
+      "code": "sk",
+      "url": "https://zsoltvarjuprojects.com/sk"
+    },
+    {
+      "language": "Hungarian",
+      "code": "hu",
+      "url": "https://zsoltvarjuprojects.com/hu"
+    }
+  ],
+  "location": {
+    "label": "Prague, CZ",
+    "city": "Prague",
+    "country": "CZ",
+    "origin": "Čierna Voda, SK"
+  },
+  "inSoftwareSince": "2022",
+  "contact": {
+    "email": "dev@zsoltvarju.com",
+    "linkedin": "https://www.linkedin.com/in/zsoltvarju/",
+    "github": "https://github.com/zsoolti8917",
+    "website": "https://zsoltvarjuprojects.com/"
+  },
+  "current": {
+    "role": "Software Developer at Serco, Prague",
+    "detail": "Sole developer and operator of a document search platform on a project for the European Space Agency — the code, the data pipelines, and the servers it runs on."
+  },
+  "experience": [
+    {
+      "company": "Serco Czech Republic s.r.o.",
+      "title": "Software Developer",
+      "location": "Prague",
+      "dates": "Feb 2025 - Present",
+      "responsibilities": [
+        {
+          "area": "Sole Ownership",
+          "description": "Sole developer and operator of a document search platform on a project for the European Space Agency, owned end to end from the user interface down to the servers it runs on."
+        },
+        {
+          "area": "Full-Stack Development",
+          "description": "React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships, and Tika for document extraction."
+        },
+        {
+          "area": "ETL & Automation",
+          "description": "Design and operate multi-mission ingestion pipelines in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners."
+        },
+        {
+          "area": "Operations & Security",
+          "description": "Run Ubuntu servers on Azure: nginx with TLS and access control, containerised services, CI, backups, and regular vulnerability remediation under formal change control."
+        },
+        {
+          "area": "Performance & Code Quality",
+          "description": "Led a phased frontend quality programme that cut the vendor bundle by roughly three quarters, reduced the JavaScript payload by a third and CSS by more than half, cleared every outstanding lint error, and cut unnecessary React re-renders by 80%."
+        },
+        {
+          "area": "Stakeholder Coordination",
+          "description": "Work directly with mission teams and IT on requirements, formal bug reports, escalations, change records, and effort estimates for new work."
+        }
+      ],
+      "skills": [
+        "React",
+        "Node.js",
+        "Python",
+        "Apache Solr",
+        "RabbitMQ",
+        "Neo4j",
+        "Docker",
+        "Azure",
+        "Linux",
+        "nginx",
+        "Bash",
+        "Jenkins"
+      ]
+    },
+    {
+      "company": "Galileo Corporation s.r.o",
+      "title": "Quality Assurance Tester",
+      "location": "Remote",
+      "dates": "2022 - 2025",
+      "responsibilities": [
+        {
+          "area": "Functionality Testing",
+          "description": "Conducting thorough manual testing of web pages to verify that all features operate correctly across various browsers and devices. Identifying and reporting discrepancies or bugs promptly."
+        },
+        {
+          "area": "Visual Consistency",
+          "description": "Assessing the visual appearance of web pages to ensure they match the provided graphic design specifications. Communicating deviations to the relevant team members and providing detailed feedback for necessary corrections."
+        },
+        {
+          "area": "Quality Assurance",
+          "description": "Maintaining high standards of quality by rigorously testing web pages, ensuring they meet required specifications and user expectations."
+        },
+        {
+          "area": "Communication",
+          "description": "Collaborating effectively with designers, developers, and project managers to address issues found during testing and offering suggestions for improvements and clarifications."
+        },
+        {
+          "area": "Remote Work",
+          "description": "Managing all tasks independently while adhering to strict deadlines and utilizing effective time management skills to complete tasks efficiently and accurately."
+        },
+        {
+          "area": "Documentation",
+          "description": "Maintaining detailed records of test results, issues identified, and corrective actions taken, and providing comprehensive reports to relevant stakeholders."
+        }
+      ],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Cross-Browser Testing",
+        "Bug Tracking",
+        "Remote Collaboration",
+        "Time Management"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Self-Hosted RAG Search",
+      "description": "A retrieval-augmented search system over a local document collection, built to answer questions with citations, and to stay quiet when the evidence isn't there.",
+      "tech": [
+        "Python",
+        "Qdrant",
+        "bge-m3",
+        "LangChain",
+        "Docker"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "Hybrid retrieval combining BM25 keyword search with vector similarity",
+        "bge-m3 embeddings stored in a Qdrant vector database",
+        "Every answer grounded in retrieved passages, with inline citations",
+        "Explicit abstention when no supporting passage is found, instead of a plausible guess",
+        "Runs fully self-hosted, with local models as an alternative to hosted APIs",
+        "Cost modelling comparing hosted API inference against running a GPU yourself"
+      ]
+    },
+    {
+      "name": "Coffece (coffece.sk)",
+      "description": "A bilingual (SK/EN) marketing and ordering site for an office coffee delivery brand: product pages, FAQ, testimonial carousel, and contact flow, with full SEO metadata.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "next-intl",
+        "Framer Motion"
+      ],
+      "url": "https://coffece.sk",
+      "repository": null,
+      "highlights": [
+        "Fully localized SK/EN routing powered by next-intl",
+        "Product and offering pages for office coffee delivery",
+        "FAQ section and a testimonial carousel",
+        "Contact and ordering flow with validated forms and e-mail delivery",
+        "Complete SEO metadata including Open Graph tags",
+        "Smooth Framer Motion animations and dark mode support"
+      ]
+    },
+    {
+      "name": "IDT PLUS STAV (idtplusstav.sk)",
+      "description": "Complete digital operations for a Slovak diamond drilling and concrete cutting company: a self-hosted marketing website, business email, invoicing configured for Slovak VAT rules, plus paid search and SEO.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "MDX"
+      ],
+      "url": "https://idtplusstav.sk",
+      "repository": null,
+      "highlights": [
+        "Dedicated pages for each drilling and cutting service, with pricing and FAQ",
+        "Project news section built on MDX articles",
+        "Extensive references section showcasing completed projects",
+        "Quote request form with validation and e-mail delivery",
+        "Self-hosted deployment on a Dokku-managed server",
+        "Google Workspace with DKIM-authenticated business email",
+        "Invoicing set up for Slovak VAT reverse charge",
+        "Google Ads campaigns and ongoing SEO"
+      ]
+    },
+    {
+      "name": "B2B Wholesale Ordering Portal",
+      "description": "A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production. Features tiered customer pricing, a login-only catalog with hidden prices, two-warehouse inventory, decimal quantities for weighted goods, and integrated invoicing.",
+      "tech": [
+        "WooCommerce",
+        "B2BKing",
+        "Stock Locations",
+        "SuperFaktúra"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "Tiered customer pricing with per-group price lists",
+        "Login-only catalog with prices hidden from the public",
+        "Inventory tracked across two warehouses",
+        "Decimal quantities for weighted goods, such as ordering by the kilogram",
+        "Integrated invoicing via SuperFaktúra"
+      ]
+    },
+    {
+      "name": "Lemma: Vocabulary Scanner",
+      "description": "A mobile app that turns a photo of a printed page into vocabulary cards. Point the camera at text, and it pulls out the words worth learning and schedules them for review.",
+      "tech": [
+        "React Native",
+        "Expo",
+        "Vision models",
+        "FSRS"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "Camera capture with a vision-language model detection pipeline",
+        "Word extraction and lemmatisation from printed pages",
+        "FSRS spaced-repetition scheduling, so reviews land when you are about to forget",
+        "Offline-friendly local storage",
+        "Cross-platform from a single React Native and Expo codebase",
+        "Specced through to v1.1"
+      ]
+    },
+    {
+      "name": "Personal Infrastructure & Homelab",
+      "description": "A personal VPS and home server run with production habits: private networking, atomic zero-downtime deploys, and a stack of self-hosted services.",
+      "tech": [
+        "Linux",
+        "Docker",
+        "WireGuard",
+        "Tailscale",
+        "CI/CD"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "WireGuard private networking linking the VPS and the home network",
+        "Atomic zero-downtime deployments, with instant rollback",
+        "Tailscale mesh access to home services from anywhere",
+        "Docker-based NAS services including media streaming and camera recording",
+        "Self-healing service recovery and scheduled backups",
+        "Remote development driven from a phone when needed"
+      ]
+    },
+    {
+      "name": "Multi Photo Cropper",
+      "description": "A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "OpenCV",
+        "ONNX Runtime",
+        "Docker"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "Automatic photo region detection running entirely in the browser",
+        "An optional self-hosted backend that merges four detection strategies by IoU consensus voting",
+        "Local CPU inference of a YOLOv8-nano ONNX model, with no cloud service and no API keys",
+        "Texture and color histogram validation that separates a real photo from blank scanner background",
+        "Per-region skew analysis with deskew and perspective correction",
+        "Full manual control: draw, drag, resize with eight handles, zoom, pan, undo history, and keyboard shortcuts",
+        "A “photos per scan” hint that constrains the detector to the expected number of prints",
+        "Crops re-extracted at full source resolution and exported together as a ZIP",
+        "Automatic fallback to the in-browser detector whenever the backend is offline"
+      ]
+    },
+    {
+      "name": "Municipal Website Migrations",
+      "description": "Content migration and restructuring for five Slovak municipal websites, including bilingual Slovak and Hungarian content.",
+      "tech": [
+        "Virgo / GCM Cloud CMS"
+      ],
+      "url": null,
+      "repository": null,
+      "highlights": [
+        "Complete content inventories of the legacy websites",
+        "Page trees restructured to fit the new CMS",
+        "Migration of documents, official notices, contracts, and image galleries",
+        "Bilingual Slovak and Hungarian language mutations",
+        "Post-migration audits comparing the old and new sites page by page"
+      ]
+    },
+    {
+      "name": "InfoMap SK: Master's Thesis",
+      "description": "A full-stack application for visualising Slovak open data on an interactive map, built as my master's thesis project. The public site is no longer online; the source remains available.",
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "TailwindCSS"
+      ],
+      "url": null,
+      "repository": "https://github.com/zsoolti8917/InfoMapSK-frontend",
+      "highlights": [
+        "Interactive map of Slovakia with region, district, and city/village selection",
+        "Visualization of demographic data using various chart types",
+        "Multiple data categories: Population, Economic Activity, Agriculture, and Organizational Statistics",
+        "Search functionality for specific locations",
+        "Responsive design optimized for various devices",
+        "Accessibility features following WCAG 2.1 guidelines",
+        "Contact form for user feedback and inquiries"
+      ]
+    },
+    {
+      "name": "Garden Bros Website",
+      "description": "A website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel.",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Strapi CMS",
+        "Vercel",
+        "VPS",
+        "Dokku",
+        "PostgreSQL"
+      ],
+      "url": null,
+      "repository": "https://github.com/zsoolti8917/garden-bros-frontend",
+      "highlights": [
+        "Responsive main page with dynamic components",
+        "Fully-featured contact page and FAQ section",
+        "Blog with author-written posts",
+        "Dynamic page generation",
+        "Content management through Strapi CMS"
+      ]
+    },
+    {
+      "name": "Alza Dni Kupónový Filter",
+      "description": "A Chrome extension that helps users filter products during Alza Days sales by various coupon codes, making it easier to find the best discounts on Alza.sk.",
+      "tech": [
+        "JavaScript",
+        "Chrome Extension API",
+        "HTML",
+        "CSS"
+      ],
+      "url": "https://github.com/zsoolti8917/Alza",
+      "repository": "https://github.com/zsoolti8917/Alza",
+      "highlights": [
+        "Filtering products by coupon codes (5%, 10%, 15%, 20%, 25%, 30%, 50%)",
+        "Option to filter only currently displayed products or load all products",
+        "Simple and clear user interface",
+        "Quick filter removal with one click"
+      ]
+    }
+  ],
+  "skills": {
+    "groups": [
+      {
+        "label": "Languages & frameworks",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Bash",
+          "SQL",
+          "React",
+          "Next.js"
+        ]
+      },
+      {
+        "label": "Backend & data",
+        "items": [
+          "Node.js",
+          "Express",
+          "REST API",
+          "Apache Solr",
+          "Neo4j",
+          "RabbitMQ",
+          "Tika",
+          "PostgreSQL",
+          "MongoDB",
+          "Headless CMS"
+        ]
+      },
+      {
+        "label": "Infra & ops",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "GitHub Actions",
+          "Azure",
+          "Linux",
+          "nginx",
+          "Dokku",
+          "WireGuard",
+          "Tailscale"
+        ]
+      },
+      {
+        "label": "Tools",
+        "items": [
+          "Git",
+          "Postman",
+          "Figma"
+        ]
+      }
+    ],
+    "ai": {
+      "label": "AI & LLM",
+      "items": [
+        "RAG architecture",
+        "Embeddings",
+        "Vector search",
+        "Qdrant",
+        "Hybrid retrieval",
+        "Prompt engineering",
+        "Claude Code",
+        "Codex",
+        "OpenRouter",
+        "LangChain / LangSmith",
+        "Self-hosted models"
+      ]
+    },
+    "exploratory": {
+      "label": "Tried out / Used in school",
+      "items": [
+        "Storybook",
+        "Java",
+        "OOP",
+        "AdobeXD",
+        "Laravel",
+        "Unity",
+        "Blender",
+        "GraphQL",
+        "C#"
+      ]
+    }
+  },
+  "education": [
+    {
+      "degree": "MSc, Applied Informatics",
+      "org": "Constantine the Philosopher University in Nitra",
+      "dates": "2018 – 2024",
+      "note": "Thesis: InfoMap SK, a full-stack application visualising Slovak open data from the Statistical Office API on an interactive map."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Linux Foundation / CNCF",
+      "date": null
+    },
+    {
+      "name": "Ubuntu Linux Professional Certificate",
+      "issuer": "Canonical",
+      "date": "Apr 2025"
+    },
+    {
+      "name": "Learning Bash Scripting",
+      "issuer": "LinkedIn Learning",
+      "date": "Jul 2025"
+    },
+    {
+      "name": "Basics of ABAP Programming on SAP BTP",
+      "issuer": "SAP",
+      "date": "Oct 2024"
+    },
+    {
+      "name": "AWS Academy Graduate, Cloud Foundations",
+      "issuer": "AWS Academy",
+      "date": "Jul 2022"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Hungarian",
+      "level": "native"
+    },
+    {
+      "name": "Slovak",
+      "level": "fluent"
+    },
+    {
+      "name": "Czech",
+      "level": "fluent"
+    },
+    {
+      "name": "English",
+      "level": "fluent"
+    }
+  ],
+  "documents": {
+    "cvMarkdown": "https://zsoltvarjuprojects.com/cv.md",
+    "llmsTxt": "https://zsoltvarjuprojects.com/llms.txt",
+    "cvPdf": {
+      "english": "https://zsoltvarjuprojects.com/Varju-CV-EN.pdf",
+      "slovak": "https://zsoltvarjuprojects.com/Varju-CV-SK.pdf",
+      "hungarian": "https://zsoltvarjuprojects.com/Varju-CV-HU.pdf"
+    }
+  }
+}

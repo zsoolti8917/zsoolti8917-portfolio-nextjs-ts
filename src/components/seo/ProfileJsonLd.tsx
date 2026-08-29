@@ -161,8 +161,10 @@ export const ProfileJsonLd = () => {
       "@id": `${SITE_URL}/#project-${definition.key}`,
       name: message.title,
       description: message.description,
+      // `keywords` carries the whole stack. No `programmingLanguage`: the
+      // tech lists mix languages with databases and CSS frameworks, and
+      // filtering them apart would mean hardcoding a list here.
       keywords: tech.join(", "),
-      programmingLanguage: definition.code ? tech : undefined,
       codeRepository: definition.code,
       url: definition.projectLink ?? definition.code,
       image: definition.imgSrc ? `${SITE_URL}${definition.imgSrc}` : undefined,
@@ -192,11 +194,13 @@ export const ProfileJsonLd = () => {
       inLanguage: locale,
       dateModified: buildDate,
       isPartOf: { "@id": websiteId },
-      mainEntity: { "@id": PERSON_ID },
-      about: { "@id": PERSON_ID },
+      // Nested rather than referenced by @id: this is the shape Google's
+      // ProfilePage documentation shows, and mainEntity -> Person.name is the
+      // one thing it strictly requires. Everything else points at the same
+      // node by @id.
+      mainEntity: person,
       hasPart: projectNodes.map((node) => ({ "@id": node["@id"] })),
     }),
-    person,
     ...projectNodes,
   ];
 

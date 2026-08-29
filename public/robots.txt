@@ -1,0 +1,51 @@
+# https://zsoltvarjuprojects.com/robots.txt
+#
+# Everything on this site is public and intended to be read, by people and by
+# machines alike. The AI crawlers below are listed by name so the permission is
+# explicit rather than merely implied by the absence of a rule.
+#
+# Note: Google-Extended and Applebot-Extended are opt-out tokens for AI
+# training and grounding. They are named here to record the choice, not
+# because a rule is required.
+#
+# Machine-readable copies of this site:
+#   /llms.txt     index for language models (https://llmstxt.org)
+#   /cv.md        the full CV as markdown
+#   /profile.json structured profile
+
+# --- OpenAI ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+# --- Google (AI training and grounding) ---
+User-agent: Google-Extended
+Allow: /
+
+# --- Apple (AI training) ---
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Meta ---
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# --- Everyone else ---
+User-agent: *
+Allow: /
