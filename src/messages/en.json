@@ -282,6 +282,7 @@
       "readAsPage": "Read as a page ↓",
       "skipLink": "Skip the terminal — read the full CV",
       "inputLabel": "Type a command, or click one of the buttons below",
+      "searchPlaceholder": "Search my CV — projects, experience, skills",
       "logLabel": "Terminal output",
       "hintClick": "or click — you don't have to type",
       "ready": "ready",
@@ -300,6 +301,7 @@
       ],
       "help": {
         "intro": "Commands — click one, or type it:",
+        "help": "the full list of commands",
         "about": "who I am, in 20 seconds",
         "projects": "everything I have built",
         "experience": "where I have worked",

@@ -19,6 +19,7 @@ export interface HeroTerminalCopy {
   readAsPage: string;
   skipLink: string;
   inputLabel: string;
+  searchPlaceholder: string;
   logLabel: string;
   hintClick: string;
   ready: string;
@@ -33,7 +34,7 @@ export interface HeroTerminalCopy {
   findUsage: string;
   boot: string[];
   help: Record<
-    | "intro" | "about" | "projects" | "experience" | "skills"
+    | "intro" | "help" | "about" | "projects" | "experience" | "skills"
     | "certifications" | "languages" | "contact" | "cv" | "find" | "clear",
     string
   >;

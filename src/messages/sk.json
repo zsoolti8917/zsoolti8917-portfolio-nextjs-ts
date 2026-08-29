@@ -282,6 +282,7 @@
       "readAsPage": "Čítať ako stránku ↓",
       "skipLink": "Preskočiť terminál — čítať celý životopis",
       "inputLabel": "Napíšte príkaz alebo kliknite na niektoré z tlačidiel nižšie",
+      "searchPlaceholder": "Hľadajte v mojom životopise — projekty, prax, technológie",
       "logLabel": "Výstup terminálu",
       "hintClick": "alebo kliknite — písať nemusíte",
       "ready": "pripravené",
@@ -300,6 +301,7 @@
       ],
       "help": {
         "intro": "Príkazy — kliknite alebo napíšte:",
+        "help": "úplný zoznam príkazov",
         "about": "kto som, za 20 sekúnd",
         "projects": "všetko, čo som postavil",
         "experience": "kde som pracoval",

@@ -282,6 +282,7 @@
       "readAsPage": "Olvasd oldalként ↓",
       "skipLink": "Ugrás a terminál után — a teljes önéletrajz",
       "inputLabel": "Írj be egy parancsot, vagy kattints az alábbi gombok egyikére",
+      "searchPlaceholder": "Keress az önéletrajzomban — projektek, tapasztalat, technológiák",
       "logLabel": "Terminál kimenete",
       "hintClick": "vagy kattints — nem kell gépelned",
       "ready": "kész",
@@ -300,6 +301,7 @@
       ],
       "help": {
         "intro": "Parancsok — kattints vagy írd be:",
+        "help": "a parancsok teljes listája",
         "about": "ki vagyok, 20 másodpercben",
         "projects": "minden, amit építettem",
         "experience": "hol dolgoztam",

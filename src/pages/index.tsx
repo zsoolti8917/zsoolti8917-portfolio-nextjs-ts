@@ -1,6 +1,7 @@
 import { HomPage } from "@/components";
 import Head from "next/head";
 import { useTranslations } from 'next-intl';
+import { AlternateLinks, ProfileJsonLd } from "@/components/seo";
 import {
   ALL_HERO_VARIANT_IDS,
   SHIPPED_VARIANT_ID,
@@ -16,6 +17,12 @@ export default function Home() {
         <title>{t('title')}</title>
         <meta name="description" content={t('description')} />
       </Head>
+      {/* Beside <Head>, not inside it: next/head collects its children as
+          unevaluated elements and renders them later in _document, outside
+          NextIntlClientProvider — so a child calling useTranslations throws.
+          These each render their own <Head>, which Next merges. */}
+      <ProfileJsonLd />
+      <AlternateLinks />
       <HomPage />
     </>
   );
