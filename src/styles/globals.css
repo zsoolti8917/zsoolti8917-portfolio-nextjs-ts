@@ -62,39 +62,8 @@ html {
 }
 .hero-ping { animation: hero-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite; }
 
-/* V2 — chips are absolutely positioned and driven by matter-js via
-   `transform`. Until the engine loads they are laid out by normal flow, so
-   the positioning only switches on once the world exists. */
-.hero-chip-physics {
-  position: absolute;
-  left: 0;
-  top: 0;
-  will-change: transform;
-}
-
-/* V3 — a Bayer dither is a *pixel* effect; the canvas is rendered at DPR 1
-   and upscaled, so it must not be smoothed. */
-.hero-dither-canvas { image-rendering: pixelated; }
-
-/* V5 — the weight is written per letter as a custom property rather than a
-   whole font-variation-settings string: cheaper to parse, and it keeps the
-   CSS out of the JS. Fixed width is load-bearing — a variable `wght` changes
-   glyph advance, which would reflow the line on every frame and make the
-   letters slide out from under the cursor. */
-.hero-kinetic-letter {
-  display: inline-block;
-  text-align: center;
-  font-variation-settings: "wght" var(--hw, 400);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .hero-ping { animation: none; }
-  .hero-chip-physics { position: static; transform: none !important; }
-  /* Deliberately NOT overriding .hero-kinetic-letter here. Its weight comes
-     from an inline `--hw` the SERVER renders as a static 300->520 gradient,
-     and the cursor loop never starts under reduced motion -- so the value is
-     already safe. Forcing "wght" 400 would only flatten the design for the
-     people who opted out of motion, not spare them any. */
 }
 
 /* V4 — a terminal caret is a hard square blink, not a fade. Tailwind's

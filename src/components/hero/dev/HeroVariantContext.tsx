@@ -9,11 +9,11 @@ import {
 import type { HeroVariantId } from "../types";
 
 export const HERO_VARIANTS: { id: HeroVariantId; name: string }[] = [
-  { id: 1, name: "Mission control" },
-  { id: 2, name: "Ragdoll stack" },
-  { id: 3, name: "Dither field" },
-  { id: 4, name: "Shell" },
-  { id: 5, name: "Kinetic" },
+  { id: 1, name: "Console" },
+  { id: 2, name: "Full-bleed TTY" },
+  { id: 3, name: "Palette" },
+  { id: 4, name: "Split explorer" },
+  { id: 5, name: "IDE frame" },
 ];
 
 const STORAGE_KEY = "hero-variant";

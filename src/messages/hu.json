@@ -265,95 +265,89 @@
     ]
   },
   "hero": {
-    "greeting": "Helló, Zsolt vagyok",
-    "title": "Én",
-    "profession": "szoftverfejlesztő vagyok",
-    "description": "Fejlesztő és platformüzemeltető: webalkalmazásokat építek a teljes stacken, megtervezem a mögöttük álló adatpipeline-okat, és karbantartom az infrastruktúrát, amin futnak. Jelenleg egyedüli fejlesztő és üzemeltető vagyok az Európai Űrügynökség egyik projektjén.",
-    "buttonText": "Kapcsolatfelvétel",
     "common": {
       "name": "Varjú Zsolt",
-      "languages": "EN · SK · HU",
+      "role": "Szoftverfejlesztő",
+      "tagline": "Full-stack fejlesztő és platformüzemeltető. Egyedüli fejlesztő az Európai Űrügynökség egyik projektjén.",
+      "location": "Prága, CET · EN · SK · HU",
       "ctaWork": "Amit eddig szállítottam",
       "ctaCv": "Önéletrajz (PDF)",
       "ctaContact": "Kapcsolatfelvétel",
       "statusLabel": "Jelenleg",
-      "statusValue": "Serco, Prága — egyedüli fejlesztő és üzemeltető",
-      "proof": {
-        "tools": "technológia éles környezetben",
-        "projects": "leszállított projekt",
-        "certs": "tanúsítvány",
-        "langs": "beszélt nyelv",
-        "years": "év a szakmában",
-        "build": "utolsó build"
+      "statusValue": "Serco, Prága — egyedüli fejlesztő és üzemeltető"
+    },
+    "terminal": {
+      "prompt": "visitor@zsoltvarju:~$",
+      "windowTitle": "zsolt — a teljes önéletrajz shellként",
+      "readAsPage": "Olvasd oldalként ↓",
+      "skipLink": "Ugrás a terminál után — a teljes önéletrajz",
+      "inputLabel": "Írj be egy parancsot, vagy kattints az alábbi gombok egyikére",
+      "logLabel": "Terminál kimenete",
+      "hintClick": "vagy kattints — nem kell gépelned",
+      "ready": "kész",
+      "ghostHint": "nyomd meg a → gombot",
+      "didYouMean": "Nem ismerem: „{cmd}”. Erre gondoltál:",
+      "orClick": "Vagy kattints bármelyik gombra a beviteli sor alatt.",
+      "openHint": "Kattints egy projekt nevére a részletekért.",
+      "moreHint": "Kattints egy pozícióra, hogy lásd, mit csináltam ott.",
+      "cvLine": "Önéletrajz megnyitása…",
+      "findHeader": "Találatok erre: „{q}”:",
+      "findEmpty": "Nincs találat erre: „{q}”. Próbáld: projects, experience, skills.",
+      "findUsage": "Használat: find <szó> — projektek, tapasztalat és technológiák között keres.",
+      "boot": [
+        "zsoltvarju.com — a teljes önéletrajz shellként.",
+        "Írj be egy parancsot, vagy kattints egy gombra."
+      ],
+      "help": {
+        "intro": "Parancsok — kattints vagy írd be:",
+        "about": "ki vagyok, 20 másodpercben",
+        "projects": "minden, amit építettem",
+        "experience": "hol dolgoztam",
+        "skills": "amivel dolgozom",
+        "certifications": "tanúsítványok",
+        "languages": "milyen nyelveken beszélek",
+        "contact": "hogyan érsz el",
+        "cv": "PDF letöltése",
+        "find": "keresés mindenben — pl. find docker",
+        "clear": "képernyő törlése"
+      },
+      "headers": {
+        "about": "Rólam",
+        "projects": "Projektek",
+        "experience": "Tapasztalat",
+        "skills": "Technológiák",
+        "certifications": "Tanúsítványok",
+        "languages": "Nyelvek",
+        "contact": "Kapcsolat"
+      },
+      "labels": {
+        "tech": "Technológiák",
+        "link": "Megnyitás ↗",
+        "based": "Lakhely",
+        "from": "Származás",
+        "since": "A szakmában",
+        "back": "← összes projekt"
       }
     },
-    "v1": {
-      "eyebrow": "Full-stack · Üzemeltetés · Prága, CET",
-      "headlineLines": [
-        "Az Európai Űrügynökség",
-        "egyik projektjén én vagyok",
-        "az egyetlen fejlesztő."
-      ],
-      "subhead": "Webalkalmazásokat építek a teljes stacken, megtervezem a mögöttük álló adatpipeline-okat, és karbantartom az infrastruktúrát, amin futnak.",
-      "panelTitle": "Rendszerállapot"
+    "t1": {
+      "eyebrow": "Full-stack · Automatizálás · Prága",
+      "headline": "Abból élek, hogy megszüntetek munkát."
     },
-    "v2": {
-      "eyebrow": "Full-stack · Automatizálás · Prága, CET",
-      "headlineLines": [
-        "Amit látsz belőle, az React.",
-        "Amit nem látsz, attól marad állva."
-      ],
-      "subhead": "Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén.",
-      "hint": "Húzd meg őket.",
-      "resetLabel": "Rakd újra őket"
+    "t2": {
+      "eyebrow": "Full-stack · Üzemeltetés · Prága",
+      "headline": "A teljes önéletrajz itt fut."
     },
-    "v3": {
-      "eyebrow": "Full-stack · Üzemeltetés · Prága, CET",
-      "headline": "A telepítéssel a munkának csak a fele kész.",
-      "subhead": "Én írom a kódot, és én tartom életben. Jelenleg egyedüli fejlesztő az Európai Űrügynökség egyik projektjén."
+    "t3": {
+      "eyebrow": "Full-stack · Automatizálás · Prága",
+      "headline": "Keress rám."
     },
-    "v4": {
-      "eyebrow": "Automatizálás · AI eszközök · Prága, CET",
-      "headline": "Abból élek, hogy megszüntetek munkát.",
-      "subhead": "Scraperek, adatpipeline-ok és belső eszközök, amelyek kiváltják azt a munkát, amit senki nem akar kétszer elvégezni — meg a React felületek, amelyek rájuk épülnek.",
-      "prompt": "visitor@zsoltvarju:~$",
-      "boot": [
-        "zsoltvarju.com — interaktív shell",
-        "Írd be, hogy help, és nyomj Entert."
-      ],
-      "hint": "Írd be, hogy help, és nyomj Entert.",
-      "notFound": "{cmd}: nincs ilyen parancs. Próbáld a help-et.",
-      "help": {
-        "intro": "Elérhető parancsok:",
-        "whoami": "kivel beszélsz",
-        "ls": "a leszállított munkák listája",
-        "stack": "amivel dolgozom",
-        "cv": "önéletrajz letöltése",
-        "contact": "hogyan érsz el",
-        "gui": "kilépés a terminálból"
-      },
-      "whoami": [
-        "Varjú Zsolt — full-stack fejlesztő és platformüzemeltető, Prága.",
-        "Egyedüli fejlesztő és üzemeltető egy dokumentumkereső platformon az Európai Űrügynökség egyik projektjén.",
-        "Nyelvek: angol, szlovák, magyar, cseh."
-      ],
-      "contactLines": [
-        "Görgess a kapcsolat szekcióhoz, vagy keress a LinkedInen és a GitHubon."
-      ],
-      "cvLine": "Önéletrajz megnyitása…",
-      "stackHeader": "Amivel dolgozom:",
-      "lsHeader": "Leszállított munkák:",
-      "guiLeaving": "Váltás a grafikus felületre…"
+    "t4": {
+      "eyebrow": "Full-stack · Üzemeltetés · Prága",
+      "headline": "Minden egyetlen parancsra."
     },
-    "v5": {
-      "eyebrow": "Full-stack · Üzemeltetés · Prága, CET",
-      "headlineLines": [
-        "Megépíteni.",
-        "Kiszállítani.",
-        "És életben tartani."
-      ],
-      "subhead": "Full-stack fejlesztő és platformüzemeltető. Egyedüli fejlesztő az Európai Űrügynökség egyik projektjén.",
-      "hoverHint": "Mozgasd a kurzort."
+    "t5": {
+      "eyebrow": "Full-stack · Automatizálás · Prága",
+      "headline": "Olvasd a forrást."
     }
   },
   "sidebar": {

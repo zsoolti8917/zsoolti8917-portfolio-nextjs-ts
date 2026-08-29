@@ -265,95 +265,89 @@
     ]
   },
   "hero": {
-    "greeting": "Hi, I'm Zsolt",
-    "title": "I'm a",
-    "profession": "Software Developer",
-    "description": "Developer and platform operator: I build web applications end to end, design the data pipelines behind them, and keep the infrastructure they run on healthy. Currently the sole developer and operator on a project for the European Space Agency.",
-    "buttonText": "Contact Me",
     "common": {
       "name": "Zsolt Varju",
-      "languages": "EN · SK · HU",
+      "role": "Software Developer",
+      "tagline": "Full-stack developer and platform operator. Sole developer on a project for the European Space Agency.",
+      "location": "Prague, CET · EN · SK · HU",
       "ctaWork": "See what I've shipped",
       "ctaCv": "CV (PDF)",
       "ctaContact": "Get in touch",
       "statusLabel": "Currently",
-      "statusValue": "Serco, Prague — sole developer & operator",
-      "proof": {
-        "tools": "technologies in production",
-        "projects": "shipped projects",
-        "certs": "certifications",
-        "langs": "languages spoken",
-        "years": "years in software",
-        "build": "last build"
+      "statusValue": "Serco, Prague — sole developer & operator"
+    },
+    "terminal": {
+      "prompt": "visitor@zsoltvarju:~$",
+      "windowTitle": "zsolt — the whole CV, as a shell",
+      "readAsPage": "Read as a page ↓",
+      "skipLink": "Skip the terminal — read the full CV",
+      "inputLabel": "Type a command, or click one of the buttons below",
+      "logLabel": "Terminal output",
+      "hintClick": "or click — you don't have to type",
+      "ready": "ready",
+      "ghostHint": "press → to accept",
+      "didYouMean": "I don't know “{cmd}”. Did you mean:",
+      "orClick": "Or click any of the buttons under the prompt.",
+      "openHint": "Click any project name to read more.",
+      "moreHint": "Click a role to see what I did there.",
+      "cvLine": "Opening the CV…",
+      "findHeader": "Results for “{q}”:",
+      "findEmpty": "Nothing matched “{q}”. Try: projects, experience, skills.",
+      "findUsage": "Usage: find <word>  — searches projects, experience and skills.",
+      "boot": [
+        "zsoltvarju.com — the whole CV, as a shell.",
+        "Type a command below, or click one of the buttons."
+      ],
+      "help": {
+        "intro": "Commands — click one, or type it:",
+        "about": "who I am, in 20 seconds",
+        "projects": "everything I have built",
+        "experience": "where I have worked",
+        "skills": "what I build with",
+        "certifications": "certifications",
+        "languages": "languages I speak",
+        "contact": "how to reach me",
+        "cv": "download the PDF",
+        "find": "search everything — e.g. find docker",
+        "clear": "clear the screen"
+      },
+      "headers": {
+        "about": "About",
+        "projects": "Projects",
+        "experience": "Experience",
+        "skills": "Stack",
+        "certifications": "Certifications",
+        "languages": "Languages",
+        "contact": "Contact"
+      },
+      "labels": {
+        "tech": "Tech",
+        "link": "Open ↗",
+        "based": "Based in",
+        "from": "From",
+        "since": "In software since",
+        "back": "← all projects"
       }
     },
-    "v1": {
-      "eyebrow": "Full-stack · Platform ops · Prague, CET",
-      "headlineLines": [
-        "I'm the only developer",
-        "on a project for the",
-        "European Space Agency."
-      ],
-      "subhead": "I build web applications end to end, design the data pipelines behind them, and keep the servers they run on healthy.",
-      "panelTitle": "System status"
+    "t1": {
+      "eyebrow": "Full-stack · Automation · Prague",
+      "headline": "I delete work for a living."
     },
-    "v2": {
-      "eyebrow": "Full-stack · Automation · Prague, CET",
-      "headlineLines": [
-        "The half you see is React.",
-        "The half you don't is why it stays up."
-      ],
-      "subhead": "Sole developer and operator of a document search platform on a project for the European Space Agency.",
-      "hint": "Drag them.",
-      "resetLabel": "Stack them again"
+    "t2": {
+      "eyebrow": "Full-stack · Platform ops · Prague",
+      "headline": "The whole CV runs in here."
     },
-    "v3": {
-      "eyebrow": "Full-stack · Platform ops · Prague, CET",
-      "headline": "Deploy is the halfway point.",
-      "subhead": "I write the code and I'm the one who keeps it running. Currently the only developer on a project for the European Space Agency."
+    "t3": {
+      "eyebrow": "Full-stack · Automation · Prague",
+      "headline": "Search me."
     },
-    "v4": {
-      "eyebrow": "Automation · AI tooling · Prague, CET",
-      "headline": "I delete work for a living.",
-      "subhead": "Scrapers, pipelines and internal tools that replace the jobs nobody wants to do twice — and the React front ends that sit on top.",
-      "prompt": "visitor@zsoltvarju:~$",
-      "boot": [
-        "zsoltvarju.com — interactive shell",
-        "Type help and press Enter."
-      ],
-      "hint": "Type help and press Enter.",
-      "notFound": "{cmd}: command not found. Try help.",
-      "help": {
-        "intro": "Available commands:",
-        "whoami": "who you are talking to",
-        "ls": "list the shipped work",
-        "stack": "what I build with",
-        "cv": "download the CV",
-        "contact": "how to reach me",
-        "gui": "leave the terminal"
-      },
-      "whoami": [
-        "Zsolt Varju — full-stack developer and platform operator, Prague.",
-        "Sole developer and operator of a document search platform on a project for the European Space Agency.",
-        "Languages: English, Slovak, Hungarian, Czech."
-      ],
-      "contactLines": [
-        "Scroll to the contact section, or find me on LinkedIn and GitHub."
-      ],
-      "cvLine": "Opening the CV…",
-      "stackHeader": "What I build with:",
-      "lsHeader": "Shipped work:",
-      "guiLeaving": "Dropping to the graphical interface…"
+    "t4": {
+      "eyebrow": "Full-stack · Platform ops · Prague",
+      "headline": "Everything, one command away."
     },
-    "v5": {
-      "eyebrow": "Full-stack · Platform ops · Prague, CET",
-      "headlineLines": [
-        "Build it.",
-        "Ship it.",
-        "Then keep it alive."
-      ],
-      "subhead": "Full-stack engineer and platform operator. Sole developer on a project for the European Space Agency.",
-      "hoverHint": "Move the cursor."
+    "t5": {
+      "eyebrow": "Full-stack · Automation · Prague",
+      "headline": "Read the source."
     }
   },
   "sidebar": {

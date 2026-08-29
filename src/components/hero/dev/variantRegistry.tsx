@@ -11,9 +11,9 @@ import type { HeroVariantId } from "../types";
  * renders a skeleton, client renders content" mismatch to debug here.
  */
 export const HERO_VARIANT_COMPONENTS: Record<HeroVariantId, ComponentType> = {
-  1: dynamic(() => import("../variants/HeroV1").then((m) => m.HeroV1), { ssr: true }),
-  2: dynamic(() => import("../variants/HeroV2").then((m) => m.HeroV2), { ssr: true }),
-  3: dynamic(() => import("../variants/HeroV3").then((m) => m.HeroV3), { ssr: true }),
-  4: dynamic(() => import("../variants/HeroV4").then((m) => m.HeroV4), { ssr: true }),
-  5: dynamic(() => import("../variants/HeroV5").then((m) => m.HeroV5), { ssr: true }),
+  1: dynamic(() => import("../variants/HeroT1").then((m) => m.HeroT1), { ssr: true }),
+  2: dynamic(() => import("../variants/HeroT2").then((m) => m.HeroT2), { ssr: true }),
+  3: dynamic(() => import("../variants/HeroT3").then((m) => m.HeroT3), { ssr: true }),
+  4: dynamic(() => import("../variants/HeroT4").then((m) => m.HeroT4), { ssr: true }),
+  5: dynamic(() => import("../variants/HeroT5").then((m) => m.HeroT5), { ssr: true }),
 };

@@ -33,7 +33,7 @@ export async function getStaticProps({locale}: {locale: string}) {
   const messages = { ...raw, hero: { ...raw.hero } };
   if (process.env.NODE_ENV !== 'development') {
     for (const id of ALL_HERO_VARIANT_IDS) {
-      if (id !== SHIPPED_VARIANT_ID) delete messages.hero[`v${id}`];
+      if (id !== SHIPPED_VARIANT_ID) delete messages.hero[`t${id}`];
     }
   }
 

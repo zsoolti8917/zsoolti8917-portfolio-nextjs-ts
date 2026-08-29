@@ -1,15 +1,14 @@
 import { useTranslations } from "next-intl";
-import type { HeroCommonCopy, HeroCopyMap, HeroVariantId } from "../types";
+import type {
+  HeroCommonCopy, HeroTerminalCopy, HeroVariantCopy, HeroVariantId,
+} from "../types";
 
-/**
- * Typed reader for `hero.common.*` plus one variant's namespace, so the
- * string literals live in one file instead of five.
- */
-export const useHeroCopy = <N extends HeroVariantId>(variant: N) => {
+/** Typed reader for `hero.common`, `hero.terminal` and one variant's framing copy. */
+export const useHeroCopy = (variant: HeroVariantId) => {
   const t = useTranslations("hero");
-
   return {
     common: t.raw("common") as HeroCommonCopy,
-    copy: t.raw(`v${variant}`) as HeroCopyMap[N],
+    terminal: t.raw("terminal") as HeroTerminalCopy,
+    copy: t.raw(`t${variant}`) as HeroVariantCopy,
   };
 };
