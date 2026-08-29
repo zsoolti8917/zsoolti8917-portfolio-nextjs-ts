@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Reveal from "../../util/Reveal";
-import { MyLinks } from "../../nav/Header";
+import { SocialLinks } from "../../nav/SocialLinks";
 
 interface Props {
   /** Constrain the measure. Prose is unreadable much past ~75ch. */
@@ -45,7 +45,7 @@ export const AboutProse = ({
               <span>{t("myLinks")}</span>
               <AiOutlineArrowRight />
             </div>
-            <MyLinks />
+            <SocialLinks />
           </div>
         </Reveal>
       )}

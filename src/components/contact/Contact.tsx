@@ -7,7 +7,7 @@ export const Contact = () => {
   const t = useTranslations('Contact');
 
   return (
-    <section className="section-wrapper" id="contact">
+    <section className="section-wrapper scroll-mt-16" id="contact">
       <div className="max-w-xl mx-auto bg-zinc-800 px-8 py-12 rounded-xl">
         <Reveal width="w-full">
           <h4 className="text-4xl md:text-5xl text-center font-black leading-tight pb-2">

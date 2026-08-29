@@ -57,6 +57,7 @@ export const PROJECTS: ProjectDef[] = [
 
 export const Projects = () => {
   const t = useTranslations('projects');
+  const nav = useTranslations('nav');
 
   const bulletList = (key: string, listKey: string) => (
     <ul className="list-disc list-inside ml-4">
@@ -93,8 +94,8 @@ export const Projects = () => {
   );
 
   return (
-    <section className="section-wrapper" id="projects">
-      <SectionHeader title={t('sectionTitle')} dir="r" />
+    <section className="section-wrapper scroll-mt-16" id="projects">
+      <SectionHeader index="02" kicker={nav('projects').toLowerCase()} title={t('sectionTitle')} />
 
       <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
         {PROJECTS.map((def) => (

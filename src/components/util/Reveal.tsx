@@ -1,68 +1,50 @@
-import { useEffect, useRef, useState } from "react";
-import { useAnimation, useInView, motion } from "framer-motion";
-import { useRouter } from 'next/router';
+import { useRef } from "react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useRouter } from "next/router";
 
 interface RevealProps {
   children: JSX.Element;
-  width?: string;
+  /**
+   * CSS width ("fit-content" | "100%"). Tailwind width classes ("w-full",
+   * "w-fit") are also accepted — several call sites predate the token rework —
+   * and are applied as a class instead of an inline style.
+   */
+  width?: "fit-content" | "100%" | (string & {});
 }
 
-export const Reveal = ({ children, width = "w-fit" }: RevealProps) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+/**
+ * Fade-up on first sight. One element, no wrapper: the old version stacked an
+ * indigo slab under `overflow-hidden`, which clipped focus rings on anything
+ * revealed and made every heading a two-node animation.
+ */
+export const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
   const router = useRouter();
-  const [shouldAnimate, setShouldAnimate] = useState(true);
+  // Remount on a locale switch so freshly swapped copy animates in rather than
+  // popping. `useInView({ once: true })` has no other way to re-fire.
+  return (
+    <RevealOnce key={router.locale} width={width}>
+      {children}
+    </RevealOnce>
+  );
+};
 
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView && shouldAnimate) {
-      mainControls.start("visible");
-      slideControls.start("visible");
-    }
-  }, [isInView, shouldAnimate]);
-
-  useEffect(() => {
-    // Trigger animation when language changes
-    if (!isInView) return;
-    
-    setShouldAnimate(false);
-    mainControls.set("hidden");
-    slideControls.set("hidden");
-    
-    // Use a short timeout to ensure the "hidden" state is applied before animating again
-    setTimeout(() => {
-      setShouldAnimate(true);
-      mainControls.start("visible");
-      slideControls.start("visible");
-    }, 50);
-  }, [router.locale]);
+const RevealOnce = ({ children, width }: Required<RevealProps>) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
+  const reduced = useReducedMotion();
+  const isClass = width.startsWith("w-");
 
   return (
-    <div ref={ref} className={`relative overflow-hidden ${width}`}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
-        {children}
-      </motion.div>
-      <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
-        }}
-        initial="hidden"
-        animate={slideControls}
-        transition={{ duration: 0.5, ease: "easeIn" }}
-        className="absolute bottom-1 left-0 right-0 top-1 z-20 bg-indigo-500"
-      />
-    </div>
+    <motion.div
+      ref={ref}
+      className={isClass ? width : undefined}
+      style={isClass ? undefined : { width }}
+      initial={reduced ? false : { opacity: 0, y: 16 }}
+      animate={reduced || isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+      transition={{ duration: reduced ? 0 : 0.45, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
