@@ -10,12 +10,10 @@ export const CertificationList = ({ items, className = "" }: Props) => (
   <ul className={`space-y-3 ${className}`}>
     {items.map((cert) => (
       <li key={cert.name} className="flex items-start gap-3">
-        <AiFillSafetyCertificate className="mt-[3px] shrink-0 text-base text-indigo-500" />
+        <AiFillSafetyCertificate className="mt-[3px] shrink-0 text-base text-accent" />
         <div className="min-w-0">
-          <p className="text-sm font-medium leading-snug text-zinc-200">
-            {cert.name}
-          </p>
-          <p className="text-xs text-zinc-500">
+          <p className="text-sm font-medium leading-snug text-fg">{cert.name}</p>
+          <p className="text-xs text-fg-3">
             {cert.issuer}
             {/* CKA carries no date on purpose — never render a stray separator */}
             {cert.date && ` · ${cert.date}`}

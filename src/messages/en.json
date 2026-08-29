@@ -172,7 +172,8 @@
     "moreYourSpeed": "if that's more your speed.",
     "email": "dev@zsoltvarju.com",
     "copy": "Copy email",
-    "copied": "Copied"
+    "copied": "Copied",
+    "sendEmail": "Send an email"
   },
   "experience": {
     "title": "Experience",
@@ -372,7 +373,8 @@
   "projectModal": {
     "projectLinks": "Project Links",
     "sourceCode": "Source Code",
-    "liveProject": "Live Project"
+    "liveProject": "Live Project",
+    "close": "Close"
   },
   "projects": {
     "sectionTitle": "Projects",
@@ -514,7 +516,8 @@
         "para4": "This extension highlights my proficiency in creating solutions that address specific user needs, improving the shopping experience during promotional events. It also demonstrates my ability to work with browser APIs and create user-friendly interfaces for browser extensions.",
         "para5": "The project is open-source, inviting contributions from the developer community, which shows my commitment to collaborative development and continuous improvement of software projects."
       }
-    }
+    },
+    "openSite": "Open site"
   },
   "nav": {
     "home": "Home",
@@ -524,11 +527,13 @@
     "contact": "Contact",
     "palette": "Search / commands",
     "menu": "Menu",
-    "cv": "CV"
+    "cv": "CV",
+    "scrollTop": "Scroll to top"
   },
   "palette": {
     "placeholder": "Type a command or search…",
     "empty": "No results",
+    "runInTerminal": "Run “{query}” in the terminal",
     "groups": {
       "sections": "Go to",
       "projects": "Projects",
@@ -542,6 +547,11 @@
       "copyEmail": "Copy email",
       "copied": "Copied",
       "switchLocale": "Switch language"
+    },
+    "footer": {
+      "navigate": "navigate",
+      "select": "select",
+      "close": "close"
     }
   },
   "footer": {

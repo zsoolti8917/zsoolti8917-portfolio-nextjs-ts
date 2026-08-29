@@ -2,7 +2,6 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from 'next/router';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
 import { inter, recursive } from '@/lib/fonts';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -28,7 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <div className={`${inter.variable} ${recursive.variable}`}>
         <Component {...pageProps} />
-        <ScrollToTopButton />
       </div>
     </NextIntlClientProvider>
   );

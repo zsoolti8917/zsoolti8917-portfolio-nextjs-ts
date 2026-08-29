@@ -14,20 +14,22 @@ export const CurrentlyCard = ({ className = "", bare = false }: Props) => {
     <>
       {!bare && (
         <h4 className="mb-4 flex items-center gap-2">
-          <AiOutlineRadarChart className="text-lg text-indigo-500" />
-          <span className="text-xs font-bold uppercase tracking-widest text-zinc-400">
+          <AiOutlineRadarChart className="text-lg text-fg-3" />
+          <span className="font-mono mono-1 text-[11px] uppercase tracking-widest text-fg-3">
             {t("currently.label")}
           </span>
         </h4>
       )}
-      <p className="flex items-center gap-2 font-bold text-zinc-100">
+      <p className="flex items-center gap-2 font-semibold text-fg">
+        {/* The one animated thing in the section: a live status light. Green,
+            not indigo — it reports a state, it is not an accent. */}
         <span className="relative flex h-2 w-2 shrink-0">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
         </span>
         {t("currently.role")}
       </p>
-      <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+      <p className="mt-3 text-sm leading-relaxed text-fg-2">
         {t("currently.detail")}
       </p>
     </>
@@ -37,7 +39,7 @@ export const CurrentlyCard = ({ className = "", bare = false }: Props) => {
 
   return (
     <div
-      className={`rounded-xl border border-zinc-800 border-l-2 border-l-indigo-500 bg-zinc-900/60 p-6 ${className}`}
+      className={`rounded-xl border border-hairline bg-surface-1 p-6 ${className}`}
     >
       {body}
     </div>

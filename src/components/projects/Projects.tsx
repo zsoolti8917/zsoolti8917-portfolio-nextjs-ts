@@ -59,46 +59,14 @@ export const Projects = () => {
   const t = useTranslations('projects');
   const nav = useTranslations('nav');
 
-  const bulletList = (key: string, listKey: string) => (
-    <ul className="list-disc list-inside ml-4">
-      {t(`${key}.modalContent.${listKey}`).split('|').map((item, index) => (
-        <li key={index}>{item.trim()}</li>
-      ))}
-    </ul>
-  );
-
-  const modalContent = ({ key, paras = 3, techList }: ProjectDef) => (
-    <>
-      <p className="mb-4">{t(`${key}.modalContent.para1`)}</p>
-      <div className="mb-4">
-        {t(`${key}.modalContent.keyFeatures`)}
-        {bulletList(key, 'featuresList')}
-      </div>
-      <p className="mb-4">{t(`${key}.modalContent.para2`)}</p>
-      {techList && (
-        <div className="mb-4">
-          {t(`${key}.modalContent.technologiesList`)}
-          {bulletList(key, 'techList')}
-        </div>
-      )}
-      {Array.from({ length: paras - 2 }, (_, i) => {
-        const n = i + 3;
-        const last = n === paras;
-        return (
-          <p key={n} className={last ? undefined : "mb-4"}>
-            {t(`${key}.modalContent.para${n}`)}
-          </p>
-        );
-      })}
-    </>
-  );
-
   return (
     <section className="section-wrapper scroll-mt-16" id="projects">
       <SectionHeader index="02" kicker={nav('projects').toLowerCase()} title={t('sectionTitle')} />
 
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
-        {PROJECTS.map((def) => (
+      {/* items-stretch (the default) plus `h-full` on the card: the cards
+          carry a border now, so ragged bottom edges would read as a bug. */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {PROJECTS.map((def, i) => (
           <Project
             key={def.key}
             title={t(`${def.key}.title`)}
@@ -107,7 +75,8 @@ export const Projects = () => {
             projectLink={def.projectLink}
             tech={t(`${def.key}.tech`).split(',')}
             description={t(`${def.key}.description`)}
-            modalContent={modalContent(def)}
+            projectKey={def.key}
+            index={i}
           />
         ))}
       </div>

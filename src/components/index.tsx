@@ -9,6 +9,7 @@ import { Contact } from "./contact/Contact";
 import { Footer } from "./footer/Footer";
 import { ProjectModalHost } from "./projects/ProjectModalHost";
 import { CommandPalette } from "./palette/CommandPalette";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 /**
  * The whole page.
@@ -23,6 +24,11 @@ import { CommandPalette } from "./palette/CommandPalette";
  *
  * Footer is a sibling of <main>, not a child: it is its own `contentinfo`
  * landmark, not part of the main document content.
+ *
+ * ScrollToTopButton lives here rather than in `_app.tsx` so it can read
+ * `useTerminalBus()` (it needs to hide itself while the palette or a project
+ * modal is open) and so `useTranslations()` inside it only ever runs where
+ * messages exist.
  */
 export const HomPage = () => {
   return (
@@ -40,6 +46,7 @@ export const HomPage = () => {
       <Footer />
       <ProjectModalHost />
       <CommandPalette />
+      <ScrollToTopButton />
     </TerminalBusProvider>
   );
 };
