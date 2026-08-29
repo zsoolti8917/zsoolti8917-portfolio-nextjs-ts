@@ -1,5 +1,14 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Colours are indirected through CSS variables (see globals.css) rather than
+ * hard-coded hex, so a theme swap is a `:root` change and never a component
+ * change. The channel-only form is what lets `<alpha-value>` work, i.e.
+ * `bg-canvas/70` and `bg-accent/10`.
+ *
+ * `hairline` is the exception: it is *defined* as an alpha over white, so it
+ * takes literal rgba and does not accept an alpha modifier.
+ */
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +17,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        canvas: "rgb(var(--canvas) / <alpha-value>)",
+        "surface-1": "rgb(var(--surface-1) / <alpha-value>)",
+        "surface-2": "rgb(var(--surface-2) / <alpha-value>)",
+        "surface-3": "rgb(var(--surface-3) / <alpha-value>)",
+        hairline: "rgba(255, 255, 255, 0.08)",
+        "hairline-strong": "rgba(255, 255, 255, 0.14)",
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        "fg-2": "rgb(var(--fg-2) / <alpha-value>)",
+        "fg-3": "rgb(var(--fg-3) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        "accent-hover": "rgb(var(--accent-hover) / <alpha-value>)",
+        success: "rgb(var(--success) / <alpha-value>)",
+        warn: "rgb(var(--warn) / <alpha-value>)",
+      },
+      fontFamily: {
+        // Set on :root by _app.tsx, so portals rendered into <body> (the
+        // project modal, the palette) inherit the fonts too.
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

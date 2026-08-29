@@ -2,26 +2,34 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from 'next/router';
-import { Inter } from "next/font/google";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import { LanguageProvider } from '@/components/LanguageContext';
-const inter = Inter({ subsets: ["latin", "latin-ext"], display: 'swap' });
-
+import { inter, recursive } from '@/lib/fonts';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
-    <LanguageProvider>
-    <NextIntlClientProvider 
-      messages={pageProps.messages} 
-      locale={router.locale} // Add this line
+    <NextIntlClientProvider
+      messages={pageProps.messages}
+      locale={router.locale}
+      // Fixed, not the visitor's zone: dates render identically on the server
+      // and the client, so next-intl never warns about an ambiguous zone.
+      timeZone="Europe/Prague"
     >
-            <main className={inter.className}>
+      {/* The font families go on :root rather than on a wrapper className.
+          The project modal and the ⌘K palette portal into <body>, i.e.
+          outside this tree — a class-based approach would leave them in
+          system-ui. Tailwind's font-sans/font-mono read these two vars. */}
+      <style jsx global>{`
+        :root {
+          --font-sans: ${inter.style.fontFamily};
+          --font-mono: ${recursive.style.fontFamily};
+        }
+      `}</style>
+      <div className={`${inter.variable} ${recursive.variable}`}>
         <Component {...pageProps} />
         <ScrollToTopButton />
-      </main>
+      </div>
     </NextIntlClientProvider>
-    </LanguageProvider>
   );
 }

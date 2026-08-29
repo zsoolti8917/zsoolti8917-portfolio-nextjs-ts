@@ -2,36 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
-
-/* Define the background and track color in hex format */
+/* Design tokens.
+   Stored as bare RGB channels ("9 9 11", not "#09090b") because Tailwind
+   composes them as `rgb(var(--canvas) / <alpha-value>)` — that is what makes
+   `bg-canvas/70` and `bg-accent/10` work. A light theme can later redefine
+   these on a `[data-theme]` selector without touching a single component. */
 :root {
-  --scrollbar-bg: #1c1b1f; /* Equivalent to bg-zinc-900 in Tailwind CSS */
-  --scrollbar-thumb: #4b5563; /* Equivalent to bg-zinc-700 in Tailwind CSS */
+  --canvas: 9 9 11;          /* #09090b — page background */
+  --surface-1: 15 15 17;     /* #0f0f11 — window body */
+  --surface-2: 20 20 23;     /* #141417 — title bars, chips */
+  --surface-3: 26 26 30;     /* #1a1a1e — hover */
+
+  --fg: 244 244 245;         /* #f4f4f5 — primary text */
+  --fg-2: 161 161 170;       /* #a1a1aa — secondary text */
+  --fg-3: 107 107 116;       /* #6b6b74 — muted text */
+
+  --accent: 99 102 241;      /* #6366f1 */
+  --accent-hover: 129 140 248; /* #818cf8 */
+  --success: 52 211 153;     /* #34d399 — status dot */
+  --warn: 251 191 36;        /* #fbbf24 — terminal error tone */
+
+  /* Scrollbars are chrome, not content: they read off the tokens so they
+     never drift from the page background again. */
+  --scrollbar-bg: rgb(var(--canvas));
+  --scrollbar-thumb: rgb(var(--surface-3));
+  --scrollbar-thumb-hover: rgb(var(--fg-3));
 }
 
-/* Custom scrollbar styling for WebKit browsers (Chrome, Safari) */
+body {
+  /* Inter's disambiguated lowercase l (cv11) and stylistic set 1 — both are
+     legibility fixes, not decoration, and matter most at the 14px UI sizes. */
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* Recursive interpolates between a proportional sans and a true monospace.
+   `font-mono` alone gets the family; this pins the MONO axis to 1 so text
+   actually lands on the grid. Apply it wherever a monospace look is intended. */
+.mono-1 {
+  font-variation-settings: "MONO" 1;
+}
+
+/* --- Scrollbars -------------------------------------------------------- */
+
 ::-webkit-scrollbar {
-  width: 8px; /* Adjust the width of the scrollbar */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scrollbar-bg); /* Color of the track */
+  background: var(--scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb); /* Color of the thumb */
-  border-radius: 4px; /* Rounded corners for the thumb */
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280; /* Slightly lighter color when hovered */
+  background: var(--scrollbar-thumb-hover);
 }
 
-/* Custom scrollbar styling for Firefox */
 html {
-  scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg); /* Thumb and track color */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+  scroll-behavior: smooth;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -43,15 +76,31 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.writing-vertical {
-  writing-mode: vertical-lr;
+
+/* --- Backdrop ---------------------------------------------------------- */
+
+/* Three stackable, non-animated layers used behind the hero only. Each is a
+   background-image so they can sit on separate absolutely-positioned divs and
+   composite without a single extra DOM cost at paint time. */
+
+.bg-dots {
+  background-image: radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-html {
-  scroll-behavior: smooth;
+.bg-glow {
+  background-image: radial-gradient(900px 500px at 50% -10%, rgb(99 102 241 / 0.18), transparent 70%);
 }
 
-/* --- Hero ------------------------------------------------------------- */
+/* feTurbulence inlined as a data URI: a real <svg> filter would need a node in
+   the tree and would repaint; this is one decoded bitmap the compositor tiles. */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* --- Terminal (owned by WP1) ------------------------------------------- */
 
 /* A terminal caret is a hard square blink, not a fade. Tailwind's
    `animate-pulse` eases opacity, which reads as a glow rather than a cursor. */
@@ -64,3 +113,5 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .hero-caret { animation: none; opacity: 1; }
 }
+
+/* WP1 adds the sequential-print stagger keyframes below this line. */

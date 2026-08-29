@@ -1,4 +1,4 @@
-import { recursiveMono } from "../fonts";
+import { recursive } from "@/lib/fonts";
 import type { HeroTerminalCopy } from "../types";
 import {
   TerminalChips, TerminalInput, TerminalLog, TerminalPageLink, TerminalShell, TerminalSkipLink,
@@ -22,7 +22,7 @@ export const Terminal = ({
   const term = useTerminal(copy);
 
   return (
-    <TerminalShell className={`${recursiveMono.variable} rounded-lg border border-zinc-800 bg-zinc-950/80 ${className}`}>
+    <TerminalShell className={`${recursive.variable} rounded-lg border border-zinc-800 bg-zinc-950/80 ${className}`}>
       <TerminalSkipLink copy={copy} />
       <div className="flex items-center gap-2 border-b border-zinc-800 px-4 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
