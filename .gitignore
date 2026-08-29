@@ -40,3 +40,4 @@ next-env.d.ts
 
 # CV build artifacts
 cv/render.*.html
+.superpowers/
