@@ -44,11 +44,18 @@ export const Project = ({
           shared 0.45s fade-up every other section uses. */}
       <Reveal width="100%">
         <div className="h-full rounded-lg border border-hairline bg-surface-1 p-3 transition-colors hover:border-hairline-strong">
-          <div
+          {/* A real <button>, not a div with an onClick: the cover was the
+              card's primary action and a keyboard user could not reach it at
+              all. The title row and "Learn more" below are siblings, never
+              nested inside it — a button inside a button is invalid HTML and
+              the inner one stops being operable. */}
+          <button
+            type="button"
+            aria-label={`${title} — ${t("learnMore")}`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={() => openProject(projectKey)}
-            className="w-full cursor-pointer"
+            className="w-full cursor-pointer rounded-lg text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
           >
             {imgSrc ? (
               <div className="relative aspect-video overflow-hidden rounded-lg border border-hairline bg-surface-2">
@@ -66,7 +73,7 @@ export const Project = ({
             ) : (
               <ProjectCover title={title} tech={tech} index={index} />
             )}
-          </div>
+          </button>
           <div className="mt-4">
             {/* The old row padded the title to `100% - 150px` and filled the
                 gap with a rule; on any title that wrapped, the rule floated
@@ -94,12 +101,13 @@ export const Project = ({
             </p>
             <p className="text-sm leading-relaxed text-fg-2">
               {description}{" "}
-              <span
-                className="inline-block cursor-pointer text-sm text-accent-hover underline-offset-4 hover:underline"
+              <button
+                type="button"
+                className="inline-block cursor-pointer rounded-sm text-sm text-accent-hover underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
                 onClick={() => openProject(projectKey)}
               >
                 {t("learnMore")} →
-              </span>
+              </button>
             </p>
           </div>
         </div>

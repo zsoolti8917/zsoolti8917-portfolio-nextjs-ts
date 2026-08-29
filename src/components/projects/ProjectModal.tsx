@@ -1,10 +1,11 @@
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { useTranslations } from 'next-intl';
+import { focusableStops, trapStop } from "../util/focusTrap";
 import { useDialogKeys } from "../util/useDialogKeys";
 import { useScrollLock } from "../util/useScrollLock";
 import { ProjectCover } from "./ProjectCover";
@@ -43,18 +44,45 @@ export const ProjectModal = ({ project, onClose }: Props) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
   useScrollLock(true);
   useDialogKeys({ open: true, onClose });
 
+  // Two effects rather than one, as in `CommandPalette`: the button does not
+  // exist until `mounted` has flipped and the portal has rendered. Opened from
+  // the ⌘K palette, focus would otherwise be handed back to the nav behind an
+  // `aria-modal` dialog — a keyboard user operating a page they cannot see.
+  useEffect(() => {
+    if (mounted) closeRef.current?.focus();
+  }, [mounted]);
+
+  /**
+   * The trap. `aria-modal` tells a screen reader that nothing behind the dialog
+   * is reachable; only this makes that true for Tab. The cycle covers the whole
+   * dialog, not just the panel, so the close button stays in the tab order.
+   */
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== "Tab") return;
+    e.preventDefault();
+    const stops = focusableStops(dialogRef.current);
+    const next = trapStop(stops.length, stops.indexOf(document.activeElement as HTMLElement), e.shiftKey);
+    if (next >= 0) stops[next].focus();
+  };
+
   const dialog = (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-labelledby={titleId}
       className="fixed inset-0 z-50 flex cursor-pointer justify-center overflow-y-scroll bg-canvas/70 px-4 py-12 backdrop-blur"
       onClick={onClose}
+      onKeyDown={onKeyDown}
     >
       <button
+        ref={closeRef}
         type="button"
         aria-label={t('close')}
         onClick={onClose}
