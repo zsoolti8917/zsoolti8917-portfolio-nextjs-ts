@@ -14,7 +14,7 @@ node cv/verify.mjs         # assert the output survives automated screening
 `build.mjs` needs Google Chrome. Override its location with `CHROME_PATH`.
 
 Output filenames are fixed, because `getCVUrl()` in
-`src/components/nav/Header.tsx` maps locale → filename.
+`src/lib/cv.ts` maps locale → filename.
 
 ## Files
 
