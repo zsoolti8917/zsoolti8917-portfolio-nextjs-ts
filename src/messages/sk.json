@@ -267,27 +267,21 @@
     ]
   },
   "hero": {
-    "eyebrow": "Full-stack · Automatizácia · Praha",
-    "headline": "Živím sa tým, že ruším prácu.",
     "common": {
       "name": "Zsolt Varjú",
       "role": "Softvérový vývojár",
       "tagline": "Full-stack vývojár a prevádzkovateľ platforiem. Jediný vývojár na projekte pre Európsku vesmírnu agentúru.",
-      "location": "Praha, CET · EN · SK · HU",
-      "ctaWork": "Pozrite, čo som dodal",
-      "ctaCv": "Životopis (PDF)",
-      "ctaContact": "Kontaktujte ma"
+      "location": "Praha, CET · EN · SK · HU"
     },
     "terminal": {
-      "prompt": "visitor@zsoltvarju:~$",
-      "windowTitle": "zsolt — celý životopis ako shell",
+      "prompt": "❯",
+      "windowTitle": "zsolt@varju — ~/cv — zsh",
       "readAsPage": "Čítať ako stránku ↓",
       "skipLink": "Preskočiť terminál — čítať celý životopis",
       "inputLabel": "Napíšte príkaz alebo kliknite na niektoré z tlačidiel nižšie",
       "searchPlaceholder": "Hľadajte v mojom životopise — projekty, prax, technológie",
       "logLabel": "Výstup terminálu",
       "hintClick": "alebo kliknite — písať nemusíte",
-      "ready": "pripravené",
       "ghostHint": "stlačte → na potvrdenie",
       "didYouMean": "Nepoznám „{cmd}“. Mysleli ste:",
       "orClick": "Alebo kliknite na ktorékoľvek tlačidlo pod príkazovým riadkom.",
@@ -297,13 +291,27 @@
       "findHeader": "Výsledky pre „{q}“:",
       "findEmpty": "Nič sa nezhoduje s „{q}“. Skúste: projects, experience, skills.",
       "findUsage": "Použitie: find <slovo> — prehľadá projekty, prax a technológie.",
-      "boot": [
-        "zsoltvarju.com — celý životopis ako shell.",
-        "Napíšte príkaz nižšie alebo kliknite na tlačidlo."
-      ],
+      "status": "otvorený novým ponukám",
+      "statusBar": {
+        "cwd": "~/cv",
+        "hints": "↑↓ história · → doplniť · ^L vyčistiť",
+        "zone": "Praha"
+      },
+      "whoami": {
+        "headline": "Živím sa tým, že ruším prácu.",
+        "role": "rola",
+        "now": "teraz",
+        "based": "sídlo",
+        "since": "od",
+        "stack": "stack",
+        "statusLabel": "stav",
+        "roleValue": "Softvérový vývojár · full-stack + prevádzka platforiem",
+        "nowValue": "jediný vývojár na projekte pre Európsku vesmírnu agentúru"
+      },
       "help": {
         "intro": "Príkazy — kliknite alebo napíšte:",
         "help": "úplný zoznam príkazov",
+        "whoami": "karta: kto, kde a s čím",
         "about": "kto som, za 20 sekúnd",
         "projects": "všetko, čo som postavil",
         "experience": "kde som pracoval",

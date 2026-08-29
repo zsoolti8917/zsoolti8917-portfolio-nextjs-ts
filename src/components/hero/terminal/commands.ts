@@ -1,6 +1,6 @@
-import type { HeroTerminalCopy } from "../types";
+import type { HeroCommonCopy, HeroTerminalCopy } from "../types";
 import type { TerminalData } from "./useTerminalData";
-import { blank, seg, t, type Line } from "./model";
+import { blank, kv, seg, t, type Line } from "./model";
 
 export type Effect = "cv" | "contact" | "clear" | "page";
 
@@ -11,6 +11,8 @@ export interface CommandResult {
 
 export interface CommandContext {
   copy: HeroTerminalCopy;
+  /** Name / role / location. One source, shared with the rest of the page. */
+  common: HeroCommonCopy;
   data: TerminalData;
   /** ICU formatter bound to the `hero.terminal` namespace. */
   fmt: (key: string, values: Record<string, string>) => string;
@@ -25,7 +27,7 @@ export interface CommandContext {
  * the program can actually keep. Everything here is also reachable by clicking.
  */
 export const COMMANDS = [
-  "about", "projects", "experience", "skills",
+  "whoami", "about", "projects", "experience", "skills",
   "certifications", "languages", "contact", "cv", "find", "help", "clear",
 ] as const;
 
@@ -37,9 +39,11 @@ export const CHIPS = ["about", "projects", "experience", "skills", "contact", "c
  * -value part of the shell: without it, "resume" or "what does he do" returns
  * `command not found` and the visitor concludes the page is broken.
  */
-const SYNONYMS: Record<string, string> = {
+export const SYNONYMS: Record<string, string> = {
+  // whoami — `whoami` itself is a real command now, not a synonym
+  who: "whoami",
   // about
-  whoami: "about", who: "about", bio: "about", intro: "about", summary: "about",
+  bio: "about", intro: "about", summary: "about",
   me: "about", profile: "about", hi: "about", hello: "about",
   // projects
   project: "projects", portfolio: "projects", work: "projects", works: "projects",
@@ -120,19 +124,54 @@ export const suggest = (raw: string): string[] => {
   return ["about", "projects", "contact"];
 };
 
-/** `about` — the 20-second answer, and what the auto-demo prints on load. */
+/**
+ * `whoami` — the card, and what the auto-demo prints on load.
+ *
+ * This is the block the server renders, so every value in it must come from
+ * the same messages the visible page uses: a crawler that never runs
+ * JavaScript still gets the name, the role, the current work, the location,
+ * the year and the stack, and none of it exists only here.
+ */
+const whoamiLines = (ctx: CommandContext): Line[] => {
+  const w = ctx.copy.whoami;
+  // Flattened rather than one-per-group: the card is the 5-second read, the
+  // grouped version is what `skills` prints.
+  const stack = ctx.data.stack.flatMap((g) => g.items).slice(0, 7);
+
+  return [
+    { tone: "out", kind: "h1", segments: [{ text: ctx.common.name }] },
+    { tone: "out", kind: "headline", segments: [{ text: w.headline }] },
+    kv(w.role, [{ text: w.roleValue }]),
+    kv(w.now, [{ text: w.nowValue }]),
+    kv(w.based, [{ text: ctx.common.location }]),
+    kv(w.since, [{ text: ctx.data.about.since }]),
+    kv(
+      w.stack,
+      stack.flatMap((item, i) => [
+        ...(i ? [{ text: " · " }] : []),
+        // Exactly the `skills` contract, so the same click does the same thing
+        // wherever a technology is printed.
+        { text: item, run: `find ${item}` },
+      ])
+    ),
+    kv(
+      w.statusLabel,
+      [
+        { text: ctx.copy.status },
+        { text: "[contact]", run: "contact" },
+        { text: "[cv ↓]", run: "cv" },
+      ],
+      "actions"
+    ),
+  ];
+};
+
+/** `about` — the long-form answer. The card above is the short one. */
 const aboutLines = (ctx: CommandContext): Line[] => [
   t(ctx.copy.headers.about, "head"),
   t(ctx.data.about.intro),
   blank(),
   t(ctx.data.about.currentWork),
-  blank(),
-  seg([
-    { text: `  ${ctx.copy.labels.based}: ` , },
-    { text: ctx.data.about.based },
-    { text: `   ${ctx.copy.labels.since}: ` },
-    { text: ctx.data.about.since },
-  ], "muted"),
 ];
 
 const projectsLines = (ctx: CommandContext): Line[] => [
@@ -274,6 +313,7 @@ const findLines = (ctx: CommandContext, query: string): Line[] => {
 
 const helpLines = (ctx: CommandContext): Line[] => {
   const rows: [string, string][] = [
+    ["whoami", ctx.copy.help.whoami],
     ["about", ctx.copy.help.about],
     ["projects", ctx.copy.help.projects],
     ["experience", ctx.copy.help.experience],
@@ -307,6 +347,7 @@ export const runCommand = (raw: string, ctx: CommandContext): CommandResult => {
   const cmd = SYNONYMS[head.toLowerCase()] ?? head.toLowerCase();
 
   switch (cmd) {
+    case "whoami":      return { lines: whoamiLines(ctx) };
     case "about":       return { lines: aboutLines(ctx) };
     case "projects":    return { lines: arg ? openLines(ctx, arg) : projectsLines(ctx) };
     case "open":        return { lines: openLines(ctx, arg) };

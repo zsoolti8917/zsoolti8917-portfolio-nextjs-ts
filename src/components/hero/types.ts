@@ -1,12 +1,25 @@
-/** Copy that must NOT change when the variant changes. */
+/** Copy that is shared by the card and anything else naming the person. */
 export interface HeroCommonCopy {
   name: string;
   role: string;
   tagline: string;
   location: string;
-  ctaWork: string;
-  ctaCv: string;
-  ctaContact: string;
+}
+
+/** The labels and values of the `whoami` card. */
+export interface HeroWhoamiCopy {
+  headline: string;
+  /** Row labels. */
+  role: string;
+  now: string;
+  based: string;
+  since: string;
+  stack: string;
+  statusLabel: string;
+  /** Row values that exist nowhere else. `based` reuses `common.location`,
+   *  `since` comes from the About data, `stack` from the Stats data. */
+  roleValue: string;
+  nowValue: string;
 }
 
 export interface HeroTerminalCopy {
@@ -18,7 +31,6 @@ export interface HeroTerminalCopy {
   searchPlaceholder: string;
   logLabel: string;
   hintClick: string;
-  ready: string;
   ghostHint: string;
   didYouMean: string;
   orClick: string;
@@ -28,9 +40,13 @@ export interface HeroTerminalCopy {
   findHeader: string;
   findEmpty: string;
   findUsage: string;
-  boot: string[];
+  /** The availability line, in the card and the status bar. Softening or
+   *  emptying this is a JSON edit, not a code edit. */
+  status: string;
+  statusBar: { cwd: string; hints: string; zone: string };
+  whoami: HeroWhoamiCopy;
   help: Record<
-    | "intro" | "help" | "about" | "projects" | "experience" | "skills"
+    | "intro" | "help" | "whoami" | "about" | "projects" | "experience" | "skills"
     | "certifications" | "languages" | "contact" | "cv" | "find" | "clear",
     string
   >;
@@ -39,12 +55,6 @@ export interface HeroTerminalCopy {
     string
   >;
   labels: Record<"tech" | "link" | "based" | "from" | "since" | "back", string>;
-}
-
-/** The framing copy above the terminal. */
-export interface HeroFramingCopy {
-  eyebrow: string;
-  headline: string;
 }
 
 export interface HeroStats {

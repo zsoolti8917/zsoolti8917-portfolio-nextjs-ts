@@ -267,27 +267,21 @@
     ]
   },
   "hero": {
-    "eyebrow": "Full-stack · Automation · Prague",
-    "headline": "I delete work for a living.",
     "common": {
       "name": "Zsolt Varjú",
       "role": "Software Developer",
       "tagline": "Full-stack developer and platform operator. Sole developer on a project for the European Space Agency.",
-      "location": "Prague, CET · EN · SK · HU",
-      "ctaWork": "See what I've shipped",
-      "ctaCv": "CV (PDF)",
-      "ctaContact": "Get in touch"
+      "location": "Prague, CET · EN · SK · HU"
     },
     "terminal": {
-      "prompt": "visitor@zsoltvarju:~$",
-      "windowTitle": "zsolt — the whole CV, as a shell",
+      "prompt": "❯",
+      "windowTitle": "zsolt@varju — ~/cv — zsh",
       "readAsPage": "Read as a page ↓",
       "skipLink": "Skip the terminal — read the full CV",
       "inputLabel": "Type a command, or click one of the buttons below",
       "searchPlaceholder": "Search my CV — projects, experience, skills",
       "logLabel": "Terminal output",
       "hintClick": "or click — you don't have to type",
-      "ready": "ready",
       "ghostHint": "press → to accept",
       "didYouMean": "I don't know “{cmd}”. Did you mean:",
       "orClick": "Or click any of the buttons under the prompt.",
@@ -297,13 +291,27 @@
       "findHeader": "Results for “{q}”:",
       "findEmpty": "Nothing matched “{q}”. Try: projects, experience, skills.",
       "findUsage": "Usage: find <word>  — searches projects, experience and skills.",
-      "boot": [
-        "zsoltvarju.com — the whole CV, as a shell.",
-        "Type a command below, or click one of the buttons."
-      ],
+      "status": "open to new roles",
+      "statusBar": {
+        "cwd": "~/cv",
+        "hints": "↑↓ history · → accept · ^L clear",
+        "zone": "Prague"
+      },
+      "whoami": {
+        "headline": "I delete work for a living.",
+        "role": "role",
+        "now": "now",
+        "based": "based",
+        "since": "since",
+        "stack": "stack",
+        "statusLabel": "status",
+        "roleValue": "Software Developer · full-stack + platform operator",
+        "nowValue": "sole developer on a project for the European Space Agency"
+      },
       "help": {
         "intro": "Commands — click one, or type it:",
         "help": "the full list of commands",
+        "whoami": "the card: who, where, what with",
         "about": "who I am, in 20 seconds",
         "projects": "everything I have built",
         "experience": "where I have worked",

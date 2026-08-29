@@ -267,27 +267,21 @@
     ]
   },
   "hero": {
-    "eyebrow": "Full-stack · Automatizálás · Prága",
-    "headline": "Abból élek, hogy megszüntetek munkát.",
     "common": {
       "name": "Varjú Zsolt",
       "role": "Szoftverfejlesztő",
       "tagline": "Full-stack fejlesztő és platformüzemeltető. Egyedüli fejlesztő az Európai Űrügynökség egyik projektjén.",
-      "location": "Prága, CET · EN · SK · HU",
-      "ctaWork": "Amit eddig szállítottam",
-      "ctaCv": "Önéletrajz (PDF)",
-      "ctaContact": "Kapcsolatfelvétel"
+      "location": "Prága, CET · EN · SK · HU"
     },
     "terminal": {
-      "prompt": "visitor@zsoltvarju:~$",
-      "windowTitle": "zsolt — a teljes önéletrajz shellként",
+      "prompt": "❯",
+      "windowTitle": "zsolt@varju — ~/cv — zsh",
       "readAsPage": "Olvasd oldalként ↓",
       "skipLink": "Ugrás a terminál után — a teljes önéletrajz",
       "inputLabel": "Írj be egy parancsot, vagy kattints az alábbi gombok egyikére",
       "searchPlaceholder": "Keress az önéletrajzomban — projektek, tapasztalat, technológiák",
       "logLabel": "Terminál kimenete",
       "hintClick": "vagy kattints — nem kell gépelned",
-      "ready": "kész",
       "ghostHint": "nyomd meg a → gombot",
       "didYouMean": "Nem ismerem: „{cmd}”. Erre gondoltál:",
       "orClick": "Vagy kattints bármelyik gombra a beviteli sor alatt.",
@@ -297,13 +291,27 @@
       "findHeader": "Találatok erre: „{q}”:",
       "findEmpty": "Nincs találat erre: „{q}”. Próbáld: projects, experience, skills.",
       "findUsage": "Használat: find <szó> — projektek, tapasztalat és technológiák között keres.",
-      "boot": [
-        "zsoltvarju.com — a teljes önéletrajz shellként.",
-        "Írj be egy parancsot, vagy kattints egy gombra."
-      ],
+      "status": "nyitott új pozíciókra",
+      "statusBar": {
+        "cwd": "~/cv",
+        "hints": "↑↓ előzmények · → elfogadás · ^L törlés",
+        "zone": "Prága"
+      },
+      "whoami": {
+        "headline": "Abból élek, hogy megszüntetek munkát.",
+        "role": "szerep",
+        "now": "most",
+        "based": "lakhely",
+        "since": "szakmában",
+        "stack": "stack",
+        "statusLabel": "állapot",
+        "roleValue": "Szoftverfejlesztő · full-stack + platformüzemeltetés",
+        "nowValue": "egyedüli fejlesztő az Európai Űrügynökség egyik projektjén"
+      },
       "help": {
         "intro": "Parancsok — kattints vagy írd be:",
         "help": "a parancsok teljes listája",
+        "whoami": "a kártya: ki, hol, mivel",
         "about": "ki vagyok, 20 másodpercben",
         "projects": "minden, amit építettem",
         "experience": "hol dolgoztam",
