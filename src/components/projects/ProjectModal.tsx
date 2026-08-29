@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
@@ -40,6 +40,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
   const { content, projectLink, imgSrc, index, title, code, tech } = project;
   const t = useTranslations('projectModal');
   const titleId = useId();
+  const reduced = useReducedMotion();
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -92,8 +93,12 @@ export const ProjectModal = ({ project, onClose }: Props) => {
       </button>
 
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
+        // A 100px rise is exactly the vestibular trigger the preference is
+        // there to switch off. Gated the way `util/Reveal` does it: no initial
+        // offset at all, so the panel is simply there.
+        initial={reduced ? false : { y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        transition={reduced ? { duration: 0 } : undefined}
         onClick={(e) => e.stopPropagation()}
         className="h-fit w-full max-w-2xl cursor-auto overflow-hidden rounded-xl border border-hairline bg-surface-1"
       >

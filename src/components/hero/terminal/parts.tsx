@@ -3,7 +3,7 @@ import type { HeroTerminalCopy } from "../types";
 import { CHIPS } from "./commands";
 import type { Block, Line } from "./model";
 import { PILL, Seg, stagger } from "./atoms";
-import { revealed } from "./session";
+import { isDoneBlock, revealed } from "./session";
 import { WhoamiCard } from "./WhoamiCard";
 import type { useTerminal } from "./useTerminal";
 
@@ -58,7 +58,13 @@ const TerminalBlock = ({
   const shown = isDemo ? revealed(term.typed, block.id, block.command as string) : 0;
 
   return (
-    <article className="mb-5 last:mb-0">
+    <article
+      // Per block, not on the log root. Freezing the whole log on the first
+      // interaction meant no command a visitor ran ever printed with the
+      // stagger — the shell stopped looking like it was doing anything.
+      data-done={isDoneBlock(block, term.liveFrom, term.instant) ? "" : undefined}
+      className="mb-5 last:mb-0"
+    >
       {block.command !== null && (
         // The visitor's own keystrokes were already announced by the input;
         // re-announcing the echo would double up.
@@ -117,9 +123,6 @@ export const TerminalLog = ({
   return (
     <div
       ref={term.logRef}
-      // Set the moment the visitor does anything: a stagger that is still
-      // playing while someone is reading or typing is noise, not feedback.
-      data-done={term.instant ? "" : undefined}
       className={`min-h-0 overflow-y-auto overscroll-contain ${className}`}
     >
       {ssr.map((block) => (

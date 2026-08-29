@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, Variants } from "framer-motion";
 import { FiChevronDown, FiGlobe } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
@@ -18,6 +18,7 @@ export const LocaleMenu: React.FC = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion() ?? false;
 
   const changeLocale = (locale: string) => {
     router.push("/", "/", { locale, scroll: false }).then(() => {
@@ -57,7 +58,7 @@ export const LocaleMenu: React.FC = () => {
       >
         <FiGlobe className="hidden sm:block" />
         <span className="text-sm font-medium uppercase">{router.locale}</span>
-        <motion.span variants={iconVariants}>
+        <motion.span variants={iconVariants(reduced)}>
           <FiChevronDown />
         </motion.span>
       </button>
@@ -68,12 +69,12 @@ export const LocaleMenu: React.FC = () => {
             initial="closed"
             animate="open"
             exit="closed"
-            variants={wrapperVariants}
+            variants={wrapperVariants(reduced)}
             style={{ originY: "top" }}
             className="absolute right-0 top-[120%] flex w-44 flex-col gap-1 overflow-hidden rounded-lg border border-hairline bg-surface-2 p-1.5 shadow-xl"
           >
             {LOCALES.map((locale) => (
-              <motion.li key={locale} role="none" variants={itemVariants}>
+              <motion.li key={locale} role="none" variants={itemVariants(reduced)}>
                 <button
                   type="button"
                   role="menuitem"
@@ -91,17 +92,31 @@ export const LocaleMenu: React.FC = () => {
   );
 };
 
-const wrapperVariants: Variants = {
-  open: { scaleY: 1, transition: { when: "beforeChildren", staggerChildren: 0.06 } },
-  closed: { scaleY: 0, transition: { when: "afterChildren", staggerChildren: 0.06 } },
-};
+/**
+ * Factories rather than constants so `prefers-reduced-motion` can switch the
+ * motion off without a second copy of the menu. Under the preference the panel
+ * does not unroll and the rows do not stagger in — they are simply there, which
+ * is the whole point: the menu still opens and closes, it just does not move.
+ * The chevron still turns, because its rotation is state, not decoration; only
+ * its duration goes to zero.
+ */
+const wrapperVariants = (reduced: boolean): Variants =>
+  reduced
+    ? { open: { scaleY: 1 }, closed: { scaleY: 1 } }
+    : {
+        open: { scaleY: 1, transition: { when: "beforeChildren", staggerChildren: 0.06 } },
+        closed: { scaleY: 0, transition: { when: "afterChildren", staggerChildren: 0.06 } },
+      };
 
-const iconVariants: Variants = {
-  open: { rotate: 180 },
-  closed: { rotate: 0 },
-};
+const iconVariants = (reduced: boolean): Variants => ({
+  open: { rotate: 180, transition: reduced ? { duration: 0 } : undefined },
+  closed: { rotate: 0, transition: reduced ? { duration: 0 } : undefined },
+});
 
-const itemVariants: Variants = {
-  open: { opacity: 1, y: 0, transition: { when: "beforeChildren" } },
-  closed: { opacity: 0, y: -12, transition: { when: "afterChildren" } },
-};
+const itemVariants = (reduced: boolean): Variants =>
+  reduced
+    ? { open: { opacity: 1, y: 0 }, closed: { opacity: 1, y: 0 } }
+    : {
+        open: { opacity: 1, y: 0, transition: { when: "beforeChildren" } },
+        closed: { opacity: 0, y: -12, transition: { when: "afterChildren" } },
+      };

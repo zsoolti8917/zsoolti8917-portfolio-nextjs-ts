@@ -5,6 +5,7 @@ import {
   DEMO_DONE,
   demoSchedule,
   headingBlockId,
+  isDoneBlock,
   revealed,
   type Typed,
 } from "./session";
@@ -107,5 +108,31 @@ describe("headingBlockId", () => {
 
   it("never matches a headerless block", () => {
     expect(headingBlockId([block(0, null)])).toBeNull();
+  });
+});
+
+describe("isDoneBlock", () => {
+  const LIVE_FROM = 2;
+
+  it("staggers everything while the demo is still running", () => {
+    expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, false)).toBe(false);
+    expect(isDoneBlock(block(1, "projects"), LIVE_FROM, false)).toBe(false);
+  });
+
+  it("freezes the pre-run blocks once the visitor has interacted", () => {
+    expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, true)).toBe(true);
+    expect(isDoneBlock(block(1, "projects"), LIVE_FROM, true)).toBe(true);
+  });
+
+  it("still staggers a block the visitor caused to be printed", () => {
+    // R5: `data-done` used to be set on the whole log, so after the first
+    // keystroke no command output ever animated in again — the shell stopped
+    // looking like it was running anything.
+    expect(isDoneBlock(block(2, "skills"), LIVE_FROM, true)).toBe(false);
+    expect(isDoneBlock(block(9, "about"), LIVE_FROM, true)).toBe(false);
+  });
+
+  it("keeps the card frozen when `clear` re-prints it", () => {
+    expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, true)).toBe(true);
   });
 });

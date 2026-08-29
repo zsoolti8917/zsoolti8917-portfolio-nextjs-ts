@@ -76,3 +76,16 @@ export const revealed = (typed: Typed, index: number, command: string): number =
  */
 export const headingBlockId = (blocks: Block[]): number | null =>
   blocks.find((b) => b.command === "whoami")?.id ?? null;
+
+/**
+ * Whether a block's output should skip the `.term-line` print stagger.
+ *
+ * Only the pre-run demo blocks ever do, and only once the visitor has
+ * interacted (`instant`): replaying their reveal under someone who is already
+ * reading or typing is noise. Blocks the visitor caused to be printed keep the
+ * stagger for the whole session — it is the feedback that the shell just ran
+ * the command. `data-done` used to go on the log root, which froze those too.
+ * Reduced motion is handled in CSS, not here.
+ */
+export const isDoneBlock = (block: Block, liveFrom: number, instant: boolean): boolean =>
+  instant && block.id < liveFrom;
