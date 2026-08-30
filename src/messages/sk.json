@@ -301,11 +301,11 @@
         "role": "pozícia",
         "now": "teraz",
         "based": "bydlisko",
-        "since": "od",
         "stack": "stack",
         "statusLabel": "stav",
         "roleValue": "Softvérový vývojár · full-stack + prevádzka platforiem",
         "nowValue": "jediný vývojár na projekte pre Európsku vesmírnu agentúru",
+        "basedValue": "{location} · od {since}",
         "stackValue": [
           "TypeScript",
           "React",

@@ -118,25 +118,52 @@ html {
   .hero-caret { animation: none; opacity: 1; }
 }
 
-/* Sequential print. Output lines rise in one after another, ~35ms apart and
-   capped at 20 lines, so a long block finishes inside ~0.9s. The animation is
-   pure CSS: the server-rendered card reveals itself with JavaScript disabled,
+/* Sequential print — the FALLBACK. Output lines rise in one after another,
+   ~35ms apart and capped at 20 lines, so a long block finishes inside ~0.9s.
+   Pure CSS: the server-rendered card reveals itself with JavaScript disabled,
    and a crawler — which reads the markup, not the paint — is unaffected either
-   way. `data-done` freezes a block at its final state; it is set on the pre-run
-   demo blocks alone, the moment the visitor interacts, so replaying their
-   reveal never interrupts someone who is already reading. Output the visitor
-   asked for keeps the stagger for the whole session. */
+   way. With JavaScript, `useTypeReveal` types blocks out instead and sets
+   `data-reveal` on the block; "typing" and "done" take the stagger out of its
+   way, "css" means the API is missing (or the block will not be typed) and the
+   stagger runs. `data-done` freezes the pre-run block the moment the visitor
+   interacts, so replaying its reveal never interrupts someone already reading.
+   `--boot` defers the stagger: the pre-run card waits long enough for the
+   page to hydrate and the typed reveal to take over, so the card is not
+   painted in full and then hidden again. Without JavaScript it simply appears
+   after that beat. */
 .term-line {
   opacity: 0;
   transform: translateY(2px);
   animation: term-line 0.18s ease-out forwards;
-  animation-delay: calc(min(var(--i), 20) * 35ms);
+  animation-delay: calc(var(--boot, 0ms) + min(var(--i), 20) * 35ms);
 }
 
-[data-done] .term-line {
+[data-demo] {
+  --boot: 1200ms;
+}
+
+[data-reveal="css"] {
+  --boot: 0ms;
+}
+
+[data-done] .term-line,
+[data-reveal="typing"] .term-line,
+[data-reveal="done"] .term-line {
   animation: none;
   opacity: 1;
   transform: none;
+}
+
+/* The not-yet-typed remainder of a block being typed out. The text is in the
+   DOM — this is paint only, so the box never grows and nothing ever moves. */
+::highlight(term-untyped) {
+  color: transparent;
+}
+
+/* Firefox ignores text-decoration in highlight pseudos, so an untyped link
+   would show a bare underline running ahead of the text. */
+[data-reveal="typing"] :is(a, button) {
+  text-decoration-color: transparent;
 }
 
 @keyframes term-line {

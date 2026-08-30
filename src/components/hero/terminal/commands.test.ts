@@ -47,7 +47,7 @@ const copy: HeroTerminalCopy = {
     role: "role",
     now: "now",
     based: "based",
-    since: "since",
+    basedValue: "whoami.basedValue",
     stack: "stack",
     statusLabel: "status",
     roleValue: "Software Developer · full-stack + platform operator",
@@ -197,16 +197,15 @@ describe("runCommand('whoami')", () => {
     expect(lines[1].segments[0].text).toBe("I delete work for a living.");
   });
 
-  it("prints the labelled key/value rows in order", () => {
+  it("prints the labelled key/value rows in order — five, the fetch-card sweet spot", () => {
     expect(lines.slice(2).map((l) => l.label)).toEqual([
       "role",
       "now",
       "based",
-      "since",
       "stack",
       "status",
     ]);
-    expect(lines.slice(2, 7).map((l) => l.kind)).toEqual(["kv", "kv", "kv", "kv", "kv"]);
+    expect(lines.slice(2, 6).map((l) => l.kind)).toEqual(["kv", "kv", "kv", "kv"]);
   });
 
   it("uses the approved ESA phrasing verbatim for the now row", () => {
@@ -216,14 +215,15 @@ describe("runCommand('whoami')", () => {
     );
   });
 
-  it("takes the based row from the shared location copy", () => {
+  it("folds the year into the based row: location from the shared copy, year from the About data", () => {
+    // Two one-token filters do not each deserve a row. The ICU string owns the
+    // wording per locale ("since 2022" / "od 2022" / "2022 óta"); the fixture's
+    // fmt just proves both values reach it.
     const based = lines.find((l) => l.label === "based");
-    expect(based?.segments.map((s) => s.text).join("")).toBe("Prague, CET · EN · SK · HU");
-  });
-
-  it("takes the since row from the same data the About section renders", () => {
-    const since = lines.find((l) => l.label === "since");
-    expect(since?.segments.map((s) => s.text).join("")).toBe("2022");
+    expect(based?.segments.map((s) => s.text).join("")).toBe(
+      'whoami.basedValue{"location":"Prague, CET · EN · SK · HU","since":"2022"}'
+    );
+    expect(lines.find((l) => l.label === "since")).toBeUndefined();
   });
 
   it("prints the curated stack from the messages, not the flattened Stats data", () => {

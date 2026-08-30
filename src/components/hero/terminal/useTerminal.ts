@@ -8,15 +8,21 @@ import type { HeroCommonCopy, HeroTerminalCopy } from "../types";
 import type { Block } from "./model";
 import { ghostFor, runCommand, type CommandContext } from "./commands";
 import {
-  DEMO_COMMANDS, DEMO_DONE, demoSchedule, headingBlockId, type Typed,
+  DEMO_COMMANDS, DEMO_DONE, demoSchedule, headingBlockId, type RevealState, type Typed,
 } from "./session";
 import { useTerminalData } from "./useTerminalData";
 
+/** A confident typist: ~26 keys a second, give or take a quarter. */
 const TYPE_MS = 38;
-/** The beat between the two demo headers — long enough to read as a pause. */
+const TYPE_JITTER = 0.25;
+/** The beat between two demo headers — long enough to read as a pause. */
 const GAP_MS = 450;
+/** The beat between the demo pressing Enter and the output starting to print. */
+const BEAT_MS = 120;
 /** Ids below this were rendered on the server. Everything above is live output. */
 const LIVE_FROM = DEMO_COMMANDS.length;
+/** Once the visitor has fast-forwarded a reveal, nothing types for the session. */
+const FAST_KEY = "term:instant";
 
 export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
   const router = useRouter();
@@ -36,13 +42,13 @@ export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
   );
 
   /**
-   * The server renders the result of BOTH demo commands, so the visitor's name,
-   * role, current work, location and stack — and then the whole project list —
-   * are legible on the first paint with no JS, which is also what a crawler
-   * sees. Two blocks rather than one because one card leaves the window
-   * two-thirds empty on a desktop. The auto-demo does NOT hide or re-run any of
-   * it; it only types the two command headers in above output that is already
-   * on screen. Liveness is proven without ever removing content.
+   * The server renders the result of the demo command, so the visitor's name,
+   * role, current work, location and stack are legible on the first paint
+   * with no JS, which is also what a crawler sees. The auto-demo does NOT
+   * hide or re-run any of it in the markup: it types the command header in,
+   * then reveals the card with a paint-only effect (`useTypeReveal`) over
+   * text that is already in the DOM. Liveness is proven without ever
+   * removing content.
    */
   const initialBlocks = useMemo<Block[]>(
     () =>
@@ -60,9 +66,19 @@ export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
   const [historyIndex, setHistoryIndex] = useState(-1);
   /** How much of the demo headers is revealed. Starts complete, for SSR. */
   const [typed, setTyped] = useState<Typed>(DEMO_DONE);
-  const [busy, setBusy] = useState(false);
-  /** Cancels the sequential-print stagger for the rest of the session. */
+  /** The demo is typing a header. */
+  const [demoTyping, setDemoTyping] = useState(false);
+  /** How many blocks are typing their output out right now. */
+  const revealing = useRef(0);
+  const [revealingCount, setRevealingCount] = useState(0);
+  /** Cancels the demo and the sequential-print stagger for the rest of the session. */
   const [instant, setInstant] = useState(false);
+  /** The visitor fast-forwarded a reveal; persisted for the session. */
+  const [fast, setFast] = useState(false);
+  /** The persisted flag has been read. Until then the pre-run card must wait. */
+  const [ready, setReady] = useState(false);
+  /** The pre-run block whose header the demo has typed; it may reveal now. */
+  const [armed, setArmed] = useState<number | null>(null);
   const nextId = useRef(LIVE_FROM);
   const inputRef = useRef<HTMLInputElement>(null);
   const logRef = useRef<HTMLDivElement>(null);
@@ -70,36 +86,78 @@ export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
 
   const ghost = ghostFor(value);
 
+  // In an effect, never in the initialiser: the first client render must
+  // match the server's, and the server has no sessionStorage.
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(FAST_KEY)) setFast(true);
+    } catch {
+      /* private mode, or storage blocked: every visit animates once */
+    }
+    setReady(true);
+  }, []);
+
+  const markFast = useCallback(() => {
+    setFast(true);
+    try {
+      sessionStorage.setItem(FAST_KEY, "1");
+    } catch {
+      /* see above */
+    }
+  }, []);
+
+  /**
+   * Any interaction ends the demo. If a block was still typing itself out,
+   * the interaction was also a fast-forward — the visitor has said they are
+   * not here for the animation, so nothing types again this session.
+   */
   const stopDemo = useCallback(() => {
     timers.current.forEach(clearTimeout);
     timers.current = [];
     setTyped(DEMO_DONE);
-    setBusy(false);
+    setDemoTyping(false);
     setInstant(true);
+    if (revealing.current > 0) markFast();
+  }, [markFast]);
+
+  const onRevealStart = useCallback(() => {
+    revealing.current += 1;
+    setRevealingCount(revealing.current);
+  }, []);
+  const onRevealEnd = useCallback(() => {
+    revealing.current = Math.max(0, revealing.current - 1);
+    setRevealingCount(revealing.current);
   }, []);
 
-  // The demo: type the already-printed commands in, character by character,
-  // one after the other. The schedule is computed as a flat list of timeouts so
-  // `stopDemo()` cancels the whole thing with one clear.
+  // The demo: type the already-printed command in, character by character,
+  // then — a beat later — arm its block, which types the output out over the
+  // text already on screen. The schedule is a flat list of timeouts so
+  // `stopDemo()` cancels the whole thing with one clear. Waits for `ready`:
+  // a visitor who fast-forwarded earlier in the session gets no demo at all.
   useEffect(() => {
-    if (!canAnimate) return;
+    if (!canAnimate || !ready || fast) return;
     setTyped({ block: 0, chars: 0 });
-    setBusy(true);
-    const steps = demoSchedule(DEMO_COMMANDS, TYPE_MS, GAP_MS);
+    setDemoTyping(true);
+    const steps = demoSchedule(DEMO_COMMANDS, TYPE_MS, GAP_MS, TYPE_JITTER);
     steps.forEach((step, i) => {
       const last = i === steps.length - 1;
       timers.current.push(
         setTimeout(() => {
           setTyped(last ? DEMO_DONE : { block: step.block, chars: step.chars });
-          if (last) setBusy(false);
+          if (last) setDemoTyping(false);
         }, step.at)
       );
     });
+    const lastAt = steps[steps.length - 1]?.at ?? 0;
+    timers.current.push(setTimeout(() => setArmed(DEMO_COMMANDS.length - 1), lastAt + BEAT_MS));
     return () => {
       timers.current.forEach(clearTimeout);
       timers.current = [];
     };
-  }, [canAnimate]);
+    // `fast` flipping true mid-demo is handled by stopDemo, which cleared the
+    // timers already; re-running for it would only clear them again.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [canAnimate, ready]);
 
   const run = useCallback(
     (raw: string) => {
@@ -165,18 +223,34 @@ export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
     return () => el.removeEventListener("click", focusInput);
   }, [coarsePointer, focusInput]);
 
+  /** A press anywhere in the output, on any pointer, is "get on with it". */
+  useEffect(() => {
+    const el = logRef.current;
+    if (!el) return;
+    el.addEventListener("pointerdown", stopDemo);
+    return () => el.removeEventListener("pointerdown", stopDemo);
+  }, [stopDemo]);
+
   /**
-   * Keep the newest block in view without ever scrolling the page itself —
-   * but only once there IS a newest block. The two pre-run blocks overflow a
-   * phone, and scrolling to the bottom of them on mount would open the page on
-   * the tail of the project list with the visitor's name already out of sight.
-   * Nothing the visitor did caused them, so nothing should move. The same rule
-   * puts the card back at the top after `clear`.
+   * Bring the newest block into view without ever scrolling the page itself —
+   * but only once there IS a newest block: nothing the visitor did caused the
+   * pre-run card, so nothing should move on mount, and the same rule puts the
+   * card back at the top after `clear`. The block's TOP, not the bottom of the
+   * log: the block already occupies its final height while it types itself
+   * out, so the bottom would be blank, and a long block is read from its
+   * header down either way. `useTypeReveal` then follows the write head.
    */
   useEffect(() => {
     const el = logRef.current;
     if (!el) return;
-    el.scrollTop = blocks.some((b) => b.id >= LIVE_FROM) ? el.scrollHeight : 0;
+    if (!blocks.some((b) => b.id >= LIVE_FROM)) {
+      el.scrollTop = 0;
+      return;
+    }
+    const article = el.querySelector<HTMLElement>("[role='log'] > article:last-child");
+    el.scrollTop = article
+      ? article.getBoundingClientRect().top - el.getBoundingClientRect().top + el.scrollTop
+      : el.scrollHeight;
   }, [blocks]);
 
   const onKeyDown = useCallback(
@@ -217,10 +291,13 @@ export const useTerminal = (copy: HeroTerminalCopy, common: HeroCommonCopy) => {
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
 
+  const reveal: RevealState = { canAnimate, ready, fast, instant, armed };
+
   return {
     blocks, value, setValue, ghost, run, onKeyDown,
     inputRef, logRef, focusInput, stopDemo,
     liveFrom: LIVE_FROM, headingBlockId: headingBlockId(blocks),
-    typed, busy, instant,
+    typed, busy: demoTyping || revealingCount > 0, instant,
+    reveal, onRevealStart, onRevealEnd,
   };
 };

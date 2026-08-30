@@ -13,13 +13,15 @@ export interface HeroWhoamiCopy {
   role: string;
   now: string;
   based: string;
-  since: string;
   stack: string;
   statusLabel: string;
-  /** Row values that exist nowhere else. `based` reuses `common.location` and
-   *  `since` comes from the About data. */
+  /** Row values that exist nowhere else. */
   roleValue: string;
   nowValue: string;
+  /** ICU: `{location}` is `common.location`, `{since}` the About section's
+   *  start year. Owns the wording of the year per locale ("since 2022",
+   *  "od 2022", "2022 óta"). */
+  basedValue: string;
   /** The card's curated seven. Proper nouns, so identical in every locale. */
   stackValue: string[];
 }

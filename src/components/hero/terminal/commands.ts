@@ -131,6 +131,10 @@ export const suggest = (raw: string): string[] => {
  * the same messages the visible page uses: a crawler that never runs
  * JavaScript still gets the name, the role, the current work, the location,
  * the year and the stack, and none of it exists only here.
+ *
+ * Five rows. A fetch card reads as one between five and eight; the location
+ * and the year are both one-token filters, so they share a row rather than
+ * spending two on a city and a number.
  */
 const whoamiLines = (ctx: CommandContext): Line[] => {
   const w = ctx.copy.whoami;
@@ -145,8 +149,14 @@ const whoamiLines = (ctx: CommandContext): Line[] => {
     { tone: "out", kind: "headline", segments: [{ text: w.headline }] },
     kv(w.role, [{ text: w.roleValue }]),
     kv(w.now, [{ text: w.nowValue }]),
-    kv(w.based, [{ text: ctx.common.location }]),
-    kv(w.since, [{ text: ctx.data.about.since }]),
+    kv(w.based, [
+      {
+        text: ctx.fmt("whoami.basedValue", {
+          location: ctx.common.location,
+          since: ctx.data.about.since,
+        }),
+      },
+    ]),
     kv(
       w.stack,
       stack.flatMap((item, i) => [

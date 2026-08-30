@@ -6,6 +6,7 @@ import {
   demoSchedule,
   headingBlockId,
   isDoneBlock,
+  revealMode,
   revealed,
   type Typed,
 } from "./session";
@@ -20,8 +21,11 @@ import {
 const block = (id: number, command: string | null): Block => ({ id, command, lines: [] });
 
 describe("DEMO_COMMANDS", () => {
-  it("pre-runs the card and then the project list", () => {
-    expect(DEMO_COMMANDS).toEqual(["whoami", "projects"]);
+  it("pre-runs the card, and only the card", () => {
+    // The project list used to be pre-run under it. Eleven rows of monospace
+    // in the least-read part of the viewport made the first screen a wall;
+    // the same titles are in the Projects section of the same HTML anyway.
+    expect(DEMO_COMMANDS).toEqual(["whoami"]);
   });
 });
 
@@ -60,6 +64,27 @@ describe("demoSchedule", () => {
       { block: 0, chars: 2, at: 10 },
     ]);
   });
+
+  it("is exact when no jitter is asked for, whatever the random source says", () => {
+    expect(demoSchedule(["cv"], 10, 0, 0, () => 1)).toEqual([
+      { block: 0, chars: 1, at: 10 },
+      { block: 0, chars: 2, at: 20 },
+    ]);
+  });
+
+  it("stretches or squeezes each keystroke by up to the jitter fraction", () => {
+    // A fixed random source makes the extremes checkable: 1 → every key is
+    // 25% slow, 0 → every key is 25% fast. Real typing sits in between.
+    expect(demoSchedule(["cv"], 100, 0, 0.25, () => 1).map((s) => s.at)).toEqual([125, 250]);
+    expect(demoSchedule(["cv"], 100, 0, 0.25, () => 0).map((s) => s.at)).toEqual([75, 150]);
+  });
+
+  it("never jitters the gap between commands", () => {
+    const steps = demoSchedule(["ab", "cd"], 100, 300, 0.25, () => 1);
+    const lastOfFirst = steps[1].at;
+    const firstOfSecond = steps[2].at;
+    expect(firstOfSecond - lastOfFirst).toBe(300 + 125);
+  });
 });
 
 describe("revealed", () => {
@@ -85,16 +110,16 @@ describe("revealed", () => {
 });
 
 describe("headingBlockId", () => {
-  const initial = [block(0, "whoami"), block(1, "projects")];
+  const initial = [block(0, "whoami")];
 
   it("gives the <h1> to the first whoami block on screen", () => {
-    expect(headingBlockId(initial)).toBe(0);
+    expect(headingBlockId([...initial, block(1, "projects")])).toBe(0);
   });
 
   it("keeps the <h1> after `clear` resets the scrollback to the card", () => {
     // R1: `clear` used to leave the page with no <h1> for the rest of the
     // session, because the heading was pinned to a block id that never came back.
-    const cleared = initial.slice(0, 1);
+    const cleared = [...initial, block(1, "skills")].slice(0, 1);
     expect(headingBlockId(cleared)).toBe(0);
   });
 
@@ -112,27 +137,71 @@ describe("headingBlockId", () => {
 });
 
 describe("isDoneBlock", () => {
-  const LIVE_FROM = 2;
+  const LIVE_FROM = 1;
 
   it("staggers everything while the demo is still running", () => {
     expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, false)).toBe(false);
     expect(isDoneBlock(block(1, "projects"), LIVE_FROM, false)).toBe(false);
   });
 
-  it("freezes the pre-run blocks once the visitor has interacted", () => {
+  it("freezes the pre-run block once the visitor has interacted", () => {
     expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, true)).toBe(true);
-    expect(isDoneBlock(block(1, "projects"), LIVE_FROM, true)).toBe(true);
   });
 
   it("still staggers a block the visitor caused to be printed", () => {
     // R5: `data-done` used to be set on the whole log, so after the first
     // keystroke no command output ever animated in again — the shell stopped
     // looking like it was running anything.
-    expect(isDoneBlock(block(2, "skills"), LIVE_FROM, true)).toBe(false);
+    expect(isDoneBlock(block(1, "projects"), LIVE_FROM, true)).toBe(false);
     expect(isDoneBlock(block(9, "about"), LIVE_FROM, true)).toBe(false);
   });
 
   it("keeps the card frozen when `clear` re-prints it", () => {
     expect(isDoneBlock(block(0, "whoami"), LIVE_FROM, true)).toBe(true);
+  });
+});
+
+describe("revealMode", () => {
+  const LIVE_FROM = 1;
+  const idle = { canAnimate: true, ready: true, fast: false, instant: false, armed: null };
+
+  it("types a block the visitor caused to be printed", () => {
+    expect(revealMode(block(3, "projects"), LIVE_FROM, idle)).toBe("type");
+  });
+
+  it("types nothing without motion capability — the server, or reduced motion", () => {
+    const s = { ...idle, canAnimate: false, ready: false };
+    expect(revealMode(block(3, "projects"), LIVE_FROM, s)).not.toBe("type");
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...s, armed: 0 })).not.toBe("type");
+  });
+
+  it("settles a live block once the visitor has fast-forwarded a reveal", () => {
+    expect(revealMode(block(3, "projects"), LIVE_FROM, { ...idle, fast: true })).toBe("settle");
+  });
+
+  it("makes the pre-run card wait until the demo has typed its header", () => {
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, idle)).toBe("wait");
+  });
+
+  it("types the pre-run card once the demo arms it", () => {
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...idle, armed: 0 })).toBe("type");
+  });
+
+  it("settles the pre-run card if the visitor interacted before it was armed", () => {
+    // The card must not stay hidden behind a deferred stagger: the visitor is
+    // already reading, so show it now.
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...idle, instant: true })).toBe("settle");
+  });
+
+  it("settles the pre-run card when a skip persisted from earlier in the session", () => {
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...idle, fast: true })).toBe("settle");
+  });
+
+  it("does not settle the pre-run card before the client is ready — the deferral is what hides the flash", () => {
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...idle, ready: false, canAnimate: false, fast: true })).toBe("wait");
+  });
+
+  it("only arms the block that was asked for", () => {
+    expect(revealMode(block(0, "whoami"), LIVE_FROM, { ...idle, armed: 4 })).toBe("wait");
   });
 });

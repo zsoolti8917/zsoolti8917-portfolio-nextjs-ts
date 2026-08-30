@@ -34,12 +34,14 @@ export const WhoamiCard = ({
 
       <div>
         <Name
+          data-line
           className="term-line font-mono mono-1 font-extrabold tracking-tight text-fg"
           style={{ ...stagger(0), fontSize: "clamp(1.75rem, 5vw, 3.25rem)", lineHeight: 1.05 }}
         >
           {name}
         </Name>
         <p
+          data-line
           className="term-line mt-1 font-mono mono-1 text-[1.05rem] text-fg-2 md:text-xl"
           style={stagger(1)}
         >
@@ -52,10 +54,11 @@ export const WhoamiCard = ({
           const hasRun = row.segments.some((s) => s.run);
           return (
             <Fragment key={row.label ?? i}>
-              <dt className="term-line min-w-[5ch] text-fg-3" style={stagger(i + 2)}>
+              <dt data-line className="term-line min-w-[5ch] text-fg-3" style={stagger(i + 2)}>
                 {row.label}
               </dt>
               <dd
+                data-line
                 className={`term-line text-fg ${
                   row.kind === "actions" ? "flex flex-wrap items-center gap-x-3 gap-y-2" : ""
                 }`}

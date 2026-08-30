@@ -301,11 +301,11 @@
         "role": "role",
         "now": "now",
         "based": "based",
-        "since": "since",
         "stack": "stack",
         "statusLabel": "status",
         "roleValue": "Software Developer · full-stack + platform operator",
         "nowValue": "sole developer on a project for the European Space Agency",
+        "basedValue": "{location} · since {since}",
         "stackValue": [
           "TypeScript",
           "React",

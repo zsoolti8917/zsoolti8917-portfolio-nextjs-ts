@@ -301,11 +301,11 @@
         "role": "pozíció",
         "now": "most",
         "based": "lakhely",
-        "since": "kezdés",
         "stack": "stack",
         "statusLabel": "állapot",
         "roleValue": "Szoftverfejlesztő · full-stack + platformüzemeltetés",
         "nowValue": "egyedüli fejlesztő az Európai Űrügynökség egyik projektjén",
+        "basedValue": "{location} · {since} óta",
         "stackValue": [
           "TypeScript",
           "React",

@@ -1,9 +1,10 @@
-import type { ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import type { HeroTerminalCopy } from "../types";
 import { CHIPS } from "./commands";
 import type { Block, Line } from "./model";
 import { PILL, Seg, stagger } from "./atoms";
-import { isDoneBlock, revealed } from "./session";
+import { isDoneBlock, revealMode, revealed } from "./session";
+import { useTypeReveal } from "./useTypeReveal";
 import { WhoamiCard } from "./WhoamiCard";
 import type { useTerminal } from "./useTerminal";
 
@@ -52,10 +53,20 @@ const TerminalBlock = ({
   term: TerminalState;
   copy: HeroTerminalCopy;
 }) => {
-  // The pre-run blocks are the demo, and their id IS their position in it, so
-  // each header can be typed in independently while the other stays complete.
+  // The pre-run block is the demo, and its id IS its position in it, so the
+  // header is typed in by `typed` while the output stays complete underneath.
   const isDemo = block.id < term.liveFrom && block.command !== null;
   const shown = isDemo ? revealed(term.typed, block.id, block.command as string) : 0;
+
+  // The output types itself out — paint only; the markup below is complete
+  // from the first render, on the server and the client alike.
+  const bodyRef = useRef<HTMLDivElement>(null);
+  useTypeReveal(bodyRef, {
+    mode: revealMode(block, term.liveFrom, term.reveal),
+    follow: term.logRef,
+    onStart: term.onRevealStart,
+    onEnd: term.onRevealEnd,
+  });
 
   return (
     <article
@@ -63,6 +74,9 @@ const TerminalBlock = ({
       // interaction meant no command a visitor ran ever printed with the
       // stagger — the shell stopped looking like it was doing anything.
       data-done={isDoneBlock(block, term.liveFrom, term.instant) ? "" : undefined}
+      // The pre-run block's stagger is deferred (see `--boot` in globals.css)
+      // so the card is not painted in full and then hidden for the reveal.
+      data-demo={isDemo ? "" : undefined}
       className="mb-5 last:mb-0"
     >
       {block.command !== null && (
@@ -79,23 +93,25 @@ const TerminalBlock = ({
         </p>
       )}
 
-      {block.command === "whoami" ? (
-        <WhoamiCard
-          lines={block.lines}
-          onRun={term.run}
-          asHeading={block.id === term.headingBlockId}
-        />
-      ) : (
-        <div className="whitespace-pre-wrap break-words">
-          {block.lines.map((line, i) => (
-            <p key={i} className={`term-line ${TONE[line.tone]}`} style={stagger(i)}>
-              {line.segments.map((segment, j) => (
-                <Seg key={j} segment={segment} onRun={term.run} />
-              ))}
-            </p>
-          ))}
-        </div>
-      )}
+      <div ref={bodyRef}>
+        {block.command === "whoami" ? (
+          <WhoamiCard
+            lines={block.lines}
+            onRun={term.run}
+            asHeading={block.id === term.headingBlockId}
+          />
+        ) : (
+          <div className="whitespace-pre-wrap break-words">
+            {block.lines.map((line, i) => (
+              <p key={i} data-line className={`term-line ${TONE[line.tone]}`} style={stagger(i)}>
+                {line.segments.map((segment, j) => (
+                  <Seg key={j} segment={segment} onRun={term.run} />
+                ))}
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
     </article>
   );
 };
