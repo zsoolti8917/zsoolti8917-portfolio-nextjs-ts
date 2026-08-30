@@ -290,14 +290,14 @@
       "findHeader": "Results for “{q}”:",
       "findEmpty": "Nothing matched “{q}”. Try: projects, experience, skills.",
       "findUsage": "Usage: find <word>  — searches projects, experience and skills.",
-      "status": "open to new roles",
+      "status": "always open to possibilities",
       "statusBar": {
         "cwd": "~/cv",
         "hints": "↑↓ history · → accept · ^L clear",
         "zone": "Prague"
       },
       "whoami": {
-        "headline": "I delete work for a living.",
+        "headline": "I solve problems for a living.",
         "role": "role",
         "now": "now",
         "based": "based",

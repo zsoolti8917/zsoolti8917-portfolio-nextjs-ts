@@ -103,12 +103,12 @@ describe("revealSchedule", () => {
   it("with the shipped defaults types the card in about the old stagger's time", () => {
     const card = [
       "Zsolt Varjú",
-      "I delete work for a living.",
+      "I solve problems for a living.",
       "Software Developer · full-stack + platform operator",
       "sole developer on a project for the European Space Agency",
       "Prague, CET · EN · SK · HU · since 2022",
       "TypeScript · React · Next.js · Node.js · Python · Docker · Kubernetes",
-      "open to new roles [contact] [cv ↓]",
+      "always open to possibilities [contact] [cv ↓]",
     ];
     expect(total(card, REVEAL)).toBeCloseTo(REVEAL.budgetMs);
   });

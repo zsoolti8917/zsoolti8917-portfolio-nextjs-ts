@@ -290,14 +290,14 @@
       "findHeader": "Výsledky pre „{q}“:",
       "findEmpty": "Nič sa nezhoduje s „{q}“. Skúste: projects, experience, skills.",
       "findUsage": "Použitie: find <slovo> — prehľadá projekty, prax a technológie.",
-      "status": "otvorený novým príležitostiam",
+      "status": "vždy otvorený novým príležitostiam",
       "statusBar": {
         "cwd": "~/cv",
         "hints": "↑↓ história · → doplniť · ^L vyčistiť",
         "zone": "Praha"
       },
       "whoami": {
-        "headline": "Živím sa tým, že ruším prácu.",
+        "headline": "Živím sa tým, že riešim problémy.",
         "role": "pozícia",
         "now": "teraz",
         "based": "bydlisko",

@@ -40,10 +40,10 @@ const copy: HeroTerminalCopy = {
   findHeader: "findHeader",
   findEmpty: "findEmpty",
   findUsage: "Usage: find <word>",
-  status: "open to new roles",
+  status: "always open to possibilities",
   statusBar: { cwd: "~/cv", hints: "↑↓ history", zone: "Prague" },
   whoami: {
-    headline: "I delete work for a living.",
+    headline: "I solve problems for a living.",
     role: "role",
     now: "now",
     based: "based",
@@ -194,7 +194,7 @@ describe("runCommand('whoami')", () => {
 
   it("follows with the headline", () => {
     expect(lines[1].kind).toBe("headline");
-    expect(lines[1].segments[0].text).toBe("I delete work for a living.");
+    expect(lines[1].segments[0].text).toBe("I solve problems for a living.");
   });
 
   it("prints the labelled key/value rows in order — five, the fetch-card sweet spot", () => {
@@ -248,7 +248,7 @@ describe("runCommand('whoami')", () => {
   it("ends with an actions row whose pills run contact and cv", () => {
     const actions = lines[lines.length - 1];
     expect(actions.kind).toBe("actions");
-    expect(actions.segments[0].text).toBe("open to new roles");
+    expect(actions.segments[0].text).toBe("always open to possibilities");
     expect(actions.segments.filter((s) => s.run)).toEqual([
       { text: "[contact]", run: "contact" },
       { text: "[cv ↓]", run: "cv" },

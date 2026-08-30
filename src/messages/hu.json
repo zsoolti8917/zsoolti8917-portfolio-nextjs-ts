@@ -290,14 +290,14 @@
       "findHeader": "Találatok erre: „{q}”:",
       "findEmpty": "Nincs találat erre: „{q}”. Próbáld: projects, experience, skills.",
       "findUsage": "Használat: find <szó> — projektek, tapasztalat és technológiák között keres.",
-      "status": "nyitott új pozíciókra",
+      "status": "mindig nyitott az új lehetőségekre",
       "statusBar": {
         "cwd": "~/cv",
         "hints": "↑↓ előzmények · → elfogadás · ^L törlés",
         "zone": "Prága"
       },
       "whoami": {
-        "headline": "Abból élek, hogy megszüntetek munkát.",
+        "headline": "Abból élek, hogy problémákat oldok meg.",
         "role": "pozíció",
         "now": "most",
         "based": "lakhely",

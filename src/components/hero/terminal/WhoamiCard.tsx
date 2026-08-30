@@ -85,7 +85,7 @@ export const WhoamiCard = ({
   );
 };
 
-/** `● open to new roles   [contact]  [cv ↓]` — the only CTAs above the fold. */
+/** `● always open to possibilities   [contact]  [cv ↓]` — the only CTAs above the fold. */
 const ActionsRow = ({ row, onRun }: { row: Line; onRun: (cmd: string) => void }) => {
   const actions = row.segments.filter((s) => s.run);
   const label = row.segments.filter((s) => !s.run);
