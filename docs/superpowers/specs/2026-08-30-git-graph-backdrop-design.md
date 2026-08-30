@@ -34,34 +34,41 @@ history behind that hash. Vertical lanes suit the tall, narrow gutters beside
 the 1152px window, which is the only place the backdrop shows (below `md` the
 window is full-bleed).
 
-## Design
+## Design (v2 — after Zsolt's review of v1)
+
+v1 was eight thin monochrome columns drifting at clock-hand speed. Zsolt asked
+for **full-width coverage, GitKraken colours, and merges you can watch
+happen**. So:
 
 - **Generator** (`src/components/hero/backdrop/gitgraph.ts`, pure, vitest):
   mulberry32 PRNG threaded through the state; each lane-group is an independent
-  repository with a main lane and two branch lanes. Time is in absolute steps,
-  rows are derived, so appending a commit changes nothing already drawn. A
-  branch forks from the latest main commit onto the lowest free lane, makes
-  2–5 commits, merges back; lanes are reused only after the merge, so rails
-  never overlap. A ring buffer keeps 56 rows. `layoutGroup` emits crisp
-  integer-or-half coordinates so server and client strings are identical.
-- **Component** (`GitGraphBackdrop.tsx`): eight `<svg>` roots at mirrored
-  offsets 616/792/968/1144px from the centre — gutters only, at every width the
-  same groups sit beside the window. Rendered from a constant seed, so it is
-  there at first paint, for crawlers, and — still — under reduced motion.
-- **Conveyor:** each root drifts `translateY(0 → 32px)` over 15 s, `linear
-  infinite`, with a negative per-group delay so a commit lands somewhere every
-  ~2 s. On `animationiteration` the component appends one commit inside
-  `flushSync`, so the model shifts a row in the same frame the transform snaps
-  back one — verified at 60× playback: 100 samples, zero backward jumps.
-- **Gates:** the drift is `animation-name: none` until an effect (gated on
-  `canAnimate`) sets `data-live`; an IntersectionObserver clears it when the
-  hero scrolls off. `prefers-reduced-motion` freezes everything in CSS and
-  turns the newest node into a still accent HEAD marker. Nothing in render
-  reads the clock, `Math.random` or the window.
-- **Look:** rails at 8–11% hairline, nodes at 16% fg, merges hollow, the newest
-  node lands at 70% accent and settles over 2.4 s. The dot grid drops from 6%
-  to 4% so the rails read above it. All tuning lives in `GITGRAPH`; alphas in
-  the CSS block.
+  repository with a main lane and three branch lanes. Time is in absolute steps,
+  rows are derived, so appending a commit changes nothing already drawn. Every
+  commit carries its **parent links** — the real DAG — and a palette index: main
+  is 0 (the accent), each branch takes the next of six colours. A branch forks
+  from the latest main commit onto the lowest free lane, makes 2–6 commits,
+  merges back; lanes are reused only after the merge, so rails never overlap.
+  A ring buffer keeps 44 rows. `layoutGroup` emits one node per commit and one
+  edge per parent link: verticals on a lane, S-curves for a fork (leaving main
+  in the row above the parent) and a merge (arriving at main in the last row),
+  all integer-or-half coordinates so server and client strings are identical.
+- **Tiling:** groups are 112px wide (pad = half the lane pitch, so lane spacing
+  is uniform across seams) and tile outward from the window edge, six per
+  side, mirrored — the gutter reads as one wide graph at any viewport width and
+  the same groups sit beside the window everywhere. Twelve `<svg>` roots.
+- **Events instead of drift:** nothing moves between commits. When one lands
+  (every ~12 s ± 40 % per group, only for groups inside the viewport and only
+  while the hero is on screen), the model gains a row inside `flushSync` and,
+  in the same frame, the column slides down one row via a WAAPI `transform` on
+  its root (compositor); the new edge draws in from its parent
+  (`pathLength="1"` + dash-offset) and the node pops. Idle cost is zero.
+- **Gates:** the scheduler lives in an effect gated on `canAnimate`; the SSR'd
+  graph is what renders under reduced motion and without JavaScript, with the
+  newest commits simply a little brighter. Nothing in render reads the clock,
+  `Math.random` or the window.
+- **Look:** 2px strokes at 45 % alpha, 3.5px nodes at 85 %, merges hollow.
+  Palette and alphas are custom properties on `.gg` in the CSS block;
+  geometry and timing in `GITGRAPH`. The dot grid drops from 6 % to 4 %.
 
 ## Out of scope
 

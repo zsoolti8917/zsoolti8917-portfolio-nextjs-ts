@@ -8,63 +8,55 @@ import {
   OPTS,
   appendCommit,
   createGroups,
+  groupOffsets,
   layoutGroup,
   type Group,
 } from "./gitgraph";
 
 /**
- * The ambient layer behind the hero window: eight small git graphs drifting
- * down the desktop gutters, one commit landing every couple of seconds.
+ * The live layer behind the hero window: small git graphs tiling the desktop
+ * gutters, a commit landing somewhere every couple of seconds.
  *
  * Three rules keep it honest:
  *
  * - The graph is SERVER-RENDERED from a fixed seed, so it is there at first
  *   paint, for crawlers, and — still — for anyone who asked for less motion.
  *   Nothing in render reads the clock, `Math.random` or the window.
- * - The drift is a CSS transform on each `<svg>` root: compositor-only, no
- *   per-frame JavaScript beside the typing reveal. It is switched on by
- *   setting `data-live` from an effect (gated on `canAnimate`), never in JSX.
- * - Each `animationiteration` appends one commit INSIDE `flushSync`: the model
- *   shifts every row down by one in the same frame the transform snaps back
- *   by one row, so the conveyor never visibly jumps.
+ * - Nothing moves between events. When a commit lands, the model gains a row
+ *   INSIDE `flushSync` and, in the same frame, the column slides down one row
+ *   on the compositor (a WAAPI transform) while the new edge draws itself in
+ *   (CSS on the `[data-new]` elements). Idle cost is zero.
+ * - The scheduler lives in an effect gated on `canAnimate`, never in JSX;
+ *   groups outside the viewport, or the hero off-screen, are skipped.
  */
 
-/** Group centres from the section centre, mirrored into both gutters. */
-const OFFSETS: number[] = GITGRAPH.OFFSETS.flatMap((o) => [-o, o]);
+const OFFSETS = groupOffsets();
 
-const GraphGroup = memo(
-  ({ index, group, offset, delay }: { index: number; group: Group; offset: number; delay: number }) => {
-    const layout = layoutGroup(group, METRICS);
-    return (
-      <svg
-        className="gg-group"
-        data-group={index}
-        style={
-          {
-            left: `calc(50% + ${offset - GROUP_W / 2}px)`,
-            width: GROUP_W,
-            "--gg-delay": `${delay}ms`,
-          } as CSSProperties
-        }
-      >
-        <path data-main="" d={layout.main} />
-        {layout.branches.map((b) => (
-          <path key={b.key} d={b.d} />
-        ))}
-        {layout.nodes.map((n) => (
-          <circle
-            key={n.key}
-            cx={n.x}
-            cy={n.y}
-            r={GITGRAPH.R}
-            data-new={n.newest ? "" : undefined}
-            data-merge={n.merge ? "" : undefined}
-          />
-        ))}
-      </svg>
-    );
-  }
-);
+const GraphGroup = memo(({ index, group, offset }: { index: number; group: Group; offset: number }) => {
+  const layout = layoutGroup(group, METRICS);
+  return (
+    <svg
+      className="gg-group"
+      data-group={index}
+      style={{ left: `calc(50% + ${offset - GROUP_W / 2}px)`, width: GROUP_W }}
+    >
+      {layout.edges.map((e) => (
+        <path key={e.key} d={e.d} pathLength={1} data-c={e.c} data-new={e.newest ? "" : undefined} />
+      ))}
+      {layout.nodes.map((n) => (
+        <circle
+          key={n.key}
+          cx={n.x}
+          cy={n.y}
+          r={GITGRAPH.R}
+          data-c={n.c}
+          data-new={n.newest ? "" : undefined}
+          data-merge={n.merge ? "" : undefined}
+        />
+      ))}
+    </svg>
+  );
+});
 GraphGroup.displayName = "GraphGroup";
 
 export const GitGraphBackdrop = () => {
@@ -77,29 +69,39 @@ export const GitGraphBackdrop = () => {
     if (!canAnimate) return;
     const root = ref.current;
     if (!root) return;
+    const svgs = Array.from(root.querySelectorAll<SVGSVGElement>(".gg-group"));
+    const timers: number[] = [];
+    let onScreen = true;
 
-    const onIteration = (e: AnimationEvent) => {
-      if (e.animationName !== "gg-drift") return;
-      const i = Number((e.target as SVGSVGElement).dataset.group);
-      if (Number.isNaN(i)) return;
-      // Animation events dispatch before the style/layout/paint of the frame
-      // that wraps; a plain setState would flush a task later, after that
-      // frame painted, and the graph would jump up a row for one frame.
-      flushSync(() => setGroups((gs) => gs.map((g, k) => (k === i ? appendCommit(g, OPTS) : g))));
+    // Groups beyond the viewport edge get no events; nothing would show.
+    const visible = (k: number) => Math.abs(OFFSETS[k]) - GROUP_W / 2 < root.clientWidth / 2;
+    const jittered = () => GITGRAPH.INTERVAL_MS * (1 + GITGRAPH.JITTER * (Math.random() * 2 - 1));
+
+    const land = (k: number) => {
+      // Same frame for both, or the column slides before the row exists.
+      flushSync(() => setGroups((gs) => gs.map((g, i) => (i === k ? appendCommit(g, OPTS) : g))));
+      svgs[k]?.animate?.(
+        [{ transform: `translateY(-${GITGRAPH.ROW}px)` }, { transform: "translateY(0)" }],
+        { duration: GITGRAPH.SHIFT_MS, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)" }
+      );
     };
-    root.addEventListener("animationiteration", onIteration);
+    const schedule = (k: number, ms: number) => {
+      timers[k] = window.setTimeout(() => {
+        if (onScreen && visible(k)) land(k);
+        schedule(k, jittered());
+      }, ms);
+    };
+    // Spread the first events across one interval so they do not arrive as one.
+    svgs.forEach((_, k) => schedule(k, ((k * GITGRAPH.INTERVAL_MS) / svgs.length) * (0.5 + Math.random())));
 
-    // Off-screen, the eight layers and their appends cost nothing.
     const io = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) root.dataset.live = "";
-      else delete root.dataset.live;
+      onScreen = entry.isIntersecting;
     });
     io.observe(root);
 
     return () => {
       io.disconnect();
-      root.removeEventListener("animationiteration", onIteration);
-      delete root.dataset.live;
+      timers.forEach((t) => window.clearTimeout(t));
     };
   }, [canAnimate]);
 
@@ -108,16 +110,10 @@ export const GitGraphBackdrop = () => {
       ref={ref}
       aria-hidden
       className="gg pointer-events-none absolute inset-0 -z-10 hidden md:block"
-      style={{ "--gg-row": `${GITGRAPH.ROW}px`, "--gg-interval": `${GITGRAPH.INTERVAL_MS}ms` } as CSSProperties}
+      style={{ "--gg-row": `${GITGRAPH.ROW}px` } as CSSProperties}
     >
       {groups.map((g, i) => (
-        <GraphGroup
-          key={i}
-          index={i}
-          group={g}
-          offset={OFFSETS[i]}
-          delay={-Math.round((i * GITGRAPH.INTERVAL_MS) / OFFSETS.length)}
-        />
+        <GraphGroup key={i} index={i} group={g} offset={OFFSETS[i]} />
       ))}
     </div>
   );

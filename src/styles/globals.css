@@ -105,53 +105,90 @@ html {
   pointer-events: none;
 }
 
-/* --- Git graph (ambient, behind the hero window) ------------------------ */
+/* --- Git graph (live, behind the hero window) --------------------------- */
 
-/* A faint `git log --graph` drifting down the gutters beside the window.
-   Geometry and timing come from GITGRAPH in `hero/backdrop/gitgraph.ts` via
-   `--gg-row` / `--gg-interval` / `--gg-delay`; only the alphas live here.
+/* Small `git log --graph`s tiling the gutters beside the window, coloured per
+   branch the way GitKraken draws them. Geometry and timing come from GITGRAPH
+   in `hero/backdrop/gitgraph.ts` (`--gg-row` is set by the component); the
+   palette and the alphas live here.
 
    Each lane-group is its own <svg> ROOT, never a <g>: only an <svg> root gets
-   a compositor layer, and the drift must be compositor-only — a transform on
-   a <g> repaints the whole SVG every frame on the main thread, next to the
-   typing reveal. The drift is `animation-name: none` until the component sets
-   `[data-live]` from an effect (never from JSX — hydration), so a no-JS or
-   reduced-motion visitor gets a still graph and no layers at all. */
+   a compositor layer, and the slide when a commit lands is a transform on that
+   root. Nothing animates between events. The `[data-new]` draw-on and pop run
+   once per new element — and once on first paint for the newest commits the
+   server rendered, JavaScript or not. */
+.gg {
+  --gg-line: 0.45;
+  --gg-node: 0.85;
+  --gg-c0: 99 102 241;   /* main — the accent */
+  --gg-c1: 168 85 247;   /* violet */
+  --gg-c2: 236 72 153;   /* pink */
+  --gg-c3: 20 184 166;   /* teal */
+  --gg-c4: 245 158 11;   /* amber */
+  --gg-c5: 14 165 233;   /* sky */
+  --gg-c6: 52 211 153;   /* emerald */
+}
 .gg-group {
   position: absolute;
   top: calc(-1 * var(--gg-row));
   height: calc(100% + var(--gg-row));
   overflow: hidden;
-  animation: gg-drift var(--gg-interval) linear infinite;
-  /* Negative, one phase per group: a commit lands somewhere every ~2s
-     instead of eight at once. */
-  animation-delay: var(--gg-delay, 0ms);
-  animation-name: none;
 }
-[data-live] .gg-group { animation-name: gg-drift; }
-@keyframes gg-drift {
-  from { transform: translateY(0); }
-  to   { transform: translateY(var(--gg-row)); }
+.gg-group [data-c="0"] { --c: var(--gg-c0); }
+.gg-group [data-c="1"] { --c: var(--gg-c1); }
+.gg-group [data-c="2"] { --c: var(--gg-c2); }
+.gg-group [data-c="3"] { --c: var(--gg-c3); }
+.gg-group [data-c="4"] { --c: var(--gg-c4); }
+.gg-group [data-c="5"] { --c: var(--gg-c5); }
+.gg-group [data-c="6"] { --c: var(--gg-c6); }
+
+.gg-group path {
+  fill: none;
+  stroke: rgb(var(--c) / var(--gg-line));
+  stroke-width: 2;
+  transition: stroke 0.6s;
+}
+.gg-group circle {
+  fill: rgb(var(--c) / var(--gg-node));
+  transition: fill 0.6s, stroke 0.6s;
+}
+/* A merge commit is hollow, as `git log --graph` draws it. */
+.gg-group circle[data-merge] {
+  fill: rgb(var(--canvas));
+  stroke: rgb(var(--c) / var(--gg-node));
+  stroke-width: 2;
 }
 
-.gg-group path               { fill: none; stroke: rgb(var(--hairline) / 0.08); stroke-width: 1; }
-.gg-group [data-main]        { stroke: rgb(var(--hairline) / 0.11); }
-.gg-group circle             { fill: rgb(var(--fg) / 0.16); }
-/* A merge commit is hollow, as `git log --graph` draws it. */
-.gg-group circle[data-merge] { fill: rgb(var(--canvas)); stroke: rgb(var(--fg) / 0.2); stroke-width: 1; }
-/* The newest commit lands in the accent and settles. A new <circle> mounts
-   with the attribute, so the fade runs once per commit — and once on first
-   paint for the eight the server rendered, JavaScript or not. */
-.gg-group circle[data-new]   { animation: gg-new 2.4s ease-out both; }
-@keyframes gg-new {
-  0%, 45% { fill: rgb(var(--accent) / 0.7); }
-  100%    { fill: rgb(var(--fg) / 0.16); }
+/* A commit lands: the edge draws up from its parent (`pathLength="1"` makes
+   one dash the whole path), then the node pops. The column's slide is a
+   WAAPI transform the component starts in the same frame. */
+.gg-group path[data-new] {
+  stroke: rgb(var(--c) / 0.8);
+  stroke-dasharray: 1;
+  animation: gg-draw 0.45s 0.2s ease-out both;
+}
+@keyframes gg-draw {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+.gg-group circle[data-new] {
+  fill: rgb(var(--c));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: gg-pop 0.35s 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+.gg-group circle[data-merge][data-new] {
+  fill: rgb(var(--canvas));
+  stroke: rgb(var(--c));
+}
+@keyframes gg-pop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gg-group { animation: none; }
-  /* A still HEAD marker instead of a flash. */
-  .gg-group circle[data-new] { animation: none; fill: rgb(var(--accent) / 0.45); }
+  /* Still: the newest commits are simply drawn, a little brighter. */
+  .gg-group [data-new] { animation: none; stroke-dasharray: none; }
 }
 
 /* --- Terminal (owned by WP1) ------------------------------------------- */

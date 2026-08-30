@@ -26,8 +26,8 @@ export const HeroSection = ({
     className={`relative isolate mb-24 w-full overflow-hidden scroll-mt-14 md:mb-32 min-h-[calc(100svh-56px)] ${className}`}
   >
     {/* Dots and glow composite on one layer; the noise carries its own opacity
-        and so needs its own. Between them, the one animated layer: the git
-        graph, server-rendered and drifting on the compositor only. */}
+        and so needs its own. Between them, the one live layer: the git graph,
+        server-rendered, a column sliding on the compositor when a commit lands. */}
     <div aria-hidden className="absolute inset-0 -z-10 bg-dots bg-glow" />
     <GitGraphBackdrop />
     <div aria-hidden className="absolute inset-0 -z-10 bg-noise" />
