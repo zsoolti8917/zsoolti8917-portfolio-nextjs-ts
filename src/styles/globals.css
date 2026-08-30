@@ -85,10 +85,11 @@ html {
 
 /* Three stackable, non-animated layers used behind the hero only. Each is a
    background-image so they can sit on separate absolutely-positioned divs and
-   composite without a single extra DOM cost at paint time. */
+   composite without a single extra DOM cost at paint time. The one animated
+   layer, the git graph, sits between the glow and the noise (see below). */
 
 .bg-dots {
-  background-image: radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -102,6 +103,55 @@ html {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   opacity: 0.03;
   pointer-events: none;
+}
+
+/* --- Git graph (ambient, behind the hero window) ------------------------ */
+
+/* A faint `git log --graph` drifting down the gutters beside the window.
+   Geometry and timing come from GITGRAPH in `hero/backdrop/gitgraph.ts` via
+   `--gg-row` / `--gg-interval` / `--gg-delay`; only the alphas live here.
+
+   Each lane-group is its own <svg> ROOT, never a <g>: only an <svg> root gets
+   a compositor layer, and the drift must be compositor-only — a transform on
+   a <g> repaints the whole SVG every frame on the main thread, next to the
+   typing reveal. The drift is `animation-name: none` until the component sets
+   `[data-live]` from an effect (never from JSX — hydration), so a no-JS or
+   reduced-motion visitor gets a still graph and no layers at all. */
+.gg-group {
+  position: absolute;
+  top: calc(-1 * var(--gg-row));
+  height: calc(100% + var(--gg-row));
+  overflow: hidden;
+  animation: gg-drift var(--gg-interval) linear infinite;
+  /* Negative, one phase per group: a commit lands somewhere every ~2s
+     instead of eight at once. */
+  animation-delay: var(--gg-delay, 0ms);
+  animation-name: none;
+}
+[data-live] .gg-group { animation-name: gg-drift; }
+@keyframes gg-drift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(var(--gg-row)); }
+}
+
+.gg-group path               { fill: none; stroke: rgb(var(--hairline) / 0.08); stroke-width: 1; }
+.gg-group [data-main]        { stroke: rgb(var(--hairline) / 0.11); }
+.gg-group circle             { fill: rgb(var(--fg) / 0.16); }
+/* A merge commit is hollow, as `git log --graph` draws it. */
+.gg-group circle[data-merge] { fill: rgb(var(--canvas)); stroke: rgb(var(--fg) / 0.2); stroke-width: 1; }
+/* The newest commit lands in the accent and settles. A new <circle> mounts
+   with the attribute, so the fade runs once per commit — and once on first
+   paint for the eight the server rendered, JavaScript or not. */
+.gg-group circle[data-new]   { animation: gg-new 2.4s ease-out both; }
+@keyframes gg-new {
+  0%, 45% { fill: rgb(var(--accent) / 0.7); }
+  100%    { fill: rgb(var(--fg) / 0.16); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gg-group { animation: none; }
+  /* A still HEAD marker instead of a flash. */
+  .gg-group circle[data-new] { animation: none; fill: rgb(var(--accent) / 0.45); }
 }
 
 /* --- Terminal (owned by WP1) ------------------------------------------- */
