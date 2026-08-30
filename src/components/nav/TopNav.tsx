@@ -32,18 +32,31 @@ export const TopNav = () => {
 
   return (
     <header className="sticky top-0 z-30 h-14 border-b border-hairline bg-canvas/70 backdrop-blur-md">
-      <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 md:px-6">
+      {/* Three cells from lg, not justify-between: the links must sit at the
+          exact centre of the page however wide the actions cluster is (with
+          justify-between they sat centred in the GAP, ~130px left of centre).
+          Only from lg — below 1024px the two side clusters plus the links do
+          not fit on one line around a true centre, so the bar stays flex and
+          the links keep their old position. `minmax(0,1fr)` rather than `1fr`:
+          a bare 1fr track refuses to shrink below its content, and a long
+          locale label would give the whole page a horizontal scrollbar. The
+          `justify-self-*` classes are ignored in flex layout, so they need no
+          breakpoint prefix. */}
+      <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 md:px-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
         <button
           type="button"
           onClick={scrollToTop}
           aria-label={t("nav.home")}
-          className="rounded font-mono mono-1 text-xl font-bold leading-none text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+          // justify-self-start: a grid item stretches by default, which would
+          // turn this button into an invisible hit target across the left third
+          // of the bar.
+          className="justify-self-start rounded font-mono mono-1 text-xl font-bold leading-none text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         >
           V<span className="text-accent">.</span>
         </button>
 
         {/* Hidden below md — the palette lists the same sections there. */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden min-w-0 items-center gap-6 justify-self-center md:flex">
           {SECTIONS.map((id) => {
             const isActive = active === id;
             return (
@@ -67,7 +80,7 @@ export const TopNav = () => {
           })}
         </div>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex min-w-0 items-center gap-2 justify-self-end md:gap-3">
           {/* Two buttons rather than one with a responsive label: aria-label
               cannot follow a media query, and `hidden` takes the other out of
               the accessibility tree entirely. */}
