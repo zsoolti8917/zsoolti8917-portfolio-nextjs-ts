@@ -8,8 +8,8 @@ import { useProjectModalContent, type ProjectDef } from "./useProjectModalConten
 /**
  * The one project modal on the page, driven by `bus.projectKey`.
  *
- * Every card used to mount its own (eleven modals, eleven copies of the body,
- * eleven scroll-lock effects), which also meant nothing outside the card could
+ * Every card used to mount its own (a modal per card — a copy of the body and
+ * a scroll-lock effect each), which also meant nothing outside the card could
  * open one. With a single host, the card, the ⌘K palette and the terminal's
  * `open <project>` all reach the same dialog by naming a key.
  */
@@ -35,6 +35,7 @@ const OpenProject = ({ def, index, onClose }: { def: ProjectDef; index: number; 
         index,
         code: def.code,
         projectLink: def.projectLink,
+        ownSite: def.ownSite,
         tech: t(`${def.key}.tech`).split(","),
         content,
       }}

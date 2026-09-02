@@ -38,6 +38,7 @@ export const Contact = () => {
             <Link
               href={t('linkedinUrl')}
               target="_blank"
+              rel="me noreferrer"
               className="text-accent-hover underline-offset-4 hover:underline"
             >
               {t('linkedin')}
@@ -46,6 +47,7 @@ export const Contact = () => {
             <Link
               href={t('githubUrl')}
               target="_blank"
+              rel="me noreferrer"
               className="text-accent-hover underline-offset-4 hover:underline"
             >
               {t('github')}

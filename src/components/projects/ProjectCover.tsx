@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 /**
  * The generated tile for a project with no screenshot.
  *
- * Six of the eleven projects are private, offline or headless, so a "no image"
+ * Seven of the twelve projects are private, offline or headless, so a "no image"
  * placeholder would be the most common state on the page. Instead of a grey
  * box this draws a miniature of the same window chrome the hero uses — faux
  * title bar, path, prompt — so a cover reads as a deliberate object rather

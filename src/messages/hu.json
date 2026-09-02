@@ -4,7 +4,8 @@
   },
   "meta": {
     "title": "Varjú Zsolt | szoftverfejlesztő",
-    "description": "Varjú Zsolt szoftverfejlesztő és platformüzemeltető Prágában, aki webalkalmazásokat épít a teljes stacken, ETL pipeline-okat tervez, és üzemelteti az azokat futtató infrastruktúrát."
+    "description": "Varjú Zsolt szoftverfejlesztő és platformüzemeltető Prágában, aki webalkalmazásokat épít a teljes stacken, ETL pipeline-okat tervez, és üzemelteti az azokat futtató infrastruktúrát.",
+    "ogImageAlt": "Terminál stílusú kártya Varjú Zsolt szoftverfejlesztő nevével, sötét háttéren."
   },
   "About": {
     "title": "Rólam",
@@ -437,6 +438,18 @@
         "featuresList": "WireGuard privát hálózat a VPS és az otthoni hálózat között | Atomi, leállásmentes telepítések azonnali visszaállítási lehetőséggel | Tailscale mesh hozzáférés az otthoni szolgáltatásokhoz bárhonnan | Dockeres NAS szolgáltatások, köztük médialejátszás és kamerafelvétel | Önjavító szolgáltatás-helyreállítás és ütemezett mentések | Távoli fejlesztés, szükség esetén akár telefonról vezérelve",
         "para2": "A telepítések atomiak: az új verzió a futó mellett épül fel, és csak akkor kapcsol át, ha egészséges, így egy hibás build sosem viszi le a szolgáltatást. A hálózat alapértelmezetten privát: a szolgáltatások WireGuardon és Tailscale-en érhetők el, nem az internetre kitéve.",
         "para3": "Ez a munka üzemeltetői fele, saját időben gyakorolva: ugyanazok a kérdések, mint éles rendszereknél (rendelkezésre állás, hozzáférés-szabályozás, mentés, helyreállítás), olyan léptékben, ahol minden döntés az enyém."
+      }
+    },
+    "blog": {
+      "title": "Tech blog — zsoltvarju.dev",
+      "tech": "Jekyll,Markdown,RSS,Netlify",
+      "description": "Személyes, angol nyelvű technikai blog: szoftverfejlesztés, saját üzemeltetésű infrastruktúra, tesztelés és AI — minden bejegyzés abból indul, ami tényleg megtörtént.",
+      "modalContent": {
+        "para1": "Leírni valamit a megértés utolsó lépése. Erre való a blog: bejegyzések szoftverfejlesztésről, saját infrastruktúra üzemeltetéséről, tesztelésről és AI-ról, mindegyik egy konkrét problémából indul, amibe tényleg belefutottam — egy dark mode megjelenítési hiba a LinkedInen, Dokku telepítése egy friss VPS-re, egy ötlet AI olvasótársra.",
+        "keyFeatures": "Ami ott vár:",
+        "featuresList": "Gyakorlati útmutatók lépésről lépésre, például Dokku telepítése VPS-re | Hibakeresési történetek — a teljes nyomozás, nem csak a javítás | AI a gyakorlatban — projektötletek és eszközök, nem vélemények | Jekyll-lel generált statikus oldal, CDN-ről kiszolgálva | RSS feed olvasóknak és gépeknek egyaránt | Címkézve, kereshetően, közérthető angolsággal",
+        "para2": "Maga az oldal ugyanúgy fut, mint a homelab: statikus oldalgenerátor, Markdown tartalom verziókezelés alatt, automatikus telepítés minden pushnál. Nincs backend, amit foltozni kell, nincs mit pesztrálni — ugyanazok a produkciós szokások, csak most a publikálásra alkalmazva.",
+        "para3": "A fejléc mottója: „How you do one thing is how you do everything” — ahogy egy dolgot csinálsz, úgy csinálsz mindent. A blog ez a gondolat élesben: apró dolgok, gondosan megcsinálva, a levezetéssel együtt."
       }
     },
     "photoCropper": {

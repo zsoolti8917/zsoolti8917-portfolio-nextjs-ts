@@ -11,7 +11,7 @@ import type { Block } from "./model";
  *
  * Its result is in the HTML from the first paint — the card answers "who is
  * this" for a recruiter and for a crawler that never runs JavaScript. The
- * project list used to be pre-run under it, to fill the window; eleven rows of
+ * project list used to be pre-run under it, to fill the window; a screenful of
  * monospace in the least-read part of the viewport made the first screen a
  * wall, and the same titles are in the Projects section of the same document
  * anyway. An open terminal with one card and empty scrollback is what a

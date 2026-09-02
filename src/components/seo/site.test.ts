@@ -50,6 +50,7 @@ describe("sitemap", () => {
     for (const locale of LOCALES) {
       expect(sitemap).toContain(`<loc>${localeUrl(locale)}</loc>`);
     }
+    expect(sitemap).toMatch(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
     const robots = readFileSync(join(ROOT, "public/robots.txt"), "utf8");
     expect(robots).toContain(`Sitemap: ${SITE_URL}/sitemap.xml`);
   });

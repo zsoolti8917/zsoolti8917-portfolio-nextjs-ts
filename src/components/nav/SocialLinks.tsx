@@ -17,7 +17,7 @@ export const SocialLinks: React.FC = () => {
         className="text-fg-2 hover:text-accent-hover transition-colors"
         href="https://www.linkedin.com/in/zsoltvarju/"
         target="_blank"
-        rel="nofollow"
+        rel="me noreferrer"
         aria-label={t("linkedinAria")}
       >
         <SiLinkedin />
@@ -26,7 +26,7 @@ export const SocialLinks: React.FC = () => {
         className="text-fg-2 hover:text-accent-hover transition-colors"
         href="https://github.com/zsoolti8917"
         target="_blank"
-        rel="nofollow"
+        rel="me noreferrer"
         aria-label={t("githubAria")}
       >
         <SiGithub />

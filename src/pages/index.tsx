@@ -1,7 +1,7 @@
 import { HomPage } from "@/components";
 import Head from "next/head";
 import { useTranslations } from 'next-intl';
-import { AlternateLinks, ProfileJsonLd } from "@/components/seo";
+import { AlternateLinks, HeadMeta, ProfileJsonLd } from "@/components/seo";
 
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
           unevaluated elements and renders them later in _document, outside
           NextIntlClientProvider — so a child calling useTranslations throws.
           These each render their own <Head>, which Next merges. */}
+      <HeadMeta />
       <ProfileJsonLd />
       <AlternateLinks />
       <HomPage />

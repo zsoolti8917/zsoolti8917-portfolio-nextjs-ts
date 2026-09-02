@@ -17,6 +17,8 @@ interface Props {
   tech: string[];
   title: string;
   code?: string;
+  /** Follow the live link — it is one of my own properties. */
+  ownSite?: boolean;
 }
 
 export const Project = ({
@@ -28,6 +30,7 @@ export const Project = ({
   title,
   code,
   tech,
+  ownSite,
 }: Props) => {
   const t = useTranslations("projects");
 
@@ -84,13 +87,13 @@ export const Project = ({
 
               <div className="flex shrink-0 items-center gap-3 pt-1">
                 {code && (
-                  <Link href={code} target="_blank" rel="nofollow" aria-label={`${title} — GitHub`}>
+                  <Link href={code} target="_blank" rel="noreferrer" aria-label={`${title} — GitHub`}>
                     <AiFillGithub className="text-xl text-fg-3 transition-colors hover:text-fg" />
                   </Link>
                 )}
 
                 {projectLink && (
-                  <Link href={projectLink} target="_blank" rel="nofollow" aria-label={`${title} — ${t("openSite")}`}>
+                  <Link href={projectLink} target="_blank" rel={ownSite ? "noreferrer" : "nofollow noreferrer"} aria-label={`${title} — ${t("openSite")}`}>
                     <AiOutlineExport className="text-xl text-fg-3 transition-colors hover:text-fg" />
                   </Link>
                 )}

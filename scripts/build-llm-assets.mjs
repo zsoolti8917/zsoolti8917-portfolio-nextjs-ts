@@ -382,9 +382,16 @@ const buildLlms = () => {
     ).join("\n")
   );
 
+  const blogUrl = projects.find((project) => project.key === "blog")?.url;
+
   push("## Optional");
   push(
     [
+      ...(blogUrl
+        ? [
+            `- [Tech blog](${blogUrl}): posts on software development, self-hosted infrastructure, testing and AI. RSS at ${blogUrl}/feed.xml.`,
+          ]
+        : []),
       `- [LinkedIn](${contact.linkedinUrl}): work history and endorsements.`,
       `- [GitHub](${contact.githubUrl}): public repositories, including the source of this site.`,
       `- [Email](mailto:${contact.email}): ${contact.email}.`,
@@ -500,7 +507,10 @@ const buildSitemap = () => {
     `    <xhtml:link rel="alternate" hreflang="x-default" href="${localeUrl("en")}"/>`,
   ].join("\n");
   const urls = codes
-    .map((c) => `  <url>\n    <loc>${localeUrl(c)}</loc>\n${alternates}\n  </url>`)
+    .map(
+      (c) =>
+        `  <url>\n    <loc>${localeUrl(c)}</loc>\n    <lastmod>${generatedOn}</lastmod>\n${alternates}\n  </url>`
+    )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
 };

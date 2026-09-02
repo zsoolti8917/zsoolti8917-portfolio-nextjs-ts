@@ -13,6 +13,8 @@ interface ProjectDef {
   paras?: number;
   /** infoMapSK is the only project with a second bulleted list */
   techList?: boolean;
+  /** the link target is one of my own properties, so render it followed */
+  ownSite?: boolean;
 }
 
 export const PROJECTS: ProjectDef[] = [
@@ -30,6 +32,13 @@ export const PROJECTS: ProjectDef[] = [
   { key: "b2bPortal" },
   { key: "lemma" },
   { key: "homelab" },
+  {
+    // scripts/build-llm-assets.mjs evaluates this array textually, so the
+    // URL must stay a plain string literal here.
+    key: "blog",
+    projectLink: "https://zsoltvarju.dev",
+    ownSite: true,
+  },
   { key: "photoCropper" },
   { key: "municipalMigrations" },
   {
@@ -52,6 +61,7 @@ export const PROJECTS: ProjectDef[] = [
     code: "https://github.com/zsoolti8917/Alza",
     projectLink: "https://github.com/zsoolti8917/Alza",
     paras: 5,
+    ownSite: true,
   },
 ];
 
@@ -73,6 +83,7 @@ export const Projects = () => {
             imgSrc={def.imgSrc}
             code={def.code}
             projectLink={def.projectLink}
+            ownSite={def.ownSite}
             tech={t(`${def.key}.tech`).split(',')}
             description={t(`${def.key}.description`)}
             projectKey={def.key}

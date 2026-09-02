@@ -54,7 +54,7 @@ Skills: HTML, CSS, JavaScript, Cross-Browser Testing, Bug Tracking, Remote Colla
 
 ## Projects
 
-11 projects, in the order they appear on https://zsoltvarju.com/#projects.
+12 projects, in the order they appear on https://zsoltvarju.com/#projects.
 
 ### Self-Hosted RAG Search
 
@@ -184,6 +184,28 @@ Key features include:
 Deployments are atomic: a release is built alongside the running version and switched over only once it is healthy, so a bad build never takes the service down. Networking is private by default. Services are reachable over WireGuard and Tailscale rather than exposed to the internet.
 
 It is the operator half of the job, practised on my own time: the same concerns as production work (uptime, access control, backups, recovery) at a scale where I own every decision.
+
+### Tech Blog — zsoltvarju.dev
+
+**Tech:** Jekyll, Markdown, RSS, Netlify  
+**Links:** [Live](https://zsoltvarju.dev)
+
+A personal engineering blog in English: software development, self-hosted infrastructure, testing, and AI — every post grounded in something that actually happened.
+
+Writing something down is the last step of understanding it. The blog is where that happens: posts on software development, running your own infrastructure, testing, and AI, each one starting from a specific problem I actually hit — a dark-mode rendering bug on LinkedIn, deploying Dokku on a fresh VPS, an idea for an AI reading companion.
+
+What's there:
+
+- Practical step-by-step guides, like deploying Dokku on a VPS
+- Debugging stories that show the investigation, not just the fix
+- AI explored hands-on — project ideas and tooling, not hot takes
+- A static site generated with Jekyll, served from a CDN
+- An RSS feed, for readers and machines alike
+- Tagged and searchable, written in plain English
+
+The site itself runs the way the homelab does: a static site generator, content in Markdown under version control, and an automatic deploy on every push. No backend to patch, nothing to babysit — the same production habits, applied to publishing.
+
+The motto on the masthead is "How you do one thing is how you do everything." The blog is that idea in public: small things, done carefully, shown with their working.
 
 ### Multi Photo Cropper
 

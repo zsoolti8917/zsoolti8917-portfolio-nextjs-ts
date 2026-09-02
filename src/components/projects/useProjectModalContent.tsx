@@ -11,7 +11,7 @@ export type ProjectDef = (typeof PROJECTS)[number];
  * Lifted out of `Projects.tsx`, where it was built for every project on every
  * render of the section and handed down through two components. Only the modal
  * host calls it now, and only for the project actually open — so the section no
- * longer pays for eleven modal bodies nobody is looking at.
+ * longer pays for a dozen modal bodies nobody is looking at.
  */
 export const useProjectModalContent = ({
   key,

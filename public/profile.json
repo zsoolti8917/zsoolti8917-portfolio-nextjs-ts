@@ -252,6 +252,26 @@
       ]
     },
     {
+      "name": "Tech Blog — zsoltvarju.dev",
+      "description": "A personal engineering blog in English: software development, self-hosted infrastructure, testing, and AI — every post grounded in something that actually happened.",
+      "tech": [
+        "Jekyll",
+        "Markdown",
+        "RSS",
+        "Netlify"
+      ],
+      "url": "https://zsoltvarju.dev",
+      "repository": null,
+      "highlights": [
+        "Practical step-by-step guides, like deploying Dokku on a VPS",
+        "Debugging stories that show the investigation, not just the fix",
+        "AI explored hands-on — project ideas and tooling, not hot takes",
+        "A static site generated with Jekyll, served from a CDN",
+        "An RSS feed, for readers and machines alike",
+        "Tagged and searchable, written in plain English"
+      ]
+    },
+    {
       "name": "Multi Photo Cropper",
       "description": "A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP.",
       "tech": [

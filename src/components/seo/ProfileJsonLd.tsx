@@ -89,6 +89,10 @@ export const ProfileJsonLd = () => {
   // differ between the server render and the client and break hydration.
   const buildDate = process.env.NEXT_PUBLIC_BUILD_TIME?.slice(0, 10);
 
+  // The blog is one of the identity links: derive it from the curated list
+  // rather than repeating the URL here.
+  const blogUrl = PROJECTS.find((def) => def.key === "blog")?.projectLink;
+
   const person = compact({
     "@type": "Person",
     "@id": PERSON_ID,
@@ -117,7 +121,11 @@ export const ProfileJsonLd = () => {
         alternateName: LANGUAGE_CODES[language.name.toLowerCase()],
       })
     ),
-    sameAs: [contact("linkedinUrl"), contact("githubUrl")],
+    sameAs: [
+      contact("linkedinUrl"),
+      contact("githubUrl"),
+      ...(blogUrl ? [blogUrl] : []),
+    ],
     worksFor: jobs[0]
       ? compact({
           "@type": "Organization",

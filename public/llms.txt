@@ -8,7 +8,7 @@ Every page linked below is server-rendered and needs no JavaScript. The one gap:
 
 ## Start here
 
-- [Full CV (markdown)](https://zsoltvarju.com/cv.md): everything in one file — summary, both roles with responsibilities, all 11 projects in full, skills, certifications, languages, contact.
+- [Full CV (markdown)](https://zsoltvarju.com/cv.md): everything in one file — summary, both roles with responsibilities, all 12 projects in full, skills, certifications, languages, contact.
 - [Structured profile (JSON)](https://zsoltvarju.com/profile.json): the same content as data, for parsing rather than reading.
 - [Portfolio home page](https://zsoltvarju.com/): the site itself — about, projects, experience, contact, all server-rendered.
 
@@ -20,6 +20,7 @@ Every page linked below is server-rendered and needs no JavaScript. The one gap:
 - [B2B Wholesale Ordering Portal](https://zsoltvarju.com/#projects): A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production. Features tiered customer pricing, a login-only catalog with hidden prices, two-warehouse inventory, decimal quantities for weighted goods, and integrated invoicing — WooCommerce, B2BKing, Stock Locations, SuperFaktúra
 - [Lemma: Vocabulary Scanner](https://zsoltvarju.com/#projects): A mobile app that turns a photo of a printed page into vocabulary cards. Point the camera at text, and it pulls out the words worth learning and schedules them for review — React Native, Expo, Vision models, FSRS
 - [Personal Infrastructure & Homelab](https://zsoltvarju.com/#projects): A personal VPS and home server run with production habits: private networking, atomic zero-downtime deploys, and a stack of self-hosted services — Linux, Docker, WireGuard, Tailscale, CI/CD
+- [Tech Blog — zsoltvarju.dev](https://zsoltvarju.dev): A personal engineering blog in English: software development, self-hosted infrastructure, testing, and AI — every post grounded in something that actually happened — Jekyll, Markdown, RSS, Netlify
 - [Multi Photo Cropper](https://zsoltvarju.com/#projects): A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP — React, TypeScript, Vite, FastAPI, OpenCV, ONNX Runtime, Docker
 - [Municipal Website Migrations](https://zsoltvarju.com/#projects): Content migration and restructuring for five Slovak municipal websites, including bilingual Slovak and Hungarian content — Virgo / GCM Cloud CMS
 - [InfoMap SK: Master's Thesis](https://github.com/zsoolti8917/InfoMapSK-frontend): A full-stack application for visualising Slovak open data on an interactive map, built as my master's thesis project. The public site is no longer online; the source remains available — React, Node.js, Express, MongoDB, TailwindCSS
@@ -39,6 +40,7 @@ Every page linked below is server-rendered and needs no JavaScript. The one gap:
 
 ## Optional
 
+- [Tech blog](https://zsoltvarju.dev): posts on software development, self-hosted infrastructure, testing and AI. RSS at https://zsoltvarju.dev/feed.xml.
 - [LinkedIn](https://www.linkedin.com/in/zsoltvarju/): work history and endorsements.
 - [GitHub](https://github.com/zsoolti8917): public repositories, including the source of this site.
 - [Email](mailto:dev@zsoltvarju.com): dev@zsoltvarju.com.

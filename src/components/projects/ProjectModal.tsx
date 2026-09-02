@@ -17,6 +17,8 @@ export interface ProjectModalData {
   index: number;
   code?: string;
   projectLink?: string;
+  /** Follow the live link — it is one of my own properties. */
+  ownSite?: boolean;
   tech: string[];
   /** The modal body, built by `useProjectModalContent`. */
   content: JSX.Element;
@@ -37,7 +39,7 @@ interface Props {
  * after the first modal. `useScrollLock` restores whatever was there.
  */
 export const ProjectModal = ({ project, onClose }: Props) => {
-  const { content, projectLink, imgSrc, index, title, code, tech } = project;
+  const { content, projectLink, ownSite, imgSrc, index, title, code, tech } = project;
   const t = useTranslations('projectModal');
   // The alt text lives with the other per-project copy, not with the dialog's
   // chrome — the card renders exactly the same string.
@@ -139,7 +141,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
                 {code && (
                   <Link
                     target="_blank"
-                    rel="nofollow"
+                    rel="noreferrer"
                     className="flex items-center gap-1 text-fg-2 transition-colors hover:text-fg"
                     href={code}
                   >
@@ -149,7 +151,7 @@ export const ProjectModal = ({ project, onClose }: Props) => {
                 {projectLink && (
                   <Link
                     target="_blank"
-                    rel="nofollow"
+                    rel={ownSite ? "noreferrer" : "nofollow noreferrer"}
                     className="flex items-center gap-1 text-fg-2 transition-colors hover:text-fg"
                     href={projectLink}
                   >

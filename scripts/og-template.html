@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>og.png source — 1200×630</title>
+<!-- Screenshot source for public/og.png (npm run og:build). Colors are the
+     tokens from src/styles/globals.css; the fonts are a system mono stack so
+     the page renders identically over file:// with no font server. -->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #09090b; /* --canvas */
+    background-image: radial-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  .window {
+    width: 880px;
+    border: 1px solid rgb(255 255 255 / 0.09);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 40px 90px rgb(0 0 0 / 0.55);
+  }
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: #141417; /* --surface-2 */
+    border-bottom: 1px solid rgb(255 255 255 / 0.07);
+  }
+  .dot { width: 14px; height: 14px; border-radius: 50%; }
+  .titlebar span:last-child {
+    margin-left: 14px;
+    color: #6b6b74; /* --fg-3 */
+    font-size: 18px;
+  }
+  .body { background: #0f0f11; padding: 44px 48px 52px; } /* --surface-1 */
+  .prompt { color: #6b6b74; font-size: 26px; }
+  .prompt .glyph { color: #6366f1; } /* --accent */
+  .name {
+    margin-top: 26px;
+    color: #f4f4f5; /* --fg */
+    font-size: 74px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .role {
+    margin-top: 16px;
+    color: #a1a1aa; /* --fg-2 */
+    font-size: 30px;
+  }
+  .site {
+    margin-top: 34px;
+    color: #6366f1; /* --accent */
+    font-size: 26px;
+  }
+</style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span>zsolt@portfolio — ~</span>
+    </div>
+    <div class="body">
+      <div class="prompt"><span class="glyph">❯</span> whoami</div>
+      <div class="name">Zsolt Varjú</div>
+      <div class="role">Software Developer — Prague</div>
+      <div class="site">zsoltvarju.com</div>
+    </div>
+  </div>
+</body>
+</html>

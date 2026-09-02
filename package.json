@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run llm:build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "cv:build": "node cv/build.mjs",
     "cv:verify": "node cv/verify.mjs",
     "llm:build": "node scripts/build-llm-assets.mjs",
+    "og:build": "node scripts/build-og.mjs",
     "test": "vitest run"
   },
   "dependencies": {

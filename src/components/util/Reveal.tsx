@@ -33,6 +33,10 @@ const RevealOnce = ({ children, width }: Required<RevealProps>) => {
   return (
     <motion.div
       ref={ref}
+      // `initial` SSRs an inline `opacity:0`; the <noscript> rule in
+      // _document.tsx keys on this attribute so a no-JS browser still sees
+      // the sections. Crawlers read the HTML either way.
+      data-reveal
       style={{ width }}
       initial={reduced ? false : { opacity: 0, y: 16 }}
       animate={reduced || isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}

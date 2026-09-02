@@ -4,7 +4,8 @@
   },
   "meta": {
     "title": "Zsolt Varjú | Software Developer",
-    "description": "Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them."
+    "description": "Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them.",
+    "ogImageAlt": "Terminal-style card with the name Zsolt Varjú, software developer, on a dark background."
   },
   "About": {
     "title": "About",
@@ -437,6 +438,18 @@
         "featuresList": "WireGuard private networking linking the VPS and the home network | Atomic zero-downtime deployments, with instant rollback | Tailscale mesh access to home services from anywhere | Docker-based NAS services including media streaming and camera recording | Self-healing service recovery and scheduled backups | Remote development driven from a phone when needed",
         "para2": "Deployments are atomic: a release is built alongside the running version and switched over only once it is healthy, so a bad build never takes the service down. Networking is private by default. Services are reachable over WireGuard and Tailscale rather than exposed to the internet.",
         "para3": "It is the operator half of the job, practised on my own time: the same concerns as production work (uptime, access control, backups, recovery) at a scale where I own every decision."
+      }
+    },
+    "blog": {
+      "title": "Tech Blog — zsoltvarju.dev",
+      "tech": "Jekyll,Markdown,RSS,Netlify",
+      "description": "A personal engineering blog in English: software development, self-hosted infrastructure, testing, and AI — every post grounded in something that actually happened.",
+      "modalContent": {
+        "para1": "Writing something down is the last step of understanding it. The blog is where that happens: posts on software development, running your own infrastructure, testing, and AI, each one starting from a specific problem I actually hit — a dark-mode rendering bug on LinkedIn, deploying Dokku on a fresh VPS, an idea for an AI reading companion.",
+        "keyFeatures": "What's there:",
+        "featuresList": "Practical step-by-step guides, like deploying Dokku on a VPS | Debugging stories that show the investigation, not just the fix | AI explored hands-on — project ideas and tooling, not hot takes | A static site generated with Jekyll, served from a CDN | An RSS feed, for readers and machines alike | Tagged and searchable, written in plain English",
+        "para2": "The site itself runs the way the homelab does: a static site generator, content in Markdown under version control, and an automatic deploy on every push. No backend to patch, nothing to babysit — the same production habits, applied to publishing.",
+        "para3": "The motto on the masthead is \"How you do one thing is how you do everything.\" The blog is that idea in public: small things, done carefully, shown with their working."
       }
     },
     "photoCropper": {

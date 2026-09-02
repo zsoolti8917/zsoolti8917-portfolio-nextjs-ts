@@ -4,7 +4,8 @@
   },
   "meta": {
     "title": "Zsolt Varjú | softvérový vývojár",
-    "description": "Zsolt Varjú je softvérový vývojár a prevádzkovateľ platforiem so sídlom v Prahe, ktorý tvorí webové aplikácie od začiatku do konca, navrhuje ETL pipeliny a prevádzkuje infraštruktúru, na ktorej bežia."
+    "description": "Zsolt Varjú je softvérový vývojár a prevádzkovateľ platforiem so sídlom v Prahe, ktorý tvorí webové aplikácie od začiatku do konca, navrhuje ETL pipeliny a prevádzkuje infraštruktúru, na ktorej bežia.",
+    "ogImageAlt": "Karta v štýle terminálu s menom Zsolt Varjú, softvérový vývojár, na tmavom pozadí."
   },
   "About": {
     "title": "Informácie o mne",
@@ -437,6 +438,18 @@
         "featuresList": "Privátna sieť cez WireGuard prepájajúca VPS a domácu sieť | Atomické nasadenia bez výpadku s okamžitým návratom späť | Prístup k domácim službám odkiaľkoľvek cez Tailscale mesh | Služby v Dockeri na NAS vrátane streamovania médií a záznamu z kamier | Samoopravná obnova služieb a plánované zálohy | Vzdialený vývoj riadený v prípade potreby aj z telefónu",
         "para2": "Nasadenia sú atomické: nová verzia sa zostaví popri bežiacej a prepne sa až vtedy, keď je zdravá, takže pokazený build nikdy nezhodí službu. Sieť je štandardne privátna. Služby sú dostupné cez WireGuard a Tailscale namiesto vystavenia do internetu.",
         "para3": "Je to prevádzková polovica práce, cvičená vo vlastnom čase: rovnaké témy ako pri produkčných systémoch (dostupnosť, riadenie prístupu, zálohy, obnova) v mierke, kde je každé rozhodnutie moje."
+      }
+    },
+    "blog": {
+      "title": "Tech blog — zsoltvarju.dev",
+      "tech": "Jekyll,Markdown,RSS,Netlify",
+      "description": "Osobný technický blog v angličtine: vývoj softvéru, self-hosted infraštruktúra, testovanie a AI — každý článok vychádza z niečoho, čo sa naozaj stalo.",
+      "modalContent": {
+        "para1": "Zapísať si niečo je posledný krok k tomu, aby som to pochopil. Presne na to slúži blog: články o vývoji softvéru, prevádzke vlastnej infraštruktúry, testovaní a AI, pričom každý začína pri konkrétnom probléme, na ktorý som skutočne narazil — chyba vykresľovania tmavého režimu na LinkedIne, nasadenie Dokku na čistý VPS, nápad na AI spoločníka pri čítaní.",
+        "keyFeatures": "Čo tam nájdete:",
+        "featuresList": "Praktické návody krok za krokom, napríklad nasadenie Dokku na VPS | Príbehy z ladenia — celé pátranie, nielen výsledná oprava | AI skúmaná v praxi — nápady na projekty a nástroje, nie dojmy | Statický web generovaný Jekyllom, servírovaný cez CDN | RSS feed pre čitateľov aj stroje | Označkované, prehľadávateľné, písané zrozumiteľnou angličtinou",
+        "para2": "Samotný web beží rovnako ako homelab: generátor statických stránok, obsah v Markdowne pod správou verzií a automatické nasadenie pri každom pushi. Žiadny backend, ktorý treba záplatovať, nič, čo treba strážiť — tie isté produkčné návyky, tentoraz aplikované na publikovanie.",
+        "para3": "Motto v hlavičke znie „How you do one thing is how you do everything“ — ako robíte jednu vec, tak robíte všetko. Blog je tá myšlienka naživo: malé veci, urobené poriadne, aj s postupom, akým vznikli."
       }
     },
     "photoCropper": {
