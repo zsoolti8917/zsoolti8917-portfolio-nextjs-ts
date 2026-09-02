@@ -24,6 +24,10 @@ const commit = () => {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Docker/Dokku builds set NEXT_STANDALONE=1 so `next build` emits the
+  // self-contained .next/standalone server. Netlify never sets it, so its
+  // build output is unchanged.
+  output: process.env.NEXT_STANDALONE === '1' ? 'standalone' : undefined,
   i18n: {
     locales: ['en', 'sk', 'hu'], // Add your supported locales here
     defaultLocale: 'en'

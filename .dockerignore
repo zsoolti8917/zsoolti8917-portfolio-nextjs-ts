@@ -1,0 +1,10 @@
+.git
+node_modules
+.next
+docs
+cv
+netlify.toml
+tsconfig.tsbuildinfo
+.env*
+Dockerfile
+.dockerignore
