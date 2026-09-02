@@ -10,7 +10,7 @@ Zsolt Varjú is a software developer and platform operator based in Prague, buil
 - **Email:** dev@zsoltvarju.com
 - **LinkedIn:** https://www.linkedin.com/in/zsoltvarju/
 - **GitHub:** https://github.com/zsoolti8917
-- **Website:** https://zsoltvarjuprojects.com/
+- **Website:** https://zsoltvarju.com/
 
 ## Summary
 
@@ -54,7 +54,7 @@ Skills: HTML, CSS, JavaScript, Cross-Browser Testing, Bug Tracking, Remote Colla
 
 ## Projects
 
-11 projects, in the order they appear on https://zsoltvarjuprojects.com/#projects.
+11 projects, in the order they appear on https://zsoltvarju.com/#projects.
 
 ### Self-Hosted RAG Search
 
@@ -360,11 +360,11 @@ Storybook, Java, OOP, AdobeXD, Laravel, Unity, Blender, GraphQL, C#
 - Email: dev@zsoltvarju.com
 - LinkedIn: https://www.linkedin.com/in/zsoltvarju/
 - GitHub: https://github.com/zsoolti8917
-- Portfolio: https://zsoltvarjuprojects.com/
-- CV, English (PDF): https://zsoltvarjuprojects.com/Varju-CV-EN.pdf
-- CV, Slovak (PDF): https://zsoltvarjuprojects.com/Varju-CV-SK.pdf
-- CV, Hungarian (PDF): https://zsoltvarjuprojects.com/Varju-CV-HU.pdf
+- Portfolio: https://zsoltvarju.com/
+- CV, English (PDF): https://zsoltvarju.com/Varju-CV-EN.pdf
+- CV, Slovak (PDF): https://zsoltvarju.com/Varju-CV-SK.pdf
+- CV, Hungarian (PDF): https://zsoltvarju.com/Varju-CV-HU.pdf
 
 ---
 
-This file is generated from the site's own content (`npm run llm:build`), last on 2026-08-29. Slovak and Hungarian versions of the site are at https://zsoltvarjuprojects.com/sk and https://zsoltvarjuprojects.com/hu.
+This file is generated from the site's own content (`npm run llm:build`), last on 2026-09-02. Slovak and Hungarian versions of the site are at https://zsoltvarju.com/sk and https://zsoltvarju.com/hu.

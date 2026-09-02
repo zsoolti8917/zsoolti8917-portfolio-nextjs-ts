@@ -1,11 +1,12 @@
 /**
- * Canonical origin for every absolute URL this site emits. Confirmed against
- * `src/pages/_document.tsx`, which loads a self-hosted umami script from it.
+ * Canonical origin for every absolute URL this site emits — the registered
+ * domain, the same one the CVs and dev@zsoltvarju.com advertise. Guarded by
+ * `site.test.ts`, which sweeps every shipping file for its dead predecessor.
  *
  * `scripts/build-llm-assets.mjs` repeats this constant — a plain `.mjs` build
  * script can't import a `.ts` module — so change the two together.
  */
-export const SITE_URL = "https://zsoltvarjuprojects.com";
+export const SITE_URL = "https://zsoltvarju.com";
 
 /**
  * Deliberately stable across locales: `/`, `/sk` and `/hu` are three language

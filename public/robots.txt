@@ -1,4 +1,4 @@
-# https://zsoltvarjuprojects.com/robots.txt
+# https://zsoltvarju.com/robots.txt
 #
 # Everything on this site is public and intended to be read, by people and by
 # machines alike. The AI crawlers below are listed by name so the permission is
@@ -49,3 +49,5 @@ Allow: /
 # --- Everyone else ---
 User-agent: *
 Allow: /
+
+Sitemap: https://zsoltvarju.com/sitemap.xml

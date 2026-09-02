@@ -5,6 +5,7 @@
  *   public/llms.txt     navigational index, per https://llmstxt.org
  *   public/cv.md        the whole CV as markdown — the "everything" file
  *   public/profile.json a plain structured profile (not schema.org)
+ *   public/sitemap.xml  the three locale URLs, with hreflang alternates
  *
  * Why: the AI crawlers that answer "who is Zsolt Varju?" — GPTBot,
  * OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Meta-ExternalAgent —
@@ -33,7 +34,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 /** Mirrors SITE_URL in src/components/seo/site.ts — a .mjs script cannot
  *  import a .ts module. Change the two together. */
-const SITE = "https://zsoltvarjuprojects.com";
+const SITE = "https://zsoltvarju.com";
 
 const LOCALES = [
   { code: "sk", label: "Slovak" },
@@ -484,8 +485,29 @@ const buildProfile = () => ({
 
 // ---------------------------------------------------------------------------
 
+// public/sitemap.xml -------------------------------------------------------
+
+/** `en` is the default locale and carries no path prefix (next.config.mjs). */
+const localeUrl = (code) => (code === "en" ? `${SITE}/` : `${SITE}/${code}`);
+
+const buildSitemap = () => {
+  const codes = ["en", ...LOCALES.map((l) => l.code)];
+  const alternates = [
+    ...codes.map(
+      (c) =>
+        `    <xhtml:link rel="alternate" hreflang="${c}" href="${localeUrl(c)}"/>`
+    ),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${localeUrl("en")}"/>`,
+  ].join("\n");
+  const urls = codes
+    .map((c) => `  <url>\n    <loc>${localeUrl(c)}</loc>\n${alternates}\n  </url>`)
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
+};
+
 const outputs = [
   ["public/llms.txt", buildLlms()],
+  ["public/sitemap.xml", buildSitemap()],
   ["public/cv.md", buildCv()],
   ["public/profile.json", `${JSON.stringify(buildProfile(), null, 2)}\n`],
 ];

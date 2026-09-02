@@ -8,34 +8,34 @@ Every page linked below is server-rendered and needs no JavaScript. The one gap:
 
 ## Start here
 
-- [Full CV (markdown)](https://zsoltvarjuprojects.com/cv.md): everything in one file — summary, both roles with responsibilities, all 11 projects in full, skills, certifications, languages, contact.
-- [Structured profile (JSON)](https://zsoltvarjuprojects.com/profile.json): the same content as data, for parsing rather than reading.
-- [Portfolio home page](https://zsoltvarjuprojects.com/): the site itself — about, projects, experience, contact, all server-rendered.
+- [Full CV (markdown)](https://zsoltvarju.com/cv.md): everything in one file — summary, both roles with responsibilities, all 11 projects in full, skills, certifications, languages, contact.
+- [Structured profile (JSON)](https://zsoltvarju.com/profile.json): the same content as data, for parsing rather than reading.
+- [Portfolio home page](https://zsoltvarju.com/): the site itself — about, projects, experience, contact, all server-rendered.
 
 ## Projects
 
-- [Self-Hosted RAG Search](https://zsoltvarjuprojects.com/#projects): A retrieval-augmented search system over a local document collection, built to answer questions with citations, and to stay quiet when the evidence isn't there — Python, Qdrant, bge-m3, LangChain, Docker
+- [Self-Hosted RAG Search](https://zsoltvarju.com/#projects): A retrieval-augmented search system over a local document collection, built to answer questions with citations, and to stay quiet when the evidence isn't there — Python, Qdrant, bge-m3, LangChain, Docker
 - [Coffece (coffece.sk)](https://coffece.sk): A bilingual (SK/EN) marketing and ordering site for an office coffee delivery brand: product pages, FAQ, testimonial carousel, and contact flow, with full SEO metadata — Next.js, TypeScript, TailwindCSS, next-intl, Framer Motion
 - [IDT PLUS STAV (idtplusstav.sk)](https://idtplusstav.sk): Complete digital operations for a Slovak diamond drilling and concrete cutting company: a self-hosted marketing website, business email, invoicing configured for Slovak VAT rules, plus paid search and SEO — Next.js, TypeScript, TailwindCSS, MDX
-- [B2B Wholesale Ordering Portal](https://zsoltvarjuprojects.com/#projects): A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production. Features tiered customer pricing, a login-only catalog with hidden prices, two-warehouse inventory, decimal quantities for weighted goods, and integrated invoicing — WooCommerce, B2BKing, Stock Locations, SuperFaktúra
-- [Lemma: Vocabulary Scanner](https://zsoltvarjuprojects.com/#projects): A mobile app that turns a photo of a printed page into vocabulary cards. Point the camera at text, and it pulls out the words worth learning and schedules them for review — React Native, Expo, Vision models, FSRS
-- [Personal Infrastructure & Homelab](https://zsoltvarjuprojects.com/#projects): A personal VPS and home server run with production habits: private networking, atomic zero-downtime deploys, and a stack of self-hosted services — Linux, Docker, WireGuard, Tailscale, CI/CD
-- [Multi Photo Cropper](https://zsoltvarjuprojects.com/#projects): A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP — React, TypeScript, Vite, FastAPI, OpenCV, ONNX Runtime, Docker
-- [Municipal Website Migrations](https://zsoltvarjuprojects.com/#projects): Content migration and restructuring for five Slovak municipal websites, including bilingual Slovak and Hungarian content — Virgo / GCM Cloud CMS
+- [B2B Wholesale Ordering Portal](https://zsoltvarju.com/#projects): A private B2B ordering portal implemented for a Slovak fresh-produce wholesaler, now in production. Features tiered customer pricing, a login-only catalog with hidden prices, two-warehouse inventory, decimal quantities for weighted goods, and integrated invoicing — WooCommerce, B2BKing, Stock Locations, SuperFaktúra
+- [Lemma: Vocabulary Scanner](https://zsoltvarju.com/#projects): A mobile app that turns a photo of a printed page into vocabulary cards. Point the camera at text, and it pulls out the words worth learning and schedules them for review — React Native, Expo, Vision models, FSRS
+- [Personal Infrastructure & Homelab](https://zsoltvarju.com/#projects): A personal VPS and home server run with production habits: private networking, atomic zero-downtime deploys, and a stack of self-hosted services — Linux, Docker, WireGuard, Tailscale, CI/CD
+- [Multi Photo Cropper](https://zsoltvarju.com/#projects): A personal tool for digitizing family photo albums. Scan several prints at once on a flatbed, and it finds each photo on the sheet, lets you fine-tune the boxes, and exports every crop at full resolution as a ZIP — React, TypeScript, Vite, FastAPI, OpenCV, ONNX Runtime, Docker
+- [Municipal Website Migrations](https://zsoltvarju.com/#projects): Content migration and restructuring for five Slovak municipal websites, including bilingual Slovak and Hungarian content — Virgo / GCM Cloud CMS
 - [InfoMap SK: Master's Thesis](https://github.com/zsoolti8917/InfoMapSK-frontend): A full-stack application for visualising Slovak open data on an interactive map, built as my master's thesis project. The public site is no longer online; the source remains available — React, Node.js, Express, MongoDB, TailwindCSS
 - [Garden Bros Website](https://github.com/zsoolti8917/garden-bros-frontend): A website for a gardening company, built with Next.js, styled with Tailwind CSS, and managed through Strapi CMS. Features responsive design, dynamic content generation, and deployment on Vercel — Next.js, Tailwind CSS, Strapi CMS, Vercel, VPS, Dokku, PostgreSQL
 - [Alza Dni Kupónový Filter](https://github.com/zsoolti8917/Alza): A Chrome extension that helps users filter products during Alza Days sales by various coupon codes, making it easier to find the best discounts on Alza.sk — JavaScript, Chrome Extension API, HTML, CSS
 
 ## CV downloads
 
-- [CV in English (PDF)](https://zsoltvarjuprojects.com/Varju-CV-EN.pdf): the same CV, typeset for print.
-- [CV in Slovak (PDF)](https://zsoltvarjuprojects.com/Varju-CV-SK.pdf): the same CV, typeset for print.
-- [CV in Hungarian (PDF)](https://zsoltvarjuprojects.com/Varju-CV-HU.pdf): the same CV, typeset for print.
+- [CV in English (PDF)](https://zsoltvarju.com/Varju-CV-EN.pdf): the same CV, typeset for print.
+- [CV in Slovak (PDF)](https://zsoltvarju.com/Varju-CV-SK.pdf): the same CV, typeset for print.
+- [CV in Hungarian (PDF)](https://zsoltvarju.com/Varju-CV-HU.pdf): the same CV, typeset for print.
 
 ## Other languages
 
-- [Slovak version of this site](https://zsoltvarjuprojects.com/sk): the same content in Slovak. English is the default locale and lives at the root.
-- [Hungarian version of this site](https://zsoltvarjuprojects.com/hu): the same content in Hungarian. English is the default locale and lives at the root.
+- [Slovak version of this site](https://zsoltvarju.com/sk): the same content in Slovak. English is the default locale and lives at the root.
+- [Hungarian version of this site](https://zsoltvarju.com/hu): the same content in Hungarian. English is the default locale and lives at the root.
 
 ## Optional
 
