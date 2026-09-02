@@ -85,10 +85,11 @@ html {
 
 /* Three stackable, non-animated layers used behind the hero only. Each is a
    background-image so they can sit on separate absolutely-positioned divs and
-   composite without a single extra DOM cost at paint time. */
+   composite without a single extra DOM cost at paint time. The one animated
+   layer, the git graph, sits between the glow and the noise (see below). */
 
 .bg-dots {
-  background-image: radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -102,6 +103,92 @@ html {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   opacity: 0.03;
   pointer-events: none;
+}
+
+/* --- Git graph (live, behind the hero window) --------------------------- */
+
+/* Small `git log --graph`s tiling the gutters beside the window, coloured per
+   branch the way GitKraken draws them. Geometry and timing come from GITGRAPH
+   in `hero/backdrop/gitgraph.ts` (`--gg-row` is set by the component); the
+   palette and the alphas live here.
+
+   Each lane-group is its own <svg> ROOT, never a <g>: only an <svg> root gets
+   a compositor layer, and the slide when a commit lands is a transform on that
+   root. Nothing animates between events. The `[data-new]` draw-on and pop run
+   once per new element — and once on first paint for the newest commits the
+   server rendered, JavaScript or not. */
+.gg {
+  --gg-line: 0.45;
+  --gg-node: 0.85;
+  --gg-c0: 99 102 241;   /* main — the accent */
+  --gg-c1: 168 85 247;   /* violet */
+  --gg-c2: 236 72 153;   /* pink */
+  --gg-c3: 20 184 166;   /* teal */
+  --gg-c4: 245 158 11;   /* amber */
+  --gg-c5: 14 165 233;   /* sky */
+  --gg-c6: 52 211 153;   /* emerald */
+}
+.gg-group {
+  position: absolute;
+  top: calc(-1 * var(--gg-row));
+  height: calc(100% + var(--gg-row));
+  overflow: hidden;
+}
+.gg-group [data-c="0"] { --c: var(--gg-c0); }
+.gg-group [data-c="1"] { --c: var(--gg-c1); }
+.gg-group [data-c="2"] { --c: var(--gg-c2); }
+.gg-group [data-c="3"] { --c: var(--gg-c3); }
+.gg-group [data-c="4"] { --c: var(--gg-c4); }
+.gg-group [data-c="5"] { --c: var(--gg-c5); }
+.gg-group [data-c="6"] { --c: var(--gg-c6); }
+
+.gg-group path {
+  fill: none;
+  stroke: rgb(var(--c) / var(--gg-line));
+  stroke-width: 2;
+  transition: stroke 0.6s;
+}
+.gg-group circle {
+  fill: rgb(var(--c) / var(--gg-node));
+  transition: fill 0.6s, stroke 0.6s;
+}
+/* A merge commit is hollow, as `git log --graph` draws it. */
+.gg-group circle[data-merge] {
+  fill: rgb(var(--canvas));
+  stroke: rgb(var(--c) / var(--gg-node));
+  stroke-width: 2;
+}
+
+/* A commit lands: the edge draws up from its parent (`pathLength="1"` makes
+   one dash the whole path), then the node pops. The column's slide is a
+   WAAPI transform the component starts in the same frame. */
+.gg-group path[data-new] {
+  stroke: rgb(var(--c) / 0.8);
+  stroke-dasharray: 1;
+  animation: gg-draw 0.45s 0.2s ease-out both;
+}
+@keyframes gg-draw {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+.gg-group circle[data-new] {
+  fill: rgb(var(--c));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: gg-pop 0.35s 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+.gg-group circle[data-merge][data-new] {
+  fill: rgb(var(--canvas));
+  stroke: rgb(var(--c));
+}
+@keyframes gg-pop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Still: the newest commits are simply drawn, a little brighter. */
+  .gg-group [data-new] { animation: none; stroke-dasharray: none; }
 }
 
 /* --- Terminal (owned by WP1) ------------------------------------------- */
