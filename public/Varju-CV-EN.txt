@@ -6,7 +6,7 @@ zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
 
 SUMMARY
 -------
-Software developer and platform operator. I build web applications end to end, design the data pipelines that feed them, and run the production infrastructure they depend on. At Serco I own and run a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites, aggregating validated data from ESA, legacy and third-party missions, from choosing the approach to keeping it running in production. I use AI tools daily and build with them. Heading towards system architecture.
+Software developer and platform operator. I build web applications end to end, design the data pipelines that feed them, and run the production infrastructure they depend on. At Serco I own and run a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites, aggregating validated data from ESA, legacy and third-party missions, from choosing the approach to keeping it running in production. I experiment with AI tools and keep learning them, because I believe they are the compilers of our decade. Heading towards system architecture.
 
 EXPERIENCE
 ----------

@@ -6,7 +6,7 @@ zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
 
 PROFIL
 ------
-Softvérový vývojár a prevádzkovateľ platforiem. Tvorím webové aplikácie od začiatku do konca, navrhujem pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem produkčnú infraštruktúru, na ktorej bežia. V spoločnosti Serco mám na starosti a prevádzkujem platformu, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán, a to od voľby prístupu až po udržiavanie jej chodu v produkcii. Nástroje AI používam každý deň a vyvíjam s ich pomocou. Smerujem k systémovej architektúre.
+Softvérový vývojár a prevádzkovateľ platforiem. Tvorím webové aplikácie od začiatku do konca, navrhujem pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem produkčnú infraštruktúru, na ktorej bežia. V spoločnosti Serco mám na starosti a prevádzkujem platformu, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán, a to od voľby prístupu až po udržiavanie jej chodu v produkcii. S nástrojmi AI experimentujem a stále sa o nich učím, lebo som presvedčený, že sú kompilátormi našej dekády. Smerujem k systémovej architektúre.
 
 PRACOVNÉ SKÚSENOSTI
 -------------------
