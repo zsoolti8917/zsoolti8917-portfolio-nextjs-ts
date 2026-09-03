@@ -32,7 +32,7 @@
     "certifications": "Certifikáty",
     "languages": "Jazyky"
   },
-  "summary": "Softvérový vývojár a prevádzkovateľ platforiem, zámerne širší než full-stack. Tvorím webové aplikácie od začiatku do konca, navrhujem ETL pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem infraštruktúru, na ktorej bežia, momentálne ako jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru. Vývoj s podporou AI je pre mňa bežná pracovná metóda, nie kuriozita. Smerujem k systémovej architektúre.",
+  "summary": "Softvérový vývojár a prevádzkovateľ platforiem, zámerne širší než full-stack. Tvorím webové aplikácie od začiatku do konca, navrhujem ETL pipeliny, ktoré ich napĺňajú dátami, a prevádzkujem produkčnú infraštruktúru, na ktorej bežia. Na projekte pre Európsku vesmírnu agentúru zodpovedám za platformu, ktorá poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán, a prevádzkujem ju, a to od voľby prístupu až po udržiavanie jej chodu v produkcii. Vývoj s podporou AI je pre mňa bežná pracovná metóda, nie kuriozita. Smerujem k systémovej architektúre.",
   "skillGroups": [
     {
       "label": "Jazyky",
@@ -123,12 +123,13 @@
       "location": "Praha, Česko",
       "dates": "Feb 2025 – súčasnosť",
       "bullets": [
-        "Jediný vývojár a prevádzkovateľ platformy na vyhľadávanie dokumentov na projekte pre Európsku vesmírnu agentúru, a to od používateľského rozhrania až po servery, na ktorých beží.",
-        "React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ pre správy, Neo4j pre vzťahy a Tika pre extrakciu dokumentov.",
-        "Návrh a prevádzka ingesčných pipelín pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát.",
-        "Správa Ubuntu serverov v Azure: nginx s TLS a riadením prístupu, kontajnerizované služby, CI, zálohovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.",
+        "Kompletná zodpovednosť za vývoj a prevádzku platformy, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán, a to od používateľského rozhrania až po servery, na ktorých beží.",
+        "Voľba prístupu, technológií a architektúry pre nové úlohy, prezentácia riešenia, jeho implementácia, testovanie na UAT, nasadenie do produkcie a následne monitorovanie, opravy, záplaty a zálohovanie.",
+        "React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ na výmenu správ, Neo4j pre vzťahy a Tika pre extrakciu dokumentov, všetko kontajnerizované.",
+        "Návrh a prevádzka ingesčných pipelín a skriptov pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát.",
+        "Správa Ubuntu serverov v Azure: smerovanie a TLS cez nginx, riadenie prístupu, kontajnerizované služby, CI/CD, aktualizácie a záplaty, zálohovanie, monitorovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.",
         "Viedol som fázovaný program kvality frontendu: vendor bundle menší približne o tri štvrtiny, objem JavaScriptu nižší o tretinu, CSS o viac než polovicu, odstránené všetky lint chyby a o 80 % menej zbytočných React re-renderov.",
-        "Priama spolupráca s tímami misií a IT na požiadavkách, formálnych hláseniach chýb, eskaláciách, záznamoch o zmenách a odhadoch prácnosti."
+        "Priama spolupráca s tímami misií a IT: požiadavky, brainstorming a návrhy riešení, formálne hlásenia chýb, eskalácie, záznamy o zmenách a odhady prácnosti."
       ]
     },
     {

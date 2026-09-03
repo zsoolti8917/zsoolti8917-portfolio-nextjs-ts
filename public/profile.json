@@ -2,11 +2,11 @@
   "name": "Zsolt Varjú",
   "title": "Software Developer",
   "headline": "Zsolt Varjú | Software Developer",
-  "summary": "Hey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a document search platform on a project for the European Space Agency, where I'm the only developer. I write the code, move the data, and keep the servers up.\n\nI started out testing other people's websites, which is where I learned to care about what happens after the deploy. Since then I've picked up the unglamorous half of the job: data pipelines, Linux, networking, backups. I lean on AI heavily in my daily work and I build with it too, mostly retrieval systems and self-hosted models. Outside work there's a homelab that has grown well past what I can justify, a motorcycle, and a ski season I never get enough of.",
+  "summary": "Hey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions. I choose the approach, write the code, move the data, and keep the servers up.\n\nI started out testing other people's websites, which is where I learned to care about what happens after the deploy. Since then I've picked up the unglamorous half of the job: data pipelines, Linux, networking, backups. I lean on AI heavily in my daily work and I build with it too, mostly retrieval systems and self-hosted models. Outside work there's a homelab that has grown well past what I can justify, a motorcycle, and a ski season I never get enough of.",
   "shortDescription": "Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them.",
   "url": "https://zsoltvarju.com/",
   "language": "en",
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "generatedFrom": "src/messages/en.json",
   "localizedVersions": [
     {
@@ -35,7 +35,7 @@
   },
   "current": {
     "role": "Software Developer at Serco, Prague",
-    "detail": "Sole developer and operator of a document search platform on a project for the European Space Agency — the code, the data pipelines, and the servers it runs on."
+    "detail": "I own and run a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency — the code, the data pipelines, CI/CD, and the servers it runs on."
   },
   "experience": [
     {
@@ -45,20 +45,24 @@
       "dates": "Feb 2025 - Present",
       "responsibilities": [
         {
-          "area": "Sole Ownership",
-          "description": "Sole developer and operator of a document search platform on a project for the European Space Agency, owned end to end from the user interface down to the servers it runs on."
+          "area": "End-to-End Ownership",
+          "description": "Own and run, end to end, a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions: from the user interface down to the servers it runs on."
+        },
+        {
+          "area": "Solution Design & Delivery",
+          "description": "Choose the approach, technologies and architecture for new work, present the solution, build it, test it on UAT, deploy it to production, then monitor, fix, patch and back it up."
         },
         {
           "area": "Full-Stack Development",
-          "description": "React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships, and Tika for document extraction."
+          "description": "React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships and Tika for document extraction, all containerised."
         },
         {
           "area": "ETL & Automation",
-          "description": "Design and operate multi-mission ingestion pipelines in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners."
+          "description": "Design and operate multi-mission ingestion pipelines and scripts in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners."
         },
         {
           "area": "Operations & Security",
-          "description": "Run Ubuntu servers on Azure: nginx with TLS and access control, containerised services, CI, backups, and regular vulnerability remediation under formal change control."
+          "description": "Run Ubuntu servers on Azure: nginx routing and TLS, access control, containerised services, CI/CD, updates and patches, backups, monitoring, and regular vulnerability remediation under formal change control."
         },
         {
           "area": "Performance & Code Quality",
@@ -66,7 +70,7 @@
         },
         {
           "area": "Stakeholder Coordination",
-          "description": "Work directly with mission teams and IT on requirements, formal bug reports, escalations, change records, and effort estimates for new work."
+          "description": "Work directly with mission teams and IT: requirements, brainstorming and solution proposals, formal bug reports, escalations, change records and effort estimates."
         }
       ],
       "skills": [
@@ -81,6 +85,7 @@
         "Linux",
         "nginx",
         "Bash",
+        "CI/CD",
         "Jenkins"
       ]
     },

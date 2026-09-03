@@ -14,7 +14,7 @@ Zsolt Varjú is a software developer and platform operator based in Prague, buil
 
 ## Summary
 
-Hey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a document search platform on a project for the European Space Agency, where I'm the only developer. I write the code, move the data, and keep the servers up.
+Hey there. I'm Zsolt, a developer from Čierna Voda in Slovakia, now living in Prague. I build software and I also run it in production. Today I look after a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions. I choose the approach, write the code, move the data, and keep the servers up.
 
 I started out testing other people's websites, which is where I learned to care about what happens after the deploy. Since then I've picked up the unglamorous half of the job: data pipelines, Linux, networking, backups. I lean on AI heavily in my daily work and I build with it too, mostly retrieval systems and self-hosted models. Outside work there's a homelab that has grown well past what I can justify, a motorcycle, and a ski season I never get enough of.
 
@@ -22,7 +22,7 @@ I started out testing other people's websites, which is where I learned to care 
 
 **Software Developer at Serco, Prague**
 
-Sole developer and operator of a document search platform on a project for the European Space Agency — the code, the data pipelines, and the servers it runs on.
+I own and run a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency — the code, the data pipelines, CI/CD, and the servers it runs on.
 
 ## Experience
 
@@ -30,14 +30,15 @@ Sole developer and operator of a document search platform on a project for the E
 
 Prague · Feb 2025 - Present
 
-- **Sole Ownership:** Sole developer and operator of a document search platform on a project for the European Space Agency, owned end to end from the user interface down to the servers it runs on.
-- **Full-Stack Development:** React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships, and Tika for document extraction.
-- **ETL & Automation:** Design and operate multi-mission ingestion pipelines in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners.
-- **Operations & Security:** Run Ubuntu servers on Azure: nginx with TLS and access control, containerised services, CI, backups, and regular vulnerability remediation under formal change control.
+- **End-to-End Ownership:** Own and run, end to end, a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions: from the user interface down to the servers it runs on.
+- **Solution Design & Delivery:** Choose the approach, technologies and architecture for new work, present the solution, build it, test it on UAT, deploy it to production, then monitor, fix, patch and back it up.
+- **Full-Stack Development:** React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships and Tika for document extraction, all containerised.
+- **ETL & Automation:** Design and operate multi-mission ingestion pipelines and scripts in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners.
+- **Operations & Security:** Run Ubuntu servers on Azure: nginx routing and TLS, access control, containerised services, CI/CD, updates and patches, backups, monitoring, and regular vulnerability remediation under formal change control.
 - **Performance & Code Quality:** Led a phased frontend quality programme that cut the vendor bundle by roughly three quarters, reduced the JavaScript payload by a third and CSS by more than half, cleared every outstanding lint error, and cut unnecessary React re-renders by 80%.
-- **Stakeholder Coordination:** Work directly with mission teams and IT on requirements, formal bug reports, escalations, change records, and effort estimates for new work.
+- **Stakeholder Coordination:** Work directly with mission teams and IT: requirements, brainstorming and solution proposals, formal bug reports, escalations, change records and effort estimates.
 
-Skills: React, Node.js, Python, Apache Solr, RabbitMQ, Neo4j, Docker, Azure, Linux, nginx, Bash, Jenkins
+Skills: React, Node.js, Python, Apache Solr, RabbitMQ, Neo4j, Docker, Azure, Linux, nginx, Bash, CI/CD, Jenkins
 
 ### Quality Assurance Tester — Galileo Corporation s.r.o
 
@@ -389,4 +390,4 @@ Storybook, Java, OOP, AdobeXD, Laravel, Unity, Blender, GraphQL, C#
 
 ---
 
-This file is generated from the site's own content (`npm run llm:build`), last on 2026-09-02. Slovak and Hungarian versions of the site are at https://zsoltvarju.com/sk and https://zsoltvarju.com/hu.
+This file is generated from the site's own content (`npm run llm:build`), last on 2026-09-03. Slovak and Hungarian versions of the site are at https://zsoltvarju.com/sk and https://zsoltvarju.com/hu.
