@@ -43,7 +43,7 @@ const copy: HeroTerminalCopy = {
   status: "always open to possibilities",
   statusBar: { cwd: "~/cv", hints: "↑↓ history", zone: "Prague" },
   whoami: {
-    headline: "I solve problems for a living.",
+    headline: "Solving problems for a living.",
     role: "role",
     now: "now",
     based: "based",
@@ -194,7 +194,7 @@ describe("runCommand('whoami')", () => {
 
   it("follows with the headline", () => {
     expect(lines[1].kind).toBe("headline");
-    expect(lines[1].segments[0].text).toBe("I solve problems for a living.");
+    expect(lines[1].segments[0].text).toBe("Solving problems for a living.");
   });
 
   it("prints the labelled key/value rows in order — five, the fetch-card sweet spot", () => {

@@ -103,7 +103,7 @@ describe("revealSchedule", () => {
   it("with the shipped defaults types the card in about the old stagger's time", () => {
     const card = [
       "Zsolt Varjú",
-      "I solve problems for a living.",
+      "Solving problems for a living.",
       "Software Developer · full-stack + platform operator",
       "sole developer on a project for the European Space Agency",
       "Prague, CET · EN · SK · HU · since 2022",
