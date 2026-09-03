@@ -2,7 +2,7 @@
 
 > Zsolt Varjú is a software developer and platform operator based in Prague, building web applications end to end, designing ETL pipelines, and running the production infrastructure behind them.
 
-Software Developer at Serco, Prague. I own and run a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency — the code, the data pipelines, CI/CD, and the servers it runs on.
+Software Developer at Serco, Prague. I own and run a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites: the code, the data pipelines, CI/CD, and the servers it runs on.
 
 Every page linked below is server-rendered and needs no JavaScript. The one gap: each project's detailed write-up opens in a modal, so /cv.md is the place to read those in full.
 

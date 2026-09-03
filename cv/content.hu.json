@@ -32,7 +32,7 @@
     "certifications": "Tanúsítványok",
     "languages": "Nyelvtudás"
   },
-  "summary": "Szoftverfejlesztő és platformüzemeltető, szándékosan szélesebb hatókörrel, mint a full-stack. Webalkalmazásokat építek a teljes stacken, megtervezem az őket adattal ellátó ETL pipeline-okat, és üzemeltetem az infrastruktúrát, amin futnak. Az Európai Űrügynökség egyik projektjén a megközelítés megválasztásától az éles üzem fenntartásáig gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve. Az AI-támogatott fejlesztés nálam bevett munkamódszer, nem érdekesség. A rendszerarchitektúra felé tartok.",
+  "summary": "Szoftverfejlesztő és platformüzemeltető. Webalkalmazásokat építek végponttól végpontig, megtervezem az őket adattal ellátó pipeline-okat, és üzemeltetem az éles infrastruktúrát, amin futnak. A Sercónál az Európai Űrügynökség egyik projektjén gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve, a megközelítés megválasztásától az éles üzem fenntartásáig. Nap mint nap használok AI-eszközöket, és építek is velük. A rendszerarchitektúra felé tartok.",
   "skillGroups": [
     {
       "label": "Nyelvek",
@@ -123,13 +123,12 @@
       "location": "Prága, Csehország",
       "dates": "2025. febr. – jelenleg",
       "bullets": [
-        "Az Európai Űrügynökség egyik projektjén végponttól végpontig gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve: a felhasználói felülettől egészen a szerverekig, amelyeken fut.",
-        "Új feladatoknál megválasztom a megközelítést, a technológiákat és az architektúrát, bemutatom a megoldást, megépítem, UAT környezetben tesztelem, élesbe telepítem, majd monitorozom, javítom, frissítem és mentem.",
-        "React frontend és Node.js backend egy Apache Solr alapú keresési stack fölött, RabbitMQ üzenetkezeléssel, Neo4j kapcsolatkezeléssel és Tika dokumentumfeldolgozással, mindez konténerizálva.",
-        "Több misszióra kiterjedő adatbetöltő pipeline-ok és szkriptek tervezése és üzemeltetése Pythonban: ütemezett átvitelek, keresési séma tervezése, valamint táblázatkinyerés PDF- és táblázatfájlokból, az elutasított rekordok visszajelzésével az adatgazdák felé.",
-        "Ubuntu szerverek üzemeltetése Azure-on: nginx útválasztás és TLS, hozzáférés-szabályozás, konténerizált szolgáltatások, CI/CD, frissítések és javítások, mentések, monitorozás, valamint rendszeres sérülékenységkezelés formális változáskezelés mellett.",
-        "Ütemezett frontend minőségi programot vezettem: a vendor bundle nagyjából háromnegyedével kisebb, a JavaScript mennyisége harmadával, a CSS több mint felével csökkent, minden lint hiba megszűnt, a felesleges React újrarenderelések száma 80%-kal esett.",
-        "Közvetlen együttműködés a missziós csapatokkal és az IT-vel: követelmények, ötletelés és megoldási javaslatok, formális hibajelentések, eszkalációk, változáskezelési rekordok és ráfordításbecslések."
+        "Az Európai Űrügynökség egyik projektjén végponttól végpontig gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve.",
+        "Új feladatoknál megválasztom a megközelítést, a technológiákat és az architektúrát, bemutatom a megoldást, megépítem, UAT környezetben tesztelem, élesbe telepítem és működésben tartom: monitorozás, hibajavítás, frissítések és mentések.",
+        "Fejlesztem a frontendet, a backendet és az adatbetöltő pipeline-okat, és karbantartom a köréjük épülő automatizálási szkripteket.",
+        "Üzemeltetem a felhőszervereket: konténerek, CI/CD, frissítések, mentések, hozzáférés-szabályozás és rendszeres sérülékenységkezelés formális változáskezelés mellett.",
+        "Ütemezett frontend minőségi programot vezettem: a vendor bundle nagyjából háromnegyedével kisebb, a JavaScript mennyisége harmadával, a CSS több mint felével csökkent, a felesleges újrarenderelések száma 80%-kal esett.",
+        "Közvetlenül együttműködöm a missziós csapatokkal és az IT-vel: követelmények, megoldási javaslatok, hibajelentések, változáskezelési rekordok és ráfordításbecslések."
       ]
     },
     {

@@ -22,7 +22,7 @@ I started out testing other people's websites, which is where I learned to care 
 
 **Software Developer at Serco, Prague**
 
-I own and run a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency — the code, the data pipelines, CI/CD, and the servers it runs on.
+I own and run a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites: the code, the data pipelines, CI/CD, and the servers it runs on.
 
 ## Experience
 
@@ -30,15 +30,14 @@ I own and run a platform that delivers quality reports and data unavailability r
 
 Prague · Feb 2025 - Present
 
-- **End-to-End Ownership:** Own and run, end to end, a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions: from the user interface down to the servers it runs on.
-- **Solution Design & Delivery:** Choose the approach, technologies and architecture for new work, present the solution, build it, test it on UAT, deploy it to production, then monitor, fix, patch and back it up.
-- **Full-Stack Development:** React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships and Tika for document extraction, all containerised.
-- **ETL & Automation:** Design and operate multi-mission ingestion pipelines and scripts in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners.
-- **Operations & Security:** Run Ubuntu servers on Azure: nginx routing and TLS, access control, containerised services, CI/CD, updates and patches, backups, monitoring, and regular vulnerability remediation under formal change control.
-- **Performance & Code Quality:** Led a phased frontend quality programme that cut the vendor bundle by roughly three quarters, reduced the JavaScript payload by a third and CSS by more than half, cleared every outstanding lint error, and cut unnecessary React re-renders by 80%.
-- **Stakeholder Coordination:** Work directly with mission teams and IT: requirements, brainstorming and solution proposals, formal bug reports, escalations, change records and effort estimates.
+- **End-to-End Ownership:** Own and run, end to end, a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites, aggregating validated data from ESA, legacy and third-party missions.
+- **Solution Design & Delivery:** Choose the approach, technologies and architecture for new work, present it, build it, take it through UAT to production, and keep it running: monitoring, fixes, patches and backups.
+- **Development:** Develop the frontend, the backend and the data ingestion pipelines, and maintain the automation scripts around them.
+- **Operations & Security:** Operate the cloud servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control.
+- **Performance & Code Quality:** Led a phased frontend quality programme: vendor bundle cut by roughly three quarters, JavaScript payload down a third, CSS down more than half, unnecessary re-renders reduced by 80%.
+- **Stakeholder Coordination:** Work directly with the mission teams and IT on requirements, solution proposals, bug reports, change records and estimates.
 
-Skills: React, Node.js, Python, Apache Solr, RabbitMQ, Neo4j, Docker, Azure, Linux, nginx, Bash, CI/CD, Jenkins
+Skills: React, Node.js, Python, Docker, Azure, Linux, Bash, CI/CD, Jenkins
 
 ### Quality Assurance Tester — Galileo Corporation s.r.o
 

@@ -22,7 +22,7 @@
     "currently": {
       "label": "Momentálne",
       "role": "Softvérový vývojár v Serco, Praha",
-      "detail": "Mám na starosti a prevádzkujem platformu, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme — kód, dátové pipeliny, CI/CD aj servery, na ktorých beží."
+      "detail": "Mám na starosti a prevádzkujem platformu, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme: kód, dátové pipeliny, CI/CD aj servery, na ktorých beží."
     },
     "facts": {
       "basedLabel": "Žijem v",
@@ -187,44 +187,36 @@
         "responsibilities": [
           {
             "title": "Kompletná zodpovednosť:",
-            "description": "Kompletná zodpovednosť za vývoj a prevádzku platformy, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán, a to od používateľského rozhrania až po servery, na ktorých beží."
+            "description": "Kompletná zodpovednosť za vývoj a prevádzku platformy, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán."
           },
           {
             "title": "Návrh a dodanie riešení:",
-            "description": "Voľba prístupu, technológií a architektúry pre nové úlohy, prezentácia riešenia, jeho implementácia, testovanie na UAT, nasadenie do produkcie a následne monitorovanie, opravy, záplaty a zálohovanie."
+            "description": "Voľba prístupu, technológií a architektúry pre nové úlohy, prezentácia riešenia, jeho implementácia, testovanie na UAT, nasadenie do produkcie a udržiavanie chodu: monitorovanie, opravy, záplaty a zálohovanie."
           },
           {
-            "title": "Full-stack vývoj:",
-            "description": "React frontend a Node.js backend nad vyhľadávacím stackom postaveným na Apache Solr, s RabbitMQ na výmenu správ, Neo4j pre vzťahy a Tika pre extrakciu dokumentov, všetko kontajnerizované."
-          },
-          {
-            "title": "ETL a automatizácia:",
-            "description": "Návrh a prevádzka ingesčných pipelín a skriptov pre viaceré misie v Pythone: plánované prenosy, návrh vyhľadávacej schémy a extrakcia tabuliek z PDF a tabuľkových súborov s auditom odmietnutých záznamov späť k vlastníkom dát."
+            "title": "Vývoj:",
+            "description": "Vývoj frontendu, backendu a ingesčných dátových pipelín a údržba súvisiacich automatizačných skriptov."
           },
           {
             "title": "Prevádzka a bezpečnosť:",
-            "description": "Správa Ubuntu serverov v Azure: smerovanie a TLS cez nginx, riadenie prístupu, kontajnerizované služby, CI/CD, aktualizácie a záplaty, zálohovanie, monitorovanie a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien."
+            "description": "Prevádzka cloudových serverov: kontajnery, CI/CD, aktualizácie, zálohovanie, riadenie prístupu a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien."
           },
           {
             "title": "Výkon a kvalita kódu:",
-            "description": "Viedol som fázovaný program kvality frontendu, ktorý zmenšil vendor bundle približne o tri štvrtiny, znížil objem JavaScriptu o tretinu a CSS o viac než polovicu, odstránil všetky lint chyby a obmedzil zbytočné React re-rendery o 80 %."
+            "description": "Viedol som fázovaný program kvality frontendu: vendor bundle menší približne o tri štvrtiny, objem JavaScriptu nižší o tretinu, CSS o viac než polovicu a o 80 % menej zbytočných re-renderov."
           },
           {
-            "title": "Komunikácia so zainteresovanými stranami:",
-            "description": "Priama spolupráca s tímami misií a IT: požiadavky, brainstorming a návrhy riešení, formálne hlásenia chýb, eskalácie, záznamy o zmenách a odhady prácnosti."
+            "title": "Koordinácia so zainteresovanými stranami:",
+            "description": "Priama spolupráca s tímami misií a IT: požiadavky, návrhy riešení, hlásenia chýb, záznamy o zmenách a odhady prácnosti."
           }
         ],
         "skills": [
           "React",
           "Node.js",
           "Python",
-          "Apache Solr",
-          "RabbitMQ",
-          "Neo4j",
           "Docker",
           "Azure",
           "Linux",
-          "nginx",
           "Bash",
           "CI/CD",
           "Jenkins"

@@ -22,7 +22,7 @@
     "currently": {
       "label": "Jelenleg",
       "role": "Szoftverfejlesztő a Sercónál, Prága",
-      "detail": "Az Európai Űrügynökség egyik projektjén egy platform gazdája és üzemeltetője vagyok, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja — a kód, az adatpipeline-ok, a CI/CD és a szerverek is, amelyeken fut."
+      "detail": "Az Európai Űrügynökség egyik projektjén egy platform gazdája és üzemeltetője vagyok, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja: a kód, az adatpipeline-ok, a CI/CD és a szerverek, amelyeken fut."
     },
     "facts": {
       "basedLabel": "Lakhely",
@@ -187,44 +187,36 @@
         "responsibilities": [
           {
             "title": "Teljes körű felelősség:",
-            "description": "Az Európai Űrügynökség egyik projektjén végponttól végpontig gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve: a felhasználói felülettől egészen a szerverekig, amelyeken fut."
+            "description": "Az Európai Űrügynökség egyik projektjén végponttól végpontig gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve."
           },
           {
             "title": "Megoldástervezés és megvalósítás:",
-            "description": "Új feladatoknál megválasztom a megközelítést, a technológiákat és az architektúrát, bemutatom a megoldást, megépítem, UAT környezetben tesztelem, élesbe telepítem, majd monitorozom, javítom, frissítem és mentem."
+            "description": "Új feladatoknál megválasztom a megközelítést, a technológiákat és az architektúrát, bemutatom a megoldást, megépítem, UAT környezetben tesztelem, élesbe telepítem és működésben tartom: monitorozás, hibajavítás, frissítések és mentések."
           },
           {
-            "title": "Full-stack fejlesztés:",
-            "description": "React frontend és Node.js backend egy Apache Solr alapú keresési stack fölött, RabbitMQ üzenetkezeléssel, Neo4j kapcsolatkezeléssel és Tika dokumentumfeldolgozással, mindez konténerizálva."
-          },
-          {
-            "title": "ETL és automatizálás:",
-            "description": "Több misszióra kiterjedő adatbetöltő pipeline-ok és szkriptek tervezése és üzemeltetése Pythonban: ütemezett átvitelek, keresési séma tervezése, valamint táblázatkinyerés PDF- és táblázatfájlokból, az elutasított rekordok visszajelzésével az adatgazdák felé."
+            "title": "Fejlesztés:",
+            "description": "Fejlesztem a frontendet, a backendet és az adatbetöltő pipeline-okat, és karbantartom a köréjük épülő automatizálási szkripteket."
           },
           {
             "title": "Üzemeltetés és biztonság:",
-            "description": "Ubuntu szerverek üzemeltetése Azure-on: nginx útválasztás és TLS, hozzáférés-szabályozás, konténerizált szolgáltatások, CI/CD, frissítések és javítások, mentések, monitorozás, valamint rendszeres sérülékenységkezelés formális változáskezelés mellett."
+            "description": "Üzemeltetem a felhőszervereket: konténerek, CI/CD, frissítések, mentések, hozzáférés-szabályozás és rendszeres sérülékenységkezelés formális változáskezelés mellett."
           },
           {
             "title": "Teljesítmény és kódminőség:",
-            "description": "Ütemezett frontend minőségi programot vezettem, amely nagyjából háromnegyedével csökkentette a vendor bundle méretét, harmadával a JavaScript mennyiségét, több mint felével a CSS-t, megszüntette az összes lint hibát, és 80%-kal csökkentette a felesleges React újrarendereléseket."
+            "description": "Ütemezett frontend minőségi programot vezettem: a vendor bundle nagyjából háromnegyedével kisebb, a JavaScript mennyisége harmadával, a CSS több mint felével csökkent, a felesleges újrarenderelések száma 80%-kal esett."
           },
           {
             "title": "Kapcsolattartás:",
-            "description": "Közvetlen együttműködés a missziós csapatokkal és az IT-vel: követelmények, ötletelés és megoldási javaslatok, formális hibajelentések, eszkalációk, változáskezelési rekordok és ráfordításbecslések."
+            "description": "Közvetlenül együttműködöm a missziós csapatokkal és az IT-vel: követelmények, megoldási javaslatok, hibajelentések, változáskezelési rekordok és ráfordításbecslések."
           }
         ],
         "skills": [
           "React",
           "Node.js",
           "Python",
-          "Apache Solr",
-          "RabbitMQ",
-          "Neo4j",
           "Docker",
           "Azure",
           "Linux",
-          "nginx",
           "Bash",
           "CI/CD",
           "Jenkins"

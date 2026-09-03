@@ -22,7 +22,7 @@
     "currently": {
       "label": "Currently",
       "role": "Software Developer at Serco, Prague",
-      "detail": "I own and run a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency — the code, the data pipelines, CI/CD, and the servers it runs on."
+      "detail": "I own and run a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites: the code, the data pipelines, CI/CD, and the servers it runs on."
     },
     "facts": {
       "basedLabel": "Based in",
@@ -187,44 +187,36 @@
         "responsibilities": [
           {
             "title": "End-to-End Ownership:",
-            "description": "Own and run, end to end, a platform that delivers quality reports and data unavailability reports from Earth observation satellites on a project for the European Space Agency, aggregating validated data from ESA, legacy and third-party missions: from the user interface down to the servers it runs on."
+            "description": "Own and run, end to end, a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites, aggregating validated data from ESA, legacy and third-party missions."
           },
           {
             "title": "Solution Design & Delivery:",
-            "description": "Choose the approach, technologies and architecture for new work, present the solution, build it, test it on UAT, deploy it to production, then monitor, fix, patch and back it up."
+            "description": "Choose the approach, technologies and architecture for new work, present it, build it, take it through UAT to production, and keep it running: monitoring, fixes, patches and backups."
           },
           {
-            "title": "Full-Stack Development:",
-            "description": "React frontend and Node.js backend over a search stack built on Apache Solr, with RabbitMQ for messaging, Neo4j for relationships and Tika for document extraction, all containerised."
-          },
-          {
-            "title": "ETL & Automation:",
-            "description": "Design and operate multi-mission ingestion pipelines and scripts in Python: scheduled transfers, search schema design, and table extraction from PDFs and spreadsheets with rejection audits returned to the data owners."
+            "title": "Development:",
+            "description": "Develop the frontend, the backend and the data ingestion pipelines, and maintain the automation scripts around them."
           },
           {
             "title": "Operations & Security:",
-            "description": "Run Ubuntu servers on Azure: nginx routing and TLS, access control, containerised services, CI/CD, updates and patches, backups, monitoring, and regular vulnerability remediation under formal change control."
+            "description": "Operate the cloud servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control."
           },
           {
             "title": "Performance & Code Quality:",
-            "description": "Led a phased frontend quality programme that cut the vendor bundle by roughly three quarters, reduced the JavaScript payload by a third and CSS by more than half, cleared every outstanding lint error, and cut unnecessary React re-renders by 80%."
+            "description": "Led a phased frontend quality programme: vendor bundle cut by roughly three quarters, JavaScript payload down a third, CSS down more than half, unnecessary re-renders reduced by 80%."
           },
           {
             "title": "Stakeholder Coordination:",
-            "description": "Work directly with mission teams and IT: requirements, brainstorming and solution proposals, formal bug reports, escalations, change records and effort estimates."
+            "description": "Work directly with the mission teams and IT on requirements, solution proposals, bug reports, change records and estimates."
           }
         ],
         "skills": [
           "React",
           "Node.js",
           "Python",
-          "Apache Solr",
-          "RabbitMQ",
-          "Neo4j",
           "Docker",
           "Azure",
           "Linux",
-          "nginx",
           "Bash",
           "CI/CD",
           "Jenkins"
