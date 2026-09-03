@@ -6,7 +6,7 @@ zsoltvarju.com · linkedin.com/in/zsoltvarju · github.com/zsoolti8917
 
 PROFIL
 ------
-Szoftverfejlesztő és platformüzemeltető. Webalkalmazásokat építek végponttól végpontig, megtervezem az őket adattal ellátó pipeline-okat, és üzemeltetem az éles infrastruktúrát, amin futnak. A Sercónál az Európai Űrügynökség egyik projektjén gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve, a megközelítés megválasztásától az éles üzem fenntartásáig. AI-eszközökkel kísérletezem és folyamatosan tanulom őket, mert hiszem, hogy ezek a mi évtizedünk fordítóprogramjai. A rendszerarchitektúra felé tartok.
+Szoftverfejlesztő és platformüzemeltető. Webalkalmazásokat építek végponttól végpontig, megtervezem az őket adattal ellátó pipeline-okat, és üzemeltetem az éles infrastruktúrát, amin futnak. A Sercónál az Európai Űrügynökség egyik projektjén gazdája és üzemeltetője vagyok egy platformnak, amely földmegfigyelő műholdak minőségjelentéseit és adatkiesési jelentéseit szolgáltatja, ESA-, korábbi és harmadik feles missziók validált adatait összesítve, a megközelítés megválasztásától az éles üzem fenntartásáig. Minden nap kísérletezem új technológiákkal, az AI-t is beleértve, és hiszek az ágensalapú fejlesztésben, ahol a fejlesztő vezeti az ágenseket. Az AI-eszközök a mi évtizedünk fordítóprogramjai. A rendszerarchitektúra felé tartok.
 
 SZAKMAI TAPASZTALAT
 -------------------
