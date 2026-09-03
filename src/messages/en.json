@@ -199,7 +199,11 @@
           },
           {
             "title": "Operations & Security:",
-            "description": "Operate the cloud servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control."
+            "description": "Administer the platform's two Ubuntu servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control."
+          },
+          {
+            "title": "Server Migration:",
+            "description": "Led the migration of a legacy service from Ubuntu 18.04 to a new Ubuntu 24.04 LTS server: dockerised the legacy codebase so it runs on the new host, closed the outstanding vulnerability findings and brought the server under regular patching, and replaced a manual multi-step deployment with a single automated, zero-downtime release."
           },
           {
             "title": "Performance & Code Quality:",
@@ -215,7 +219,6 @@
           "Node.js",
           "Python",
           "Docker",
-          "Azure",
           "Linux",
           "Bash",
           "CI/CD",

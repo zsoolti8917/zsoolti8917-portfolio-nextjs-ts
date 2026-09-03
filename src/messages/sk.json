@@ -199,7 +199,11 @@
           },
           {
             "title": "Prevádzka a bezpečnosť:",
-            "description": "Prevádzka cloudových serverov: kontajnery, CI/CD, aktualizácie, zálohovanie, riadenie prístupu a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien."
+            "description": "Správa dvoch Ubuntu serverov platformy: kontajnery, CI/CD, aktualizácie, zálohovanie, riadenie prístupu a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien."
+          },
+          {
+            "title": "Migrácia servera:",
+            "description": "Viedol som migráciu staršej služby z Ubuntu 18.04 na nový server s Ubuntu 24.04 LTS: starší kód som zabalil do Docker kontajnerov, aby bežal na novom serveri, uzavrel som otvorené nálezy zraniteľností, server som zaradil do pravidelného záplatovania a manuálne viackrokové nasadenie som nahradil jediným automatizovaným vydaním bez výpadku."
           },
           {
             "title": "Výkon a kvalita kódu:",
@@ -215,7 +219,6 @@
           "Node.js",
           "Python",
           "Docker",
-          "Azure",
           "Linux",
           "Bash",
           "CI/CD",

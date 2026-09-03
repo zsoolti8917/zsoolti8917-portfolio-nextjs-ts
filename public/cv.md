@@ -33,11 +33,12 @@ Prague · Feb 2025 - Present
 - **End-to-End Ownership:** Own and run, end to end, a platform for the European Space Agency that delivers quality reports and data unavailability reports from Earth observation satellites, aggregating validated data from ESA, legacy and third-party missions.
 - **Solution Design & Delivery:** Choose the approach, technologies and architecture for new work, present it, build it, take it through UAT to production, and keep it running: monitoring, fixes, patches and backups.
 - **Development:** Develop the frontend, the backend and the data ingestion pipelines, and maintain the automation scripts around them.
-- **Operations & Security:** Operate the cloud servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control.
+- **Operations & Security:** Administer the platform's two Ubuntu servers: containers, CI/CD, updates, backups, access control and regular vulnerability remediation under formal change control.
+- **Server Migration:** Led the migration of a legacy service from Ubuntu 18.04 to a new Ubuntu 24.04 LTS server: dockerised the legacy codebase so it runs on the new host, closed the outstanding vulnerability findings and brought the server under regular patching, and replaced a manual multi-step deployment with a single automated, zero-downtime release.
 - **Performance & Code Quality:** Led a phased frontend quality programme: vendor bundle cut by roughly three quarters, JavaScript payload down a third, CSS down more than half, unnecessary re-renders reduced by 80%.
 - **Stakeholder Coordination:** Work directly with the mission teams and IT on requirements, solution proposals, bug reports, change records and estimates.
 
-Skills: React, Node.js, Python, Docker, Azure, Linux, Bash, CI/CD, Jenkins
+Skills: React, Node.js, Python, Docker, Linux, Bash, CI/CD, Jenkins
 
 ### Quality Assurance Tester — Galileo Corporation s.r.o
 

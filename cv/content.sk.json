@@ -126,7 +126,8 @@
         "Kompletná zodpovednosť za vývoj a prevádzku platformy, ktorá na projekte pre Európsku vesmírnu agentúru poskytuje správy o kvalite a o nedostupnosti dát z družíc na pozorovanie Zeme a agreguje validované dáta z misií ESA, starších misií a misií tretích strán.",
         "Voľba prístupu, technológií a architektúry pre nové úlohy, prezentácia riešenia, jeho implementácia, testovanie na UAT, nasadenie do produkcie a udržiavanie chodu: monitorovanie, opravy, záplaty a zálohovanie.",
         "Vývoj frontendu, backendu a ingesčných dátových pipelín a údržba súvisiacich automatizačných skriptov.",
-        "Prevádzka cloudových serverov: kontajnery, CI/CD, aktualizácie, zálohovanie, riadenie prístupu a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.",
+        "Správa dvoch Ubuntu serverov platformy: kontajnery, CI/CD, aktualizácie, zálohovanie, riadenie prístupu a pravidelné odstraňovanie zraniteľností v rámci formálneho riadenia zmien.",
+        "Viedol som migráciu staršej služby z Ubuntu 18.04 na nový server s Ubuntu 24.04 LTS: starší kód som zabalil do Docker kontajnerov, aby bežal na novom serveri, uzavrel som otvorené nálezy zraniteľností, server som zaradil do pravidelného záplatovania a manuálne viackrokové nasadenie som nahradil jediným automatizovaným vydaním bez výpadku.",
         "Viedol som fázovaný program kvality frontendu: vendor bundle menší približne o tri štvrtiny, objem JavaScriptu nižší o tretinu, CSS o viac než polovicu a o 80 % menej zbytočných re-renderov.",
         "Priama spolupráca s tímami misií a IT: požiadavky, návrhy riešení, hlásenia chýb, záznamy o zmenách a odhady prácnosti."
       ]

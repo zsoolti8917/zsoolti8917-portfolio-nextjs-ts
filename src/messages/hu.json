@@ -199,7 +199,11 @@
           },
           {
             "title": "Üzemeltetés és biztonság:",
-            "description": "Üzemeltetem a felhőszervereket: konténerek, CI/CD, frissítések, mentések, hozzáférés-szabályozás és rendszeres sérülékenységkezelés formális változáskezelés mellett."
+            "description": "Üzemeltetem a platform két Ubuntu szerverét: konténerek, CI/CD, frissítések, mentések, hozzáférés-szabályozás és rendszeres sérülékenységkezelés formális változáskezelés mellett."
+          },
+          {
+            "title": "Szervermigráció:",
+            "description": "Vezettem egy örökölt szolgáltatás migrálását Ubuntu 18.04-ről egy új Ubuntu 24.04 LTS szerverre: dockerizáltam az örökölt kódbázist, hogy az új szerveren fusson, lezártam a nyitott sérülékenységi megállapításokat és rendszeres frissítés alá vontam a szervert, a kézi, többlépéses telepítést pedig egyetlen automatizált, leállásmentes kiadásra cseréltem."
           },
           {
             "title": "Teljesítmény és kódminőség:",
@@ -215,7 +219,6 @@
           "Node.js",
           "Python",
           "Docker",
-          "Azure",
           "Linux",
           "Bash",
           "CI/CD",
